@@ -4,6 +4,9 @@
 -- Wrapper for the MiSTer core that runs exclusively in the core's clock domanin
 --
 -- MiSTer2MEGA65 done by sy2002 and MJoergen in 2022 and licensed under GPL v3
+--
+--  Changes:
+--  Jan 2025   Kiwi   Add in the Amiga Core
 ----------------------------------------------------------------------------------
 
 library ieee;
@@ -15,6 +18,7 @@ use work.video_modes_pkg.all;
 
 entity main is
    generic (
+      G_BOARD                 : string;                     -- Which platform are we running on.
       G_VDNUM                 : natural                     -- amount of virtual drives
    );
    port (
@@ -25,6 +29,7 @@ entity main is
 
       -- MiSTer core main clock speed:
       -- Make sure you pass very exact numbers here, because they are used for avoiding clock drift at derived clocks
+-- DJR cannot define a port with type natural.  May not need this port for the Amiga.  If required, use a different method to pass the value.
       clk_main_speed_i        : in  natural;
 
       -- Video output
@@ -43,6 +48,7 @@ entity main is
       audio_right_o           : out signed(15 downto 0);
 
       -- M2M Keyboard interface
+-- DJR Doesn't like Integer as type for port.  Need to find another way.      
       kb_key_num_i            : in  integer range 0 to 79;    -- cycles through all MEGA65 keys
       kb_key_pressed_n_i      : in  std_logic;                -- low active: debounced feedback: is kb_key_num_i pressed right now?
 
@@ -69,42 +75,52 @@ end entity main;
 architecture synthesis of main is
 
 -- @TODO: Remove these demo core signals
-signal keyboard_n          : std_logic_vector(79 downto 0);
+--signal keyboard_n          : std_logic_vector(79 downto 0);
+
+
+
+
 
 begin
 
    -- @TODO: Add the actual MiSTer core here
    -- The demo core's purpose is to show a test image and to make sure, that the MiSTer2MEGA65 framework
    -- can be synthesized and run stand-alone without an actual MiSTer core being there, yet
-   i_democore : entity work.democore
-      port map (
-         clk_main_i           => clk_main_i,
+   
+   -- DJR Lots more work to be done here !!!!
+   
+   
+   amiga_clk : entity work.amiga_clk
+        port map (
+            clk_28      => clk_main_i,
+            reset_n     => reset_hard_i               
+        );  -- amiga_clk
+   
+   
+   
+--   cpu_wrapper : entity work.cpu_wrapper
+--        port map (
+--            reset       => reset_hard_i,
+--            clk         => clk_main_i                 --- TBC                            
+--        );  -- cpu_wrapper
+   
+-- DJR:    Needs looking into.  A section that does IDE uses a component that is supplied with Quartus.
+--  Need to validate if this is necessary or what are the alternatives.  But first understand what the outcome it.
+--   fastchip : entity work.fastchip
+--        port map (
+--        ); -- fastchip   
+   
 
-         reset_i              => reset_soft_i or reset_hard_i,       -- long and short press of reset button mean the same
-         pause_i              => pause_i,
 
-         ball_col_rgb_i       => x"EE4020",                          -- ball color (RGB): orange
-         paddle_speed_i       => x"1",                               -- paddle speed is about 50 pixels / sec (due to 50 Hz)
-
-         keyboard_n_i         => keyboard_n,                         -- move the paddle with the cursor left/right keys...
-         joy_up_n_i           => joy_1_up_n_i,                       -- ... or move the paddle with a joystick in port #1
-         joy_down_n_i         => joy_1_down_n_i,
-         joy_left_n_i         => joy_1_left_n_i,
-         joy_right_n_i        => joy_1_right_n_i,
-         joy_fire_n_i         => joy_1_fire_n_i,
-
-         vga_ce_o             => video_ce_o,
-         vga_red_o            => video_red_o,
-         vga_green_o          => video_green_o,
-         vga_blue_o           => video_blue_o,
-         vga_vs_o             => video_vs_o,
-         vga_hs_o             => video_hs_o,
-         vga_hblank_o         => video_hblank_o,
-         vga_vblank_o         => video_vblank_o,
-
-         audio_left_o         => audio_left_o,
-         audio_right_o        => audio_right_o
-      ); -- i_democore
+--    IRR_filter : entity work.irr_filter
+--        port map (
+--        ); -- irr_filter   
+        
+        
+   
+--   minimig : entity work.minimig
+--     port map (
+--      ); -- minimig
 
    -- On video_ce_o and video_ce_ovl_o: You have an important @TODO when porting a core:
    -- video_ce_o: You need to make sure that video_ce_o divides clk_main_i such that it transforms clk_main_i
@@ -115,28 +131,30 @@ begin
    --             resolution specified by VGA_DX/VGA_DY (globals.vhd)
    -- video_retro15kHz_o: '1', if the output from the core (post-scandoubler) in the retro 15 kHz analog RGB mode.
    --             Hint: Scandoubler off does not automatically mean retro 15 kHz on.
-   video_ce_ovl_o <= video_ce_o;
+-- DJR Need to do something here!!!   
+--   video_ce_ovl_o <= video_ce_o;
 
    -- @TODO: Keyboard mapping and keyboard behavior
    -- Each core is treating the keyboard in a different way: Some need low-active "matrices", some
    -- might need small high-active keyboard memories, etc. This is why the MiSTer2MEGA65 framework
    -- lets you define literally everything and only provides a minimal abstraction layer to the keyboard.
    -- You need to adjust keyboard.vhd to your needs
-   i_keyboard : entity work.keyboard
-      port map (
-         clk_main_i           => clk_main_i,
+--   i_keyboard : entity work.keyboard
+--      port map (
+--         clk_main_i           => clk_main_i,
 
          -- Interface to the MEGA65 keyboard
-         key_num_i            => kb_key_num_i,
-         key_pressed_n_i      => kb_key_pressed_n_i,
+-- DJR Need another way to do this.         
+--         key_num_i            => kb_key_num_i,
+--         key_pressed_n_i      => kb_key_pressed_n_i,
 
          -- @TODO: Create the kind of keyboard output that your core needs
          -- "example_n_o" is a low active register and used by the demo core:
          --    bit 0: Space
          --    bit 1: Return
          --    bit 2: Run/Stop
-         example_n_o          => keyboard_n
-      ); -- i_keyboard
+--         example_n_o          => keyboard_n
+--      ); -- i_keyboard
 
 end architecture synthesis;
 

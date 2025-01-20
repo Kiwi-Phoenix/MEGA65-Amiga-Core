@@ -1,0 +1,22 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.660473",
+   "Default View_TopLeft":"-1022,-47",
+   "ExpandedHierarchyInLayout":"/Main_hier/paula_hier/paula_audio_hier/paula_audio_mixer_hier",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst paula_audio_0 -pg 1 -lvl 3 -x 863 -y 140 -defaultsOSRD
+preplace inst paula_audio_channel_0 -pg 1 -lvl 4 -x 1190 -y 150 -defaultsOSRD
+preplace inst paula_audio_channel_1 -pg 1 -lvl 4 -x 1190 -y 430 -defaultsOSRD
+preplace inst paula_audio_channel_2 -pg 1 -lvl 4 -x 1190 -y 710 -defaultsOSRD
+preplace inst paula_audio_channel_3 -pg 1 -lvl 4 -x 1190 -y 990 -defaultsOSRD
+preplace inst paula_audio_mixer_hier -pg 1 -lvl 2 -x 380 -y 18 -defaultsOSRD
+preplace inst paula_audio_mixer_hier|paula_audio_mixer_0 -pg 1 -lvl 1 -x 490 -y 148 -defaultsOSRD
+preplace inst paula_audio_mixer_hier|paula_audio_volume_0 -pg 1 -lvl 1 -x 490 -y 348 -defaultsOSRD
+levelinfo -pg 1 0 20 380 863 1190 1350
+levelinfo -hier paula_audio_mixer_hier * 490 *
+pagesize -pg 1 -db -bbox -sgen 0 -280 1350 1140
+pagesize -hier paula_audio_mixer_hier -db -bbox -sgen 350 -2 630 418
+"
+}
+

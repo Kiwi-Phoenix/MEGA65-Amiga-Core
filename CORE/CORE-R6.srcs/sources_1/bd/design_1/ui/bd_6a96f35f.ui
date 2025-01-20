@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.707105",
+   "Default View_TopLeft":"-1594,-385",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst paula_0 -pg 1 -lvl 1 -x -440 -y 150 -defaultsOSRD
+preplace inst paula_uart_0 -pg 1 -lvl 5 -x 621 -y 100 -defaultsOSRD
+preplace inst paula_intcontroller_0 -pg 1 -lvl 4 -x 330 -y 120 -defaultsOSRD
+preplace inst paula_floppy_hier_0 -pg 1 -lvl 3 -x 70 -y -90 -defaultsOSRD
+preplace inst paula_audio_hier -pg 1 -lvl 2 -x -120 -y -338 -defaultsOSRD
+levelinfo -pg 1 -600 -440 -120 70 330 621 760
+pagesize -pg 1 -db -bbox -sgen -600 -560 1530 820
+"
+}
+

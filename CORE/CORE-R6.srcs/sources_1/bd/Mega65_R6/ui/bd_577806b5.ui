@@ -1,0 +1,504 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.965071",
+   "Default View_TopLeft":"3047,1677",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk_i -pg 1 -lvl 0 -x 0 -y 1590 -defaultsOSRD
+preplace port port-id_reset_n_i -pg 1 -lvl 0 -x 0 -y 1670 -defaultsOSRD
+preplace port port-id_uart_rxd_i -pg 1 -lvl 0 -x 0 -y 2320 -defaultsOSRD
+preplace port port-id_uart_txd_o -pg 1 -lvl 10 -x 5890 -y 1610 -defaultsOSRD
+preplace port port-id_vga_hs_o -pg 1 -lvl 10 -x 5890 -y 1250 -defaultsOSRD
+preplace port port-id_vga_vs_o -pg 1 -lvl 10 -x 5890 -y 1270 -defaultsOSRD
+preplace port port-id_vdac_clk_o -pg 1 -lvl 10 -x 5890 -y 1290 -defaultsOSRD
+preplace port port-id_vdac_sync_n_o -pg 1 -lvl 10 -x 5890 -y 1310 -defaultsOSRD
+preplace port port-id_vdac_blank_n_o -pg 1 -lvl 10 -x 5890 -y 1330 -defaultsOSRD
+preplace port port-id_tmds_clk_p_o -pg 1 -lvl 10 -x 5890 -y 1470 -defaultsOSRD
+preplace port port-id_tmds_clk_n_o -pg 1 -lvl 10 -x 5890 -y 1490 -defaultsOSRD
+preplace port port-id_kb_io0_o -pg 1 -lvl 10 -x 5890 -y 2590 -defaultsOSRD
+preplace port port-id_kb_io1_o -pg 1 -lvl 10 -x 5890 -y 2610 -defaultsOSRD
+preplace port port-id_sd_reset_o -pg 1 -lvl 10 -x 5890 -y 1630 -defaultsOSRD
+preplace port port-id_sd_clk_o -pg 1 -lvl 10 -x 5890 -y 1650 -defaultsOSRD
+preplace port port-id_sd_mosi_o -pg 1 -lvl 10 -x 5890 -y 1670 -defaultsOSRD
+preplace port port-id_sd_miso_i -pg 1 -lvl 0 -x 0 -y 850 -defaultsOSRD
+preplace port port-id_sd_cd_i -pg 1 -lvl 0 -x 0 -y 870 -defaultsOSRD
+preplace port port-id_sd2_reset_o -pg 1 -lvl 10 -x 5890 -y 1690 -defaultsOSRD
+preplace port port-id_sd2_clk_o -pg 1 -lvl 10 -x 5890 -y 1710 -defaultsOSRD
+preplace port port-id_sd2_mosi_o -pg 1 -lvl 10 -x 5890 -y 1730 -defaultsOSRD
+preplace port port-id_sd2_miso_i -pg 1 -lvl 0 -x 0 -y 2280 -defaultsOSRD
+preplace port port-id_sd2_cd_i -pg 1 -lvl 0 -x 0 -y 910 -defaultsOSRD
+preplace port port-id_joy_1_up_n_i -pg 1 -lvl 0 -x 0 -y 2920 -defaultsOSRD
+preplace port port-id_joy_1_down_n_i -pg 1 -lvl 0 -x 0 -y 2940 -defaultsOSRD
+preplace port port-id_joy_1_left_n_i -pg 1 -lvl 0 -x 0 -y 2960 -defaultsOSRD
+preplace port port-id_joy_1_right_n_i -pg 1 -lvl 0 -x 0 -y 2980 -defaultsOSRD
+preplace port port-id_joy_1_fire_n_i -pg 1 -lvl 0 -x 0 -y 3000 -defaultsOSRD
+preplace port port-id_joy_1_up_n_o -pg 1 -lvl 10 -x 5890 -y 3160 -defaultsOSRD
+preplace port port-id_joy_1_down_n_o -pg 1 -lvl 10 -x 5890 -y 2700 -defaultsOSRD
+preplace port port-id_joy_1_left_n_o -pg 1 -lvl 10 -x 5890 -y 2740 -defaultsOSRD
+preplace port port-id_joy_1_right_n_o -pg 1 -lvl 10 -x 5890 -y 2760 -defaultsOSRD
+preplace port port-id_joy_1_fire_n_o -pg 1 -lvl 10 -x 5890 -y 2720 -defaultsOSRD
+preplace port port-id_joy_2_up_n_i -pg 1 -lvl 0 -x 0 -y 3020 -defaultsOSRD
+preplace port port-id_joy_2_down_n_i -pg 1 -lvl 0 -x 0 -y 3040 -defaultsOSRD
+preplace port port-id_joy_2_left_n_i -pg 1 -lvl 0 -x 0 -y 3060 -defaultsOSRD
+preplace port port-id_joy_2_right_n_i -pg 1 -lvl 0 -x 0 -y 3080 -defaultsOSRD
+preplace port port-id_joy_2_fire_n_i -pg 1 -lvl 0 -x 0 -y 3100 -defaultsOSRD
+preplace port port-id_joy_2_up_n_o -pg 1 -lvl 10 -x 5890 -y 3260 -defaultsOSRD
+preplace port port-id_joy_2_down_n_o -pg 1 -lvl 10 -x 5890 -y 3180 -defaultsOSRD
+preplace port port-id_joy_2_left_n_o -pg 1 -lvl 10 -x 5890 -y 3220 -defaultsOSRD
+preplace port port-id_joy_2_right_n_o -pg 1 -lvl 10 -x 5890 -y 3240 -defaultsOSRD
+preplace port port-id_joy_2_fire_n_o -pg 1 -lvl 10 -x 5890 -y 3200 -defaultsOSRD
+preplace port port-id_paddle_drain_o -pg 1 -lvl 10 -x 5890 -y 1750 -defaultsOSRD
+preplace port port-id_hr_rwds_io -pg 1 -lvl 10 -x 5890 -y 220 -defaultsOSRD
+preplace port port-id_hr_reset_o -pg 1 -lvl 10 -x 5890 -y 2470 -defaultsOSRD
+preplace port port-id_hr_clk_p_o -pg 1 -lvl 10 -x 5890 -y 2090 -defaultsOSRD
+preplace port port-id_hr_cs0_o -pg 1 -lvl 10 -x 5890 -y 2110 -defaultsOSRD
+preplace port port-id_qnice_clk_o -pg 1 -lvl 10 -x 5890 -y 2510 -defaultsOSRD
+preplace port port-id_qnice_rst_o -pg 1 -lvl 10 -x 5890 -y 2530 -defaultsOSRD
+preplace port port-id_main_clk_i -pg 1 -lvl 0 -x 0 -y 2360 -defaultsOSRD
+preplace port port-id_main_rst_i -pg 1 -lvl 0 -x 0 -y 2840 -defaultsOSRD
+preplace port port-id_main_qnice_reset_o -pg 1 -lvl 10 -x 5890 -y 2010 -defaultsOSRD
+preplace port port-id_main_qnice_pause_o -pg 1 -lvl 10 -x 5890 -y 1990 -defaultsOSRD
+preplace port port-id_main_reset_m2m_o -pg 1 -lvl 10 -x 5890 -y 3340 -defaultsOSRD
+preplace port port-id_main_reset_core_o -pg 1 -lvl 10 -x 5890 -y 3320 -defaultsOSRD
+preplace port port-id_main_key_num_o -pg 1 -lvl 10 -x 5890 -y 2630 -defaultsOSRD
+preplace port port-id_main_key_pressed_n_o -pg 1 -lvl 10 -x 5890 -y 2650 -defaultsOSRD
+preplace port port-id_main_power_led_i -pg 1 -lvl 0 -x 0 -y 2400 -defaultsOSRD
+preplace port port-id_main_drive_led_i -pg 1 -lvl 0 -x 0 -y 2440 -defaultsOSRD
+preplace port port-id_video_clk_i -pg 1 -lvl 0 -x 0 -y 2520 -defaultsOSRD
+preplace port port-id_video_rst_i -pg 1 -lvl 0 -x 0 -y 2580 -defaultsOSRD
+preplace port port-id_video_ce_i -pg 1 -lvl 0 -x 0 -y 2480 -defaultsOSRD
+preplace port port-id_video_ce_ovl_i -pg 1 -lvl 0 -x 0 -y 2500 -defaultsOSRD
+preplace port port-id_video_vs_i -pg 1 -lvl 0 -x 0 -y 2620 -defaultsOSRD
+preplace port port-id_video_hs_i -pg 1 -lvl 0 -x 0 -y 2560 -defaultsOSRD
+preplace port port-id_video_hblank_i -pg 1 -lvl 0 -x 0 -y 2540 -defaultsOSRD
+preplace port port-id_video_vblank_i -pg 1 -lvl 0 -x 0 -y 2600 -defaultsOSRD
+preplace port port-id_main_joy1_up_n_o -pg 1 -lvl 10 -x 5890 -y 2870 -defaultsOSRD
+preplace port port-id_main_joy1_down_n_o -pg 1 -lvl 10 -x 5890 -y 2890 -defaultsOSRD
+preplace port port-id_main_joy1_left_n_o -pg 1 -lvl 10 -x 5890 -y 2910 -defaultsOSRD
+preplace port port-id_main_joy1_right_n_o -pg 1 -lvl 10 -x 5890 -y 2930 -defaultsOSRD
+preplace port port-id_main_joy1_fire_n_o -pg 1 -lvl 10 -x 5890 -y 2950 -defaultsOSRD
+preplace port port-id_main_joy1_up_n_i -pg 1 -lvl 0 -x 0 -y 3160 -defaultsOSRD
+preplace port port-id_main_joy1_down_n_i -pg 1 -lvl 0 -x 0 -y 2700 -defaultsOSRD
+preplace port port-id_main_joy1_left_n_i -pg 1 -lvl 0 -x 0 -y 2740 -defaultsOSRD
+preplace port port-id_main_joy1_right_n_i -pg 1 -lvl 0 -x 0 -y 2760 -defaultsOSRD
+preplace port port-id_main_joy1_fire_n_i -pg 1 -lvl 0 -x 0 -y 2720 -defaultsOSRD
+preplace port port-id_main_joy2_up_n_o -pg 1 -lvl 10 -x 5890 -y 2970 -defaultsOSRD
+preplace port port-id_main_joy2_down_n_o -pg 1 -lvl 10 -x 5890 -y 2990 -defaultsOSRD
+preplace port port-id_main_joy2_left_n_o -pg 1 -lvl 10 -x 5890 -y 3010 -defaultsOSRD
+preplace port port-id_main_joy2_right_n_o -pg 1 -lvl 10 -x 5890 -y 3030 -defaultsOSRD
+preplace port port-id_main_joy2_fire_n_o -pg 1 -lvl 10 -x 5890 -y 3050 -defaultsOSRD
+preplace port port-id_main_joy2_up_n_i -pg 1 -lvl 0 -x 0 -y 3260 -defaultsOSRD
+preplace port port-id_main_joy2_down_n_i -pg 1 -lvl 0 -x 0 -y 3180 -defaultsOSRD
+preplace port port-id_main_joy2_left_n_i -pg 1 -lvl 0 -x 0 -y 3220 -defaultsOSRD
+preplace port port-id_main_joy2_right_n_i -pg 1 -lvl 0 -x 0 -y 3240 -defaultsOSRD
+preplace port port-id_main_joy2_fire_n_i -pg 1 -lvl 0 -x 0 -y 3200 -defaultsOSRD
+preplace port port-id_main_rtc_o -pg 1 -lvl 10 -x 5890 -y 2030 -defaultsOSRD
+preplace port port-id_audio_clk_o -pg 1 -lvl 10 -x 5890 -y 1350 -defaultsOSRD
+preplace port port-id_audio_reset_o -pg 1 -lvl 10 -x 5890 -y 1370 -defaultsOSRD
+preplace port port-id_hr_clk_o -pg 1 -lvl 10 -x 5890 -y 1570 -defaultsOSRD
+preplace port port-id_hr_rst_o -pg 1 -lvl 10 -x 5890 -y 1590 -defaultsOSRD
+preplace port port-id_hr_core_write_i -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_hr_core_read_i -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_hr_core_readdatavalid_o -pg 1 -lvl 10 -x 5890 -y 2050 -defaultsOSRD
+preplace port port-id_hr_core_waitrequest_o -pg 1 -lvl 10 -x 5890 -y 2070 -defaultsOSRD
+preplace port port-id_hr_high_o -pg 1 -lvl 10 -x 5890 -y 1190 -defaultsOSRD
+preplace port port-id_hr_low_o -pg 1 -lvl 10 -x 5890 -y 1210 -defaultsOSRD
+preplace port port-id_qnice_dvi_i -pg 1 -lvl 0 -x 0 -y 2200 -defaultsOSRD
+preplace port port-id_qnice_video_mode_i -pg 1 -lvl 0 -x 0 -y 1800 -defaultsOSRD
+preplace port port-id_qnice_retro15kHz_i -pg 1 -lvl 0 -x 0 -y 2240 -defaultsOSRD
+preplace port port-id_qnice_scandoubler_i -pg 1 -lvl 0 -x 0 -y 2260 -defaultsOSRD
+preplace port port-id_qnice_csync_i -pg 1 -lvl 0 -x 0 -y 2220 -defaultsOSRD
+preplace port port-id_qnice_audio_mute_i -pg 1 -lvl 0 -x 0 -y 2180 -defaultsOSRD
+preplace port port-id_qnice_audio_filter_i -pg 1 -lvl 0 -x 0 -y 2160 -defaultsOSRD
+preplace port port-id_qnice_zoom_crop_i -pg 1 -lvl 0 -x 0 -y 2300 -defaultsOSRD
+preplace port port-id_qnice_ascal_mode_i -pg 1 -lvl 0 -x 0 -y 950 -defaultsOSRD
+preplace port port-id_qnice_ascal_polyphase_i -pg 1 -lvl 0 -x 0 -y 970 -defaultsOSRD
+preplace port port-id_qnice_ascal_triplebuf_i -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
+preplace port port-id_qnice_flip_joyports_i -pg 1 -lvl 0 -x 0 -y 1010 -defaultsOSRD
+preplace port port-id_qnice_ramrom_ce_o -pg 1 -lvl 10 -x 5890 -y 1830 -defaultsOSRD
+preplace port port-id_qnice_ramrom_we_o -pg 1 -lvl 10 -x 5890 -y 1850 -defaultsOSRD
+preplace port port-id_qnice_ramrom_wait_i -pg 1 -lvl 0 -x 0 -y 1050 -defaultsOSRD
+preplace port port-id_hdmi_scl_io -pg 1 -lvl 10 -x 5890 -y 160 -defaultsOSRD
+preplace port port-id_hdmi_sda_io -pg 1 -lvl 10 -x 5890 -y 200 -defaultsOSRD
+preplace port port-id_vga_scl_io -pg 1 -lvl 10 -x 5890 -y 280 -defaultsOSRD
+preplace port port-id_vga_sda_io -pg 1 -lvl 10 -x 5890 -y 300 -defaultsOSRD
+preplace port port-id_audio_scl_io -pg 1 -lvl 10 -x 5890 -y 40 -defaultsOSRD
+preplace port port-id_audio_sda_io -pg 1 -lvl 10 -x 5890 -y 60 -defaultsOSRD
+preplace port port-id_i2c_scl_io -pg 1 -lvl 10 -x 5890 -y 240 -defaultsOSRD
+preplace port port-id_i2c_sda_io -pg 1 -lvl 10 -x 5890 -y 260 -defaultsOSRD
+preplace port port-id_grove_sda_io -pg 1 -lvl 10 -x 5890 -y 140 -defaultsOSRD
+preplace port port-id_grove_scl_io -pg 1 -lvl 10 -x 5890 -y 120 -defaultsOSRD
+preplace port port-id_fpga_sda_io -pg 1 -lvl 10 -x 5890 -y 100 -defaultsOSRD
+preplace port port-id_fpga_scl_io -pg 1 -lvl 10 -x 5890 -y 80 -defaultsOSRD
+preplace port port-id_kb_io2_i -pg 1 -lvl 0 -x 0 -y 2380 -defaultsOSRD
+preplace port port-id_hr_rwds_io_i -pg 1 -lvl 0 -x 0 -y 1500 -defaultsOSRD
+preplace port port-id_hr_rwds_io_o -pg 1 -lvl 10 -x 5890 -y 2490 -defaultsOSRD
+preplace port port-id_hr_d_io_i -pg 1 -lvl 0 -x 0 -y 1520 -defaultsOSRD
+preplace port port-id_hr_d_io_o -pg 1 -lvl 10 -x 5890 -y 2450 -defaultsOSRD
+preplace port port-id_audio_scl_io_i -pg 1 -lvl 0 -x 0 -y 1910 -defaultsOSRD
+preplace port port-id_audio_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2350 -defaultsOSRD
+preplace port port-id_vga_scl_io_i -pg 1 -lvl 0 -x 0 -y 1930 -defaultsOSRD
+preplace port port-id_vga_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2310 -defaultsOSRD
+preplace port port-id_hdmi_scl_io_i -pg 1 -lvl 0 -x 0 -y 1950 -defaultsOSRD
+preplace port port-id_hdmi_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2270 -defaultsOSRD
+preplace port port-id_i2c_scl_io_i -pg 1 -lvl 0 -x 0 -y 1970 -defaultsOSRD
+preplace port port-id_i2c_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2230 -defaultsOSRD
+preplace port port-id_grove_scl_io_i -pg 1 -lvl 0 -x 0 -y 1990 -defaultsOSRD
+preplace port port-id_grove_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2190 -defaultsOSRD
+preplace port port-id_fpga_scl_io_i -pg 1 -lvl 0 -x 0 -y 2010 -defaultsOSRD
+preplace port port-id_fpga_scl_io_o -pg 1 -lvl 10 -x 5890 -y 2150 -defaultsOSRD
+preplace port port-id_audo_sda_io_i -pg 1 -lvl 0 -x 0 -y 2030 -defaultsOSRD
+preplace port port-id_vga_sda_io_i -pg 1 -lvl 0 -x 0 -y 2050 -defaultsOSRD
+preplace port port-id_vga_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2290 -defaultsOSRD
+preplace port port-id_hdmi_sda_io_i -pg 1 -lvl 0 -x 0 -y 2070 -defaultsOSRD
+preplace port port-id_hdmi_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2250 -defaultsOSRD
+preplace port port-id_i2c_sda_io_i -pg 1 -lvl 0 -x 0 -y 2090 -defaultsOSRD
+preplace port port-id_i2c_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2210 -defaultsOSRD
+preplace port port-id_grove_sda_io_i -pg 1 -lvl 0 -x 0 -y 2110 -defaultsOSRD
+preplace port port-id_grove_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2170 -defaultsOSRD
+preplace port port-id_fpga_sda_io_i -pg 1 -lvl 0 -x 0 -y 2130 -defaultsOSRD
+preplace port port-id_fpga_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2130 -defaultsOSRD
+preplace port port-id_audio_sda_io_o -pg 1 -lvl 10 -x 5890 -y 2330 -defaultsOSRD
+preplace portBus vga_red_o -pg 1 -lvl 10 -x 5890 -y 1230 -defaultsOSRD
+preplace portBus vga_green_o -pg 1 -lvl 10 -x 5890 -y 1530 -defaultsOSRD
+preplace portBus vga_blue_o -pg 1 -lvl 10 -x 5890 -y 1550 -defaultsOSRD
+preplace portBus tmds_data_p_o -pg 1 -lvl 10 -x 5890 -y 1430 -defaultsOSRD
+preplace portBus tmds_data_n_o -pg 1 -lvl 10 -x 5890 -y 1450 -defaultsOSRD
+preplace portBus paddle_i -pg 1 -lvl 0 -x 0 -y 930 -defaultsOSRD
+preplace portBus hr_d_io -pg 1 -lvl 10 -x 5890 -y 20 -defaultsOSRD
+preplace portBus main_power_led_col_i -pg 1 -lvl 0 -x 0 -y 2420 -defaultsOSRD
+preplace portBus main_drive_led_col_i -pg 1 -lvl 0 -x 0 -y 2460 -defaultsOSRD
+preplace portBus main_osm_control_m_o -pg 1 -lvl 10 -x 5890 -y 1870 -defaultsOSRD
+preplace portBus main_qnice_gp_reg_o -pg 1 -lvl 10 -x 5890 -y 1970 -defaultsOSRD
+preplace portBus main_audio_l_i -pg 1 -lvl 0 -x 0 -y 1820 -defaultsOSRD
+preplace portBus main_audio_r_i -pg 1 -lvl 0 -x 0 -y 1840 -defaultsOSRD
+preplace portBus video_red_i -pg 1 -lvl 0 -x 0 -y 2680 -defaultsOSRD
+preplace portBus video_green_i -pg 1 -lvl 0 -x 0 -y 2660 -defaultsOSRD
+preplace portBus video_blue_i -pg 1 -lvl 0 -x 0 -y 2640 -defaultsOSRD
+preplace portBus main_pot1_x_o -pg 1 -lvl 10 -x 5890 -y 1950 -defaultsOSRD
+preplace portBus main_pot1_y_o -pg 1 -lvl 10 -x 5890 -y 1890 -defaultsOSRD
+preplace portBus main_pot2_x_o -pg 1 -lvl 10 -x 5890 -y 1910 -defaultsOSRD
+preplace portBus main_pot2_y_o -pg 1 -lvl 10 -x 5890 -y 1930 -defaultsOSRD
+preplace portBus audio_left_o -pg 1 -lvl 10 -x 5890 -y 1390 -defaultsOSRD
+preplace portBus audio_right_o -pg 1 -lvl 10 -x 5890 -y 1410 -defaultsOSRD
+preplace portBus hr_core_address_i -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace portBus hr_core_writedata_i -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace portBus hr_core_byteenable_i -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace portBus hr_core_burstcount_i -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace portBus hr_core_readdata_o -pg 1 -lvl 10 -x 5890 -y 180 -defaultsOSRD
+preplace portBus qnice_osm_cfg_scaling_i -pg 1 -lvl 0 -x 0 -y 2340 -defaultsOSRD
+preplace portBus qnice_osm_control_m_o -pg 1 -lvl 10 -x 5890 -y 1770 -defaultsOSRD
+preplace portBus qnice_gp_reg_o -pg 1 -lvl 10 -x 5890 -y 1790 -defaultsOSRD
+preplace portBus qnice_ramrom_dev_o -pg 1 -lvl 10 -x 5890 -y 1810 -defaultsOSRD
+preplace portBus qnice_ramrom_addr_o -pg 1 -lvl 10 -x 5890 -y 2550 -defaultsOSRD
+preplace portBus qnice_ramrom_data_out_o -pg 1 -lvl 10 -x 5890 -y 2570 -defaultsOSRD
+preplace portBus qnice_ramrom_data_in_i -pg 1 -lvl 0 -x 0 -y 1030 -defaultsOSRD
+preplace inst clk_m2m_0 -pg 1 -lvl 2 -x 460 -y 1650 -defaultsOSRD
+preplace inst video_out_clock_0 -pg 1 -lvl 5 -x 1980 -y 1730 -defaultsOSRD
+preplace inst reset_manager_0 -pg 1 -lvl 1 -x 160 -y 1660 -defaultsOSRD
+preplace inst debouncer_0 -pg 1 -lvl 9 -x 5500 -y 2960 -defaultsOSRD
+preplace inst M2M_Keyboard -pg 1 -lvl 8 -x 4380 -y 2390 -defaultsOSRD
+preplace inst M2M_Qnice_Wrapper -pg 1 -lvl 7 -x 3570 -y 1160 -defaultsOSRD
+preplace inst clock_counter_0 -pg 1 -lvl 6 -x 2670 -y 1720 -defaultsOSRD
+preplace inst avm_arbit_general_0 -pg 1 -lvl 4 -x 1440 -y 1180 -defaultsOSRD
+preplace inst cdc_pulse_0 -pg 1 -lvl 5 -x 1980 -y 1400 -defaultsOSRD
+preplace inst avm_fifo_0 -pg 1 -lvl 6 -x 2670 -y 400 -defaultsOSRD
+preplace inst hyperram_0 -pg 1 -lvl 3 -x 900 -y 1430 -defaultsOSRD
+preplace inst rtc_wrapper_0 -pg 1 -lvl 6 -x 2670 -y 1320 -defaultsOSRD
+preplace inst M2M_AV_Pipeline -pg 1 -lvl 9 -x 5500 -y 1200 -defaultsOSRD
+preplace inst M2M_CDC_Stable_main2Audio -pg 1 -lvl 8 -x 4380 -y 1990 -defaultsOSRD
+preplace inst M2M_CDC_Stable_hr2QNICE -pg 1 -lvl 6 -x 2670 -y 1570 -defaultsOSRD
+preplace inst hr2qnice_src_data_logic_model -pg 1 -lvl 5 -x 1980 -y 1590 -defaultsOSRD
+preplace inst M2M_Deadend -pg 1 -lvl 7 -x 3570 -y 1760 -defaultsOSRD
+preplace inst rtc_wrapper_logic -pg 1 -lvl 5 -x 1980 -y 2020 -defaultsOSRD
+preplace inst M2M_Frame_rtc_wrapper_logic_model -pg 1 -lvl 9 -x 5500 -y 2240 -defaultsOSRD
+preplace inst avm_arbit_general_logic_model -pg 1 -lvl 5 -x 1980 -y 290 -defaultsOSRD
+preplace inst M2M_AV_Pipeline_Logic_Model -pg 1 -lvl 8 -x 4380 -y 1670 -defaultsOSRD
+preplace inst M2M_Framework_i_qnice2main -pg 1 -lvl 8 -x 4380 -y 1450 -defaultsOSRD
+preplace inst hr_d_io_logic_model -pg 1 -lvl 9 -x 5500 -y 2450 -defaultsOSRD
+preplace inst src_data_logic_model -pg 1 -lvl 7 -x 3570 -y 1990 -defaultsOSRD
+preplace inst M2M_Framework_i_sys2main -pg 1 -lvl 9 -x 5500 -y 3330 -defaultsOSRD
+preplace inst Constants -pg 1 -lvl 7 -x 3570 -y 2340 -defaultsOSRD
+preplace netloc M2M_AV_Pipeline_VGA_BLUE 1 9 1 NJ 1550
+preplace netloc M2M_AV_Pipeline_VGA_GREEN 1 9 1 NJ 1530
+preplace netloc M2M_AV_Pipeline_VGA_HS 1 9 1 NJ 1250
+preplace netloc M2M_AV_Pipeline_VGA_RED 1 9 1 NJ 1230
+preplace netloc M2M_AV_Pipeline_VGA_VS 1 9 1 NJ 1270
+preplace netloc M2M_AV_Pipeline_audio_clk_o 1 9 1 NJ 1350
+preplace netloc M2M_AV_Pipeline_audio_left_o 1 9 1 NJ 1390
+preplace netloc M2M_AV_Pipeline_audio_reset_o 1 9 1 NJ 1370
+preplace netloc M2M_AV_Pipeline_audio_right_o 1 9 1 NJ 1410
+preplace netloc M2M_AV_Pipeline_hr_high_o 1 9 1 NJ 1190
+preplace netloc M2M_AV_Pipeline_hr_low_o 1 9 1 NJ 1210
+preplace netloc M2M_AV_Pipeline_qnice_h_bp_o 1 6 4 3300 620 NJ 620 5080J 610 5760
+preplace netloc M2M_AV_Pipeline_qnice_v_fp_o 1 6 4 3330 650 NJ 650 5120J 640 5810
+preplace netloc M2M_AV_Pipeline_qnice_v_pixels_o 1 6 4 3280 600 NJ 600 4840J 590 5740
+preplace netloc M2M_AV_Pipeline_qnice_v_pulse_o 1 6 4 3320 640 NJ 640 5100J 630 5800
+preplace netloc M2M_AV_Pipeline_qnice_vdmax_o 1 6 4 3260 580 NJ 580 4620J 570 5720
+preplace netloc M2M_AV_Pipeline_tmds_clk_n_o 1 9 1 NJ 1490
+preplace netloc M2M_AV_Pipeline_tmds_clk_p_o 1 9 1 NJ 1470
+preplace netloc M2M_AV_Pipeline_tmds_data_n_o 1 9 1 NJ 1450
+preplace netloc M2M_AV_Pipeline_tmds_data_p_o 1 9 1 NJ 1430
+preplace netloc M2M_AV_Pipeline_vdac_blank_n 1 9 1 NJ 1330
+preplace netloc M2M_AV_Pipeline_vdac_clk 1 9 1 NJ 1290
+preplace netloc M2M_AV_Pipeline_vdac_sync_n 1 9 1 NJ 1310
+preplace netloc M2M_CDC_Stable_hr2QNICE_dst_data_o 1 6 1 2990 1390n
+preplace netloc M2M_CDC_Stable_main2Audio_dst_data_o 1 8 1 4640 990n
+preplace netloc M2M_Keyboard_key_num_o 1 8 2 4630J 2600 5750J
+preplace netloc M2M_Keyboard_key_pressed_n_o 1 8 2 4600J 2610 5700J
+preplace netloc M2M_Keyboard_kio8_o 1 8 2 4670J 2580 5870J
+preplace netloc M2M_Keyboard_kio9_o 1 8 2 4640J 2590 5830J
+preplace netloc M2M_Qnice_Wrapper_paddle_drain_o 1 7 3 4080J 1220 5230J 1810 5820J
+preplace netloc M2M_Qnice_Wrapper_qnice_ascal_mode_o 1 7 2 4070 1140 5290J
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_address_o 1 5 3 2450 210 NJ 210 3860
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_burstcount_o 1 5 3 2460 650 3190J 560 3820
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_byteenable_o 1 5 3 2470 580 3010J 510 3800
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_read_o 1 5 3 2440 200 NJ 200 3830
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_write_o 1 5 3 2410 190 NJ 190 3810
+preplace netloc M2M_Qnice_Wrapper_qnice_avm_writedata_o 1 5 3 2470 220 NJ 220 3890
+preplace netloc M2M_Qnice_Wrapper_qnice_gp_reg_o 1 7 3 4050J 1240 5220J 1830 5840J
+preplace netloc M2M_Qnice_Wrapper_qnice_i2c_ce_o 1 5 3 2440 1130 3060J 1660 3830
+preplace netloc M2M_Qnice_Wrapper_qnice_i2c_we_o 1 5 3 2460 1140 3030J 1670 3800
+preplace netloc M2M_Qnice_Wrapper_qnice_osm_cfg_enable_o 1 7 2 4130 1120 5310J
+preplace netloc M2M_Qnice_Wrapper_qnice_osm_cfg_xy_o 1 7 2 4150 1090 NJ
+preplace netloc M2M_Qnice_Wrapper_qnice_osm_control_m_o 1 7 3 4060J 1230 4990J 1820 5830J
+preplace netloc M2M_Qnice_Wrapper_qnice_poly_wr_o 1 7 2 3930 1130 5300J
+preplace netloc M2M_Qnice_Wrapper_qnice_ramrom_addr_o 1 5 5 2430 1120 3090J 1650 3890 1740 4930 2550 NJ
+preplace netloc M2M_Qnice_Wrapper_qnice_ramrom_ce_o 1 7 3 3970J 1260 5060J 1850 5860J
+preplace netloc M2M_Qnice_Wrapper_qnice_ramrom_data_out_o 1 5 5 2470 1490 3000J 1680 3860 1790 5110 2570 NJ
+preplace netloc M2M_Qnice_Wrapper_qnice_ramrom_dev_o 1 7 3 3950J 1250 5170J 1840 5850J
+preplace netloc M2M_Qnice_Wrapper_qnice_ramrom_we_o 1 7 3 3980J 1270 4980J 1860 5870J
+preplace netloc M2M_Qnice_Wrapper_qnice_rtc_ce_o 1 5 3 2450 690 NJ 690 3840
+preplace netloc M2M_Qnice_Wrapper_qnice_rtc_we_o 1 5 3 2470 700 NJ 700 3790
+preplace netloc M2M_Qnice_Wrapper_sd2_clk_o 1 7 3 4100J 1200 5240J 1790 5800J
+preplace netloc M2M_Qnice_Wrapper_sd2_mosi_o 1 7 3 4090J 1210 5140J 1800 5810J
+preplace netloc M2M_Qnice_Wrapper_sd2_reset_o 1 7 3 4110J 1190 4720J 1780 5790J
+preplace netloc M2M_Qnice_Wrapper_sd_clk_o 1 7 3 4160J 1170 5130J 1760 5770J
+preplace netloc M2M_Qnice_Wrapper_sd_mosi_o 1 7 3 4140J 1180 5250J 1770 5780J
+preplace netloc M2M_Qnice_Wrapper_sd_reset_o 1 7 3 4170J 1160 5260J 1750 5760J
+preplace netloc M2M_Qnice_Wrapper_uart_txd_o 1 7 3 4180J 1150 4950J 1740 5750J
+preplace netloc audio_scl_io_i_1 1 0 5 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ
+preplace netloc audo_sda_io_i_1 1 0 5 NJ 2030 NJ 2030 NJ 2030 NJ 2030 NJ
+preplace netloc avm_fifo_0_s_avm_readdata_o 1 6 1 3230 340n
+preplace netloc avm_fifo_0_s_avm_readdatavalid_o 1 6 1 3200 360n
+preplace netloc avm_fifo_0_s_avm_waitrequest_o 1 6 1 3210 320n
+preplace netloc cdc_pulse_0_dst_pulse_o 1 5 2 2420 1150 3150
+preplace netloc clk_i_1 1 0 9 20 1590 310 1800 650J 1790 NJ 1790 1750 1310 2280J 1850 2950J 1860 NJ 1860 4850
+preplace netloc clk_m2m_0_audio_clk_o 1 2 7 710J 1800 NJ 1800 1790J 1810 2210J 1920 NJ 1920 4020 950 NJ
+preplace netloc clk_m2m_0_audio_rst_o 1 2 7 NJ 1710 NJ 1710 1760J 1650 2250J 1880 NJ 1880 NJ 1880 4840
+preplace netloc clk_m2m_0_hr_clk_del_o 1 2 1 600 1340n
+preplace netloc clk_m2m_0_hr_clk_o 1 2 8 640 1660 1130 1480 NJ 1480 2410 1640 2970J 1690 3810J 1810 4960 1720 5730J
+preplace netloc clk_m2m_0_hr_delay_refclk_o 1 2 1 610 1360n
+preplace netloc clk_m2m_0_hr_rst_o 1 2 8 660 1670 1160 1490 NJ 1490 2390 1810 3000J 1820 NJ 1820 4970 1730 5740J
+preplace netloc clk_m2m_0_qnice_clk_o 1 2 8 630J 1650 NJ 1650 1710 1510 2380 790 3040 2080 NJ 2080 5270 2530 5810J
+preplace netloc clk_m2m_0_qnice_rst_o 1 2 8 620J 1640 1230J 1570 1730J 1520 2340 1800 3130 2090 NJ 2090 5280 2540 5870J
+preplace netloc clk_m2m_0_sys_pps_o 1 2 7 NJ 1730 NJ 1730 1740 1320 2270J 1860 2910J 1870 NJ 1870 4600
+preplace netloc clock_counter_0_cnt_o 1 6 1 2980 1370n
+preplace netloc fpga_scl_io_i_1 1 0 5 NJ 2010 NJ 2010 NJ 2010 NJ 2010 NJ
+preplace netloc fpga_sda_io_i_1 1 0 5 NJ 2130 NJ 2130 NJ 2130 NJ 2130 NJ
+preplace netloc grove_scl_io_i_1 1 0 5 NJ 1990 NJ 1990 NJ 1990 NJ 1990 NJ
+preplace netloc grove_sda_io_i_1 1 0 5 NJ 2110 NJ 2110 NJ 2110 NJ 2110 NJ
+preplace netloc hdmi_scl_io_i_1 1 0 5 NJ 1950 NJ 1950 NJ 1950 NJ 1950 NJ
+preplace netloc hdmi_sda_io_i_1 1 0 5 NJ 2070 NJ 2070 NJ 2070 NJ 2070 NJ
+preplace netloc hr2qnice_src_data_logic_src_data 1 5 1 N 1590
+preplace netloc hr_d_io_i_1 1 0 3 NJ 1520 320J 1510 650J
+preplace netloc hr_rwds_io_i_1 1 0 3 NJ 1500 NJ 1500 670J
+preplace netloc hyperram_0_avm_readdata_o 1 3 6 1230 1360 1710J 1280 2310J 1820 2990J 1830 NJ 1830 5200
+preplace netloc hyperram_0_avm_readdatavalid_o 1 3 6 1200 1370 1720J 1290 2300J 1830 2980J 1840 NJ 1840 5160
+preplace netloc hyperram_0_avm_waitrequest_o 1 3 6 1220 1380 1730J 1300 2290J 1840 2970J 1850 NJ 1850 4700
+preplace netloc hyperram_0_count_long_o 1 3 2 1210 1580 NJ
+preplace netloc hyperram_0_count_short_o 1 3 2 NJ 1400 1660
+preplace netloc hyperram_0_hr_ck_o 1 3 7 1180J 1840 NJ 1840 2180J 1950 2910J 2050 3830J 2060 NJ 2060 5720J
+preplace netloc hyperram_0_hr_csn_o 1 3 7 1090J 1850 NJ 1850 2170J 1960 2890J 2060 3800J 2070 NJ 2070 5700J
+preplace netloc hyperram_0_hr_resetn_o 1 3 7 1150J 2310 NJ 2310 NJ 2310 3320J 2260 3820J 2250 4690J 2510 5710J
+preplace netloc hyperram_0_hr_rwds_oe_n_o 1 3 4 NJ 1500 NJ 1500 2260J 1870 2900
+preplace netloc hyperram_0_hr_rwds_out_o 1 3 7 1110J 2320 NJ 2320 NJ 2320 3330J 2270 4140J 2260 4680J 2520 5740J
+preplace netloc i2c_scl_io_i_1 1 0 5 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ
+preplace netloc i2c_sda_io_i_1 1 0 5 NJ 2090 NJ 2090 NJ 2090 NJ 2090 NJ
+preplace netloc joy_1_down_n_i_1 1 0 9 NJ 2940 NJ 2940 NJ 2940 NJ 2940 NJ 2940 NJ 2940 NJ 2940 NJ 2940 NJ
+preplace netloc joy_1_fire_n_i_1 1 0 9 NJ 3000 NJ 3000 NJ 3000 NJ 3000 NJ 3000 NJ 3000 NJ 3000 NJ 3000 NJ
+preplace netloc joy_1_left_n_i_1 1 0 9 NJ 2960 NJ 2960 NJ 2960 NJ 2960 NJ 2960 NJ 2960 NJ 2960 NJ 2960 NJ
+preplace netloc joy_1_right_n_i_1 1 0 9 NJ 2980 NJ 2980 NJ 2980 NJ 2980 NJ 2980 NJ 2980 NJ 2980 NJ 2980 NJ
+preplace netloc joy_1_up_n_i_1 1 0 9 NJ 2920 NJ 2920 NJ 2920 NJ 2920 NJ 2920 NJ 2920 NJ 2920 NJ 2920 NJ
+preplace netloc joy_2_down_n_i_1 1 0 9 NJ 3040 NJ 3040 NJ 3040 NJ 3040 NJ 3040 NJ 3040 NJ 3040 NJ 3040 NJ
+preplace netloc joy_2_fire_n_i_1 1 0 9 NJ 3100 NJ 3100 NJ 3100 NJ 3100 NJ 3100 NJ 3100 NJ 3100 NJ 3100 NJ
+preplace netloc joy_2_left_n_i_1 1 0 9 NJ 3060 NJ 3060 NJ 3060 NJ 3060 NJ 3060 NJ 3060 NJ 3060 NJ 3060 NJ
+preplace netloc joy_2_right_n_i_1 1 0 9 NJ 3080 NJ 3080 NJ 3080 NJ 3080 NJ 3080 NJ 3080 NJ 3080 NJ 3080 NJ
+preplace netloc joy_2_up_n_i_1 1 0 9 NJ 3020 NJ 3020 NJ 3020 NJ 3020 NJ 3020 NJ 3020 NJ 3020 NJ 3020 NJ
+preplace netloc kb_io2_i_1 1 0 8 20J 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 4140J
+preplace netloc main_clk_i_1 1 0 9 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 3340J 2280 3880 2820 NJ
+preplace netloc main_drive_led_col_i_1 1 0 8 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ
+preplace netloc main_drive_led_i_1 1 0 8 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ
+preplace netloc main_power_led_col_i_1 1 0 8 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ
+preplace netloc main_power_led_i_1 1 0 8 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ
+preplace netloc main_rst_i_1 1 0 9 NJ 2840 NJ 2840 NJ 2840 NJ 2840 NJ 2840 NJ 2840 NJ 2840 NJ 2840 NJ
+preplace netloc paddle_i_1 1 0 7 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ
+preplace netloc qnice_ascal_mode_i_1 1 0 7 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 3240J
+preplace netloc qnice_ascal_polyphase_i_1 1 0 7 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 3220J
+preplace netloc qnice_ascal_triplebuf_i_1 1 0 7 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 3190J
+preplace netloc qnice_audio_filter_i_1 1 0 9 NJ 2160 NJ 2160 NJ 2160 NJ 2160 1710J 2210 NJ 2210 3130J 2150 NJ 2150 5030J
+preplace netloc qnice_audio_mute_i_1 1 0 9 NJ 2180 NJ 2180 NJ 2180 NJ 2180 1690J 2220 NJ 2220 3210J 2160 NJ 2160 5180J
+preplace netloc qnice_csync_i_1 1 0 9 NJ 2220 NJ 2220 NJ 2220 NJ 2220 1660J 2240 NJ 2240 2910J 2180 NJ 2180 5040J
+preplace netloc qnice_dvi_i_1 1 0 9 NJ 2200 NJ 2200 NJ 2200 NJ 2200 1670J 2230 NJ 2230 2890J 2170 NJ 2170 5210J
+preplace netloc qnice_flip_joyports_i_1 1 0 7 NJ 1010 NJ 1010 NJ 1010 1090J 1000 NJ 1000 NJ 1000 3180J
+preplace netloc qnice_h_fp_i_1 1 6 4 3310 630 NJ 630 5090J 620 5770
+preplace netloc qnice_h_freq_i_1 1 6 4 3340 660 NJ 660 5260J 650 5820
+preplace netloc qnice_h_pixels_i_1 1 6 4 3270 590 NJ 590 4640J 580 5730
+preplace netloc qnice_h_pulse_i_1 1 6 4 3290 610 NJ 610 5070J 600 5750
+preplace netloc qnice_hdmax_i_1 1 6 4 3250 570 NJ 570 4610J 560 5690
+preplace netloc qnice_i2c_rd_data_i_1 1 6 1 3070 1340n
+preplace netloc qnice_i2c_wait_i_1 1 6 1 3100 1320n
+preplace netloc qnice_osm_cfg_dxdy_i_1 1 7 2 4120 1110 NJ
+preplace netloc qnice_osm_cfg_scaling_i_1 1 0 9 NJ 2340 NJ 2340 NJ 2340 1230J 2300 NJ 2300 NJ 2300 3310J 2220 NJ 2220 5120J
+preplace netloc qnice_ramrom_data_in_i_1 1 0 7 NJ 1030 NJ 1030 NJ 1030 1130J 1010 NJ 1010 NJ 1010 3170J
+preplace netloc qnice_ramrom_wait_i_1 1 0 7 NJ 1050 NJ 1050 NJ 1050 1160J 1020 NJ 1020 NJ 1020 3160J
+preplace netloc qnice_retro15kHz_i_1 1 0 9 20J 2250 NJ 2250 NJ 2250 NJ 2250 NJ 2250 NJ 2250 3270J 2190 NJ 2190 5020J
+preplace netloc qnice_rtc_rd_data_i_1 1 6 1 3080 1300n
+preplace netloc qnice_rtc_wait_i_1 1 6 1 3110 1280n
+preplace netloc qnice_scandoubler_i_1 1 0 9 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ 2260 NJ 2260 3290J 2200 NJ 2200 5150J
+preplace netloc qnice_v_bp_i_1 1 6 4 3350 1630 3850J 1760 4770J 1980 5720
+preplace netloc qnice_video_mode_i_1 1 0 9 NJ 1800 300J 1810 NJ 1810 NJ 1810 1780 2200 NJ 2200 2990J 2140 NJ 2140 5050
+preplace netloc qnice_vram_data_i_1 1 6 4 3330 1640 3840J 1770 4750J 1990 5690
+preplace netloc qnice_zoom_crop_i_1 1 0 9 NJ 2300 NJ 2300 NJ 2300 1220J 2280 NJ 2280 NJ 2280 3300J 2210 NJ 2210 5190J
+preplace netloc reset_manager_0_reset_core_n_o 1 1 1 N 1670
+preplace netloc reset_manager_0_reset_m2m_n_o 1 1 4 320 1790 600J 1780 NJ 1780 1770J
+preplace netloc reset_n_i_1 1 0 1 NJ 1670
+preplace netloc rtc_wrapper_logic_scl_in_i 1 5 1 2320 1410n
+preplace netloc rtc_wrapper_logic_sda_in_i 1 5 1 2330 1430n
+preplace netloc sd2_cd_i_1 1 0 7 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ
+preplace netloc sd2_miso_i_1 1 0 7 NJ 2280 NJ 2280 NJ 2280 1190J 2270 NJ 2270 NJ 2270 3020J
+preplace netloc sd_cd_i_1 1 0 7 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ
+preplace netloc sd_miso_i_1 1 0 7 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ
+preplace netloc uart_rxd_i_1 1 0 7 NJ 2320 NJ 2320 NJ 2320 1100J 2290 NJ 2290 NJ 2290 3050J
+preplace netloc vga_scl_io_i_1 1 0 5 NJ 1930 NJ 1930 NJ 1930 NJ 1930 NJ
+preplace netloc vga_sda_io_i_1 1 0 5 NJ 2050 NJ 2050 NJ 2050 NJ 2050 NJ
+preplace netloc video_blue_i_1 1 0 9 NJ 2640 NJ 2640 NJ 2640 NJ 2640 NJ 2640 NJ 2640 NJ 2640 NJ 2640 5090J
+preplace netloc video_ce_i_1 1 0 9 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 3840J 2510 4620J
+preplace netloc video_ce_ovl_i_1 1 0 9 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 3830J 2520 4650J
+preplace netloc video_clk_i_1 1 0 9 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 3800J 2530 4880J
+preplace netloc video_green_i_1 1 0 9 NJ 2660 NJ 2660 NJ 2660 NJ 2660 NJ 2660 NJ 2660 NJ 2660 NJ 2660 5080J
+preplace netloc video_hblank_i_1 1 0 9 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 5010J
+preplace netloc video_hs_i_1 1 0 9 NJ 2560 NJ 2560 NJ 2560 NJ 2560 NJ 2560 NJ 2560 NJ 2560 NJ 2560 5000J
+preplace netloc video_out_clock_0_clko 1 5 4 2230 1900 NJ 1900 NJ 1900 4630
+preplace netloc video_out_clock_0_clko_x5 1 5 4 2220J 1910 NJ 1910 NJ 1910 4690
+preplace netloc video_out_clock_0_rsto 1 5 4 2240J 1890 NJ 1890 NJ 1890 4670
+preplace netloc video_red_i_1 1 0 9 NJ 2680 NJ 2680 NJ 2680 NJ 2680 NJ 2680 NJ 2680 NJ 2680 NJ 2680 5070J
+preplace netloc video_rst_i_1 1 0 9 NJ 2580 NJ 2580 NJ 2580 NJ 2580 NJ 2580 NJ 2580 NJ 2580 NJ 2580 4660J
+preplace netloc video_vblank_i_1 1 0 9 NJ 2600 NJ 2600 NJ 2600 NJ 2600 NJ 2600 NJ 2600 NJ 2600 NJ 2600 4610J
+preplace netloc video_vs_i_1 1 0 9 NJ 2620 NJ 2620 NJ 2620 NJ 2620 NJ 2620 NJ 2620 NJ 2620 NJ 2620 5100J
+preplace netloc rtc_wrapper_0_rtc_o 1 6 1 3010 1260n
+preplace netloc rtc_wrapper_0_scl_out_o 1 6 3 2960 2230 NJ 2230 NJ
+preplace netloc rtc_wrapper_0_sda_out_o 1 6 3 2940 2240 NJ 2240 4710J
+preplace netloc M2M_Frame_rtc_wrapper_logic_fpga_sda_io 1 9 1 NJ 2130
+preplace netloc M2M_Frame_rtc_wrapper_logic_fpga_scl_io 1 9 1 NJ 2150
+preplace netloc M2M_Frame_rtc_wrapper_logic_grove_sda_io 1 9 1 NJ 2170
+preplace netloc M2M_Frame_rtc_wrapper_logic_grove_scl_io 1 9 1 NJ 2190
+preplace netloc M2M_Frame_rtc_wrapper_logic_i2c_sda_io 1 9 1 NJ 2210
+preplace netloc M2M_Frame_rtc_wrapper_logic_i2c_scl_io 1 9 1 NJ 2230
+preplace netloc M2M_Frame_rtc_wrapper_logic_hdmi_sda_io 1 9 1 NJ 2250
+preplace netloc M2M_Frame_rtc_wrapper_logic_hdmi_scl_io 1 9 1 NJ 2270
+preplace netloc M2M_Frame_rtc_wrapper_logic_vga_sda_io 1 9 1 NJ 2290
+preplace netloc M2M_Frame_rtc_wrapper_logic_vga_scl_io 1 9 1 NJ 2310
+preplace netloc M2M_Frame_rtc_wrapper_logic_audio_sda_io 1 9 1 NJ 2330
+preplace netloc M2M_Frame_rtc_wrapper_logic_audio_scl_io 1 9 1 NJ 2350
+preplace netloc avm_arbit_general_logic_s_avm_write_i 1 3 3 1220 580 NJ 580 2220
+preplace netloc hr_core_write_i_1 1 0 5 NJ 110 NJ 110 NJ 110 NJ 110 NJ
+preplace netloc avm_fifo_0_m_avm_write_o 1 4 3 1800 600 2220J 590 2890
+preplace netloc hr_core_read_i_1 1 0 5 NJ 170 NJ 170 NJ 170 NJ 170 NJ
+preplace netloc avm_arbit_general_logic_s_avm_read_i 1 3 3 1210 570 NJ 570 2200
+preplace netloc avm_fifo_0_m_avm_read_o 1 4 3 1730 650 2270J 640 2880
+preplace netloc avm_arbit_general_logic_s_avm_address_i 1 3 3 1150 540 NJ 540 2170
+preplace netloc hr_core_address_i_1 1 0 5 NJ 230 NJ 230 NJ 230 NJ 230 NJ
+preplace netloc avm_fifo_0_m_avm_address_o 1 4 3 1760 10 NJ 10 3020
+preplace netloc avm_arbit_general_logic_s_avm_writedata_i 1 3 3 1230 590 NJ 590 2210
+preplace netloc hr_core_writedata_i_1 1 0 5 NJ 290 NJ 290 NJ 290 NJ 290 NJ
+preplace netloc avm_fifo_0_m_avm_writedata_o 1 4 3 1710 660 NJ 660 2870
+preplace netloc avm_arbit_general_logic_s_avm_byteenable_i 1 3 3 1200 560 NJ 560 2190
+preplace netloc hr_core_byteenable_i_1 1 0 5 NJ 350 NJ 350 NJ 350 NJ 350 NJ
+preplace netloc avm_fifo_0_m_avm_byteenable_o 1 4 3 1790 30 NJ 30 2900
+preplace netloc avm_arbit_general_logic_s_avm_burstcount_i 1 3 3 1190 550 NJ 550 2160
+preplace netloc hr_core_burstcount_i_1 1 0 5 NJ 410 NJ 410 NJ 410 NJ 410 NJ
+preplace netloc avm_fifo_0_m_avm_burstcount_o 1 4 3 1770 20 NJ 20 3010
+preplace netloc avm_arbit_general_0_s_avm_readdata_o 1 4 1 1650 450n
+preplace netloc avm_arbit_general_logic_hr_qnice_readdata 1 5 1 2400 310n
+preplace netloc avm_arbit_general_0_s_avm_readdatavalid_o 1 4 1 1670 470n
+preplace netloc avm_arbit_general_logic_hr_core_readdata_o 1 5 5 2340J 180 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc avm_arbit_general_logic_hr_core_readdatavalid_o 1 5 5 2370J 1030 3140J 1610 3880J 1730 4790J 1960 5740J
+preplace netloc avm_arbit_general_logic_hr_qnice_readdatavalid 1 5 1 2360 370n
+preplace netloc avm_arbit_general_0_s_avm_waitrequest_o 1 4 1 1680 490n
+preplace netloc avm_arbit_general_logic_hr_core_waitrequest_o 1 5 5 2300J 1040 3120J 1620 3870J 1750 4780J 1970 5730J
+preplace netloc avm_arbit_general_logic_hr_qnice_waitrequest 1 5 1 2350 430n
+preplace netloc avm_arbit_general_0_m_avm_write_o 1 2 3 700 1250 1210J 1340 1700
+preplace netloc M2M_AV_Pipeline_hr_write_o 1 4 6 1700 670 NJ 670 NJ 670 NJ 670 5270J 660 5830
+preplace netloc avm_arbit_general_0_m_avm_read_o 1 2 3 710 1260 1190J 1350 1660
+preplace netloc M2M_AV_Pipeline_hr_read_o 1 4 6 1740 640 2260J 630 3130J 550 NJ 550 NJ 550 5840
+preplace netloc avm_arbit_general_0_m_avm_address_o 1 2 3 710 1600 1140J 1440 1690
+preplace netloc M2M_AV_Pipeline_hr_address_o 1 4 6 1780 610 2230J 600 3020J 520 NJ 520 NJ 520 5850
+preplace netloc avm_arbit_general_0_m_avm_writedata_o 1 2 3 700 1610 1170J 1450 1680
+preplace netloc M2M_AV_Pipeline_hr_writedata_o 1 4 6 1690 680 NJ 680 NJ 680 NJ 680 5280J 670 5710
+preplace netloc avm_arbit_general_0_m_avm_byteenable_o 1 2 3 690 1620 1190J 1460 1670
+preplace netloc M2M_AV_Pipeline_hr_byteenable_o 1 4 6 1760 620 2240J 610 3040J 530 NJ 530 NJ 530 5700
+preplace netloc avm_arbit_general_0_m_avm_burstcount_o 1 2 3 680 1630 1200J 1470 1650
+preplace netloc M2M_AV_Pipeline_hr_burstcount_o 1 4 6 1750 630 2250J 620 3050J 540 NJ 540 NJ 540 5780
+preplace netloc M2M_Qnice_Wrapper_qnice_vram_attr_we_o 1 7 1 3920 1180n
+preplace netloc M2M_Qnice_Wrapper_qnice_vram_we_o 1 7 1 3930 1160n
+preplace netloc M2M_AV_Pipeline_Logic_Model_qnice_wren_i 1 8 1 4900 1450n
+preplace netloc M2M_AV_Pipeline_Logic_Model_qnice_byteenable_i 1 8 1 4920 1470n
+preplace netloc MeM_Framework_i_qnice2main_main_flip_joyports 1 8 1 4760 1330n
+preplace netloc MeM_Framework_i_qnice2main_main_csr_joy1_on 1 8 1 4740 1350n
+preplace netloc MeM_Framework_i_qnice2main_main_csr_joy2_on 1 8 1 4730 1370n
+preplace netloc MeM_Framework_i_qnice2main_main_osm_control_m_o 1 8 2 4940J 1870 NJ
+preplace netloc MeM_Framework_i_qnice2main_main_pot1_y_o 1 8 2 4910J 1880 5870J
+preplace netloc MeM_Framework_i_qnice2main_main_pot2_x_o 1 8 2 4890J 1890 5860J
+preplace netloc MeM_Framework_i_qnice2main_main_pot2_y_o 1 8 2 4870J 1900 5840J
+preplace netloc MeM_Framework_i_qnice2main_main_pot1_x_o 1 8 2 4860J 1910 5820J
+preplace netloc MeM_Framework_i_qnice2main_main_qnice_gp_reg_o 1 8 2 4830J 1920 5800J
+preplace netloc hyperram_0_hr_dq_out_o 1 3 6 1120J 2140 1750J 2180 NJ 2180 2900J 2120 NJ 2120 4720
+preplace netloc hyperram_0_hr_dq_oe_n_o 1 3 6 1100J 2150 1730J 2190 NJ 2190 2980J 2130 NJ 2130 4700
+preplace netloc hr_d_io_logic_model_hr_d_io 1 9 1 NJ 2450
+preplace netloc debouncer_0_dbnce_joy1_up_n 1 9 1 NJ 2870
+preplace netloc debouncer_0_dbnce_joy1_left_n 1 9 1 NJ 2910
+preplace netloc debouncer_0_dbnce_joy1_right_n 1 9 1 NJ 2930
+preplace netloc debouncer_0_dbnce_joy1_fire_n 1 9 1 NJ 2950
+preplace netloc debouncer_0_dbnce_joy1_down_n 1 9 1 NJ 2890
+preplace netloc debouncer_0_dbnce_joy2_up_n 1 9 1 NJ 2970
+preplace netloc debouncer_0_dbnce_joy2_down_n 1 9 1 NJ 2990
+preplace netloc debouncer_0_dbnce_joy2_left_n 1 9 1 NJ 3010
+preplace netloc debouncer_0_dbnce_joy2_right_n 1 9 1 NJ 3030
+preplace netloc debouncer_0_dbnce_joy2_fire_n 1 9 1 NJ 3050
+preplace netloc main_joy1_down_n_i_1 1 0 10 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ 2700 NJ
+preplace netloc main_joy1_fire_n_i_1 1 0 10 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ 2720 NJ
+preplace netloc main_joy1_left_n_i_1 1 0 10 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ 2740 NJ
+preplace netloc main_joy1_right_n_i_1 1 0 10 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ 2760 NJ
+preplace netloc main_joy1_up_n_i_1 1 0 10 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ
+preplace netloc main_joy2_down_n_i_1 1 0 10 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ
+preplace netloc main_joy2_fire_n_i_1 1 0 10 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ 3200 NJ
+preplace netloc main_joy2_left_n_i_1 1 0 10 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ 3220 NJ
+preplace netloc main_joy2_right_n_i_1 1 0 10 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ 3240 NJ
+preplace netloc main_joy2_up_n_i_1 1 0 10 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ 3260 NJ
+preplace netloc MeM_Framework_i_qnice2main_main_csr_keyboard_on 1 7 2 4180 1800 4590
+preplace netloc M2M_Keyboard_qnice_keys_n_o 1 7 2 4180 1780 4580
+preplace netloc main_audio_l_i_1 1 0 7 NJ 1820 NJ 1820 NJ 1820 NJ 1820 NJ 1820 2200J 1930 2930J
+preplace netloc main_audio_r_i_1 1 0 7 NJ 1840 NJ 1840 NJ 1840 1130J 1830 NJ 1830 2190J 1940 2920J
+preplace netloc src_data_i_1 1 7 1 N 1990
+preplace netloc MeM_Framework_i_qnice2main_main_qnice_pause_o 1 8 2 4820J 1930 5780J
+preplace netloc MeM_Framework_i_qnice2main_main_qnice_reset_o 1 8 2 4810J 1940 5760J
+preplace netloc M2M_Framework_i_sys2main_main_reset_core_o 1 9 1 NJ 3320
+preplace netloc M2M_Framework_i_sys2main_main_reset_m2m_o 1 9 1 NJ 3340
+preplace netloc MeM_Framework_i_qnice2main_main_rtc_o 1 8 2 4800J 1950 5750J
+preplace netloc qnice_csr_reset_1 1 7 1 4040 1020n
+preplace netloc M2M_Qnice_Wrapper_qnice_csr_pause_o 1 7 1 4030 1040n
+preplace netloc qnice_csr_keyboard_on_1 1 7 1 4010 1060n
+preplace netloc M2M_Qnice_Wrapper_qnice_csr_joy1_on_o 1 7 1 4000 1080n
+preplace netloc M2M_Qnice_Wrapper_qnice_csr_joy2_on_o 1 7 1 3990 1100n
+preplace netloc M2M_Qnice_Wrapper_qnice_pot1_x_n_o 1 7 1 3960 1200n
+preplace netloc M2M_Qnice_Wrapper_qnice_pot1_y_n_o 1 7 1 3940 1220n
+preplace netloc M2M_Qnice_Wrapper_qnice_pot2_x_n_o 1 7 1 3910 1240n
+preplace netloc M2M_Qnice_Wrapper_qnice_pot2_y_n_o 1 7 1 3900 1260n
+preplace netloc Constants_CORE_CLK_SPEED 1 7 1 NJ 2340
+levelinfo -pg 1 0 160 460 900 1440 1980 2670 3570 4380 5500 5890
+pagesize -pg 1 -db -bbox -sgen -250 0 6150 3390
+"
+}
+0

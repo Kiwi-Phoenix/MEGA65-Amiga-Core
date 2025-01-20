@@ -1,0 +1,25 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1371,-461",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"hr_d_gen : for i in 0 to 7 generate
+      hr_d_io(i) <= hr_dq_out(i) when hr_dq_oe_n(i) = '0' else 'Z';
+   end generate hr_d_gen;",
+   "commentid":"comment_0|",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace portBus hr_d_io -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus hr_dq_out -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace portBus hr_dq_oe_n -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace cgraphic comment_0 place left -431 -69 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -190 0 140 60
+"
+}
+
+{
+   "/comment_25":"comment_0"
+}

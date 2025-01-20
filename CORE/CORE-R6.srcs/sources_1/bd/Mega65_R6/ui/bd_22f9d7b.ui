@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1156,-205",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_rx -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port port-id_tx -pg 1 -lvl 2 -x 330 -y 350 -defaultsOSRD
+preplace port port-id_rts -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_cts -pg 1 -lvl 2 -x 330 -y 40 -defaultsOSRD
+preplace port port-id_uart_en -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_uart_we -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_uart_cpu_ws -pg 1 -lvl 2 -x 330 -y 60 -defaultsOSRD
+preplace portBus uart_reg -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus cpu_data_in -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus cpu_data_out -pg 1 -lvl 2 -x 330 -y 20 -defaultsOSRD
+preplace inst basic_uart_0 -pg 1 -lvl 1 -x 170 -y 320 -defaultsOSRD
+preplace inst ring_buffer_0 -pg 1 -lvl 1 -x 170 -y 120 -defaultsOSRD
+preplace netloc clk_1 1 0 1 30 80n
+preplace netloc reset_1 1 0 1 20 100n
+preplace netloc rx_1 1 0 1 NJ 360
+preplace netloc basic_uart_0_tx 1 1 1 N 350
+levelinfo -pg 1 0 170 330
+pagesize -pg 1 -db -bbox -sgen -170 0 510 420
+"
+}
+

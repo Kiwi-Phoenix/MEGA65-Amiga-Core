@@ -1,0 +1,96 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1316,-64",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_video_clk_i -pg 1 -lvl 0 -x -30 -y 620 -defaultsOSRD
+preplace port port-id_video_rst_i -pg 1 -lvl 0 -x -30 -y 680 -defaultsOSRD
+preplace port port-id_video_ce_i -pg 1 -lvl 0 -x -30 -y 580 -defaultsOSRD
+preplace port port-id_video_ce_ovl_i -pg 1 -lvl 0 -x -30 -y 600 -defaultsOSRD
+preplace port port-id_video_vs_i -pg 1 -lvl 0 -x -30 -y 720 -defaultsOSRD
+preplace port port-id_video_hs_i -pg 1 -lvl 0 -x -30 -y 660 -defaultsOSRD
+preplace port port-id_video_hblank_i -pg 1 -lvl 0 -x -30 -y 640 -defaultsOSRD
+preplace port port-id_video_vblank_i -pg 1 -lvl 0 -x -30 -y 700 -defaultsOSRD
+preplace port port-id_audio_clk_i -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace port port-id_audio_rst_i -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace port port-id_qnice_clk_i -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace port port-id_qnice_rst_i -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
+preplace port port-id_qnice_osm_cfg_enable_i -pg 1 -lvl 0 -x -30 -y 360 -defaultsOSRD
+preplace port port-id_qnice_retro15kHz_i -pg 1 -lvl 0 -x -30 -y 420 -defaultsOSRD
+preplace port port-id_qnice_scandoubler_i -pg 1 -lvl 0 -x -30 -y 460 -defaultsOSRD
+preplace port port-id_qnice_csync_i -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace port port-id_qnice_zoom_crop_i -pg 1 -lvl 0 -x -30 -y 500 -defaultsOSRD
+preplace port port-id_qnice_audio_filter_i -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace port port-id_qnice_audio_mute_i -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace port port-id_qnice_dvi_i -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
+preplace port port-id_qnice_poly_clk_i -pg 1 -lvl 0 -x -30 -y 380 -defaultsOSRD
+preplace port port-id_qnice_poly_wr_i -pg 1 -lvl 0 -x -30 -y 400 -defaultsOSRD
+preplace port port-id_qnice_wren_i -pg 1 -lvl 0 -x -30 -y 480 -defaultsOSRD
+preplace port port-id_sys_clk_i -pg 1 -lvl 0 -x -30 -y 520 -defaultsOSRD
+preplace port port-id_sys_pps_i -pg 1 -lvl 0 -x -30 -y 540 -defaultsOSRD
+preplace port port-id_hr_clk_i -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_hr_rst_i -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace port port-id_hr_write_o -pg 1 -lvl 1 -x 10 -y 340 -defaultsOSRD
+preplace port port-id_hr_read_o -pg 1 -lvl 1 -x 10 -y 320 -defaultsOSRD
+preplace port port-id_hr_readdatavalid_i -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_hr_waitrequest_i -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace port port-id_hr_high_o -pg 1 -lvl 1 -x 10 -y 280 -defaultsOSRD
+preplace port port-id_hr_low_o -pg 1 -lvl 1 -x 10 -y 300 -defaultsOSRD
+preplace port port-id_VGA_HS -pg 1 -lvl 1 -x 10 -y 200 -defaultsOSRD
+preplace port port-id_VGA_VS -pg 1 -lvl 1 -x 10 -y 220 -defaultsOSRD
+preplace port port-id_vdac_clk -pg 1 -lvl 1 -x 10 -y 420 -defaultsOSRD
+preplace port port-id_vdac_sync_n -pg 1 -lvl 1 -x 10 -y 440 -defaultsOSRD
+preplace port port-id_vdac_blank_n -pg 1 -lvl 1 -x 10 -y 400 -defaultsOSRD
+preplace port port-id_audio_clk_o -pg 1 -lvl 1 -x 10 -y 240 -defaultsOSRD
+preplace port port-id_audio_reset_o -pg 1 -lvl 1 -x 10 -y 260 -defaultsOSRD
+preplace port port-id_hdmi_clk_i -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port port-id_hdmi_rst_i -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port port-id_tmds_clk_i -pg 1 -lvl 0 -x -30 -y 560 -defaultsOSRD
+preplace port port-id_tmds_clk_p_o -pg 1 -lvl 1 -x 10 -y 380 -defaultsOSRD
+preplace port port-id_tmds_clk_n_o -pg 1 -lvl 1 -x 10 -y 360 -defaultsOSRD
+preplace portBus video_red_i -pg 1 -lvl 0 -x -30 -y 1000 -defaultsOSRD
+preplace portBus video_green_i -pg 1 -lvl 0 -x -30 -y 980 -defaultsOSRD
+preplace portBus video_blue_i -pg 1 -lvl 0 -x -30 -y 960 -defaultsOSRD
+preplace portBus audio_left_i -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace portBus audio_right_i -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace portBus qnice_osm_cfg_scaling_i -pg 1 -lvl 0 -x -30 -y 840 -defaultsOSRD
+preplace portBus qnice_osm_cfg_xy_i -pg 1 -lvl 0 -x -30 -y 860 -defaultsOSRD
+preplace portBus qnice_osm_cfg_dxdy_i -pg 1 -lvl 0 -x -30 -y 820 -defaultsOSRD
+preplace portBus qnice_video_mode_i -pg 1 -lvl 0 -x -30 -y 940 -defaultsOSRD
+preplace portBus qnice_poly_dw_i -pg 1 -lvl 0 -x -30 -y 900 -defaultsOSRD
+preplace portBus qnice_poly_a_i -pg 1 -lvl 0 -x -30 -y 880 -defaultsOSRD
+preplace portBus qnice_ascal_mode_i -pg 1 -lvl 0 -x -30 -y 760 -defaultsOSRD
+preplace portBus qnice_hdmax_o -pg 1 -lvl 1 -x 10 -y 560 -defaultsOSRD
+preplace portBus qnice_vdmax_o -pg 1 -lvl 1 -x 10 -y 660 -defaultsOSRD
+preplace portBus qnice_h_pixels_o -pg 1 -lvl 1 -x 10 -y 520 -defaultsOSRD
+preplace portBus qnice_v_pixels_o -pg 1 -lvl 1 -x 10 -y 620 -defaultsOSRD
+preplace portBus qnice_h_pulse_o -pg 1 -lvl 1 -x 10 -y 540 -defaultsOSRD
+preplace portBus qnice_h_bp_o -pg 1 -lvl 1 -x 10 -y 460 -defaultsOSRD
+preplace portBus qnice_h_fp_o -pg 1 -lvl 1 -x 10 -y 480 -defaultsOSRD
+preplace portBus qnice_v_pulse_o -pg 1 -lvl 1 -x 10 -y 640 -defaultsOSRD
+preplace portBus qnice_v_bp_o -pg 1 -lvl 1 -x 10 -y 580 -defaultsOSRD
+preplace portBus qnice_v_fp_o -pg 1 -lvl 1 -x 10 -y 600 -defaultsOSRD
+preplace portBus qnice_h_freq_o -pg 1 -lvl 1 -x 10 -y 500 -defaultsOSRD
+preplace portBus qnice_address_i -pg 1 -lvl 0 -x -30 -y 740 -defaultsOSRD
+preplace portBus qnice_data_i -pg 1 -lvl 0 -x -30 -y 800 -defaultsOSRD
+preplace portBus qnice_byteenable_i -pg 1 -lvl 0 -x -30 -y 780 -defaultsOSRD
+preplace portBus hr_address_o -pg 1 -lvl 1 -x 10 -y 100 -defaultsOSRD
+preplace portBus hr_writedata_o -pg 1 -lvl 1 -x 10 -y 180 -defaultsOSRD
+preplace portBus hr_byteenable_o -pg 1 -lvl 1 -x 10 -y 140 -defaultsOSRD
+preplace portBus hr_burstcount_o -pg 1 -lvl 1 -x 10 -y 120 -defaultsOSRD
+preplace portBus hr_readdata_i -pg 1 -lvl 1 -x 10 -y 160 -defaultsOSRD
+preplace portBus VGA_RED -pg 1 -lvl 1 -x 10 -y 0 -defaultsOSRD
+preplace portBus audio_left_o -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus audio_right_o -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace portBus tmds_data_p_o -pg 1 -lvl 1 -x 10 -y 700 -defaultsOSRD
+preplace portBus tmds_data_n_o -pg 1 -lvl 1 -x 10 -y 680 -defaultsOSRD
+preplace portBus qnice_q_o -pg 1 -lvl 1 -x 10 -y 920 -defaultsOSRD
+preplace portBus VGA_GREEN -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace portBus VGA_BLUE -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -280 -20 220 1020
+"
+}
+

@@ -33,6 +33,8 @@ port (
 
    -- Video and audio mode control
    qnice_dvi_o             : out std_logic;              -- 0=HDMI (with sound), 1=DVI (no sound)
+   -- DJR Only std_logic and std_logic_vector are allowed for ports in current VHDL standards  
+   -- Need to find another way of gettig the outcomes required.   Causes problems when trying to build a Block diagram.
    qnice_video_mode_o      : out video_mode_type;        -- Defined in video_modes_pkg.vhd
    qnice_osm_cfg_scaling_o : out std_logic_vector(8 downto 0);
    qnice_scandoubler_o     : out std_logic;              -- 0 = no scandoubler, 1 = scandoubler
@@ -126,7 +128,10 @@ port (
    main_audio_right_o      : out signed(15 downto 0);
 
    -- M2M Keyboard interface (incl. power led and drive led)
+   -- DJR only std_logic and std_lofic_vector can be used for Ports, Integer is not support in current VHDL standards
+   -- Need to find another method to get the required outcomes.
    main_kb_key_num_i       : in  integer range 0 to 79;  -- cycles through all MEGA65 keys
+   
    main_kb_key_pressed_n_i : in  std_logic;              -- low active: debounced feedback: is kb_key_num_i pressed right now?
    main_power_led_o        : out std_logic;
    main_power_led_col_o    : out std_logic_vector(23 downto 0);
@@ -240,16 +245,16 @@ signal main_rst               : std_logic;
 ---------------------------------------------------------------------------------------------
 
 -- Democore menu items
-constant C_MENU_HDMI_16_9_50   : natural := 12;
-constant C_MENU_HDMI_16_9_60   : natural := 13;
-constant C_MENU_HDMI_4_3_50    : natural := 14;
-constant C_MENU_HDMI_5_4_50    : natural := 15;
-constant C_MENU_HDMI_640_60    : natural := 16;
-constant C_MENU_HDMI_720_5994  : natural := 17;
-constant C_MENU_SVGA_800_60    : natural := 18;
-constant C_MENU_CRT_EMULATION  : natural := 30;
-constant C_MENU_HDMI_ZOOM      : natural := 31;
-constant C_MENU_IMPROVE_AUDIO  : natural := 32;
+--constant C_MENU_HDMI_16_9_50   : natural := 12;
+--constant C_MENU_HDMI_16_9_60   : natural := 13;
+--constant C_MENU_HDMI_4_3_50    : natural := 14;
+--constant C_MENU_HDMI_5_4_50    : natural := 15;
+--constant C_MENU_HDMI_640_60    : natural := 16;
+--constant C_MENU_HDMI_720_5994  : natural := 17;
+--constant C_MENU_SVGA_800_60    : natural := 18;
+--constant C_MENU_CRT_EMULATION  : natural := 30;
+--constant C_MENU_HDMI_ZOOM      : natural := 31;
+--constant C_MENU_IMPROVE_AUDIO  : natural := 32;
 
 -- QNICE clock domain
 signal qnice_demo_vd_data_o   : std_logic_vector(15 downto 0);
@@ -310,11 +315,11 @@ begin
 
 
    -- MMCME2_ADV clock generators:
-   --   @TODO YOURCORE:       54 MHz
+   --   Amiga Clocks
    clk_gen : entity work.clk
       port map (
          sys_clk_i         => clk_i,           -- expects 100 MHz
-         main_clk_o        => main_clk,        -- CORE's 54 MHz clock
+         main_clk_o        => main_clk,        -- CORE's 28.37516 MHz clock (expecct by the MiSTer Amiga Core (??)
          main_rst_o        => main_rst         -- CORE's reset, synchronized
       ); -- clk_gen
 
@@ -330,11 +335,15 @@ begin
    -- MEGA65's power led: By default, it is on and glows green when the MEGA65 is powered on.
    -- We switch it to blue when a long reset is detected and as long as the user keeps pressing the preset button
    main_power_led_o     <= '1';
-   main_power_led_col_o <= x"0000FF" when main_reset_m2m_i else x"00FF00";
+   -- DJR In current VDHL expecting a Boolean type for main_reset_m2m_i, however is required to be 
+   -- std_logic type for port map.  Simply need to test if it = '1'.
+   --main_power_led_col_o <= x"0000FF" when main_reset_m2m_i else x"00FF00";
+   main_power_led_col_o <= x"0000FF" when main_reset_m2m_i = '1' else x"00FF00";
 
    -- main.vhd contains the actual MiSTer core
    i_main : entity work.main
-      generic map (
+      generic map (         
+         G_BOARD              => G_BOARD,           -- Which platform are we running on. 
          G_VDNUM              => C_VDNUM
       )
       port map (

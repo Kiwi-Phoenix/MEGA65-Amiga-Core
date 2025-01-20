@@ -1,0 +1,2746 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jan 18 13:44:37 2025" VIVADOVERSION="2024.2.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a200t" NAME="Mega65_R6" PACKAGE="fbg484" SPEEDGRADE="-2"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="audio_bick_o" SIGIS="data" SIGNAME="audio_0_audio_bick_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="audio_0" PORT="audio_bick_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="audio_i2cfil_o" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="audio_lrclk_o" SIGIS="clk" SIGNAME="audio_0_audio_lrclk_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="audio_0" PORT="audio_lrclk_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="audio_mclk_o" SIGIS="clk" SIGNAME="audio_0_audio_mclk_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="audio_0" PORT="audio_mclk_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="audio_pdn_n_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="audio_0_audio_pdn_n_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="audio_0" PORT="audio_pdn_n_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="audio_scl_io" SIGIS="data"/>
+    <PORT DIR="IO" NAME="audio_sda_io" SIGIS="data"/>
+    <PORT DIR="O" NAME="audio_sdti_o" SIGIS="data" SIGNAME="audio_0_audio_sdti_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="audio_0" PORT="audio_sdti_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="15" NAME="cart_a_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_addr_en_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_ba_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_ctrl_dir_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_ctrl_en_o" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="7" NAME="cart_d_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_data_dir_o" SIGIS="data"/>
+    <PORT DIR="O" NAME="cart_data_en_o" SIGIS="data"/>
+    <PORT DIR="I" NAME="cart_dma_i" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="cart_dotclock_o" SIGIS="clk"/>
+    <PORT DIR="O" NAME="cart_en_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_exrom_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_exrom_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_game_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_game_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_haddr_dir_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_io1_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_io2_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_irq_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_irq_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_laddr_dir_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_nmi_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_nmi_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_phi2_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_reset_io" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+    <PORT DIR="O" NAME="cart_reset_oe_n_o" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+    <PORT DIR="IO" NAME="cart_romh_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_romh_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_roml_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="cart_roml_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="cart_rw_io" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_i" SIGIS="clk" SIGNAME="External_Ports_clk_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="sys_clk_i"/>
+        <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="sys_clk_i"/>
+        <CONNECTION INSTANCE="M2M_Framework_video_out_clock_0" PORT="clki"/>
+        <CONNECTION INSTANCE="M2M_Framework_reset_manager_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="M2M_Framework_cdc_pulse_0" PORT="src_clk_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="dbg_io_11" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="eth_clock_o" SIGIS="clk"/>
+    <PORT DIR="O" NAME="eth_led2_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="eth_mdc_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="eth_mdio_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="eth_reset_o" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+    <PORT DIR="I" LEFT="1" NAME="eth_rxd_i" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="eth_rxdv_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="eth_rxer_i" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="eth_txd_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="eth_txen_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_density_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="f_diskchanged_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="f_index_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_motora_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_motorb_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="f_rdata_i" SIGIS="data"/>
+    <PORT DIR="O" NAME="f_selecta_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_selectb_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_side1_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_step_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_stepdir_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="f_track0_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_wdata_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="f_wgate_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="f_writeprotect_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="fa_down_n_i" SIGIS="undef" SIGNAME="External_Ports_fa_down_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_1_down_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fa_down_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_down_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy1_down_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fa_fire_n_i" SIGIS="undef" SIGNAME="External_Ports_fa_fire_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_1_fire_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fa_fire_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_fire_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy1_fire_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fa_left_n_i" SIGIS="undef" SIGNAME="External_Ports_fa_left_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_1_left_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fa_left_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_left_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy1_left_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fa_right_n_i" SIGIS="undef" SIGNAME="External_Ports_fa_right_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_1_right_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fa_right_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_right_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy1_right_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fa_up_n_i" SIGIS="undef" SIGNAME="External_Ports_fa_up_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_1_up_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fa_up_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_up_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy1_up_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fb_down_n_i" SIGIS="undef" SIGNAME="External_Ports_fb_down_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_2_down_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fb_down_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_down_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy2_down_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fb_fire_n_i" SIGIS="undef" SIGNAME="External_Ports_fb_fire_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_2_fire_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fb_fire_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_fire_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy2_fire_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fb_left_n_i" SIGIS="undef" SIGNAME="External_Ports_fb_left_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_2_left_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fb_left_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_left_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy2_left_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fb_right_n_i" SIGIS="undef" SIGNAME="External_Ports_fb_right_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_2_right_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fb_right_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_right_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy2_right_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="fb_up_n_i" SIGIS="undef" SIGNAME="External_Ports_fb_up_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="joy_2_up_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="fb_up_n_o" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_up_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_debouncer_0" PORT="dbnce_joy2_up_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fpga_scl_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="fpga_sda_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="grove_scl_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="grove_sda_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_hiz_en_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="hdmi_hpd_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_ls_oe_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="hdmi_scl_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="hdmi_sda_io" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hr_clk_p_o" SIGIS="clk" SIGNAME="M2M_Framework_hyperram_0_hr_ck_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="hr_ck_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hr_cs0_o" SIGIS="undef" SIGNAME="M2M_Framework_hyperram_0_hr_csn_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="hr_csn_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="7" NAME="hr_d_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hr_reset_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_hyperram_0_hr_resetn_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="hr_resetn_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="hr_rwds_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="i2c_scl_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="i2c_sda_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="iec_atn_n_o" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="iec_clk_en_n_o" SIGIS="clk"/>
+    <PORT DIR="I" NAME="iec_clk_n_i" POLARITY="ACTIVE_LOW" SIGIS="ce"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="iec_clk_n_o" SIGIS="clk"/>
+    <PORT DIR="O" NAME="iec_data_en_n_o" SIGIS="data"/>
+    <PORT DIR="I" NAME="iec_data_n_i" SIGIS="data"/>
+    <PORT DIR="O" NAME="iec_data_n_o" SIGIS="data"/>
+    <PORT DIR="O" NAME="iec_reset_n_o" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+    <PORT DIR="O" NAME="iec_srq_en_n_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="iec_srq_n_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="iec_srq_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="joystick_5v_disable_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="joystick_5v_powergood_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_io0_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_io1_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="kb_io2_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_jtagen_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_tck_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_tdi_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="kb_tdo_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="kb_tms_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="led_g_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="led_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="led_r_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="3" NAME="p1hi_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="3" NAME="p1lo_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="3" NAME="p2hi_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="3" NAME="p2lo_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="paddle_drain_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0_pot_drain">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="pot_drain"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="paddle_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_paddle_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="fa_potx"/>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="fa_poty"/>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="fb_potx"/>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="fb_poty"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pmod1_en_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="pmod1_flag_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="pmod2_en_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="pmod2_flag_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="qspicsn_o" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="3" NAME="qspidb_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="reset_button_i" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_button_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_reset_manager_0" PORT="RESET_N"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd2_cd_i" SIGIS="undef" SIGNAME="External_Ports_sd2_cd_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_tray_detect_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="sd2_clk_o" SIGIS="clk" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_clk_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_tray_clk_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd2_d1_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="sd2_d2_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="sd2_miso_i" SIGIS="undef" SIGNAME="External_Ports_sd2_miso_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_tray_miso_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd2_mosi_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_mosi_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_tray_mosi_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd2_reset_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_reset_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_tray_reset_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd2_wp_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="sd_cd_i" SIGIS="undef" SIGNAME="External_Ports_sd_cd_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_back_detect_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="sd_clk_o" SIGIS="clk" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_clk_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_back_clk_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd_d1_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="sd_d2_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="sd_miso_i" SIGIS="undef" SIGNAME="External_Ports_sd_miso_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_back_miso_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd_mosi_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_mosi_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_back_mosi_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd_reset_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_reset_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sd_back_reset_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="12" NAME="sdram_a_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="sdram_ba_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_cas_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_cke_o" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="sdram_clk_o" SIGIS="clk"/>
+    <PORT DIR="O" NAME="sdram_cs_n_o" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="15" NAME="sdram_dq_io" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_dqmh_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_dqml_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_ras_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="sdram_we_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="tmds_clk_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="tmds_clk_p_o" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="2" NAME="tmds_data_n_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="2" NAME="tmds_data_p_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="uart_rxd_i" SIGIS="undef" SIGNAME="External_Ports_uart_rxd_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0" PORT="rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="uart_txd_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0_tx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0" PORT="tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vdac_blank_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="vdac_clk_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="vdac_psave_n_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="vdac_sync_n_o" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="vga_blue_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="vga_green_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="vga_hs_o" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="vga_red_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="vga_scl_io" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="vga_sda_io" SIGIS="undef"/>
+    <PORT DIR="O" NAME="vga_vs_o" SIGIS="undef"/>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Keyboard/M2M_Keyb_Matrix_to_Keynum/current_kmm" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyb_Matrix_to_Keynum_current_kmm" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="kb_matrix_ram" VLNV="xilinx.com:module_ref:kb_matrix_ram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_kb_matrix_ram_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ClkA" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressa" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="dia" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Keyboard_M2M_Keyboard_to_Matrix_kb_matrix_ram_0_dob">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyboard_to_Matrix_kb_matrix_ram_0" PORT="dob"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dob" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="wea" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Keyboard/M2M_Keyb_Matrix_to_Keynum/debounce_kmm" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyb_Matrix_to_Keynum_debounce_kmm" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="kb_matrix_ram" VLNV="xilinx.com:module_ref:kb_matrix_ram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_kb_matrix_ram_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ClkA" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressa" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="dia" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="dob" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="wea" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Keyboard/M2M_Keyb_Matrix_to_Keynum/last_kmm" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyb_Matrix_to_Keynum_last_kmm" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="kb_matrix_ram" VLNV="xilinx.com:module_ref:kb_matrix_ram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_kb_matrix_ram_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ClkA" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressa" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="dia" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="dob" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="wea" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Keyboard/M2M_Keyboard_to_Matrix/kb_matrix_ram_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyboard_to_Matrix_kb_matrix_ram_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="kb_matrix_ram" VLNV="xilinx.com:module_ref:kb_matrix_ram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_kb_matrix_ram_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ClkA" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressa" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addressb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="dia" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="dob" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Keyboard_M2M_Keyboard_to_Matrix_kb_matrix_ram_0_dob">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Keyboard_M2M_Keyb_Matrix_to_Keynum_current_kmm" PORT="dia"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="wea" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/BRAM_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_BRAM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BRAM" VLNV="xilinx.com:module_ref:BRAM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_BRAM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="14" NAME="address" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="busy" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ce" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="we" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/BROM_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_BROM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BROM" VLNV="xilinx.com:module_ref:BROM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FILE_NAME" VALUE="0"/>
+        <PARAMETER NAME="ROM_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_BROM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="14" NAME="address" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="busy" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ce" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/EAE_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_EAE_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EAE" VLNV="xilinx.com:module_ref:EAE:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_EAE_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="we" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/M2M_QNICE_CPU/alu_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_CPU_alu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alu" VLNV="xilinx.com:module_ref:alu:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_alu_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="C" SIGIS="undef"/>
+        <PORT DIR="O" NAME="N" SIGIS="undef"/>
+        <PORT DIR="O" NAME="V" SIGIS="undef"/>
+        <PORT DIR="O" NAME="X" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Z" SIGIS="undef"/>
+        <PORT DIR="I" NAME="c_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="input1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="input2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="opcode" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="result" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="x_in" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/M2M_QNICE_CPU/register_file_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_CPU_register_file_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="register_file" VLNV="xilinx.com:module_ref:register_file:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_register_file_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="PC" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="SP" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="SR" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="read_addr1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="read_addr2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="read_data1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="read_data2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="sel_rbank" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="write_addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="write_en" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/M2M_QNICE_SOC_BUS_UART/basic_uart_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="basic_uart" VLNV="xilinx.com:module_ref:basic_uart:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_basic_uart_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="rx" SIGIS="undef" SIGNAME="External_Ports_uart_rxd_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_rxd_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="rx_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rx_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tx" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0_tx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_txd_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="tx_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="tx_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tx_ready" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/M2M_QNICE_SOC_BUS_UART/ring_buffer_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_ring_buffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ring_buffer" VLNV="xilinx.com:module_ref:ring_buffer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="RAM_DEPTH" VALUE="0"/>
+        <PARAMETER NAME="RAM_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_ring_buffer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="empty" SIGIS="undef"/>
+        <PORT DIR="O" NAME="empty_next" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="fill_count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="full" SIGIS="undef"/>
+        <PORT DIR="O" NAME="full_next" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="rd_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rd_en" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rd_valid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" LEFT="0" NAME="wr_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wr_en" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/cycle_counter_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_cycle_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cycle_counter" VLNV="xilinx.com:module_ref:cycle_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_cycle_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en" SIGIS="undef"/>
+        <PORT DIR="I" NAME="impulse" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="we" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/mmio_mux_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_mmio_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mmio_mux" VLNV="xilinx.com:module_ref:mmio_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="GD_HRAM" VALUE="false"/>
+        <PARAMETER NAME="GD_PORE" VALUE="true"/>
+        <PARAMETER NAME="GD_SWITCHES" VALUE="true"/>
+        <PARAMETER NAME="GD_TIL" VALUE="true"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_mmio_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="HW_RESET" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_clk_m2m_0_qnice_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="cpu_halt" SIGIS="undef"/>
+        <PORT DIR="I" NAME="cpu_igrant_n" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cpu_wait_for_data" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cyc_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cyc_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cyc_we" SIGIS="undef"/>
+        <PORT DIR="I" NAME="data_dir" SIGIS="undef"/>
+        <PORT DIR="I" NAME="data_valid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="eae_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="eae_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="eae_we" SIGIS="undef"/>
+        <PORT DIR="I" NAME="hram_cpu_ws" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hram_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="hram_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hram_we" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ins_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="ins_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ins_we" SIGIS="undef"/>
+        <PORT DIR="O" NAME="kbd_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="kbd_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="kbd_we" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pore_rom_busy" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pore_rom_enable" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ram_busy" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ram_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="reset_post_pore" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" NAME="reset_pre_pore" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="rom_busy" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rom_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sd_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="sd_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sd_we" SIGIS="undef"/>
+        <PORT DIR="O" NAME="switch_reg_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="til_reg0_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="til_reg1_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tin_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="tin_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tin_we" SIGIS="undef"/>
+        <PORT DIR="I" NAME="uart_cpu_ws" SIGIS="undef"/>
+        <PORT DIR="O" NAME="uart_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="uart_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="uart_we" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vga_en" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="vga_reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vga_we" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/sdcard_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdcard_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sdcard" VLNV="xilinx.com:module_ref:sdcard:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_sdcard_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="reg" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="sd_clk" SIGIS="clk"/>
+        <PORT DIR="I" NAME="sd_miso" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sd_mosi" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sd_reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="we" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/sdmux_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sdmux" VLNV="xilinx.com:module_ref:sdmux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_sdmux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="active_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ctrl_reset_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ctrl_sd_clk_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ctrl_sd_miso_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ctrl_sd_mosi_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ctrl_sd_reset_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="detected_ext_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="detected_int_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="force_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="mode_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sd_back_clk_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_back_detect_i" SIGIS="undef" SIGNAME="External_Ports_sd_cd_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_cd_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_back_miso_i" SIGIS="undef" SIGNAME="External_Ports_sd_miso_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_miso_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_back_mosi_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_mosi_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_mosi_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_back_reset_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_back_reset_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_reset_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_tray_clk_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd2_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_tray_detect_i" SIGIS="undef" SIGNAME="External_Ports_sd2_cd_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd2_cd_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_tray_miso_i" SIGIS="undef" SIGNAME="External_Ports_sd2_miso_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd2_miso_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_tray_mosi_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_mosi_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd2_mosi_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_tray_reset_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0_sd_tray_reset_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd2_reset_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk50Mhz_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysreset_i" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/config_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_config_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="config" VLNV="xilinx.com:module_ref:config:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_config_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="27" NAME="address_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data_o" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/mouse_input_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mouse_input" VLNV="xilinx.com:module_ref:mouse_input:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_mouse_input_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="amiga_mouse_assume_a" SIGIS="undef"/>
+        <PORT DIR="I" NAME="amiga_mouse_assume_b" SIGIS="undef"/>
+        <PORT DIR="I" NAME="amiga_mouse_enable_a" SIGIS="undef"/>
+        <PORT DIR="I" NAME="amiga_mouse_enable_b" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fa_down" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fa_down_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fa_fire" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fa_left" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fa_left_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fa_potx" SIGIS="undef" SIGNAME="External_Ports_paddle_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="paddle_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fa_poty" SIGIS="undef" SIGNAME="External_Ports_paddle_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="paddle_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fa_right" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fa_right_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fa_up" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fa_up_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fb_down" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fb_down_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fb_fire" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fb_left" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fb_left_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fb_potx" SIGIS="undef" SIGNAME="External_Ports_paddle_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="paddle_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fb_poty" SIGIS="undef" SIGNAME="External_Ports_paddle_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="paddle_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fb_right" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fb_right_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="fb_up" SIGIS="undef"/>
+        <PORT DIR="O" NAME="fb_up_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="mouse_debug" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pot_drain" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0_pot_drain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="paddle_drain_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="pota_x" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="pota_y" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="potb_x" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="potb_y" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/M2M_Qnice_Wrapper/qnice2hyperram_0" HWVERSION="1.0" INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="qnice2hyperram" VLNV="xilinx.com:module_ref:qnice2hyperram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_qnice2hyperram_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m_avm_address_o" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_address_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_address_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_avm_burstcount_o" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_burstcount_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_burstcount_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_avm_byteenable_o" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_byteenable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_byteenable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_avm_read_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_read_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_read_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="m_avm_readdata_i" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_readdata_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_readdata_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_avm_readdatavalid_i" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_readdatavalid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_readdatavalid_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_avm_waitrequest_i" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_waitrequest_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_waitrequest_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_avm_write_o" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_write_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_write_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="m_avm_writedata_o" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_writedata_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_avm_writedata_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_qnice_address_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="s_qnice_byteenable_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_qnice_cs_i" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="s_qnice_readdata_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_qnice_wait_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_qnice_write_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="s_qnice_writedata_i" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/avm_arbit_general_0" HWVERSION="1.0" INSTANCE="M2M_Framework_avm_arbit_general_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="avm_arbit_general" VLNV="xilinx.com:module_ref:avm_arbit_general:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="G_ADDRESS_SIZE" VALUE="0"/>
+        <PARAMETER NAME="G_DATA_SIZE" VALUE="0"/>
+        <PARAMETER NAME="G_FREQ_HZ" VALUE="100000000"/>
+        <PARAMETER NAME="G_NUM_SLAVES" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_avm_arbit_general_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_address_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_avm_burstcount_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_byteenable_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_avm_read_o" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="m_avm_readdata_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_avm_readdatavalid_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_avm_waitrequest_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_avm_write_o" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_writedata_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_address_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_burstcount_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_byteenable_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_read_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="s_avm_readdata_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="s_avm_readdatavalid_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="s_avm_waitrequest_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_write_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_writedata_i" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/avm_fifo_0" HWVERSION="1.0" INSTANCE="M2M_Framework_avm_fifo_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="avm_fifo" VLNV="xilinx.com:module_ref:avm_fifo:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="G_ADDRESS_SIZE" VALUE="0"/>
+        <PARAMETER NAME="G_DATA_SIZE" VALUE="0"/>
+        <PARAMETER NAME="G_FILL_SIZE" VALUE="5"/>
+        <PARAMETER NAME="G_RD_DEPTH" VALUE="0"/>
+        <PARAMETER NAME="G_WR_DEPTH" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_avm_fifo_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_address_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_avm_burstcount_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_byteenable_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_avm_read_o" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="m_avm_readdata_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_avm_readdatavalid_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_avm_waitrequest_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_avm_write_o" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="m_avm_writedata_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_address_i" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_address_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_address_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_avm_burstcount_i" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_burstcount_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_burstcount_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_byteenable_i" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_byteenable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_byteenable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_avm_read_i" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_read_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_read_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="s_avm_readdata_o" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_readdata_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_readdata_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_avm_readdatavalid_o" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_readdatavalid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_readdatavalid_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_avm_waitrequest_o" SIGIS="undef" SIGNAME="M2M_Framework_avm_fifo_0_s_avm_waitrequest_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_waitrequest_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_avm_write_i" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_write_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_write_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_avm_writedata_i" RIGHT="0" SIGIS="undef" SIGNAME="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0_m_avm_writedata_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="m_avm_writedata_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/cdc_pulse_0" HWVERSION="1.0" INSTANCE="M2M_Framework_cdc_pulse_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cdc_pulse" VLNV="xilinx.com:module_ref:cdc_pulse:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_cdc_pulse_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dst_clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dst_pulse_o" SIGIS="undef" SIGNAME="M2M_Framework_cdc_pulse_0_dst_pulse_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clock_counter_0" PORT="pps_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="src_clk_i" SIGIS="undef" SIGNAME="External_Ports_clk_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="src_pulse_i" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/clk_m2m_0" HWVERSION="1.0" INSTANCE="M2M_Framework_clk_m2m_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_m2m" VLNV="xilinx.com:module_ref:clk_m2m:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_clk_m2m_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="audio_clk_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="audio_rst_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="core_rstn_i" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="M2M_Framework_reset_manager_0_reset_core_n_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_reset_manager_0" PORT="reset_core_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_clk_del_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_del_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="clk_del_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_clk_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="m_clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_avm_arbit_general_0" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_delay_refclk_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_delay_refclk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="delay_refclk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_rst_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="m_rst_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_hyperram_0" PORT="rst_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_avm_arbit_general_0" PORT="rst_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="qnice_clk_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_config_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_mouse_input_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_BROM_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_BRAM_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_EAE_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdmux_0" PORT="sysclk50Mhz_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_cycle_counter_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_mmio_mux_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_sdcard_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_CPU_register_file_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_basic_uart_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_M2M_QNICE_SOC_BUS_UART_ring_buffer_0" PORT="clk"/>
+            <CONNECTION INSTANCE="M2M_Framework_clock_counter_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_cdc_pulse_0" PORT="dst_clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_clk_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_rtc_wrapper_0" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="qnice_rst_o" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_qnice2hyperram_0" PORT="rst_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_M2M_Qnice_Wrapper_M2M_QNICE_SOC_mmio_mux_0" PORT="HW_RESET"/>
+            <CONNECTION INSTANCE="M2M_Framework_avm_fifo_0" PORT="s_rst_i"/>
+            <CONNECTION INSTANCE="M2M_Framework_rtc_wrapper_0" PORT="rst_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sys_clk_i" SIGIS="undef" SIGNAME="External_Ports_clk_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sys_pps_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sys_rstn_i" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="M2M_Framework_reset_manager_0_reset_m2m_n_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_reset_manager_0" PORT="reset_m2m_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/clock_counter_0" HWVERSION="1.0" INSTANCE="M2M_Framework_clock_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clock_counter" VLNV="xilinx.com:module_ref:clock_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_clock_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="27" NAME="cnt_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="mon_clk_i" SIGIS="undef" SIGNAME="M2M_Framework_video_out_clock_0_clko">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_video_out_clock_0" PORT="clko"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pps_i" SIGIS="undef" SIGNAME="M2M_Framework_cdc_pulse_0_dst_pulse_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_cdc_pulse_0" PORT="dst_pulse_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/debouncer_0" HWVERSION="1.0" INSTANCE="M2M_Framework_debouncer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:module_ref:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CLK_FREQ" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_debouncer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk"/>
+        <PORT DIR="O" NAME="dbnce_joy1_down_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_down_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_down_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy1_fire_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_fire_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_fire_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy1_left_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_left_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_left_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy1_right_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_right_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_right_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy1_up_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy1_up_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_up_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy2_down_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_down_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_down_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy2_fire_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_fire_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_fire_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy2_left_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_left_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_left_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy2_right_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_right_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_right_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbnce_joy2_up_n" SIGIS="undef" SIGNAME="M2M_Framework_debouncer_0_dbnce_joy2_up_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_up_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="flip_joys_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="joy_1_down_n" SIGIS="undef" SIGNAME="External_Ports_fa_down_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_down_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_1_fire_n" SIGIS="undef" SIGNAME="External_Ports_fa_fire_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_fire_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_1_left_n" SIGIS="undef" SIGNAME="External_Ports_fa_left_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_left_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_1_on" SIGIS="undef"/>
+        <PORT DIR="I" NAME="joy_1_right_n" SIGIS="undef" SIGNAME="External_Ports_fa_right_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_right_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_1_up_n" SIGIS="undef" SIGNAME="External_Ports_fa_up_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fa_up_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_2_down_n" SIGIS="undef" SIGNAME="External_Ports_fb_down_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_down_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_2_fire_n" SIGIS="undef" SIGNAME="External_Ports_fb_fire_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_fire_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_2_left_n" SIGIS="undef" SIGNAME="External_Ports_fb_left_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_left_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_2_on" SIGIS="undef"/>
+        <PORT DIR="I" NAME="joy_2_right_n" SIGIS="undef" SIGNAME="External_Ports_fb_right_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_right_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="joy_2_up_n" SIGIS="undef" SIGNAME="External_Ports_fb_up_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="fb_up_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/hyperram_0" HWVERSION="1.0" INSTANCE="M2M_Framework_hyperram_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hyperram" VLNV="xilinx.com:module_ref:hyperram:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="G_ERRATA_ISSI_D_FIX" VALUE="true"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_hyperram_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="avm_address_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="avm_burstcount_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="avm_byteenable_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="avm_read_i" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="avm_readdata_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="avm_readdatavalid_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="avm_waitrequest_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="avm_write_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="avm_writedata_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="clk_del_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_del_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_clk_del_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="count_long_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="count_short_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="delay_refclk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_delay_refclk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_delay_refclk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_ck_o" SIGIS="undef" SIGNAME="M2M_Framework_hyperram_0_hr_ck_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hr_clk_p_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hr_csn_o" SIGIS="undef" SIGNAME="M2M_Framework_hyperram_0_hr_csn_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hr_cs0_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="hr_dq_in_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="hr_dq_oe_n_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="hr_dq_out_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hr_resetn_o" SIGIS="undef" SIGNAME="M2M_Framework_hyperram_0_hr_resetn_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hr_reset_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hr_rwds_in_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hr_rwds_oe_n_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hr_rwds_out_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_hr_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="hr_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/reset_manager_0" HWVERSION="1.0" INSTANCE="M2M_Framework_reset_manager_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="reset_manager" VLNV="xilinx.com:module_ref:reset_manager:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BOARD_CLK_SPEED" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_reset_manager_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_clk_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RESET_N" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_button_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_button_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reset_core_n_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_reset_manager_0_reset_core_n_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="core_rstn_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reset_m2m_n_o" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="M2M_Framework_reset_manager_0_reset_m2m_n_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="sys_rstn_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/rtc_wrapper_0" HWVERSION="1.0" INSTANCE="M2M_Framework_rtc_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rtc_wrapper" VLNV="xilinx.com:module_ref:rtc_wrapper:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="G_BOARD" VALUE="0"/>
+        <PARAMETER NAME="G_I2C_CLK_DIV" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_rtc_wrapper_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="27" NAME="i2c_addr_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i2c_ce_i" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="i2c_rd_data_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="i2c_wait_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i2c_we_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="i2c_wr_data_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="M2M_Framework_clk_m2m_0_qnice_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clk_m2m_0" PORT="qnice_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="rtc_addr_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rtc_ce_i" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="64" NAME="rtc_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="rtc_rd_data_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rtc_wait_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rtc_we_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="rtc_wr_data_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="scl_in_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="scl_out_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="sda_in_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="sda_out_o" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/M2M_Framework/video_out_clock_0" HWVERSION="1.0" INSTANCE="M2M_Framework_video_out_clock_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_out_clock" VLNV="xilinx.com:module_ref:video_out_clock:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="fref" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_video_out_clock_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clki" SIGIS="undef" SIGNAME="External_Ports_clk_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clko" SIGIS="undef" SIGNAME="M2M_Framework_video_out_clock_0_clko">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="M2M_Framework_clock_counter_0" PORT="mon_clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clko_x5" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rsti" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rsto" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="sel" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/agnus_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="agnus" VLNV="xilinx.com:module_ref:agnus:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BLS_CNT_MAX" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_agnus_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="_csync" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_hsync" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0__hsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="tick"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="_vsync" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0__vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="tick"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="a1k" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="20" NAME="address_out" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="aen" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aga" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="audio_dmal" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_audio_dmal">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="audio_dmal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="audio_dmas" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_audio_dmas">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="audio_dmas"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bls" SIGIS="undef"/>
+        <PORT DIR="I" NAME="cck" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_cck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="cck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cpu_custom" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_custom_data_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="custom_data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="dbr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="dbr"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="dbr"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="dbr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbwe" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbwe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="dbwe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="disk_dmal" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_disk_dmal">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="disk_dmal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="disk_dmas" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_disk_dmas">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="disk_dmas"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ecs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="field1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="floppy_speed" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_floppy_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="floppy_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="harddis" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hblank" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hde" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="8" NAME="htotal" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="hwr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="int3" SIGIS="undef"/>
+        <PORT DIR="O" NAME="lace" SIGIS="undef"/>
+        <PORT DIR="I" NAME="lwr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ntsc" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="8" NAME="reg_address_out" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sof" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_sof">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="sof"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sol" SIGIS="undef"/>
+        <PORT DIR="O" NAME="strhor_denise" SIGIS="undef"/>
+        <PORT DIR="O" NAME="strhor_paula" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_strhor_paula">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="strhor"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="varbeamen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vbl_int" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_vbl_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="vblint"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vblank" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/cart_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cart" VLNV="xilinx.com:module_ref:cart:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_cart_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="_cpu_as" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="cart_data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7n_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7n_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7n_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="cpu_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="cpu_hwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_hwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="hwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_lwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_lwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="lwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_rd" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_rst" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="cpuhlt" SIGIS="undef"/>
+        <PORT DIR="I" NAME="dbr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="dbr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="freeze" SIGIS="undef"/>
+        <PORT DIR="O" NAME="int7" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="nmi_addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ovl" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ovr" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="reg_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="reg_data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sel_cart" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0_sel_cart">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="cart"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/ciaa_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ciaa" VLNV="xilinx.com:module_ref:ciaa:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_ciaa_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="aen" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_cia_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7n_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7n_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7n_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="eclk" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_eclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="eclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="freeze" SIGIS="undef"/>
+        <PORT DIR="I" NAME="hrtmon_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_memory_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="memory_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="int2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="kbd_mouse_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="kbd_mouse_type" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="kms_level" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="porta_in" RIGHT="2" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0__fire0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="_fire0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="porta_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="portb_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="rs" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="tick" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0__vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="_vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wr" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/ciab_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ciab" VLNV="xilinx.com:module_ref:ciab:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_ciab_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="aen" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_cia_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="eclk" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_eclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="eclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="flag" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_index">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="index"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="I" LEFT="5" NAME="porta_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="porta_out" RIGHT="6" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="portb_out" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0_portb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="_motor"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="rs" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="tick" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0__hsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="_hsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wr" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/gary_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gary" VLNV="xilinx.com:module_ref:gary:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_gary_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a1k" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="bootrom" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_bootrom">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="bootrom"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="cpu_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="cpu_data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="cpu_data_out" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_hlt" SIGIS="undef"/>
+        <PORT DIR="I" NAME="cpu_hwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_hwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="hwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_lwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_lwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="lwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_rd" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="custom_data_in" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_custom_data_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="data_in"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="custom_data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="dbr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="dbr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dbs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_dbs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="dbs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dbwe" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbwe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="dbwe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="20" NAME="dma_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ecs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hdc_ena" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="memory_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ovl" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="23" NAME="ram_address_out" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="ram_data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="ram_data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ram_hwr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ram_lwr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ram_rd" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rom_readonly" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="sel_chip" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_chip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="chip1"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="chip2"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="chip3"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="chip0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_cia" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="vpa"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_cia_a" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="aen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_cia_b" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="aen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_gayle" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sel_ide" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sel_kick" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="kick"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_kick1mb" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick1mb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="kick1mb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_kick256kmirror" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick256kmirror">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="kick256kmirror"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_reg" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="aen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_rtc" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sel_rtg" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="sel_slow" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_slow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="slow0"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="slow1"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="slow2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sel_toccata" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="toccata_base" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="toccata_ena" SIGIS="undef"/>
+        <PORT DIR="O" NAME="xbs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_xbs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="xbs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/minimig_bankmapper_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="minimig_bankmapper" VLNV="xilinx.com:module_ref:minimig_bankmapper:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_minimig_bankmapper_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="bank" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0_bank">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_sram_bridge_0" PORT="bank"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cart" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0_sel_cart">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="sel_cart"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_chip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_chip"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_chip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_chip"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip2" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_chip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_chip"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip3" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_chip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_chip"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="kick" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_kick"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="kick1mb" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick1mb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_kick1mb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="kick256kmirror" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_kick256kmirror">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_kick256kmirror"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="memory_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="slow0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_slow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_slow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="slow1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_slow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_slow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="slow2" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_slow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_slow"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/minimig_m68k_bridge_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="minimig_m68k_bridge" VLNV="xilinx.com:module_ref:minimig_m68k_bridge:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_minimig_m68k_bridge_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="_as" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_cpu_reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" NAME="_dtack" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_lds" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_uds" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="23" NAME="address" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="23" NAME="address_out" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" NAME="bls" SIGIS="undef"/>
+        <PORT DIR="I" NAME="c1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="c1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c3" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="c3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cck" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_cck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="cck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7n_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7n_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7n_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cpu_halt" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_cpuhlt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="cpuhlt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="cpudatain" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="cpu_data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dbr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_dbr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="dbr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dbs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_dbs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="dbs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="eclk" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_eclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="eclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="host_ack" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_host_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="host_adr" RIGHT="1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_adr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_adr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="host_bs" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_bs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_bs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="host_cs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="host_rdat" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_host_rdat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_rdat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="host_wdat" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_wdat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_wdat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="host_we" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="host_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_hwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="cpu_hwr"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="cpu_hwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="lwr" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_lwr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="cpu_lwr"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="cpu_lwr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="memory_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="nrdy" SIGIS="undef"/>
+        <PORT DIR="I" NAME="r_w" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rd" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="cpu_rd"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="cpu_rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rd_cyc" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vpa" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_sel_cia">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="sel_cia"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="xbs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_xbs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="xbs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/minimig_sram_bridge_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_sram_bridge_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="minimig_sram_bridge" VLNV="xilinx.com:module_ref:minimig_sram_bridge:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_minimig_sram_bridge_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="_bhe" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_ble" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_oe" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_we" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="22" NAME="address" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="23" NAME="address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="bank" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0_bank">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_bankmapper_0" PORT="bank"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="c1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c3" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="c3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="hwr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="lwr" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="ramdata_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/minimig_syscontrol_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="minimig_syscontrol" VLNV="xilinx.com:module_ref:minimig_syscontrol:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_minimig_syscontrol_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cnt" SIGIS="undef"/>
+        <PORT DIR="I" NAME="mrst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="reset"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="reset"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="reset"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="reset"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="reset"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/paula_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paula" VLNV="xilinx.com:module_ref:paula:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ADKCON" VALUE="&quot;010011110&quot;"/>
+        <PARAMETER NAME="ADKCONR" VALUE="&quot;000010000&quot;"/>
+        <PARAMETER NAME="DMACON" VALUE="&quot;010010110&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_paula_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="IO_DIN" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="IO_DOUT" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="IO_ENA" SIGIS="undef"/>
+        <PORT DIR="I" NAME="IO_STROBE" SIGIS="undef"/>
+        <PORT DIR="O" NAME="IO_WAIT" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_change" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="_ipl" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_motor" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0_portb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="portb_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="_ready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="_sel" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_step" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_track0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_wprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="audio_dmal" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_audio_dmal">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="audio_dmal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="audio_dmas" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_audio_dmas">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="audio_dmas"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cck" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_cck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="cck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7n_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7n_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7n_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0_custom_data_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="custom_data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="direc" SIGIS="undef"/>
+        <PORT DIR="O" NAME="disk_dmal" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_disk_dmal">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="disk_dmal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="disk_dmas" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_disk_dmas">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="disk_dmas"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="fdd_led" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="floppy_drives" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_floppy_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="floppy_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="floppy_frd" SIGIS="undef"/>
+        <PORT DIR="O" NAME="floppy_fwr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="index" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0_index">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="flag"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="int2" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="int3" SIGIS="undef"/>
+        <PORT DIR="I" NAME="int6" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="14" NAME="ldata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="8" NAME="ldata_okk" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ntsc" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="chipset_config"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="14" NAME="rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="8" NAME="rdata_okk" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="reg_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rxd" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="secdisp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="side" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sof" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_sof">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="sof"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="strhor" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_strhor_paula">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="strhor_paula"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="trackdisp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="txd" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vblint" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0_vbl_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="vbl_int"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_Minimig/userio_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="userio" VLNV="xilinx.com:module_ref:userio:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="JOY0DAT" VALUE="&quot;000001010&quot;"/>
+        <PARAMETER NAME="JOY1DAT" VALUE="&quot;000001100&quot;"/>
+        <PARAMETER NAME="JOYTEST" VALUE="&quot;000110110&quot;"/>
+        <PARAMETER NAME="KEY_DOWN" VALUE="&quot;01001101&quot;"/>
+        <PARAMETER NAME="KEY_ENTER" VALUE="&quot;01000100&quot;"/>
+        <PARAMETER NAME="KEY_ESC" VALUE="&quot;01000101&quot;"/>
+        <PARAMETER NAME="KEY_LEFT" VALUE="&quot;01001111&quot;"/>
+        <PARAMETER NAME="KEY_MENU" VALUE="&quot;01101001&quot;"/>
+        <PARAMETER NAME="KEY_PGDOWN" VALUE="&quot;01101101&quot;"/>
+        <PARAMETER NAME="KEY_PGUP" VALUE="&quot;01101100&quot;"/>
+        <PARAMETER NAME="KEY_RIGHT" VALUE="&quot;01001110&quot;"/>
+        <PARAMETER NAME="KEY_UP" VALUE="&quot;01001100&quot;"/>
+        <PARAMETER NAME="POT0DAT" VALUE="&quot;000010010&quot;"/>
+        <PARAMETER NAME="POT1DAT" VALUE="&quot;000010100&quot;"/>
+        <PARAMETER NAME="POTGO" VALUE="&quot;000110100&quot;"/>
+        <PARAMETER NAME="POTINP" VALUE="&quot;000010110&quot;"/>
+        <PARAMETER NAME="SCRDAT" VALUE="&quot;111110000&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_userio_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="IO_DIN" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="IO_ENA" SIGIS="undef"/>
+        <PORT DIR="I" NAME="IO_STROBE" SIGIS="undef"/>
+        <PORT DIR="O" NAME="IO_WAIT" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_fire0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0__fire0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="porta_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="_fire0_dat" SIGIS="undef"/>
+        <PORT DIR="O" NAME="_fire1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="_fire1_dat" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="_joy1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="_joy2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="ar" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="aud_mix" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="blver" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="bootrom" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_bootrom">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="bootrom"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cache_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="4" NAME="chipset_config" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_chipset_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="ecs"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="a1k"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="a1k"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="ecs"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="aga"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="ntsc"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="ntsc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="cpu_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cpuhlt" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_cpuhlt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="cpu_halt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cpurst" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="floppy_config" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_floppy_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="floppy_speed"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="floppy_drives"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="host_ack" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_host_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="host_adr" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_adr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_adr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="host_bs" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_bs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_bs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="host_cs" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="host_rdat" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0_host_rdat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_rdat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="host_wdat" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_wdat">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_wdat"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="host_we" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_host_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="host_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="ide_config" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="joy_ana1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="joy_ana2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="kbd_mouse_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="kbd_mouse_type" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="kms_level" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="memory_config" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0_memory_config">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="hrtmon_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="mouse_btn" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pot_cnt_en" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="reg_address_in" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="scanline" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="usrrst" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_fastchip/akiko_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_fastchip_akiko_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="akiko" VLNV="xilinx.com:module_ref:akiko:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_akiko_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="addr" RIGHT="1" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk"/>
+        <PORT DIR="I" NAME="cs" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="din" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="dout" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wr" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/CORE_Main_fastchip/rtg_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_fastchip_rtg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rtg" VLNV="xilinx.com:module_ref:rtg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_rtg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="aen" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="base" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk"/>
+        <PORT DIR="I" LEFT="15" NAME="data_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="data_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ena" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="4" NAME="format" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="hsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="pal_a" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="pal_clk" SIGIS="clk"/>
+        <PORT DIR="I" LEFT="23" NAME="pal_dr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="23" NAME="pal_dw" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pal_wr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="rd" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" LEFT="11" NAME="rs" RIGHT="1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="stride" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="vsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wr" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/CORE_Main/amiga_clk_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="amiga_clk" VLNV="xilinx.com:module_ref:amiga_clk:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_amiga_clk_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="c1" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_sram_bridge_0" PORT="c1"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="c1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c3" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_c3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_sram_bridge_0" PORT="c3"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="c3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cck" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_cck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="cck"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="cck"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="cck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk7_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="clk7_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="clk7_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk7n_en" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_clk7n_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="clk7n_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="clk7n_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="clk7n_en"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="clk7n_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_28" SIGIS="undef" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="eclk" RIGHT="0" SIGIS="undef" SIGNAME="MEGA65_Core_CORE_Main_amiga_clk_0_eclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="eclk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="eclk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="eclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="MEGA65_Core_clk_0_main_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_clk_0" PORT="main_rst_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEGA65_Core/clk_0" HWVERSION="1.0" INSTANCE="MEGA65_Core_clk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk" VLNV="xilinx.com:module_ref:clk:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_clk_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="main_clk_o" SIGIS="undef" SIGNAME="MEGA65_Core_clk_0_main_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="clk_28"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_syscontrol_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_cart_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_sram_bridge_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_minimig_m68k_bridge_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_userio_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_gary_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_paula_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_agnus_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciaa_0" PORT="clk"/>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_CORE_Main_Minimig_ciab_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="main_rst_o" SIGIS="undef" SIGNAME="MEGA65_Core_clk_0_main_rst_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEGA65_Core_CORE_Main_amiga_clk_0" PORT="reset_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sys_clk_i" SIGIS="undef" SIGNAME="External_Ports_clk_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/audio_0" HWVERSION="1.0" INSTANCE="audio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="audio" VLNV="xilinx.com:module_ref:audio:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Mega65_R6_audio_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="audio_bick_o" SIGIS="undef" SIGNAME="audio_0_audio_bick_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_bick_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="audio_clk_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="audio_left_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="audio_lrclk_o" SIGIS="undef" SIGNAME="audio_0_audio_lrclk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_lrclk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="audio_mclk_o" SIGIS="undef" SIGNAME="audio_0_audio_mclk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_mclk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="audio_pdn_n_o" SIGIS="undef" SIGNAME="audio_0_audio_pdn_n_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_pdn_n_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="audio_reset_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="audio_right_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="audio_sdti_o" SIGIS="undef" SIGNAME="audio_0_audio_sdti_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="audio_sdti_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

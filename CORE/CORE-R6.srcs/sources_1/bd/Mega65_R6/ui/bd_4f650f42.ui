@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1239,-512",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace port port-id_reset_n -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace port port-id_cache_rst -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_cache_inhibit -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port port-id_DDRAM_CLK -pg 1 -lvl 2 -x 290 -y 120 -defaultsOSRD
+preplace port port-id_DDRAM_BUSY -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace port port-id_DDRAM_DOUT_READY -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port port-id_DDRAM_RD -pg 1 -lvl 2 -x 290 -y 140 -defaultsOSRD
+preplace port port-id_DDRAM_WE -pg 1 -lvl 2 -x 290 -y 160 -defaultsOSRD
+preplace port port-id_cpuCS -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_cpuL -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace port port-id_cpuU -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace port port-id_ramshared -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace port port-id_ramready -pg 1 -lvl 2 -x 290 -y 180 -defaultsOSRD
+preplace portBus cpu_cache_ctrl -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace portBus DDRAM_BURSTCNT -pg 1 -lvl 2 -x 290 -y 60 -defaultsOSRD
+preplace portBus DDRAM_ADDR -pg 1 -lvl 2 -x 290 -y 20 -defaultsOSRD
+preplace portBus DDRAM_DOUT -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace portBus DDRAM_DIN -pg 1 -lvl 2 -x 290 -y 80 -defaultsOSRD
+preplace portBus DDRAM_BE -pg 1 -lvl 2 -x 290 -y 40 -defaultsOSRD
+preplace portBus cpuAddr -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace portBus cpustate -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace portBus cpuWR -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace portBus cpuRD -pg 1 -lvl 2 -x 290 -y 100 -defaultsOSRD
+preplace inst CORE_ddram_ctrl_cpu_cache_new -pg 1 -lvl 1 -x 130 -y 30 -defaultsOSRD
+levelinfo -pg 1 -30 130 290
+pagesize -pg 1 -db -bbox -sgen -240 -190 510 320
+"
+}
+

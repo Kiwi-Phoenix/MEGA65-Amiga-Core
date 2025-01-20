@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1169,-218",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_Clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_clock_frequency -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_reset_in -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_matrix_col_idx -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_m65_key_num -pg 1 -lvl 2 -x 300 -y 80 -defaultsOSRD
+preplace port port-id_m65_key_status_n -pg 1 -lvl 2 -x 300 -y 100 -defaultsOSRD
+preplace port port-id_suppress_key_glitches -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_suppress_key_retrigger -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_ascii_key_valid -pg 1 -lvl 2 -x 300 -y 60 -defaultsOSRD
+preplace portBus matrix_col -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace portBus ascii_key -pg 1 -lvl 2 -x 300 -y 20 -defaultsOSRD
+preplace portBus bucky_key -pg 1 -lvl 2 -x 300 -y 40 -defaultsOSRD
+preplace inst current_kmm -pg 1 -lvl 1 -x 150 -y 460 -defaultsOSRD
+preplace inst debounce_kmm -pg 1 -lvl 1 -x 150 -y 100 -defaultsOSRD
+preplace inst last_kmm -pg 1 -lvl 1 -x 150 -y 280 -defaultsOSRD
+preplace netloc Clk_1 1 0 1 20 60n
+preplace netloc matrix_col_idx_1 1 0 1 NJ 440
+preplace netloc matrix_col_1 1 0 1 NJ 460
+levelinfo -pg 1 0 150 300
+pagesize -pg 1 -db -bbox -sgen -200 0 470 560
+"
+}
+

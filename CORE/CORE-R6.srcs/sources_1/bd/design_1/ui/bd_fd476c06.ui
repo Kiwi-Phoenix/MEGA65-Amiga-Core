@@ -1,0 +1,21 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.2883",
+   "Default View_TopLeft":"-543,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst denise_sprites_0 -pg 1 -lvl 1 -x 150 -y 190 -defaultsOSRD
+preplace inst denise_sprites_shift_0 -pg 1 -lvl 3 -x 690 -y 160 -defaultsOSRD
+preplace inst denise_sprites_shift_1 -pg 1 -lvl 3 -x 690 -y 460 -defaultsOSRD
+preplace inst denise_sprites_shift_2 -pg 1 -lvl 3 -x 690 -y 760 -defaultsOSRD
+preplace inst denise_sprites_shift_3 -pg 1 -lvl 3 -x 690 -y 1060 -defaultsOSRD
+preplace inst denise_sprites_shift_4 -pg 1 -lvl 2 -x 430 -y 160 -defaultsOSRD
+preplace inst denise_sprites_shift_5 -pg 1 -lvl 2 -x 430 -y 460 -defaultsOSRD
+preplace inst denise_sprites_shift_6 -pg 1 -lvl 2 -x 430 -y 760 -defaultsOSRD
+preplace inst denise_sprites_shift_7 -pg 1 -lvl 2 -x 430 -y 1060 -defaultsOSRD
+levelinfo -pg 1 0 150 430 690 820
+pagesize -pg 1 -db -bbox -sgen 0 0 820 1220
+"
+}
+

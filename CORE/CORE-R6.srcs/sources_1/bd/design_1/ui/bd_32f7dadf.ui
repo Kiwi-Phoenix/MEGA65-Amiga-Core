@@ -1,0 +1,21 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.82194",
+   "Default View_TopLeft":"-301,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst denise_bitplanes_0 -pg 1 -lvl 1 -x 150 -y 170 -defaultsOSRD
+preplace inst denise_bitplane_shif_0 -pg 1 -lvl 3 -x 630 -y 160 -defaultsOSRD
+preplace inst denise_bitplane_shif_1 -pg 1 -lvl 3 -x 630 -y 460 -defaultsOSRD
+preplace inst denise_bitplane_shif_2 -pg 1 -lvl 3 -x 630 -y 760 -defaultsOSRD
+preplace inst denise_bitplane_shif_3 -pg 1 -lvl 3 -x 630 -y 1060 -defaultsOSRD
+preplace inst denise_bitplane_shif_4 -pg 1 -lvl 2 -x 410 -y 160 -defaultsOSRD
+preplace inst denise_bitplane_shif_5 -pg 1 -lvl 2 -x 410 -y 460 -defaultsOSRD
+preplace inst denise_bitplane_shif_6 -pg 1 -lvl 2 -x 410 -y 760 -defaultsOSRD
+preplace inst denise_bitplane_shif_7 -pg 1 -lvl 2 -x 410 -y 1060 -defaultsOSRD
+levelinfo -pg 1 0 150 410 630 740
+pagesize -pg 1 -db -bbox -sgen 0 0 740 1220
+"
+}
+

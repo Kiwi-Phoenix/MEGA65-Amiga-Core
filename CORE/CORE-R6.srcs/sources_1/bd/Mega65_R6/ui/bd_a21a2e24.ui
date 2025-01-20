@@ -1,0 +1,25 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1518,-591",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"         qnice_wren_i            => qnice_vram_attr_we or qnice_vram_we,
+         qnice_byteenable_i      => qnice_vram_attr_we & qnice_vram_we,",
+   "commentid":"comment_0|",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_qnice_vram_attr_we -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace port port-id_qnice_vram_we -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace port port-id_qnice_wren_i -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace port port-id_qnice_byteenable_i -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace cgraphic comment_0 place top -590 -67 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -210 0 190 60
+"
+}
+
+{
+   "/comment_23":"comment_0"
+}

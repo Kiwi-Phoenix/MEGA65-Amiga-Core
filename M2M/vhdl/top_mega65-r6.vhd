@@ -1,10 +1,11 @@
 ----------------------------------------------------------------------------------
--- Commodore 64 for MEGA65 (C64MEGA65)
+-- Amiga for MEGA65
 --
 -- MEGA65 R6 main file that contains the whole machine
 --
 -- based on C64_MiSTer by the MiSTer development team
 -- port done by MJoergen and sy2002 in 2023 and licensed under GPL v3
+-- Kiwi
 ----------------------------------------------------------------------------------
 
 library ieee;
@@ -42,7 +43,7 @@ port (
    -- HDMI. U10 = PTN3363BSMP
    -- I2C address 0x40
    tmds_data_p_o           : out   std_logic_vector(2 downto 0);
-   tmds_data_n_o           : out   std_logic_vector(2 downto 0);
+   tmds_data_n_o     : out   std_logic_vector(2 downto 0);
    tmds_clk_p_o            : out   std_logic;
    tmds_clk_n_o            : out   std_logic;
    hdmi_hiz_en_o           : out   std_logic;   -- Connect to U10.HIZ_EN
@@ -571,13 +572,16 @@ begin
    -- MiSTer2MEGA framework
    -----------------------------------------------------------------------------------------
 
-   i_framework : entity work.framework
+   i_framework : entity work.framework   
    generic map (
       G_BOARD => "MEGA65_R6"
-   )
+   )   
    port map (
       -- Connect to I/O ports
       clk_i                   => clk_i,
+-- DJR: Although incorrect, changed to get the Block diagram to work!!!      
+-- This works in VHDL 2008 but not current version
+-- Need to find out the new way of getting the required results.     
       reset_n_i               => not reset_button_i,
       uart_rxd_i              => uart_rxd_i,
       uart_txd_o              => uart_txd_o,
@@ -762,7 +766,7 @@ begin
          clk_i                   => clk_i,
 
          -- Share clock and reset with the framework
-         main_clk_o              => main_clk,            -- CORE's 54 MHz clock
+         main_clk_o              => main_clk,            -- CORE's 28 MHz clock
          main_rst_o              => main_rst,            -- CORE's reset, synchronized
 
          --------------------------------------------------------------------------------------------------------
@@ -812,9 +816,15 @@ begin
          -- M2M's reset manager provides 2 signals:
          --    m2m:   Reset the whole machine: Core and Framework
          --    core:  Only reset the core
-         main_reset_m2m_i        => main_reset_m2m  or main_qnice_reset or main_rst,
-         main_reset_core_i       => main_reset_core or main_qnice_reset,
-         main_pause_core_i       => main_qnice_pause,
+         -- DJR
+         -- Using OR works in VHDL 2008 but not in current release.
+         -- Need to find the current method of getting the required results.
+         -- Changed (although incorrect) just to get the Block diagram to work!!
+         --main_reset_m2m_i        => main_reset_m2m  or main_qnice_reset or main_rst,
+         --main_reset_core_i       => main_reset_core or main_qnice_reset,
+         main_reset_m2m_i       => main_reset_m2m,
+         main_reset_core_i      => main_reset_core,         
+         main_pause_core_i      => main_qnice_pause,
 
          -- On-Screen-Menu selections (in main clock domain)
          main_osm_control_i      => main_osm_control_m,

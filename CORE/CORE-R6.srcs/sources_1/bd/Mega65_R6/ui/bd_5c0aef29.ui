@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1251,-487",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_CLK_VIDEO -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_CE_PIXEL -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_VGA_VS -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_VGA_DE -pg 1 -lvl 2 -x 260 -y 20 -defaultsOSRD
+preplace port port-id_VGA_DE_IN -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus HDMI_WIDTH -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus HDMI_HEIGHT -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus VIDEO_ARX -pg 1 -lvl 2 -x 260 -y 40 -defaultsOSRD
+preplace portBus VIDEO_ARY -pg 1 -lvl 2 -x 260 -y 60 -defaultsOSRD
+preplace portBus ARX -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus ARY -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus CROP_SIZE -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus CROP_OFF -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace portBus SCALE -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace inst CORE_video_freak_math -pg 1 -lvl 1 -x 130 -y 30 -defaultsOSRD
+levelinfo -pg 1 0 130 260
+pagesize -pg 1 -db -bbox -sgen -220 -60 430 240
+"
+}
+

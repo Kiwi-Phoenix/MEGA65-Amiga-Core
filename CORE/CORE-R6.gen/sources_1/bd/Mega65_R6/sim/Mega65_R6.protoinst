@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Mega65_R6": {
+			"proto_instances": {
+			}
+		}
+	}
+}

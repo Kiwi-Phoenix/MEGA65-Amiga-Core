@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1401,-650",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"   -- Clock domain crossing: SYS to CORE
+   i_sys2main: xpm_cdc_array_single
+      generic map (
+         WIDTH => 2
+      )
+      port map (
+         src_clk     => clk_i,
+         src_in(0)   => not reset_m2m_n,
+         src_in(1)   => not reset_core_n,
+         dest_clk    => main_clk_i,
+         dest_out(0) => main_reset_m2m_o,
+         dest_out(1) => main_reset_core_o
+      ); -- i_sys2main",
+   "commentid":"comment_0|",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_main_reset_core_o -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace port port-id_main_reset_m2m_o -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace cgraphic comment_0 place top -354 -181 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -10 10
+pagesize -pg 1 -db -bbox -sgen -10 0 190 60
+"
+}
+
+{
+   "/comment_27":"comment_0"
+}
