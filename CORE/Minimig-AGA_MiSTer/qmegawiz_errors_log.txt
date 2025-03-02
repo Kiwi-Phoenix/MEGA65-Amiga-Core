@@ -33,6 +33,7 @@ wizard.lst file in the specified library path(s).Wizard launch aborted
 D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/rtl/pll.v
 
 Jan 19 02PM:47:18>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+<<<<<<< HEAD
 wizard.lst file in the specified library path(s).Wizard launch aborted
 
 D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/rtl/pll.v
@@ -78,4 +79,6 @@ wizard.lst file in the specified library path(s).Wizard launch aborted
 D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/rtl/pll.v
 
 Feb 01 04PM:50:13>: Megafunction PLL Intel FPGA IP v23.1 is not listed in any 
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -28,7 +28,13 @@ levelinfo -pg 1 -10 10
 pagesize -pg 1 -db -bbox -sgen -10 0 190 60
 "
 }
+<<<<<<< HEAD
 0
 {
    "/comment_31":"comment_0"
+=======
+
+{
+   "/comment_27":"comment_0"
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 }

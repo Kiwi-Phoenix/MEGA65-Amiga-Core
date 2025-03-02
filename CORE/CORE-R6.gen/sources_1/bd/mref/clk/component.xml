@@ -15,7 +15,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>b0772fc3</spirit:value>
+=======
+            <spirit:value>3718632b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28,7 +32,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
+<<<<<<< HEAD
             <spirit:value>b0772fc3</spirit:value>
+=======
+            <spirit:value>3718632b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -56,6 +64,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+<<<<<<< HEAD
         <spirit:name>main_clk_114_o</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -69,6 +78,8 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         <spirit:name>main_clk_o</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -129,7 +140,11 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
+<<<<<<< HEAD
       <xilinx:coreCreationDateTime>2025-02-22T02:47:37Z</xilinx:coreCreationDateTime>
+=======
+      <xilinx:coreCreationDateTime>2025-01-18T00:44:06Z</xilinx:coreCreationDateTime>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2.1</xilinx:xilinxVersion>

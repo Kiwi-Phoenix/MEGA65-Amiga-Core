@@ -26,8 +26,12 @@
 --  NTSC:    clk_114 = 114.54544 MHz
 --           clk_sys =  28.63636 MHz
 --    
+<<<<<<< HEAD
 --  There appears to be a Port on Agnus for NTSC.
 --  Need to work out how to adjust the clock when switching to NTSC. 
+=======
+--  There appears to be a Port on Agnus for NTSC, suggesting a possibility to have NTSC capabilities.
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 -- 
 --
 --
@@ -46,7 +50,11 @@ use xpm.vcomponents.all;
 entity clk is
    port (
       sys_clk_i       : in  std_logic;   -- expects 100 MHz
+<<<<<<< HEAD
       main_clk_114_o  : out std_logic;   -- Amiga 114 clock
+=======
+
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
       main_clk_o      : out std_logic;   -- main's 28.37516  MHz main clock   expected by the MiSTer Core
       main_rst_o      : out std_logic    -- main's reset, synchronized
       
@@ -75,12 +83,26 @@ begin
    i_clk_main : MMCME2_ADV
       generic map (
          BANDWIDTH            => "OPTIMIZED",
+<<<<<<< HEAD
          CLKFBOUT_MULT_F      => 49.375000,
          CLKFBOUT_PHASE       => 0.000,
          CLKFBOUT_USE_FINE_PS => FALSE,
          CLKIN1_PERIOD        => 10.0,
          CLKIN2_PERIOD        => 0.000000,
          CLKOUT0_DIVIDE_F     => 7.250000,
+=======
+         CLKOUT4_CASCADE      => FALSE,
+         COMPENSATION         => "ZHOLD",
+         STARTUP_WAIT         => FALSE,
+         CLKIN1_PERIOD        => 10.0,       -- INPUT @ 100 MHz
+         REF_JITTER1          => 0.010,
+         DIVCLK_DIVIDE        => 1,
+         CLKFBOUT_MULT_F      => 1.1350064,      -- 113.50064 MHz
+         CLKFBOUT_PHASE       => 0.000,
+         CLKFBOUT_USE_FINE_PS => FALSE,
+         CLKOUT0_DIVIDE_F     => 4.00,           -- 28.375160 MHz
+         CLKOUT0_PHASE        => 0.000,
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
          CLKOUT0_DUTY_CYCLE   => 0.500,
          CLKOUT0_PHASE        => 0.000,
          CLKOUT0_USE_FINE_PS  => FALSE,

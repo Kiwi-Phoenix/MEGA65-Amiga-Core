@@ -45,6 +45,7 @@ pagesize -pg 1 -db -bbox -sgen -230 0 290 440
 ",
    "Color Coded_ScaleFactor":"1.0",
    "Color Coded_TopLeft":"-1344,-277",
+<<<<<<< HEAD
    "Default View_ScaleFactor":"1.099",
    "Default View_TopLeft":"-511,-7",
    "ExpandedHierarchyInLayout":"",
@@ -235,6 +236,189 @@ preplace netloc main_reset_m2m_i_1 1 0 1 N 260
 preplace netloc main_rtc_i_1 1 0 1 10J 640n
 levelinfo -pg 1 -10 190 540 730
 pagesize -pg 1 -db -bbox -sgen -250 0 980 1710
+=======
+   "Default View_ScaleFactor":"1.3294",
+   "Default View_TopLeft":"-648,2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_qnice_clk_i -pg 1 -lvl 0 -x 0 -y 980 -defaultsOSRD
+preplace port port-id_qnice_rst_i -pg 1 -lvl 0 -x 0 -y 1040 -defaultsOSRD
+preplace port port-id_qnice_dvi_o -pg 1 -lvl 3 -x 660 -y 1480 -defaultsOSRD
+preplace port port-id_qnice_video_mode_o -pg 1 -lvl 3 -x 660 -y 1560 -defaultsOSRD
+preplace port port-id_qnice_scandoubler_o -pg 1 -lvl 3 -x 660 -y 1540 -defaultsOSRD
+preplace port port-id_qnice_audio_mute_o -pg 1 -lvl 3 -x 660 -y 1420 -defaultsOSRD
+preplace port port-id_qnice_audio_filter_o -pg 1 -lvl 3 -x 660 -y 1400 -defaultsOSRD
+preplace port port-id_qnice_zoom_crop_o -pg 1 -lvl 3 -x 660 -y 1580 -defaultsOSRD
+preplace port port-id_qnice_ascal_polyphase_o -pg 1 -lvl 3 -x 660 -y 1360 -defaultsOSRD
+preplace port port-id_qnice_ascal_triplebuf_o -pg 1 -lvl 3 -x 660 -y 1380 -defaultsOSRD
+preplace port port-id_qnice_retro15kHz_o -pg 1 -lvl 3 -x 660 -y 1520 -defaultsOSRD
+preplace port port-id_qnice_csync_o -pg 1 -lvl 3 -x 660 -y 1440 -defaultsOSRD
+preplace port port-id_qnice_flip_joyports_o -pg 1 -lvl 3 -x 660 -y 1500 -defaultsOSRD
+preplace port port-id_qnice_dev_ce_i -pg 1 -lvl 0 -x 0 -y 1000 -defaultsOSRD
+preplace port port-id_qnice_dev_we_i -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
+preplace port port-id_qnice_dev_wait_o -pg 1 -lvl 3 -x 660 -y 1460 -defaultsOSRD
+preplace port port-id_hr_clk_i -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace port port-id_hr_rst_i -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace port port-id_hr_core_write_o -pg 1 -lvl 3 -x 660 -y 900 -defaultsOSRD
+preplace port port-id_hr_core_read_o -pg 1 -lvl 3 -x 660 -y 880 -defaultsOSRD
+preplace port port-id_hr_core_readdatavalid_i -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
+preplace port port-id_hr_core_waitrequest_i -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
+preplace port port-id_hr_high_i -pg 1 -lvl 0 -x 0 -y 840 -defaultsOSRD
+preplace port port-id_hr_low_i -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port port-id_video_clk_o -pg 1 -lvl 3 -x 660 -y 1600 -defaultsOSRD
+preplace port port-id_video_rst_o -pg 1 -lvl 3 -x 660 -y 1620 -defaultsOSRD
+preplace port port-id_video_ce_o -pg 1 -lvl 3 -x 660 -y 240 -defaultsOSRD
+preplace port port-id_video_ce_ovl_o -pg 1 -lvl 3 -x 660 -y 260 -defaultsOSRD
+preplace port port-id_video_vs_o -pg 1 -lvl 3 -x 660 -y 340 -defaultsOSRD
+preplace port port-id_video_hs_o -pg 1 -lvl 3 -x 660 -y 360 -defaultsOSRD
+preplace port port-id_video_hblank_o -pg 1 -lvl 3 -x 660 -y 380 -defaultsOSRD
+preplace port port-id_video_vblank_o -pg 1 -lvl 3 -x 660 -y 400 -defaultsOSRD
+preplace port port-id_clk_i -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_main_clk_o -pg 1 -lvl 3 -x 660 -y 1080 -defaultsOSRD
+preplace port port-id_main_rst_o -pg 1 -lvl 3 -x 660 -y 1340 -defaultsOSRD
+preplace port port-id_main_reset_m2m_i -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_main_reset_core_i -pg 1 -lvl 0 -x 0 -y 960 -defaultsOSRD
+preplace port port-id_main_pause_core_i -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port port-id_main_kb_key_num_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_main_kb_key_pressed_n_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_main_power_led_o -pg 1 -lvl 3 -x 660 -y 1320 -defaultsOSRD
+preplace port port-id_main_drive_led_o -pg 1 -lvl 3 -x 660 -y 1100 -defaultsOSRD
+preplace port port-id_main_joy_1_up_n_i -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_main_joy_1_down_n_i -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_main_joy_1_left_n_i -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_main_joy_1_right_n_i -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port port-id_main_joy_1_fire_n_i -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port port-id_main_joy_1_up_n_o -pg 1 -lvl 3 -x 660 -y 1200 -defaultsOSRD
+preplace port port-id_main_joy_1_down_n_o -pg 1 -lvl 3 -x 660 -y 1120 -defaultsOSRD
+preplace port port-id_main_joy_1_left_n_o -pg 1 -lvl 3 -x 660 -y 1160 -defaultsOSRD
+preplace port port-id_main_joy_1_right_n_o -pg 1 -lvl 3 -x 660 -y 1180 -defaultsOSRD
+preplace port port-id_main_joy_1_fire_n_o -pg 1 -lvl 3 -x 660 -y 1140 -defaultsOSRD
+preplace port port-id_main_joy_2_up_n_i -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port port-id_main_joy_2_down_n_i -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port port-id_main_joy_2_left_n_i -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace port port-id_main_joy_2_right_n_i -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_main_joy_2_fire_n_i -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port port-id_main_joy_2_up_n_o -pg 1 -lvl 3 -x 660 -y 1300 -defaultsOSRD
+preplace port port-id_main_joy_2_down_n_o -pg 1 -lvl 3 -x 660 -y 1220 -defaultsOSRD
+preplace port port-id_main_joy_2_left_n_o -pg 1 -lvl 3 -x 660 -y 1260 -defaultsOSRD
+preplace port port-id_main_joy_2_right_n_o -pg 1 -lvl 3 -x 660 -y 1280 -defaultsOSRD
+preplace port port-id_main_joy_2_fire_n_o -pg 1 -lvl 3 -x 660 -y 1240 -defaultsOSRD
+preplace port port-id_iec_reset_n_o -pg 1 -lvl 3 -x 660 -y 1020 -defaultsOSRD
+preplace port port-id_iec_atn_n_o -pg 1 -lvl 3 -x 660 -y 920 -defaultsOSRD
+preplace port port-id_iec_clk_en_o -pg 1 -lvl 3 -x 660 -y 940 -defaultsOSRD
+preplace port port-id_iec_clk_n_i -pg 1 -lvl 0 -x 0 -y 900 -defaultsOSRD
+preplace port port-id_iec_clk_n_o -pg 1 -lvl 3 -x 660 -y 960 -defaultsOSRD
+preplace port port-id_iec_data_en_o -pg 1 -lvl 3 -x 660 -y 980 -defaultsOSRD
+preplace port port-id_iec_data_n_i -pg 1 -lvl 0 -x 0 -y 920 -defaultsOSRD
+preplace port port-id_iec_data_n_o -pg 1 -lvl 3 -x 660 -y 1000 -defaultsOSRD
+preplace port port-id_iec_srq_en_o -pg 1 -lvl 3 -x 660 -y 1040 -defaultsOSRD
+preplace port port-id_iec_srq_n_i -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port port-id_iec_srq_n_o -pg 1 -lvl 3 -x 660 -y 1060 -defaultsOSRD
+preplace port port-id_cart_en_o -pg 1 -lvl 3 -x 660 -y 500 -defaultsOSRD
+preplace port port-id_cart_phi2_o -pg 1 -lvl 3 -x 660 -y 720 -defaultsOSRD
+preplace port port-id_cart_dotclock_o -pg 1 -lvl 3 -x 660 -y 480 -defaultsOSRD
+preplace port port-id_cart_dma_i -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port port-id_cart_reset_oe_o -pg 1 -lvl 3 -x 660 -y 760 -defaultsOSRD
+preplace port port-id_cart_reset_i -pg 1 -lvl 0 -x 0 -y 700 -defaultsOSRD
+preplace port port-id_cart_reset_o -pg 1 -lvl 3 -x 660 -y 740 -defaultsOSRD
+preplace port port-id_cart_game_oe_o -pg 1 -lvl 3 -x 660 -y 580 -defaultsOSRD
+preplace port port-id_cart_game_i -pg 1 -lvl 0 -x 0 -y 600 -defaultsOSRD
+preplace port port-id_cart_game_o -pg 1 -lvl 3 -x 660 -y 560 -defaultsOSRD
+preplace port port-id_cart_exrom_oe_o -pg 1 -lvl 3 -x 660 -y 540 -defaultsOSRD
+preplace port port-id_cart_exrom_i -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
+preplace port port-id_cart_exrom_o -pg 1 -lvl 3 -x 660 -y 520 -defaultsOSRD
+preplace port port-id_cart_nmi_oe_o -pg 1 -lvl 3 -x 660 -y 700 -defaultsOSRD
+preplace port port-id_cart_nmi_i -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port port-id_cart_nmi_o -pg 1 -lvl 3 -x 660 -y 680 -defaultsOSRD
+preplace port port-id_cart_irq_oe_o -pg 1 -lvl 3 -x 660 -y 660 -defaultsOSRD
+preplace port port-id_cart_irq_i -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace port port-id_cart_irq_o -pg 1 -lvl 3 -x 660 -y 640 -defaultsOSRD
+preplace port port-id_cart_roml_oe_o -pg 1 -lvl 3 -x 660 -y 840 -defaultsOSRD
+preplace port port-id_cart_roml_i -pg 1 -lvl 0 -x 0 -y 740 -defaultsOSRD
+preplace port port-id_cart_roml_o -pg 1 -lvl 3 -x 660 -y 820 -defaultsOSRD
+preplace port port-id_cart_romh_oe_o -pg 1 -lvl 3 -x 660 -y 800 -defaultsOSRD
+preplace port port-id_cart_romh_i -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
+preplace port port-id_cart_romh_o -pg 1 -lvl 3 -x 660 -y 780 -defaultsOSRD
+preplace port port-id_cart_ctrl_oe_o -pg 1 -lvl 3 -x 660 -y 220 -defaultsOSRD
+preplace port port-id_cart_ba_i -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port port-id_cart_rw_i -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port port-id_cart_io1_i -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
+preplace port port-id_cart_io2_i -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
+preplace port port-id_cart_ba_o -pg 1 -lvl 3 -x 660 -y 200 -defaultsOSRD
+preplace port port-id_cart_rw_o -pg 1 -lvl 3 -x 660 -y 860 -defaultsOSRD
+preplace port port-id_cart_io1_o -pg 1 -lvl 3 -x 660 -y 600 -defaultsOSRD
+preplace port port-id_cart_io2_o -pg 1 -lvl 3 -x 660 -y 620 -defaultsOSRD
+preplace port port-id_cart_addr_oe_o -pg 1 -lvl 3 -x 660 -y 180 -defaultsOSRD
+preplace port port-id_cart_data_oe_o -pg 1 -lvl 3 -x 660 -y 460 -defaultsOSRD
+preplace portBus qnice_osm_cfg_scaling_o -pg 1 -lvl 3 -x 660 -y 1680 -defaultsOSRD
+preplace portBus qnice_ascal_mode_o -pg 1 -lvl 3 -x 660 -y 1640 -defaultsOSRD
+preplace portBus qnice_osm_control_i -pg 1 -lvl 0 -x 0 -y 1140 -defaultsOSRD
+preplace portBus qnice_gp_reg_i -pg 1 -lvl 0 -x 0 -y 1120 -defaultsOSRD
+preplace portBus qnice_dev_id_i -pg 1 -lvl 0 -x 0 -y 1100 -defaultsOSRD
+preplace portBus qnice_dev_addr_i -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
+preplace portBus qnice_dev_data_i -pg 1 -lvl 0 -x 0 -y 1080 -defaultsOSRD
+preplace portBus qnice_dev_data_o -pg 1 -lvl 3 -x 660 -y 1660 -defaultsOSRD
+preplace portBus hr_core_address_o -pg 1 -lvl 3 -x 660 -y 60 -defaultsOSRD
+preplace portBus hr_core_writedata_o -pg 1 -lvl 3 -x 660 -y 120 -defaultsOSRD
+preplace portBus hr_core_byteenable_o -pg 1 -lvl 3 -x 660 -y 100 -defaultsOSRD
+preplace portBus hr_core_burstcount_o -pg 1 -lvl 3 -x 660 -y 80 -defaultsOSRD
+preplace portBus hr_core_readdata_i -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace portBus video_red_o -pg 1 -lvl 3 -x 660 -y 280 -defaultsOSRD
+preplace portBus video_green_o -pg 1 -lvl 3 -x 660 -y 300 -defaultsOSRD
+preplace portBus video_blue_o -pg 1 -lvl 3 -x 660 -y 320 -defaultsOSRD
+preplace portBus main_osm_control_i -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace portBus main_qnice_gp_reg_i -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace portBus main_audio_left_o -pg 1 -lvl 3 -x 660 -y 420 -defaultsOSRD
+preplace portBus main_audio_right_o -pg 1 -lvl 3 -x 660 -y 440 -defaultsOSRD
+preplace portBus main_power_led_col_o -pg 1 -lvl 3 -x 660 -y 160 -defaultsOSRD
+preplace portBus main_drive_led_col_o -pg 1 -lvl 3 -x 660 -y 140 -defaultsOSRD
+preplace portBus main_pot1_x_i -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace portBus main_pot1_y_i -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace portBus main_pot2_x_i -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace portBus main_pot2_y_i -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
+preplace portBus main_rtc_i -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace portBus cart_a_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus cart_a_o -pg 1 -lvl 3 -x 660 -y 20 -defaultsOSRD
+preplace portBus cart_d_i -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus cart_d_o -pg 1 -lvl 3 -x 660 -y 40 -defaultsOSRD
+preplace inst clk_0 -pg 1 -lvl 1 -x 140 -y 170 -defaultsOSRD
+preplace inst CORE_Main -pg 1 -lvl 2 -x 480 -y 340 -defaultsOSRD
+preplace netloc CORE_Main_audio_left_o 1 2 1 NJ 420
+preplace netloc CORE_Main_audio_right_o 1 2 1 NJ 440
+preplace netloc CORE_Main_video_blue_o 1 2 1 NJ 320
+preplace netloc CORE_Main_video_ce_o 1 2 1 NJ 240
+preplace netloc CORE_Main_video_ce_ovl_o 1 2 1 NJ 260
+preplace netloc CORE_Main_video_green_o 1 2 1 NJ 300
+preplace netloc CORE_Main_video_hblank_o 1 2 1 NJ 380
+preplace netloc CORE_Main_video_hs_o 1 2 1 NJ 360
+preplace netloc CORE_Main_video_red_o 1 2 1 NJ 280
+preplace netloc CORE_Main_video_vblank_o 1 2 1 NJ 400
+preplace netloc CORE_Main_video_vs_o 1 2 1 NJ 340
+preplace netloc clk_0_main_clk_o 1 1 1 260 140n
+preplace netloc clk_0_main_rst_o 1 1 1 N 180
+preplace netloc clk_i_1 1 0 1 NJ 170
+preplace netloc main_joy_1_down_n_i_1 1 0 2 NJ 20 320J
+preplace netloc main_joy_1_fire_n_i_1 1 0 2 NJ 360 NJ
+preplace netloc main_joy_1_left_n_i_1 1 0 2 NJ 40 280J
+preplace netloc main_joy_1_right_n_i_1 1 0 2 NJ 340 NJ
+preplace netloc main_joy_1_up_n_i_1 1 0 2 NJ 60 290J
+preplace netloc main_joy_2_down_n_i_1 1 0 2 NJ 400 NJ
+preplace netloc main_joy_2_fire_n_i_1 1 0 2 NJ 460 NJ
+preplace netloc main_joy_2_left_n_i_1 1 0 2 NJ 420 NJ
+preplace netloc main_joy_2_right_n_i_1 1 0 2 NJ 440 NJ
+preplace netloc main_joy_2_up_n_i_1 1 0 2 NJ 380 NJ
+preplace netloc main_kb_key_num_i_1 1 0 2 NJ 80 310J
+preplace netloc main_kb_key_pressed_n_i_1 1 0 2 NJ 100 270J
+preplace netloc main_pause_core_i_1 1 0 2 NJ 260 260J
+preplace netloc main_pot1_x_i_1 1 0 2 NJ 480 NJ
+preplace netloc main_pot1_y_i_1 1 0 2 NJ 500 NJ
+preplace netloc main_pot2_x_i_1 1 0 2 NJ 520 NJ
+preplace netloc main_pot2_y_i_1 1 0 2 NJ 540 NJ
+preplace netloc main_reset_m2m_i_1 1 0 2 NJ 240 300J
+levelinfo -pg 1 0 140 480 660
+pagesize -pg 1 -db -bbox -sgen -240 0 910 1700
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 "
 }
 0

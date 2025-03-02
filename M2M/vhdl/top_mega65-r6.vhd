@@ -6,11 +6,14 @@
 -- based on C64_MiSTer by the MiSTer development team
 -- port done by MJoergen and sy2002 in 2023 and licensed under GPL v3
 -- Kiwi
+<<<<<<< HEAD
 
 -- 23 Feb 2025
 -- DJR Temp set a default value for main_rtc_i to get around an error
 --  Need to look into this further as to what is causing the issue.
 
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 ----------------------------------------------------------------------------------
 
 library ieee;

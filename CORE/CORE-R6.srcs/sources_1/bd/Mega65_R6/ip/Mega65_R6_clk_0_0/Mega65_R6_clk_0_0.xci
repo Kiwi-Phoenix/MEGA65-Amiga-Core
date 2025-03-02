@@ -16,7 +16,11 @@
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7a200t" } ],
         "PACKAGE": [ { "value": "fbg484" } ],
+<<<<<<< HEAD
         "PREFHDL": [ { "value": "VHDL" } ],
+=======
+        "PREFHDL": [ { "value": "VERILOG" } ],
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-2" } ],
@@ -38,7 +42,10 @@
       "ports": {
         "sys_clk_i": [ { "direction": "in" } ],
         "main_clk_o": [ { "direction": "out" } ],
+<<<<<<< HEAD
         "main_clk_114_o": [ { "direction": "out" } ],
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         "main_rst_o": [ { "direction": "out" } ]
       }
     }

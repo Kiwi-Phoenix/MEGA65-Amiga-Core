@@ -250,16 +250,16 @@ signal main_rtc               : std_logic_vector(64 downto 0);
 ---------------------------------------------------------------------------------------------
 
 -- Democore menu items
-constant C_MENU_HDMI_16_9_50   : natural := 12;
-constant C_MENU_HDMI_16_9_60   : natural := 13;
-constant C_MENU_HDMI_4_3_50    : natural := 14;
-constant C_MENU_HDMI_5_4_50    : natural := 15;
-constant C_MENU_HDMI_640_60    : natural := 16;
-constant C_MENU_HDMI_720_5994  : natural := 17;
-constant C_MENU_SVGA_800_60    : natural := 18;
-constant C_MENU_CRT_EMULATION  : natural := 30;
-constant C_MENU_HDMI_ZOOM      : natural := 31;
-constant C_MENU_IMPROVE_AUDIO  : natural := 32;
+--constant C_MENU_HDMI_16_9_50   : natural := 12;
+--constant C_MENU_HDMI_16_9_60   : natural := 13;
+--constant C_MENU_HDMI_4_3_50    : natural := 14;
+--constant C_MENU_HDMI_5_4_50    : natural := 15;
+--constant C_MENU_HDMI_640_60    : natural := 16;
+--constant C_MENU_HDMI_720_5994  : natural := 17;
+--constant C_MENU_SVGA_800_60    : natural := 18;
+--constant C_MENU_CRT_EMULATION  : natural := 30;
+--constant C_MENU_HDMI_ZOOM      : natural := 31;
+--constant C_MENU_IMPROVE_AUDIO  : natural := 32;
 
 -- QNICE clock domain
 signal qnice_demo_vd_data_o   : std_logic_vector(15 downto 0);
@@ -324,7 +324,10 @@ begin
    clk_gen : entity work.clk
       port map (
          sys_clk_i         => clk_i,           -- expects 100 MHz
+<<<<<<< HEAD
          main_clk_114_o    => main_clk114,    
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
          main_clk_o        => main_clk,        -- CORE's 28.37516 MHz clock (expecct by the MiSTer Amiga Core (??)
          main_rst_o        => main_rst         -- CORE's reset, synchronized
 

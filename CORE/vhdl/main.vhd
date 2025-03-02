@@ -34,11 +34,15 @@ entity main is
       -- MiSTer core main clock speed:
       -- Make sure you pass very exact numbers here, because they are used for avoiding clock drift at derived clocks
 -- DJR cannot define a port with type natural.  May not need this port for the Amiga.  If required, use a different method to pass the value.
+<<<<<<< HEAD
       --clk_main_speed_i        : in  natural;
 --      clk_main_speed_i        : in  std_logic_signed;   -- Input to this is likely to be from a constant
 
       -- RTC
       main_rtc_i              : in std_logic_vector(64 downto 0);
+=======
+      clk_main_speed_i        : in  natural;
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 
       -- Video output
       video_ce_o              : out std_logic;
@@ -92,6 +96,7 @@ architecture synthesis of main is
 --signal keyboard_n          : std_logic_vector(79 downto 0);
 
 
+<<<<<<< HEAD
 -- CPU Wrapper Signals
 
 signal wrap_reset_out       : std_logic;
@@ -332,6 +337,8 @@ signal iir_cy1                  : std_logic_vector(23 downto 0);
 signal iir_cy2                  : std_logic_vector(23 downto 0);
 signal iir_input_l              : std_logic_vector(15 downto 0);
 signal iir_input_r              : std_logic_vector(15 downto 0);
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 
 
 
@@ -347,6 +354,7 @@ begin
    amiga_clk : entity work.amiga_clk
         port map (
             clk_28      => clk_main_i,
+<<<<<<< HEAD
             reset_n     => not clk_reset_i,
             
             clk7_en     => ac_clk7_en,
@@ -355,10 +363,14 @@ begin
             c3          => ac_c3,
             cck         => ac_cck,
             eclk        => ac_eclk              
+=======
+            reset_n     => reset_hard_i               
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         );  -- amiga_clk
    
    
    
+<<<<<<< HEAD
    cpu_wrapper : entity work.cpu_wrapper
         port map (
         -- In Ports
@@ -665,6 +677,31 @@ begin
 --                        output_r                => lpf3_output_r                                                                                       
 --                ); -- lpf3275 iir_filter               
 
+=======
+--   cpu_wrapper : entity work.cpu_wrapper
+--        port map (
+--            reset       => reset_hard_i,
+--            clk         => clk_main_i                 --- TBC                            
+--        );  -- cpu_wrapper
+   
+-- DJR:    Needs looking into.  A section that does IDE uses a component that is supplied with Quartus.
+--  Need to validate if this is necessary or what are the alternatives.  But first understand what the outcome it.
+--   fastchip : entity work.fastchip
+--        port map (
+--        ); -- fastchip   
+   
+
+
+--    IRR_filter : entity work.irr_filter
+--        port map (
+--        ); -- irr_filter   
+        
+        
+   
+--   minimig : entity work.minimig
+--     port map (
+--      ); -- minimig
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
 
    -- On video_ce_o and video_ce_ovl_o: You have an important @TODO when porting a core:
    -- video_ce_o: You need to make sure that video_ce_o divides clk_main_i such that it transforms clk_main_i

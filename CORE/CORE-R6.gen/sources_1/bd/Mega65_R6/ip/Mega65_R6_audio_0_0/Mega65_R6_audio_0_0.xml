@@ -26,7 +26,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
+<<<<<<< HEAD
             <spirit:value>9:bf49b471</spirit:value>
+=======
+            <spirit:value>9:aa2e337b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -37,6 +41,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
+<<<<<<< HEAD
             <spirit:value>9:bf49b471</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
@@ -56,6 +61,9 @@
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:bf49b471</spirit:value>
+=======
+            <spirit:value>9:aa2e337b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -66,7 +74,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
+<<<<<<< HEAD
             <spirit:value>9:bf49b471</spirit:value>
+=======
+            <spirit:value>9:aa2e337b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -91,6 +103,7 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
+<<<<<<< HEAD
         <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
         <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
@@ -98,15 +111,32 @@
         <spirit:modelName>Mega65_R6_audio_0_0</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+=======
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>Mega65_R6_audio_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Sat Feb 22 01:33:45 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:bf49b471</spirit:value>
+=======
+            <spirit:value>Sat Jan 18 00:44:35 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:aa2e337b</spirit:value>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -241,6 +271,7 @@
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
+<<<<<<< HEAD
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>Mega65_R6_audio_0_0.dcp</spirit:name>
@@ -277,6 +308,8 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
+=======
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
       <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>sim/Mega65_R6_audio_0_0.v</spirit:name>
@@ -285,10 +318,17 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
+<<<<<<< HEAD
       <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>synth/Mega65_R6_audio_0_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
+=======
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/Mega65_R6_audio_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+>>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
