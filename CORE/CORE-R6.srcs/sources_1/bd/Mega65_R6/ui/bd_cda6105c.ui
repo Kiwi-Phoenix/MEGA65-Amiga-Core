@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1228,-178",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -70 -y 60 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -70 -y 200 -defaultsOSRD
+preplace port port-id_rd -pg 1 -lvl 0 -x -70 -y 180 -defaultsOSRD
+preplace port port-id_wr -pg 1 -lvl 0 -x -70 -y 260 -defaultsOSRD
+preplace port port-id_sel_ide -pg 1 -lvl 0 -x -70 -y 240 -defaultsOSRD
+preplace port port-id_sel_gayle -pg 1 -lvl 0 -x -70 -y 220 -defaultsOSRD
+preplace port port-id_irq -pg 1 -lvl 2 -x 360 -y 80 -defaultsOSRD
+preplace port port-id_nrdy -pg 1 -lvl 2 -x 360 -y 120 -defaultsOSRD
+preplace port port-id_longword -pg 1 -lvl 0 -x -70 -y 160 -defaultsOSRD
+preplace port port-id_ide_write -pg 1 -lvl 0 -x -70 -y 140 -defaultsOSRD
+preplace port port-id_ide_read -pg 1 -lvl 0 -x -70 -y 100 -defaultsOSRD
+preplace port port-id_led -pg 1 -lvl 2 -x 360 -y 100 -defaultsOSRD
+preplace portBus addr -pg 1 -lvl 0 -x -70 -y 120 -defaultsOSRD
+preplace portBus data_in -pg 1 -lvl 0 -x -70 -y 20 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 2 -x 360 -y 20 -defaultsOSRD
+preplace portBus ide_address -pg 1 -lvl 0 -x -70 -y 40 -defaultsOSRD
+preplace portBus ide_writedata -pg 1 -lvl 0 -x -70 -y 80 -defaultsOSRD
+preplace portBus ide_readdata -pg 1 -lvl 2 -x 360 -y 40 -defaultsOSRD
+preplace portBus ide_req -pg 1 -lvl 2 -x 360 -y 60 -defaultsOSRD
+preplace inst CORE_GAYLE_ide0 -pg 1 -lvl 1 -x 180 -y 180 -defaultsOSRD
+preplace inst CORE_GAYLE_ide1 -pg 1 -lvl 1 -x 180 -y 510 -defaultsOSRD
+preplace netloc CORE_GAYLE_ide0_request 1 1 1 340 60n
+preplace netloc addr_1 1 0 1 10J 120n
+preplace netloc clk_1 1 0 1 20 60n
+preplace netloc data_in_1 1 0 1 0 20n
+preplace netloc ide_address_1 1 0 1 -10 40n
+preplace netloc ide_read_1 1 0 1 -50 100n
+preplace netloc ide_write_1 1 0 1 -40 140n
+preplace netloc ide_writedata_1 1 0 1 -30 80n
+preplace netloc rd_1 1 0 1 -20 140n
+levelinfo -pg 1 -70 180 360
+pagesize -pg 1 -db -bbox -sgen -260 0 540 680
+"
+}
+0

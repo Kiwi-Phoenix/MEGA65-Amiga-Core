@@ -1,0 +1,55 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Minimig_core_orig_minimig_bankmapper_0_0",
+    "cell_name": "emu/CORE_Main_Minimig/minimig_bankmapper_0",
+    "component_reference": "xilinx.com:module_ref:minimig_bankmapper:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../CORE-R6.gen/sources_1/bd/Minimig_core_orig/ip/Minimig_core_orig_minimig_bankmapper_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "Minimig_core_orig_minimig_bankmapper_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a200t" } ],
+        "PACKAGE": [ { "value": "fbg484" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../CORE-R6.gen/sources_1/bd/Minimig_core_orig/ip/Minimig_core_orig_minimig_bankmapper_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "chip0": [ { "direction": "in" } ],
+        "chip1": [ { "direction": "in" } ],
+        "chip2": [ { "direction": "in" } ],
+        "chip3": [ { "direction": "in" } ],
+        "slow0": [ { "direction": "in" } ],
+        "slow1": [ { "direction": "in" } ],
+        "slow2": [ { "direction": "in" } ],
+        "kick": [ { "direction": "in" } ],
+        "kick1mb": [ { "direction": "in" } ],
+        "kick256kmirror": [ { "direction": "in" } ],
+        "cart": [ { "direction": "in" } ],
+        "memory_config": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "bank": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
+      }
+    }
+  }
+}

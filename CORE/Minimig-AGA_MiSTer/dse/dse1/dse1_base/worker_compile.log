@@ -1,0 +1,1116 @@
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+Info: Command: quartus_sh --flow compile Minimig.qsf
+Info: Quartus(args): compile Minimig.qsf
+Info: Project Name = D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/Minimig
+Info: Revision Name = Minimig
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+{"object_type": "report_status", "percent" : 0}
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+Info: Command: quartus_sh -t sys/build_id.tcl compile Minimig Minimig
+Info: Quartus(args): compile Minimig Minimig
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Info: Evaluation of Tcl script sys/build_id.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+{"object_type": "report_status", "percent" : 16}
+{"object_type": "report_status", "percent" : 16}
+Info: *******************************************************************
+Info: Running Quartus Prime Signal Tap
+Info: Command: quartus_stp Minimig -c Minimig
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Info: Quartus Prime Signal Tap was successful. 0 errors, 2 warnings
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 34}
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+Info: Command: quartus_map --read_settings_files=off --write_settings_files=off Minimig -c Minimig
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Info: High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+{"object_type": "refresh_report"}
+Info: Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info: Verilog HDL Declaration information at sys_top.v(93): object "BTN_USER" differs only in case from object "btn_user" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(94): object "BTN_OSD" differs only in case from object "btn_osd" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(322): object "ARX" differs only in case from object "arx" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(322): object "ARY" differs only in case from object "ary" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(38): object "HDMI_TX_CLK" differs only in case from object "hdmi_tx_clk" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(1307): object "vga_tx_clk" differs only in case from object "VGA_TX_CLK" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(75): object "VGA_HS" differs only in case from object "vga_hs" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(76): object "VGA_VS" differs only in case from object "vga_vs" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(72): object "VGA_R" differs only in case from object "vga_r" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(73): object "VGA_G" differs only in case from object "vga_g" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(74): object "VGA_B" differs only in case from object "vga_b" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(80): object "AUDIO_L" differs only in case from object "audio_l" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(81): object "AUDIO_R" differs only in case from object "audio_r" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(90): object "LED_USER" differs only in case from object "led_user" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(92): object "LED_POWER" differs only in case from object "led_power" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(810): object "FB_EN" differs only in case from object "fb_en" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(811): object "FB_FMT" differs only in case from object "fb_fmt" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(812): object "FB_WIDTH" differs only in case from object "fb_width" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(813): object "FB_HEIGHT" differs only in case from object "fb_height" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(814): object "FB_BASE" differs only in case from object "fb_base" in the same scope
+Info: Verilog HDL Declaration information at sys_top.v(815): object "FB_STRIDE" differs only in case from object "fb_stride" in the same scope
+Info: Found 3 design units, including 3 entities, in source file sys/sys_top.v
+Info: Found 2 design units, including 1 entities, in source file sys/ascal.vhd
+Info: Found 2 design units, including 1 entities, in source file sys/pll_hdmi_adj.vhd
+Info: Found 3 design units, including 3 entities, in source file sys/math.sv
+Info: Verilog HDL Declaration information at hq2x.sv(304): object "A" differs only in case from object "a" in the same scope
+Info: Verilog HDL Declaration information at hq2x.sv(305): object "B" differs only in case from object "b" in the same scope
+Info: Verilog HDL Declaration information at hq2x.sv(306): object "D" differs only in case from object "d" in the same scope
+Info: Verilog HDL Declaration information at hq2x.sv(303): object "E" differs only in case from object "e" in the same scope
+Info: Verilog HDL Declaration information at hq2x.sv(308): object "H" differs only in case from object "h" in the same scope
+Info: Verilog HDL Declaration information at hq2x.sv(307): object "F" differs only in case from object "f" in the same scope
+Info: Found 5 design units, including 5 entities, in source file sys/hq2x.sv
+Info: Verilog HDL Declaration information at scandoubler.v(26): object "hq2x" differs only in case from object "Hq2x" in the same scope
+Info: Found 1 design units, including 1 entities, in source file sys/scandoubler.v
+Info: Found 1 design units, including 1 entities, in source file sys/scanlines.v
+Info: Found 1 design units, including 1 entities, in source file sys/shadowmask.sv
+Info: Found 2 design units, including 2 entities, in source file sys/video_cleaner.sv
+Info: Found 2 design units, including 2 entities, in source file sys/gamma_corr.sv
+Warning: Verilog HDL or VHDL warning at sys/video_mixer.sv(17): MESSAGE_ON or MESSAGE_OFF directive cannot process the non-HDL message ID 12161.
+Info: Found 1 design units, including 1 entities, in source file sys/video_mixer.sv
+Info: Verilog HDL Declaration information at video_freak.sv(33): object "SCALE" differs only in case from object "scale" in the same scope
+Warning: Verilog HDL information at video_freak.sv(173): always construct contains both blocking and non-blocking assignments
+Info: Found 2 design units, including 2 entities, in source file sys/video_freak.sv
+Info: Found 2 design units, including 2 entities, in source file sys/video_freezer.sv
+Info: Verilog HDL Declaration information at arcade_video.v(31): object "clk_video" differs only in case from object "CLK_VIDEO" in the same scope
+Info: Verilog HDL Declaration information at arcade_video.v(180): object "FB_EN" differs only in case from object "fb_en" in the same scope
+Info: Found 2 design units, including 2 entities, in source file sys/arcade_video.v
+Info: Found 1 design units, including 1 entities, in source file sys/osd.v
+Info: Found 1 design units, including 1 entities, in source file sys/vga_out.sv
+Info: Verilog HDL Declaration information at yc_out.sv(72): object "C" differs only in case from object "c" in the same scope
+Info: Found 1 design units, including 1 entities, in source file sys/yc_out.sv
+Info: Found 1 design units, including 1 entities, in source file sys/i2c.v
+Info: Found 1 design units, including 1 entities, in source file sys/alsa.sv
+Info: Found 1 design units, including 1 entities, in source file sys/i2s.v
+Info: Found 1 design units, including 1 entities, in source file sys/spdif.v
+Info: Found 2 design units, including 2 entities, in source file sys/audio_out.v
+Info: Found 3 design units, including 3 entities, in source file sys/iir_filter.v
+Info: Found 2 design units, including 2 entities, in source file sys/ltc2308.sv
+Info: Found 1 design units, including 1 entities, in source file sys/sigma_delta_dac.v
+Info: Found 1 design units, including 1 entities, in source file sys/mt32pi.sv
+Info: Found 1 design units, including 1 entities, in source file sys/mcp23009.sv
+Info: Found 1 design units, including 1 entities, in source file sys/f2sdram_safe_terminator.sv
+Info: Found 1 design units, including 1 entities, in source file sys/ddr_svc.sv
+Info: Found 2 design units, including 2 entities, in source file sys/sysmem.sv
+Info: Found 1 design units, including 1 entities, in source file sys/sd_card.sv
+Info: Found 4 design units, including 4 entities, in source file sys/hps_io.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/pll.v
+Info: Found 1 design units, including 1 entities, in source file rtl/pll/pll_0002.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_hdmi.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_hdmi/pll_hdmi_0002.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_audio.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_audio/pll_audio_0002.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_cfg/pll_cfg.v
+Info: Verilog HDL Declaration information at pll_cfg_hdmi.v(91): object "LOCKED" differs only in case from object "locked" in the same scope
+Info: Found 1 design units, including 1 entities, in source file sys/pll_cfg/pll_cfg_hdmi.v
+Info: Found 1 design units, including 1 entities, in source file sys/pll_cfg/altera_pll_reconfig_top.v
+Info: Verilog HDL Declaration information at altera_pll_reconfig_core.v(112): object "LOCKED" differs only in case from object "locked" in the same scope
+Info: Verilog HDL Declaration information at altera_pll_reconfig_core.v(1901): object "dps_done" differs only in case from object "DPS_DONE" in the same scope
+Info: Verilog HDL Declaration information at altera_pll_reconfig_core.v(1893): object "dps_changed" differs only in case from object "DPS_CHANGED" in the same scope
+Info: Found 6 design units, including 6 entities, in source file sys/pll_cfg/altera_pll_reconfig_core.v
+Info: Found 2 design units, including 1 entities, in source file rtl/tg68k/tg68k_alu.vhd
+Info: Found 1 design units, including 0 entities, in source file rtl/tg68k/tg68k_pack.vhd
+Info: Found 2 design units, including 1 entities, in source file rtl/tg68k/tg68kdotc_kernel.vhd
+Info: Found 2 design units, including 1 entities, in source file rtl/tg68k/tg68k.vhd
+Info: Found 14 design units, including 14 entities, in source file rtl/fx68k/fx68k.sv
+Info: Found 6 design units, including 6 entities, in source file rtl/fx68k/fx68kalu.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/fx68k/uaddrpla.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/sdram_ctrl.v
+Info: Found 1 design units, including 1 entities, in source file rtl/ddram_ctrl.v
+Info: Found 2 design units, including 2 entities, in source file rtl/cpu_cache_new.v
+Info: Found 10 design units, including 5 entities, in source file rtl/bram.vhd
+Info: Verilog HDL Declaration information at agnus.v(102): object "DMACON" differs only in case from object "dmacon" in the same scope
+Info: Verilog HDL Declaration information at agnus.v(103): object "DMACONR" differs only in case from object "dmaconr" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_spritedma.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_refresh.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_diskdma.v
+Info: Verilog HDL Declaration information at agnus_copper.v(62): object "reset" differs only in case from object "RESET" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(78): object "COP1LCH" differs only in case from object "cop1lch" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(79): object "COP1LCL" differs only in case from object "cop1lcl" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(80): object "COP2LCH" differs only in case from object "cop2lch" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(81): object "COP2LCL" differs only in case from object "cop2lcl" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(84): object "COPJMP1" differs only in case from object "copjmp1" in the same scope
+Info: Verilog HDL Declaration information at agnus_copper.v(85): object "COPJMP2" differs only in case from object "copjmp2" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_copper.v
+Info: Verilog HDL Declaration information at agnus_blitter.v(101): object "BLTCON0" differs only in case from object "bltcon0" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(103): object "BLTCON1" differs only in case from object "bltcon1" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(104): object "BLTAFWM" differs only in case from object "bltafwm" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(105): object "BLTALWM" differs only in case from object "bltalwm" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(106): object "BLTADAT" differs only in case from object "bltadat" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(107): object "BLTBDAT" differs only in case from object "bltbdat" in the same scope
+Info: Verilog HDL Declaration information at agnus_blitter.v(108): object "BLTCDAT" differs only in case from object "bltcdat" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_blitter.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_blitter_minterm.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_blitter_fill.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_blitter_barrelshifter.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_blitter_adrgen.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_bitplanedma.v
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(65): object "HTOTAL" differs only in case from object "htotal" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(73): object "HSSTRT" differs only in case from object "hsstrt" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(66): object "HSSTOP" differs only in case from object "hsstop" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(76): object "HCENTER" differs only in case from object "hcenter" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(67): object "HBSTRT" differs only in case from object "hbstrt" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(68): object "HBSTOP" differs only in case from object "hbstop" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(69): object "VTOTAL" differs only in case from object "vtotal" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(75): object "VSSTRT" differs only in case from object "vsstrt" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(70): object "VSSTOP" differs only in case from object "vsstop" in the same scope
+Info: Verilog HDL Declaration information at agnus_beamcounter.v(72): object "VBSTOP" differs only in case from object "vbstop" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_beamcounter.v
+Info: Found 1 design units, including 1 entities, in source file rtl/agnus_audiodma.v
+Info: Found 1 design units, including 1 entities, in source file rtl/ciaa.v
+Info: Found 1 design units, including 1 entities, in source file rtl/ciab.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cia_timerd.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cia_timerb.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cia_timera.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cia_int.v
+Info: Found 1 design units, including 1 entities, in source file rtl/gayle.v
+Info: Found 1 design units, including 1 entities, in source file rtl/ide.v
+Info: Verilog HDL Declaration information at paula.v(120): object "DMACON" differs only in case from object "dmacon" in the same scope
+Info: Verilog HDL Declaration information at paula.v(121): object "ADKCON" differs only in case from object "adkcon" in the same scope
+Info: Verilog HDL Declaration information at paula.v(122): object "ADKCONR" differs only in case from object "adkconr" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/paula.v
+Info: Verilog HDL Declaration information at paula_uart.v(68): object "TX_SHIFT" differs only in case from object "tx_shift" in the same scope
+Info: Verilog HDL Declaration information at paula_uart.v(146): object "RX_SHIFT" differs only in case from object "rx_shift" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_uart.v
+Info: Verilog HDL Declaration information at paula_intcontroller.v(29): object "INTENA" differs only in case from object "intena" in the same scope
+Info: Verilog HDL Declaration information at paula_intcontroller.v(27): object "INTENAR" differs only in case from object "intenar" in the same scope
+Info: Verilog HDL Declaration information at paula_intcontroller.v(30): object "INTREQ" differs only in case from object "intreq" in the same scope
+Info: Verilog HDL Declaration information at paula_intcontroller.v(28): object "INTREQR" differs only in case from object "intreqr" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_intcontroller.v
+Info: Verilog HDL Declaration information at paula_floppy.v(121): object "DSKSYNC" differs only in case from object "dsksync" in the same scope
+Info: Verilog HDL Declaration information at paula_floppy.v(122): object "DSKLEN" differs only in case from object "dsklen" in the same scope
+Info: Verilog HDL Declaration information at paula_floppy.v(118): object "DSKBYTR" differs only in case from object "dskbytr" in the same scope
+Info: Verilog HDL Declaration information at paula_floppy.v(120): object "DSKDATR" differs only in case from object "dskdatr" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_floppy.v
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_floppy_fifo.v
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_audio.v
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_audio_volume.v
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_audio_mixer.v
+Info: Verilog HDL Declaration information at paula_audio_channel.v(25): object "AUDLEN" differs only in case from object "audlen" in the same scope
+Info: Verilog HDL Declaration information at paula_audio_channel.v(26): object "AUDPER" differs only in case from object "audper" in the same scope
+Info: Verilog HDL Declaration information at paula_audio_channel.v(27): object "AUDVOL" differs only in case from object "audvol" in the same scope
+Info: Verilog HDL Declaration information at paula_audio_channel.v(28): object "AUDDAT" differs only in case from object "auddat" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/paula_audio_channel.v
+Info: Verilog HDL Declaration information at denise.v(59): object "BPLCON0" differs only in case from object "bplcon0" in the same scope
+Info: Verilog HDL Declaration information at denise.v(60): object "BPLCON2" differs only in case from object "bplcon2" in the same scope
+Info: Verilog HDL Declaration information at denise.v(61): object "BPLCON3" differs only in case from object "bplcon3" in the same scope
+Info: Verilog HDL Declaration information at denise.v(62): object "BPLCON4" differs only in case from object "bplcon4" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/denise.v
+Info: Verilog HDL Declaration information at denise_sprites.v(46): object "FMODE" differs only in case from object "fmode" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_sprites.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_sprites_shifter.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_spritepriority.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_playfields.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_hamgenerator.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_colortable.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_colortable_ram_mf.v
+Info: Verilog HDL Declaration information at denise_collision.v(19): object "CLXCON" differs only in case from object "clxcon" in the same scope
+Info: Verilog HDL Declaration information at denise_collision.v(20): object "CLXCON2" differs only in case from object "clxcon2" in the same scope
+Info: Verilog HDL Declaration information at denise_collision.v(21): object "CLXDAT" differs only in case from object "clxdat" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_collision.v
+Info: Verilog HDL Declaration information at denise_bitplanes.v(45): object "BPLCON1" differs only in case from object "bplcon1" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(54): object "FMODE" differs only in case from object "fmode" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(46): object "BPL1DAT" differs only in case from object "bpl1dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(47): object "BPL2DAT" differs only in case from object "bpl2dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(48): object "BPL3DAT" differs only in case from object "bpl3dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(49): object "BPL4DAT" differs only in case from object "bpl4dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(50): object "BPL5DAT" differs only in case from object "bpl5dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(51): object "BPL6DAT" differs only in case from object "bpl6dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(52): object "BPL7DAT" differs only in case from object "bpl7dat" in the same scope
+Info: Verilog HDL Declaration information at denise_bitplanes.v(53): object "BPL8DAT" differs only in case from object "bpl8dat" in the same scope
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_bitplanes.v
+Info: Found 1 design units, including 1 entities, in source file rtl/denise_bitplane_shifter.v
+Info: Found 1 design units, including 1 entities, in source file rtl/fpga-toccata/toccata_capture.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/fpga-toccata/toccata_playback.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/fpga-toccata/toccata_volume.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/fpga-toccata/toccata_fifo.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/fpga-toccata/toccata.sv
+Info: Found 1 design units, including 1 entities, in source file rtl/gary.v
+Info: Found 1 design units, including 1 entities, in source file rtl/rtg.v
+Info: Found 1 design units, including 1 entities, in source file rtl/akiko.v
+Info: Found 1 design units, including 1 entities, in source file rtl/fastchip.v
+Info: Found 1 design units, including 1 entities, in source file rtl/userio.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cart.v
+Info: Found 1 design units, including 1 entities, in source file rtl/amiga_clk.v
+Info: Found 1 design units, including 1 entities, in source file rtl/minimig_syscontrol.v
+Info: Found 1 design units, including 1 entities, in source file rtl/minimig_sram_bridge.v
+Info: Found 1 design units, including 1 entities, in source file rtl/minimig_m68k_bridge.v
+Info: Found 1 design units, including 1 entities, in source file rtl/minimig_bankmapper.v
+Info: Found 1 design units, including 1 entities, in source file rtl/minimig.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cpu_wrapper.v
+Info: Found 1 design units, including 1 entities, in source file hps_ext.v
+Info: Found 1 design units, including 1 entities, in source file rtl/cdda.v
+Info: Verilog HDL Declaration information at Minimig.sv(86): object "BUTTONS" differs only in case from object "buttons" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(14): object "RESET" differs only in case from object "reset" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(144): object "UART_CTS" differs only in case from object "uart_cts" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(149): object "UART_DSR" differs only in case from object "uart_dsr" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(145): object "UART_RTS" differs only in case from object "uart_rts" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(148): object "UART_DTR" differs only in case from object "uart_dtr" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(827): object "R" differs only in case from object "r" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(827): object "G" differs only in case from object "g" in the same scope
+Info: Verilog HDL Declaration information at Minimig.sv(827): object "B" differs only in case from object "b" in the same scope
+Info: Found 1 design units, including 1 entities, in source file minimig.sv
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+Info: Elaborating entity "sys_top" for the top level hierarchy
+Info: Elaborating entity "mcp23009" for hierarchy "mcp23009:mcp23009"
+Info: Elaborating entity "i2c" for hierarchy "mcp23009:mcp23009|i2c:i2c"
+Info: Elaborating entity "sysmem_lite" for hierarchy "sysmem_lite:sysmem"
+Info: Elaborating entity "f2sdram_safe_terminator" for hierarchy "sysmem_lite:sysmem|f2sdram_safe_terminator:f2sdram_safe_terminator_ram1"
+Info: Elaborating entity "f2sdram_safe_terminator" for hierarchy "sysmem_lite:sysmem|f2sdram_safe_terminator:f2sdram_safe_terminator_vbuf"
+Info: Elaborating entity "sysmem_HPS_fpga_interfaces" for hierarchy "sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces"
+Info: Elaborating entity "ddr_svc" for hierarchy "ddr_svc:ddr_svc"
+Info: Elaborating entity "ascal" for hierarchy "ascal:ascal"
+Info: Inferred 5 megafunctions from design logic
+Info: Elaborating entity "altsyncram" for hierarchy "ascal:ascal|altsyncram:i_mem[0].r[7]__1"
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:i_mem[0].r[7]__1"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:i_mem[0].r[7]__1" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_v8q1.tdf
+Info: Elaborating entity "altsyncram_v8q1" for hierarchy "ascal:ascal|altsyncram:i_mem[0].r[7]__1|altsyncram_v8q1:auto_generated"
+Info: Elaborating entity "altsyncram" for hierarchy "ascal:ascal|altsyncram:o_line0[0].r[7]__2"
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_line0[0].r[7]__2"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:o_line0[0].r[7]__2" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_3cn1.tdf
+Info: Elaborating entity "altsyncram_3cn1" for hierarchy "ascal:ascal|altsyncram:o_line0[0].r[7]__2|altsyncram_3cn1:auto_generated"
+Info: Elaborating entity "sys_umuldiv" for hierarchy "sys_umuldiv:ar_muldiv"
+Info: Elaborating entity "sys_umul" for hierarchy "sys_umuldiv:ar_muldiv|sys_umul:umul"
+Info: Elaborating entity "sys_udiv" for hierarchy "sys_umuldiv:ar_muldiv|sys_udiv:udiv"
+Info: Elaborating entity "pll_hdmi_adj" for hierarchy "pll_hdmi_adj:pll_hdmi_adj"
+Info: Elaborating entity "pll_hdmi" for hierarchy "pll_hdmi:pll_hdmi"
+Info: Elaborating entity "pll_hdmi_0002" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst"
+Info: Elaborating entity "altera_pll" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Warning: Output port "lvds_clk" at altera_pll.v(320) has no driver
+Warning: Output port "loaden" at altera_pll.v(321) has no driver
+Warning: Output port "extclk_out" at altera_pll.v(322) has no driver
+Info: Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Instantiated megafunction "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i" with the following parameter:
+Info: Elaborating entity "dps_extra_kick" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "dprio_init" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|dprio_init:dprio_init_inst", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_0", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_1", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_2", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_3", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_pll_dps_lcell_comb" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_pll_dps_lcell_comb:lcell_cntsel_int_4", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_cyclonev_pll" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll"
+Warning: Output port "extclk" at altera_cyclonev_pll.v(632) has no driver
+Warning: Output port "clkout[0]" at altera_cyclonev_pll.v(637) has no driver
+Warning: Output port "loaden" at altera_cyclonev_pll.v(641) has no driver
+Warning: Output port "lvdsclk" at altera_cyclonev_pll.v(642) has no driver
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_cyclonev_pll_base" for hierarchy "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0"
+Info: Elaborated megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0", which is child of megafunction instantiation "pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "pll_cfg_hdmi" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi"
+Info: Elaborating entity "altera_std_synchronizer" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst"
+Info: Elaborated megafunction instantiation "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst"
+Info: Instantiated megafunction "pll_cfg_hdmi:pll_cfg_hdmi|altera_std_synchronizer:altera_std_synchronizer_inst" with the following parameter:
+Info: Elaborating entity "dyn_phase_shift" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst"
+Info: Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_0"
+Info: Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_1"
+Info: Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_2"
+Info: Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_3"
+Info: Elaborating entity "generic_lcell_comb" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dyn_phase_shift:dyn_phase_shift_inst|generic_lcell_comb:lcell_cnt_sel_4"
+Info: Elaborating entity "self_reset" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|self_reset:self_reset_inst"
+Info: Elaborating entity "dprio_mux" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|dprio_mux:dprio_mux_inst"
+Info: Elaborating entity "fpll_dprio_init" for hierarchy "pll_cfg_hdmi:pll_cfg_hdmi|fpll_dprio_init:fpll_dprio_init_inst"
+Info: Elaborating entity "shadowmask" for hierarchy "shadowmask:HDMI_shadowmask"
+Info: Elaborating entity "osd" for hierarchy "osd:hdmi_osd"
+Info: Elaborating entity "csync" for hierarchy "csync:csync_hdmi"
+Info: Elaborating entity "altddio_out" for hierarchy "altddio_out:hdmiclk_ddr"
+Info: Elaborated megafunction instantiation "altddio_out:hdmiclk_ddr"
+Info: Instantiated megafunction "altddio_out:hdmiclk_ddr" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/ddio_out_b2j.tdf
+Info: Elaborating entity "ddio_out_b2j" for hierarchy "altddio_out:hdmiclk_ddr|ddio_out_b2j:auto_generated"
+Info: Elaborating entity "altddio_out" for hierarchy "altddio_out:vgaclk_ddr"
+Info: Elaborated megafunction instantiation "altddio_out:vgaclk_ddr"
+Info: Instantiated megafunction "altddio_out:vgaclk_ddr" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/ddio_out_1oj.tdf
+Info: Elaborating entity "ddio_out_1oj" for hierarchy "altddio_out:vgaclk_ddr|ddio_out_1oj:auto_generated"
+Info: Elaborating entity "scanlines" for hierarchy "scanlines:VGA_scanlines"
+Info: Elaborating entity "yc_out" for hierarchy "yc_out:yc_out"
+Info: Elaborating entity "vga_out" for hierarchy "vga_out:vga_scaler_out"
+Info: Elaborating entity "pll_audio" for hierarchy "pll_audio:pll_audio"
+Info: Elaborating entity "pll_audio_0002" for hierarchy "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst"
+Info: Elaborating entity "altera_pll" for hierarchy "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i"
+Info: Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info: Elaborated megafunction instantiation "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i"
+Info: Instantiated megafunction "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i" with the following parameter:
+Info: Elaborating entity "audio_out" for hierarchy "audio_out:audio_out"
+Info: Elaborating entity "i2s" for hierarchy "audio_out:audio_out|i2s:i2s"
+Info: Elaborating entity "spdif" for hierarchy "audio_out:audio_out|spdif:toslink"
+Info: Elaborating entity "sigma_delta_dac" for hierarchy "audio_out:audio_out|sigma_delta_dac:sd_l"
+Info: Elaborating entity "IIR_filter" for hierarchy "audio_out:audio_out|IIR_filter:IIR_filter"
+Info: Elaborating entity "iir_filter_tap" for hierarchy "audio_out:audio_out|IIR_filter:IIR_filter|iir_filter_tap:iir_tap_0"
+Info: Elaborating entity "DC_blocker" for hierarchy "audio_out:audio_out|DC_blocker:dcb_l"
+Info: Elaborating entity "aud_mix_top" for hierarchy "audio_out:audio_out|aud_mix_top:audmix_l"
+Info: Elaborating entity "alsa" for hierarchy "alsa:alsa"
+Info: Elaborating entity "sync_fix" for hierarchy "sync_fix:sync_v"
+Info: Elaborating entity "emu" for hierarchy "emu:emu"
+Info: Elaborating entity "hps_io" for hierarchy "emu:emu|hps_io:hps_io"
+Info: Verilog HDL Case Statement information at hps_io.sv(420): all case item expressions in this case statement are onehot
+Info: Verilog HDL Case Statement information at hps_io.sv(449): all case item expressions in this case statement are onehot
+Info: Elaborating entity "video_calc" for hierarchy "emu:emu|hps_io:hps_io|video_calc:video_calc"
+Info: Elaborating entity "hps_ext" for hierarchy "emu:emu|hps_ext:hps_ext"
+Info: Elaborating entity "pll" for hierarchy "emu:emu|pll:pll"
+Info: Elaborating entity "pll_0002" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst"
+Info: Elaborating entity "altera_pll" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i"
+Warning: Output port "lvds_clk" at altera_pll.v(320) has no driver
+Warning: Output port "loaden" at altera_pll.v(321) has no driver
+Warning: Output port "extclk_out" at altera_pll.v(322) has no driver
+Info: Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info: Elaborated megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i"
+Info: Instantiated megafunction "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter:
+Info: Elaborating entity "altera_cyclonev_pll" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll"
+Warning: Output port "extclk" at altera_cyclonev_pll.v(632) has no driver
+Warning: Output port "clkout[0]" at altera_cyclonev_pll.v(637) has no driver
+Warning: Output port "loaden" at altera_cyclonev_pll.v(641) has no driver
+Warning: Output port "lvdsclk" at altera_cyclonev_pll.v(642) has no driver
+Info: Elaborated megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll", which is child of megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "altera_cyclonev_pll_base" for hierarchy "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0"
+Info: Elaborated megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0", which is child of megafunction instantiation "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i"
+Info: Elaborating entity "pll_cfg" for hierarchy "emu:emu|pll_cfg:pll_cfg"
+Info: Elaborating entity "altera_pll_reconfig_top" for hierarchy "emu:emu|pll_cfg:pll_cfg|altera_pll_reconfig_top:pll_cfg_inst"
+Info: Elaborating entity "altera_pll_reconfig_core" for hierarchy "emu:emu|pll_cfg:pll_cfg|altera_pll_reconfig_top:pll_cfg_inst|altera_pll_reconfig_core:NM28_reconfig.reconfig_core.altera_pll_reconfig_core_inst0"
+Warning: Verilog HDL or VHDL warning at altera_pll_reconfig_core.v(208): object "dps_start_assert" assigned a value but never read
+Warning: Verilog HDL Case Statement warning at altera_pll_reconfig_core.v(1510): incomplete case statement has no default case item
+Warning: Verilog HDL Case Statement warning at altera_pll_reconfig_core.v(1526): incomplete case statement has no default case item
+Info: Elaborating entity "amiga_clk" for hierarchy "emu:emu|amiga_clk:amiga_clk"
+Info: Elaborating entity "cpu_wrapper" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper"
+Info: Verilog HDL Case Statement information at cpu_wrapper.v(316): all case item expressions in this case statement are onehot
+Info: Elaborating entity "TG68KdotC_Kernel" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p"
+Info: Elaborating entity "TG68K_ALU" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p|TG68K_ALU:ALU"
+Info: Elaborating entity "fx68k" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o"
+Info: Elaborating entity "microToNanoAddr" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|microToNanoAddr:microToNanoAddr"
+Info: Elaborating entity "nanoRom" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|nanoRom:nanoRom"
+Info: Elaborating entity "uRom" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uRom:uRom"
+Info: Elaborating entity "uaddrDecode" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uaddrDecode:uaddrDecode"
+Info: Verilog HDL Case Statement information at fx68k.sv(1862): all case item expressions in this case statement are onehot
+Info: Elaborating entity "onehotEncoder4" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uaddrDecode:uaddrDecode|onehotEncoder4:irLineDecod"
+Info: Elaborating entity "pla_lined" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uaddrDecode:uaddrDecode|pla_lined:pla_lined"
+Info: Elaborating entity "sequencer" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|sequencer:sequencer"
+Info: Elaborating entity "excUnit" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit"
+Info: Elaborating entity "pren" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|pren:rmPren"
+Info: Elaborating entity "dataIo" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|dataIo:dataIo"
+Info: Elaborating entity "fx68kAlu" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu"
+Info: Elaborating entity "rowDecoder" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu|rowDecoder:rowDecoder"
+Info: Elaborating entity "aluGetOp" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu|aluGetOp:aluGetOp"
+Info: Elaborating entity "ccrTable" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu|ccrTable:ccrTable"
+Info: Verilog HDL Case Statement information at fx68kAlu.sv(813): all case item expressions in this case statement are onehot
+Info: Elaborating entity "aluShifter" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu|aluShifter:shifter"
+Info: Elaborating entity "aluCorf" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|excUnit:excUnit|fx68kAlu:alu|aluCorf:aluCorf"
+Info: Elaborating entity "nDecoder3" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|nDecoder3:nDecoder"
+Info: Elaborating entity "irdDecode" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|irdDecode:irdDecode"
+Info: Elaborating entity "busControl" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|busControl:busControl"
+Info: Elaborating entity "busArbiter" for hierarchy "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|busArbiter:busArbiter"
+Info: Verilog HDL Case Statement information at fx68k.sv(2238): all case item expressions in this case statement are onehot
+Info: Elaborating entity "sdram_ctrl" for hierarchy "emu:emu|sdram_ctrl:ram1"
+Info: Verilog HDL Case Statement information at sdram_ctrl.v(161): all case item expressions in this case statement are onehot
+Info: Elaborating entity "cpu_cache_new" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache"
+Info: Elaborating entity "dpram" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram"
+Info: Elaborating entity "dpram_dif" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram|dpram_dif:ram"
+Info: Elaborating entity "altsyncram" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram|dpram_dif:ram|altsyncram:altsyncram_component" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_d834.tdf
+Info: Elaborating entity "altsyncram_d834" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram:itram|dpram_dif:ram|altsyncram:altsyncram_component|altsyncram_d834:auto_generated"
+Info: Elaborating entity "dpram_be_1024x16" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0"
+Info: Elaborating entity "dpram" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l"
+Info: Elaborating entity "dpram_dif" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l|dpram_dif:ram"
+Info: Elaborating entity "altsyncram" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l|dpram_dif:ram|altsyncram:altsyncram_component" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_ra34.tdf
+Info: Elaborating entity "altsyncram_ra34" for hierarchy "emu:emu|sdram_ctrl:ram1|cpu_cache_new:cpu_cache|dpram_be_1024x16:idram0|dpram:ram_l|dpram_dif:ram|altsyncram:altsyncram_component|altsyncram_ra34:auto_generated"
+Info: Elaborating entity "ddram_ctrl" for hierarchy "emu:emu|ddram_ctrl:ram2"
+Info: Verilog HDL Case Statement information at ddram_ctrl.v(101): all case item expressions in this case statement are onehot
+Info: Elaborating entity "fastchip" for hierarchy "emu:emu|fastchip:fastchip"
+Info: Elaborating entity "akiko" for hierarchy "emu:emu|fastchip:fastchip|akiko:akiko"
+Info: Elaborating entity "gayle" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle"
+Info: Elaborating entity "ide" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0"
+Info: Elaborating entity "dpram" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0"
+Info: Elaborating entity "dpram_dif" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0|dpram_dif:ram"
+Info: Elaborating entity "altsyncram" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0|dpram_dif:ram|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0|dpram_dif:ram|altsyncram:altsyncram_component" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_le34.tdf
+Info: Elaborating entity "altsyncram_le34" for hierarchy "emu:emu|fastchip:fastchip|gayle:gayle|ide:ide0|dpram:io_buf0|dpram_dif:ram|altsyncram:altsyncram_component|altsyncram_le34:auto_generated"
+Info: Elaborating entity "rtg" for hierarchy "emu:emu|fastchip:fastchip|rtg:rtg"
+Info: Elaborating entity "minimig" for hierarchy "emu:emu|minimig:minimig"
+Info: Elaborating entity "agnus" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1"
+Info: Elaborating entity "agnus_refresh" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_refresh:ref1"
+Info: Elaborating entity "agnus_diskdma" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_diskdma:dsk1"
+Info: Elaborating entity "agnus_audiodma" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_audiodma:aud1"
+Info: Elaborating entity "agnus_bitplanedma" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_bitplanedma:bpd1"
+Info: Elaborating entity "agnus_spritedma" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_spritedma:spr1"
+Info: Elaborating entity "agnus_copper" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_copper:cp1"
+Info: Elaborating entity "agnus_blitter" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_blitter:bl1"
+Info: Elaborating entity "agnus_blitter_barrelshifter" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_blitter:bl1|agnus_blitter_barrelshifter:barrel_shifter_A"
+Info: Elaborating entity "agnus_blitter_minterm" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_blitter:bl1|agnus_blitter_minterm:bltmt1"
+Info: Elaborating entity "agnus_blitter_fill" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_blitter:bl1|agnus_blitter_fill:bltfl1"
+Info: Elaborating entity "agnus_blitter_adrgen" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_blitter:bl1|agnus_blitter_adrgen:address_generator_1"
+Info: Elaborating entity "agnus_beamcounter" for hierarchy "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_beamcounter:bc1"
+Info: Elaborating entity "paula" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1"
+Info: Elaborating entity "paula_uart" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_uart:pu1"
+Info: Elaborating entity "paula_intcontroller" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_intcontroller:pi1"
+Info: Elaborating entity "paula_floppy" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_floppy:pf1"
+Info: Elaborating entity "paula_floppy_fifo" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_floppy:pf1|paula_floppy_fifo:db1"
+Info: Elaborating entity "paula_audio" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_audio:ad1"
+Info: Elaborating entity "paula_audio_channel" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_audio:ad1|paula_audio_channel:ach0"
+Info: Elaborating entity "paula_audio_mixer" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_audio:ad1|paula_audio_mixer:mix"
+Info: Elaborating entity "paula_audio_volume" for hierarchy "emu:emu|minimig:minimig|paula:PAULA1|paula_audio:ad1|paula_audio_mixer:mix|paula_audio_volume:sv0"
+Info: Elaborating entity "userio" for hierarchy "emu:emu|minimig:minimig|userio:USERIO1"
+Info: Elaborating entity "denise" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1"
+Info: Elaborating entity "denise_bitplanes" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_bitplanes:bplm0"
+Info: Elaborating entity "denise_bitplane_shifter" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_bitplanes:bplm0|denise_bitplane_shifter:bplshft1"
+Info: Elaborating entity "denise_playfields" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_playfields:plfm0"
+Info: Elaborating entity "denise_sprites" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_sprites:sprm0"
+Info: Elaborating entity "denise_sprites_shifter" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_sprites:sprm0|denise_sprites_shifter:sps0"
+Info: Elaborating entity "denise_spritepriority" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_spritepriority:spm0"
+Info: Elaborating entity "denise_colortable" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0"
+Info: Elaborating entity "denise_colortable_ram_mf" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0|denise_colortable_ram_mf:clut"
+Info: Elaborating entity "altsyncram" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0|denise_colortable_ram_mf:clut|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0|denise_colortable_ram_mf:clut|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0|denise_colortable_ram_mf:clut|altsyncram:altsyncram_component" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8612.tdf
+Info: Elaborating entity "altsyncram_8612" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_colortable:clut0|denise_colortable_ram_mf:clut|altsyncram:altsyncram_component|altsyncram_8612:auto_generated"
+Info: Elaborating entity "denise_hamgenerator" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_hamgenerator:ham0"
+Info: Elaborating entity "denise_collision" for hierarchy "emu:emu|minimig:minimig|denise:DENISE1|denise_collision:col0"
+Info: Elaborating entity "ciaa" for hierarchy "emu:emu|minimig:minimig|ciaa:CIAA1"
+Info: Elaborating entity "cia_int" for hierarchy "emu:emu|minimig:minimig|ciaa:CIAA1|cia_int:cnt"
+Info: Elaborating entity "cia_timera" for hierarchy "emu:emu|minimig:minimig|ciaa:CIAA1|cia_timera:tmra"
+Info: Elaborating entity "cia_timerb" for hierarchy "emu:emu|minimig:minimig|ciaa:CIAA1|cia_timerb:tmrb"
+Info: Elaborating entity "cia_timerd" for hierarchy "emu:emu|minimig:minimig|ciaa:CIAA1|cia_timerd:tmrd"
+Info: Elaborating entity "ciab" for hierarchy "emu:emu|minimig:minimig|ciab:CIAB1"
+Info: Elaborating entity "minimig_m68k_bridge" for hierarchy "emu:emu|minimig:minimig|minimig_m68k_bridge:CPU1"
+Info: Elaborating entity "minimig_bankmapper" for hierarchy "emu:emu|minimig:minimig|minimig_bankmapper:BMAP1"
+Info: Elaborating entity "minimig_sram_bridge" for hierarchy "emu:emu|minimig:minimig|minimig_sram_bridge:RAM1"
+Info: Elaborating entity "cart" for hierarchy "emu:emu|minimig:minimig|cart:CART1"
+Info: Elaborating entity "gary" for hierarchy "emu:emu|minimig:minimig|gary:GARY1"
+Info: Elaborating entity "minimig_syscontrol" for hierarchy "emu:emu|minimig:minimig|minimig_syscontrol:CONTROL1"
+Info: Elaborating entity "toccata" for hierarchy "emu:emu|minimig:minimig|toccata:toccata_board"
+Info: Elaborating entity "toccata_playback" for hierarchy "emu:emu|minimig:minimig|toccata:toccata_board|toccata_playback:my_playback"
+Info: Elaborating entity "toccata_capture" for hierarchy "emu:emu|minimig:minimig|toccata:toccata_board|toccata_capture:my_capture"
+Info: Elaborating entity "toccata_volume" for hierarchy "emu:emu|minimig:minimig|toccata:toccata_board|toccata_volume:my_toccata_volume"
+Info: Elaborating entity "toccata_fifo" for hierarchy "emu:emu|minimig:minimig|toccata:toccata_board|toccata_fifo:myfifo"
+Info: Elaborating entity "video_mixer" for hierarchy "emu:emu|video_mixer:video_mixer"
+Info: Elaborating entity "video_freezer" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer"
+Info: Elaborating entity "sync_lock" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer|sync_lock:vs_lock"
+Info: Elaborating entity "sync_lock" for hierarchy "emu:emu|video_mixer:video_mixer|video_freezer:freezer|sync_lock:hs_lock"
+Info: Elaborating entity "gamma_corr" for hierarchy "emu:emu|video_mixer:video_mixer|gamma_corr:gamma"
+Info: Elaborating entity "scandoubler" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd"
+Info: Elaborating entity "Hq2x" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x"
+Info: Elaborating entity "DiffCheck" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|DiffCheck:diffcheck0"
+Info: Elaborating entity "Blend" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|Blend:blender"
+Info: Elaborating entity "hq2x_in" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in"
+Info: Elaborating entity "hq2x_buf" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf0"
+Info: Elaborating entity "hq2x_buf" for hierarchy "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out"
+Info: Elaborating entity "video_freak" for hierarchy "emu:emu|video_freak:video_freak"
+Info: Elaborating entity "video_scale_int" for hierarchy "emu:emu|video_freak:video_freak|video_scale_int:scale"
+Info: Elaborating entity "mt32pi" for hierarchy "emu:emu|mt32pi:mt32pi"
+Info: Elaborating entity "cdda" for hierarchy "emu:emu|cdda:cdda"
+{"object_type": "report_status", "percent" : 39}
+Warning: Port "extclk" on the entity instantiation of "cyclonev_pll" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning: Port "extclk" on the entity instantiation of "cyclonev_pll" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 40}
+Warning: Synthesized away the following node(s):
+Warning: Synthesized away the following node(s):
+Info: Timing-Driven Synthesis is running
+Warning: Inferred dual-clock RAM node "emu:emu|mt32pi:mt32pi|lcd_data_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred dual-clock RAM node "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|gamma_curve_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred RAM node "emu:emu|minimig:minimig|toccata:toccata_board|toccata_fifo:myfifo|fifo_array_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning: Inferred RAM node "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_spritedma:spr1|sprptl_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning: Inferred RAM node "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p|regfile_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning: Inferred RAM node "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p|regfile_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning: Inferred dual-clock RAM node "shadowmask:HDMI_shadowmask|mask_lut_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred dual-clock RAM node "ascal:ascal|o_dpram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred dual-clock RAM node "ascal:ascal|o_h_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred dual-clock RAM node "ascal:ascal|o_v_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning: Inferred dual-clock RAM node "ascal:ascal|o_a_poly_mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info: Found 16 instances of uninferred RAM logic
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+Info: Inferred 31 megafunctions from design logic
+Info: Elaborated megafunction instantiation "emu:emu|cdda:cdda|altsyncram:BUFFER_rtl_0"
+Info: Instantiated megafunction "emu:emu|cdda:cdda|altsyncram:BUFFER_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_1cn1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|cart:CART1|altsyncram:custom_mirror_rtl_0"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|cart:CART1|altsyncram:custom_mirror_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_f6n1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|paula:PAULA1|paula_floppy:pf1|paula_floppy_fifo:db1|altsyncram:mem_rtl_0"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|paula:PAULA1|paula_floppy:pf1|paula_floppy_fifo:db1|altsyncram:mem_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_19q1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uRom:uRom|altsyncram:uRam_rtl_0"
+Info: Instantiated megafunction "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|uRom:uRom|altsyncram:uRam_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_kqc1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|nanoRom:nanoRom|altsyncram:nRam_rtl_0"
+Info: Instantiated megafunction "emu:emu|cpu_wrapper:cpu_wrapper|fx68k:cpu_inst_o|nanoRom:nanoRom|altsyncram:nRam_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_27d1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p|altsyncram:regfile_rtl_1"
+Info: Instantiated megafunction "emu:emu|cpu_wrapper:cpu_wrapper|TG68KdotC_Kernel:cpu_inst_p|altsyncram:regfile_rtl_1" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_odp1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|mt32pi:mt32pi|altsyncram:lcd_data_rtl_0"
+Info: Instantiated megafunction "emu:emu|mt32pi:mt32pi|altsyncram:lcd_data_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_drk1.tdf
+Info: Elaborated megafunction instantiation "osd:hdmi_osd|altsyncram:osd_buffer_rtl_0"
+Info: Instantiated megafunction "osd:hdmi_osd|altsyncram:osd_buffer_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_96k1.tdf
+Info: Elaborated megafunction instantiation "vga_out:vga_scaler_out|altshift_taps:din1_rtl_0"
+Info: Instantiated megafunction "vga_out:vga_scaler_out|altshift_taps:din1_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_huu.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4r91.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cntr_ohf.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_a9c.tdf
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_spritedma:spr1|altsyncram:sprptl_rtl_0"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|agnus:AGNUS1|agnus_spritedma:spr1|altsyncram:sprptl_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8vj1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_h_poly_mem_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:o_h_poly_mem_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_f9j1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altshift_taps:o_dcptv_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altshift_taps:o_dcptv_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_10v.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8u91.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cntr_cjf.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altshift_taps:o_vpix_inner[2].r_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altshift_taps:o_vpix_inner[2].r_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_1gv.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_ar91.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cntr_phf.tdf
+Info: Elaborated megafunction instantiation "shadowmask:HDMI_shadowmask|altsyncram:mask_lut_rtl_0"
+Info: Instantiated megafunction "shadowmask:HDMI_shadowmask|altsyncram:mask_lut_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_b9j1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|toccata:toccata_board|toccata_fifo:myfifo|altsyncram:fifo_array_rtl_0"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|toccata:toccata_board|toccata_fifo:myfifo|altsyncram:fifo_array_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_s5p1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:pal2_mem_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:pal2_mem_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_ars1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:i_dpram_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:i_dpram_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_79j1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:pal1_mem_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:pal1_mem_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_p9j1.tdf
+Info: Elaborated megafunction instantiation "ascal:ascal|altsyncram:o_dpram_rtl_0"
+Info: Instantiated megafunction "ascal:ascal|altsyncram:o_dpram_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_q1k1.tdf
+Info: Elaborated megafunction instantiation "yc_out:yc_out|altshift_taps:phase[1].y_rtl_0"
+Info: Instantiated megafunction "yc_out:yc_out|altshift_taps:phase[1].y_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_iuu.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8r91.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cntr_rhf.tdf
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_b9c.tdf
+Info: Elaborated megafunction instantiation "shadowmask:HDMI_shadowmask|altshift_taps:vid_rtl_0"
+Info: Instantiated megafunction "shadowmask:HDMI_shadowmask|altshift_taps:vid_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_nuu.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_gr91.tdf
+Info: Elaborated megafunction instantiation "altshift_taps:dv_d1_rtl_0"
+Info: Instantiated megafunction "altshift_taps:dv_d1_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_ruu.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_or91.tdf
+Info: Elaborated megafunction instantiation "emu:emu|minimig:minimig|denise:DENISE1|denise_sprites:sprm0|denise_sprites_shifter:sps7|altshift_taps:sprdata_r_rtl_0"
+Info: Instantiated megafunction "emu:emu|minimig:minimig|denise:DENISE1|denise_sprites:sprm0|denise_sprites_shifter:sps7|altshift_taps:sprdata_r_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/shift_taps_luu.tdf
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_cr91.tdf
+Info: Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out|altsyncram:ram_rtl_0"
+Info: Instantiated megafunction "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_buf:hq2x_out|altsyncram:ram_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4cn1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf1|altsyncram:ram_rtl_0"
+Info: Instantiated megafunction "emu:emu|video_mixer:video_mixer|scandoubler:sd|Hq2x:Hq2x|hq2x_in:hq2x_in|hq2x_buf:buf1|altsyncram:ram_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_bbn1.tdf
+Info: Elaborated megafunction instantiation "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|altsyncram:gamma_curve_rtl_0"
+Info: Instantiated megafunction "emu:emu|video_mixer:video_mixer|gamma_corr:gamma|altsyncram:gamma_curve_rtl_0" with the following parameter:
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_q9j1.tdf
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 40}
+Warning: 40 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 43}
+{"object_type": "report_status", "percent" : 43}
+{"object_type": "report_status", "percent" : 43}
+{"object_type": "report_status", "percent" : 43}
+Warning: Synthesized away the following node(s):
+Info: Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 14 WYSIWYG logic cells and I/Os untouched
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 44}
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+Warning: Synthesized away the following node(s):
+Warning: Synthesized away the following node(s):
+Warning: Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 45}
+{"object_type": "report_status", "percent" : 46}
+{"object_type": "report_status", "percent" : 46}
+{"object_type": "report_status", "percent" : 46}
+{"object_type": "report_status", "percent" : 46}
+{"object_type": "report_status", "percent" : 46}
+Warning: Output pins are stuck at VCC or GND
+{"object_type": "report_status", "percent" : 48}
+{"object_type": "report_status", "percent" : 48}
+Info: 1415 registers lost all their fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+Info: Generated suppressed messages file D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/output_files/Minimig.map.smsg
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.map.json_files/
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.flow.json_files/
+{"object_type": "report_status", "percent" : 49}
+{"object_type": "report_status", "percent" : 49}
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: RST port on the PLL is not properly connected on instance pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock.
+Warning: Design contains 3 input pin(s) that do not drive logic
+Info: Implemented 51950 device resources after synthesis - the final resource count might be different
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.map.json_files/
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.flow.json_files/
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 161 warnings
+{"object_type": "report_status", "percent" : 50}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 50}
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Minimig -c Minimig
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = Minimig
+Info: Revision = Minimig
+{"object_type": "report_status", "percent" : 50}
+{"object_type": "refresh_report"}
+Info: High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Info: Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info: Selected device 5CSEBA6U23I7 for design "Minimig"
+Info: Low junction temperature is -40 degrees C
+Info: High junction temperature is 100 degrees C
+Warning: RST port on the PLL is not properly connected on instance pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock.
+Warning: LOCKED port on the PLL is not properly connected on instance "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
+Info: Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Warning: Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+{"object_type": "report_status", "percent" : 52}
+{"object_type": "report_status", "percent" : 52}
+Warning: Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info: Starting Fitter periphery placement operations
+Info: Promoted 9 clocks (8 global, 1 regional)
+Info: Automatically promoted 2 clocks (2 global)
+Info: Fitter periphery placement operations ending: elapsed time is 00:00:00
+{"object_type": "report_status", "percent" : 55}
+Info: Evaluating HDL-embedded SDC commands
+Info: Reading SDC File: 'sys/sys_top.sdc'
+Info: Deriving PLL clocks
+Info: Clock uncertainty is not calculated until you update the timing netlist.
+Info: Reading SDC File: 'rtl/fx68k/fx68k.sdc'
+Info: Reading SDC File: 'Minimig.sdc'
+Info: Clock uncertainty is not calculated until you update the timing netlist.
+Info: The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+Info: Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 13 clocks
+Extra Info: Performing register packing on registers with non-logic cell location assignments
+Extra Info: Completed register packing on registers with non-logic cell location assignments
+Info: Starting register packing
+Extra Info: Started Fast Input/Output/OE register processing
+Warning: Ignoring invalid fast I/O register assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning: Ignoring some wildcard destinations of fast I/O register assignments
+Extra Info: Finished Fast Input/Output/OE register processing
+Extra Info: Start inferring scan chains for DSP blocks
+Extra Info: Inferring scan chains for DSP blocks is complete
+Extra Info: Moving registers into I/O cells, DSP blocks, and RAM blocks to improve timing and density
+Extra Info: Finished moving registers into I/O cells, DSP blocks, and RAM blocks
+Info: Finished register packing
+Info: Starting physical synthesis optimizations for speed
+Info: Starting physical synthesis algorithm register retiming
+Info: Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info: Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info: Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 917 ps
+Info: Starting physical synthesis algorithm register retiming
+Info: Physical synthesis algorithm register retiming complete: estimated slack improvement of 636 ps
+Info: Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info: Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info: Physical synthesis optimizations for speed complete: elapsed time is 00:01:12
+Info: Starting register packing
+Extra Info: Start inferring scan chains for DSP blocks
+Extra Info: Inferring scan chains for DSP blocks is complete
+Extra Info: Moving registers into I/O cells, DSP blocks, and RAM blocks to improve timing and density
+Extra Info: Finished moving registers into I/O cells, DSP blocks, and RAM blocks
+Info: Finished register packing
+{"object_type": "report_status", "percent" : 53}
+Info: Fitter preparation operations ending: elapsed time is 00:01:38
+{"object_type": "report_status", "percent" : 53}
+Warning: Design uses Placement Effort Multiplier = 4.0.  Using a Placement Effort Multiplier > 1.0 can increase processing time, especially when used during a second or third fitting attempt.
+Info: Fitter placement preparation operations beginning
+{"object_type": "report_status", "percent" : 55}
+{"object_type": "report_status", "percent" : 53}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 56}
+Info: The Fitter is using Advanced Physical Optimization.
+{"object_type": "report_status", "percent" : 53}
+{"object_type": "report_status", "percent" : 53}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 54}
+{"object_type": "report_status", "percent" : 55}
+Info: Fitter placement preparation operations ending: elapsed time is 00:05:01
+Info: Fitter placement operations beginning
+{"object_type": "report_status", "percent" : 55}
+{"object_type": "report_status", "percent" : 55}
+{"object_type": "report_status", "percent" : 55}
+{"object_type": "report_status", "percent" : 55}
+{"object_type": "report_status", "percent" : 56}
+{"object_type": "report_status", "percent" : 56}
+{"object_type": "report_status", "percent" : 56}
+{"object_type": "report_status", "percent" : 56}
+{"object_type": "report_status", "percent" : 56}
+{"object_type": "report_status", "percent" : 57}
+{"object_type": "report_status", "percent" : 58}
+{"object_type": "report_status", "percent" : 58}
+{"object_type": "report_status", "percent" : 58}
+{"object_type": "report_status", "percent" : 58}
+{"object_type": "report_status", "percent" : 58}
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 61}
+{"object_type": "report_status", "percent" : 62}
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 61}
+{"object_type": "report_status", "percent" : 61}
+{"object_type": "report_status", "percent" : 62}
+Info: Fitter placement was successful
+Info: Fitter placement operations ending: elapsed time is 00:01:25
+{"object_type": "report_status", "percent" : 55}
+Info: Fitter routing operations beginning
+{"object_type": "report_status", "percent" : 62}
+Info: 3e+03 ns of routing delay (approximately 1.4% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
+Info: Router estimated average interconnect usage is 17% of the available device resources
+{"object_type": "report_status", "percent" : 62}
+{"object_type": "report_status", "percent" : 62}
+{"object_type": "report_status", "percent" : 62}
+{"object_type": "report_status", "percent" : 62}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+Info: Fitter routing operations ending: elapsed time is 00:01:26
+Info: Total time spent on timing analysis during the Fitter is 71.66 seconds.
+{"object_type": "report_status", "percent" : 63}
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+Info: Delay annotation completed successfully
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+Info: Delay annotation completed successfully
+{"object_type": "report_status", "percent" : 64}
+{"object_type": "report_status", "percent" : 66}
+Info: Fitter post-fit operations ending: elapsed time is 00:00:45
+Warning: Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning: Following 2 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+Info: Generated suppressed messages file D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/output_files/Minimig.fit.smsg
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.fit.json_files/
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.flow.json_files/
+Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 67}
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Minimig -c Minimig
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 72}
+{"object_type": "report_status", "percent" : 73}
+{"object_type": "report_status", "percent" : 75}
+{"object_type": "report_status", "percent" : 78}
+{"object_type": "report_status", "percent" : 80}
+Info: Assembler is generating device programming files
+{"object_type": "report_status", "percent" : 81}
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+{"object_type": "report_status", "percent" : 83}
+{"object_type": "refresh_report"}
+Info: Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
+{"object_type": "report_status", "percent" : 83}
+Warning: Tcl Script File sys/pll_q23.qip not found
+Warning: Tcl Script File sys/pll_q23.qip not found
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+Info: Command: quartus_sta Minimig -c Minimig
+Info: qsta_default_script.tcl version: #1
+{"object_type": "report_status", "percent" : 84}
+Info: Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info: Low junction temperature is -40 degrees C
+Info: High junction temperature is 100 degrees C
+{"object_type": "report_status", "percent" : 87}
+Info: Evaluating HDL-embedded SDC commands
+Info: Reading SDC File: 'sys/sys_top.sdc'
+Info: Deriving PLL clocks
+Info: Clock uncertainty is not calculated until you update the timing netlist.
+Info: Reading SDC File: 'rtl/fx68k/fx68k.sdc'
+Info: Reading SDC File: 'Minimig.sdc'
+Info: Clock uncertainty is not calculated until you update the timing netlist.
+Info: The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+Info: Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 100C Model
+Info: Worst-case setup slack is 0.010
+Info: Worst-case hold slack is 0.248
+Info: Worst-case recovery slack is 4.335
+Info: Worst-case removal slack is 0.861
+Info: Worst-case minimum pulse width slack is 1.101
+Info: Report Metastability: Found 518 synchronizer chains.
+Info: Analyzing Slow 1100mV -40C Model
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+Info: Delay annotation completed successfully
+Info: The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+Info: Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.057
+Info: Worst-case hold slack is 0.098
+Info: Worst-case recovery slack is 4.496
+Info: Worst-case removal slack is 0.791
+Info: Worst-case minimum pulse width slack is 1.101
+Info: Report Metastability: Found 518 synchronizer chains.
+Info: Analyzing Fast 1100mV 100C Model
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 94}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 95}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 96}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 97}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 98}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+{"object_type": "report_status", "percent" : 99}
+Info: Delay annotation completed successfully
+Info: The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+Info: Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Worst-case setup slack is 2.772
+Info: Worst-case hold slack is 0.122
+Info: Worst-case recovery slack is 5.310
+Info: Worst-case removal slack is 0.425
+Info: Worst-case minimum pulse width slack is 1.101
+Info: Report Metastability: Found 518 synchronizer chains.
+Info: Analyzing Fast 1100mV -40C Model
+Info: The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+Info: Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Worst-case setup slack is 3.493
+Info: Worst-case hold slack is 0.076
+Info: Worst-case recovery slack is 5.542
+Info: Worst-case removal slack is 0.346
+Info: Worst-case minimum pulse width slack is 1.101
+Info: Report Metastability: Found 518 synchronizer chains.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.sta.json_files/
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.flow.json_files/
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+Info: Generated JSON formatted report files in D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/dse/dse1/dse1_base/db/Minimig.sta.json_files/
+{"object_type": "report_status", "percent" : 100}
+{"object_type": "refresh_report"}
+Info: Quartus Prime Full Compilation was successful. 0 errors, 181 warnings
+Info: Evaluation of Tcl script c:/intelfpga_lite/23.1std/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 183 warnings

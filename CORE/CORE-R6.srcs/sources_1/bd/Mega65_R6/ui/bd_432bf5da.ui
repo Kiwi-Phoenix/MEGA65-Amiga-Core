@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1225,-274",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_irq -pg 1 -lvl 2 -x 320 -y 20 -defaultsOSRD
+preplace port port-id_drq -pg 1 -lvl 2 -x 320 -y 40 -defaultsOSRD
+preplace port port-id_use_fast -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_no_data -pg 1 -lvl 2 -x 320 -y 60 -defaultsOSRD
+preplace port port-id_io_read -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_io_write -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_io_32 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_io_wait -pg 1 -lvl 2 -x 320 -y 120 -defaultsOSRD
+preplace port port-id_mgmt_write -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_mgmt_read -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace portBus drive_en -pg 1 -lvl 2 -x 320 -y 80 -defaultsOSRD
+preplace portBus io_address -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus io_readdata -pg 1 -lvl 2 -x 320 -y 100 -defaultsOSRD
+preplace portBus io_writedata -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus request -pg 1 -lvl 2 -x 320 -y 140 -defaultsOSRD
+preplace portBus mgmt_address -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus mgmt_writedata -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace portBus mgmt_readdata -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace inst BRAM_0 -pg 1 -lvl 1 -x 160 -y 160 -defaultsOSRD
+preplace netloc clk_1 1 0 1 20 20n
+levelinfo -pg 1 0 160 320
+pagesize -pg 1 -db -bbox -sgen -220 -20 500 510
+"
+}
+0

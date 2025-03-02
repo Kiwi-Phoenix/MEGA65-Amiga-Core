@@ -1,0 +1,64 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Mega65_R6_sdmux_0_0",
+    "cell_name": "M2M_Framework/M2M_Qnice_Wrapper/M2M_QNICE_SOC/sdmux_0",
+    "component_reference": "xilinx.com:module_ref:sdmux:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../CORE-R6.gen/sources_1/bd/Mega65_R6/ip/Mega65_R6_sdmux_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "Mega65_R6_sdmux_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a200t" } ],
+        "PACKAGE": [ { "value": "fbg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../CORE-R6.gen/sources_1/bd/Mega65_R6/ip/Mega65_R6_sdmux_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "sysclk50Mhz_i": [ { "direction": "in" } ],
+        "sysreset_i": [ { "direction": "in" } ],
+        "mode_i": [ { "direction": "in" } ],
+        "active_o": [ { "direction": "out" } ],
+        "force_i": [ { "direction": "in" } ],
+        "detected_int_o": [ { "direction": "out" } ],
+        "detected_ext_o": [ { "direction": "out" } ],
+        "sd_tray_detect_i": [ { "direction": "in" } ],
+        "sd_tray_reset_o": [ { "direction": "out" } ],
+        "sd_tray_clk_o": [ { "direction": "out" } ],
+        "sd_tray_mosi_o": [ { "direction": "out" } ],
+        "sd_tray_miso_i": [ { "direction": "in" } ],
+        "sd_back_detect_i": [ { "direction": "in" } ],
+        "sd_back_reset_o": [ { "direction": "out" } ],
+        "sd_back_clk_o": [ { "direction": "out" } ],
+        "sd_back_mosi_o": [ { "direction": "out" } ],
+        "sd_back_miso_i": [ { "direction": "in" } ],
+        "ctrl_reset_o": [ { "direction": "out" } ],
+        "ctrl_sd_reset_i": [ { "direction": "in" } ],
+        "ctrl_sd_clk_i": [ { "direction": "in" } ],
+        "ctrl_sd_mosi_i": [ { "direction": "in" } ],
+        "ctrl_sd_miso_o": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

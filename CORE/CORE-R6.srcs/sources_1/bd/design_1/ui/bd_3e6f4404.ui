@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1247,-165",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk_main_i -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_reset_soft_i -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port port-id_reset_hard_i -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port port-id_pause_i -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_clk_main_speed_i -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_video_ce_o -pg 1 -lvl 2 -x 260 -y 60 -defaultsOSRD
+preplace port port-id_video_ce_ovl_o -pg 1 -lvl 2 -x 260 -y 80 -defaultsOSRD
+preplace port port-id_video_vs_o -pg 1 -lvl 2 -x 260 -y 160 -defaultsOSRD
+preplace port port-id_video_hs_o -pg 1 -lvl 2 -x 260 -y 120 -defaultsOSRD
+preplace port port-id_video_hblank_o -pg 1 -lvl 2 -x 260 -y 100 -defaultsOSRD
+preplace port port-id_video_vblank_o -pg 1 -lvl 2 -x 260 -y 140 -defaultsOSRD
+preplace port port-id_kb_key_num_i -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port port-id_kb_key_pressed_n_i -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port port-id_joy_1_up_n_i -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_joy_1_down_n_i -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_joy_1_left_n_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_joy_1_right_n_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_joy_1_fire_n_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_joy_2_up_n_i -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_joy_2_down_n_i -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_joy_2_left_n_i -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_joy_2_right_n_i -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_joy_2_fire_n_i -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus video_red_o -pg 1 -lvl 2 -x 260 -y 220 -defaultsOSRD
+preplace portBus video_green_o -pg 1 -lvl 2 -x 260 -y 200 -defaultsOSRD
+preplace portBus video_blue_o -pg 1 -lvl 2 -x 260 -y 180 -defaultsOSRD
+preplace portBus audio_left_o -pg 1 -lvl 2 -x 260 -y 20 -defaultsOSRD
+preplace portBus audio_right_o -pg 1 -lvl 2 -x 260 -y 40 -defaultsOSRD
+preplace portBus pot1_x_i -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace portBus pot1_y_i -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace portBus pot2_x_i -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace portBus pot2_y_i -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace inst amiga_clk_0 -pg 1 -lvl 1 -x 130 -y 110 -defaultsOSRD
+preplace inst fastchip_hier -pg 1 -lvl 1 -x 130 -y 360 -defaultsOSRD
+preplace inst minimig_hier -pg 1 -lvl 1 -x 130 -y 430 -defaultsOSRD
+preplace inst cpu_wrapper_hier -pg 1 -lvl 1 -x 130 -y 270 -defaultsOSRD
+levelinfo -pg 1 0 130 260
+pagesize -pg 1 -db -bbox -sgen -190 0 440 470
+"
+}
+0

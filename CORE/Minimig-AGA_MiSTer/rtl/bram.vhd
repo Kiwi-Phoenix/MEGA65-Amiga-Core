@@ -8,6 +8,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
+
 ENTITY spram IS
 	generic (
 		addr_width    : integer := 8;
@@ -45,6 +46,7 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
+
 
 ENTITY spram_sz IS
 	generic (

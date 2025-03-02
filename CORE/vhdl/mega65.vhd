@@ -33,6 +33,8 @@ port (
 
    -- Video and audio mode control
    qnice_dvi_o             : out std_logic;              -- 0=HDMI (with sound), 1=DVI (no sound)
+   -- DJR Only std_logic and std_logic_vector are allowed for ports in current VHDL standards  
+   -- Need to find another way of gettig the outcomes required.   Causes problems when trying to build a Block diagram.
    qnice_video_mode_o      : out video_mode_type;        -- Defined in video_modes_pkg.vhd
    qnice_osm_cfg_scaling_o : out std_logic_vector(8 downto 0);
    qnice_scandoubler_o     : out std_logic;              -- 0 = no scandoubler, 1 = scandoubler
@@ -126,7 +128,10 @@ port (
    main_audio_right_o      : out signed(15 downto 0);
 
    -- M2M Keyboard interface (incl. power led and drive led)
+   -- DJR only std_logic and std_lofic_vector can be used for Ports, Integer is not support in current VHDL standards
+   -- Need to find another method to get the required outcomes.
    main_kb_key_num_i       : in  integer range 0 to 79;  -- cycles through all MEGA65 keys
+   
    main_kb_key_pressed_n_i : in  std_logic;              -- low active: debounced feedback: is kb_key_num_i pressed right now?
    main_power_led_o        : out std_logic;
    main_power_led_col_o    : out std_logic_vector(23 downto 0);
@@ -226,7 +231,12 @@ architecture synthesis of MEGA65_Core is
 
 signal main_clk               : std_logic;               -- Core main clock
 signal main_rst               : std_logic;
+signal main_clk114            : std_logic;
 
+signal fdd_led                : std_logic;
+signal hdd_led                : std_logic;
+
+signal main_rtc               : std_logic_vector(64 downto 0);
 ---------------------------------------------------------------------------------------------
 -- main_clk (MiSTer core's clock)
 ---------------------------------------------------------------------------------------------
@@ -257,7 +267,7 @@ signal qnice_demo_vd_ce       : std_logic;
 signal qnice_demo_vd_we       : std_logic;
 
 begin
-
+ 
    hr_core_write_o      <= '0';
    hr_core_read_o       <= '0';
    hr_core_address_o    <= (others => '0');
@@ -310,13 +320,17 @@ begin
 
 
    -- MMCME2_ADV clock generators:
-   --   @TODO YOURCORE:       54 MHz
+   --   Amiga Clocks
    clk_gen : entity work.clk
       port map (
          sys_clk_i         => clk_i,           -- expects 100 MHz
-         main_clk_o        => main_clk,        -- CORE's 54 MHz clock
+         main_clk_114_o    => main_clk114,    
+         main_clk_o        => main_clk,        -- CORE's 28.37516 MHz clock (expecct by the MiSTer Amiga Core (??)
          main_rst_o        => main_rst         -- CORE's reset, synchronized
-      ); -- clk_gen
+
+     ); -- clk_gen
+ 
+
 
    main_clk_o  <= main_clk;
    main_rst_o  <= main_rst;
@@ -330,20 +344,25 @@ begin
    -- MEGA65's power led: By default, it is on and glows green when the MEGA65 is powered on.
    -- We switch it to blue when a long reset is detected and as long as the user keeps pressing the preset button
    main_power_led_o     <= '1';
-   main_power_led_col_o <= x"0000FF" when main_reset_m2m_i else x"00FF00";
+   -- DJR In current VDHL expecting a Boolean type for main_reset_m2m_i, however is required to be 
+   -- std_logic type for port map.  Simply need to test if it = '1'.
+   --main_power_led_col_o <= x"0000FF" when main_reset_m2m_i else x"00FF00";
+   main_power_led_col_o <= x"0000FF" when main_reset_m2m_i = '1' else x"00FF00";
 
    -- main.vhd contains the actual MiSTer core
    i_main : entity work.main
-      generic map (
+      generic map (         
+         G_BOARD              => G_BOARD,           -- Which platform are we running on. 
          G_VDNUM              => C_VDNUM
       )
       port map (
          clk_main_i           => main_clk,
+         main_clk114_i        => main_clk114,
          reset_soft_i         => main_reset_core_i,
          reset_hard_i         => main_reset_m2m_i,
+         clk_reset_i          => main_rst,
          pause_i              => main_pause_core_i,
-
-         clk_main_speed_i     => CORE_CLK_SPEED,
+--         clk_main_speed_i     => CORE_CLK_SPEED,              -- This maybe a constant.  However, haven't connected this port to anything.  Likely not needed.
 
          -- Video output
          -- This is PAL 720x576 @ 50 Hz (pixel clock 27 MHz), but synchronized to main_clk (54 MHz).
@@ -364,6 +383,13 @@ begin
          -- M2M Keyboard interface
          kb_key_num_i         => main_kb_key_num_i,
          kb_key_pressed_n_i   => main_kb_key_pressed_n_i,
+         
+         
+         -- LEDs
+         main_power_led_o       => main_power_led_o,
+         main_fdd_led_o         => fdd_led,                   -- Placeholder
+         main_hdd_led_o         => hdd_led,                   -- Placeholder
+         
 
          -- MEGA65 joysticks and paddles/mouse/potentiometers
          joy_1_up_n_i         => main_joy_1_up_n_i ,
@@ -381,7 +407,9 @@ begin
          pot1_x_i             => main_pot1_x_i,
          pot1_y_i             => main_pot1_y_i,
          pot2_x_i             => main_pot2_x_i,
-         pot2_y_i             => main_pot2_y_i
+         pot2_y_i             => main_pot2_y_i,
+         
+         main_rtc_i           => main_rtc
       ); -- i_main
 
    ---------------------------------------------------------------------------------------------
@@ -450,16 +478,16 @@ begin
       qnice_dev_wait_o     <= '0';
 
       -- Demo core specific: Delete before starting to port your core
-      qnice_demo_vd_ce     <= '0';
-      qnice_demo_vd_we     <= '0';
+--      qnice_demo_vd_ce     <= '0';
+--      qnice_demo_vd_we     <= '0';
 
       case qnice_dev_id_i is
 
          -- Demo core specific stuff: delete before porting your own core
-         when C_DEV_DEMO_VD =>
-            qnice_demo_vd_ce     <= qnice_dev_ce_i;
-            qnice_demo_vd_we     <= qnice_dev_we_i;
-            qnice_dev_data_o     <= qnice_demo_vd_data_o;
+--         when C_DEV_DEMO_VD =>
+--            qnice_demo_vd_ce     <= qnice_dev_ce_i;
+--            qnice_demo_vd_we     <= qnice_dev_we_i;
+--            qnice_dev_data_o     <= qnice_demo_vd_data_o;
 
          -- @TODO YOUR RAMs or ROMs (e.g. for cartridges) or other devices here
          -- Device numbers need to be >= 0x0100
@@ -492,6 +520,9 @@ begin
    -- a) In case that this is handled in main.vhd, you need to add the appropriate ports to i_main
    -- b) You might want to change the drive led's color (just like the C64 core does) as long as
    --    the cache is dirty (i.e. as long as the write process is not finished, yet)
+   --
+   -- DJR Need to put the logic here to map the FDD and HDD LEDs plus change their colour.
+   -- Two drive LED signals mapping to the one drive led on the Mega65.
    main_drive_led_o     <= '0';
    main_drive_led_col_o <= x"00FF00";  -- 24-bit RGB value for the led
 

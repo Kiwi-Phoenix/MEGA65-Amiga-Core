@@ -1,0 +1,119 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.857567",
+   "Default View_TopLeft":"-1755,-160",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"         s_avm_write_i         => hr_dig_write         & hr_core_write_i         & hr_qnice_write,
+         s_avm_read_i          => hr_dig_read          & hr_core_read_i          & hr_qnice_read,
+         s_avm_address_i       => hr_dig_address       & hr_core_address_i       & hr_qnice_address,
+         s_avm_writedata_i     => hr_dig_writedata     & hr_core_writedata_i     & hr_qnice_writedata,
+         s_avm_byteenable_i    => hr_dig_byteenable    & hr_core_byteenable_i    & hr_qnice_byteenable,
+         s_avm_burstcount_i    => hr_dig_burstcount    & hr_core_burstcount_i    & hr_qnice_burstcount,
+         s_avm_readdata_o(3*16-1 downto 2*16) => hr_dig_readdata,
+         s_avm_readdata_o(2*16-1 downto 1*16) => hr_core_readdata_o,
+         s_avm_readdata_o(1*16-1 downto 0*16) => hr_qnice_readdata,
+         s_avm_readdata_o(1*16-1 downto 0*16) => hr_qnice_readdata,
+         s_avm_readdatavalid_o(2) => hr_dig_readdatavalid,
+         s_avm_readdatavalid_o(1) => hr_core_readdatavalid_o,
+         s_avm_readdatavalid_o(0) => hr_qnice_readdatavalid,
+         s_avm_waitrequest_o(2)   => hr_dig_waitrequest,
+         s_avm_waitrequest_o(1)   => hr_core_waitrequest_o,
+         s_avm_waitrequest_o(0)   => hr_qnice_waitrequest,",
+   "commentid":"comment_0|",
+   "fillcolor_comment_0":"",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_s_avm_write_i -pg 1 -lvl 2 -x 400 -y 990 -defaultsOSRD
+preplace port port-id_hr_dig_write -pg 1 -lvl 0 -x 0 -y 970 -defaultsOSRD
+preplace port port-id_hr_core_write_i -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
+preplace port port-id_hr_qnice_write -pg 1 -lvl 0 -x 0 -y 1010 -defaultsOSRD
+preplace port port-id_s_avm_read_i -pg 1 -lvl 2 -x 400 -y 470 -defaultsOSRD
+preplace port port-id_hr_dig_read -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port port-id_hr_core_read_i -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port port-id_hr_qnice_read -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace port port-id_s_avm_address_i -pg 1 -lvl 2 -x 400 -y 80 -defaultsOSRD
+preplace port port-id_hr_dig_address -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_hr_core_address_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_hr_qnice_address -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_s_avm_writedata_i -pg 1 -lvl 2 -x 400 -y 1120 -defaultsOSRD
+preplace port port-id_hr_dig_writedata -pg 1 -lvl 0 -x 0 -y 1100 -defaultsOSRD
+preplace port port-id_hr_core_writedata_i -pg 1 -lvl 0 -x 0 -y 1120 -defaultsOSRD
+preplace port port-id_hr_qnice_writedata -pg 1 -lvl 0 -x 0 -y 1140 -defaultsOSRD
+preplace port port-id_s_avm_byteenable_i -pg 1 -lvl 2 -x 400 -y 340 -defaultsOSRD
+preplace port port-id_hr_dig_byteenable -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port port-id_hr_core_byteenable_i -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port port-id_hr_qnice_byteenable -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port port-id_s_avm_burstcount_i -pg 1 -lvl 2 -x 400 -y 210 -defaultsOSRD
+preplace port port-id_hr_dig_burstcount -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port port-id_hr_core_burstcount_i -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port port-id_hr_qnice_burstcount -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port port-id_s_avm_readdata_o -pg 1 -lvl 0 -x 0 -y 600 -defaultsOSRD
+preplace port port-id_hr_dig_readdata -pg 1 -lvl 2 -x 400 -y 580 -defaultsOSRD
+preplace port port-id_hr_core_readdata_o -pg 1 -lvl 2 -x 400 -y 600 -defaultsOSRD
+preplace port port-id_hr_qnice_readdata -pg 1 -lvl 2 -x 400 -y 620 -defaultsOSRD
+preplace port port-id_s_avm_readdatavalid_o -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace port port-id_hr_dig_readdatavalid -pg 1 -lvl 2 -x 400 -y 710 -defaultsOSRD
+preplace port port-id_hr_core_readdatavalid_o -pg 1 -lvl 2 -x 400 -y 730 -defaultsOSRD
+preplace port port-id_hr_qnice_readdatavalid -pg 1 -lvl 2 -x 400 -y 750 -defaultsOSRD
+preplace port port-id_s_avm_waitrequest_o -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port port-id_hr_dig_waitrequest -pg 1 -lvl 2 -x 400 -y 840 -defaultsOSRD
+preplace port port-id_hr_core_waitrequest_o -pg 1 -lvl 2 -x 400 -y 860 -defaultsOSRD
+preplace port port-id_hr_qnice_waitrequest -pg 1 -lvl 2 -x 400 -y 880 -defaultsOSRD
+preplace inst s_avm_write_logic -pg 1 -lvl 1 -x 200 -y 990 -defaultsOSRD
+preplace inst s_avm_read_logic -pg 1 -lvl 1 -x 200 -y 470 -defaultsOSRD
+preplace inst s_avm_address_logic -pg 1 -lvl 1 -x 200 -y 80 -defaultsOSRD
+preplace inst s_avm_writedata_logic -pg 1 -lvl 1 -x 200 -y 1120 -defaultsOSRD
+preplace inst s_avm_byteenable_logic -pg 1 -lvl 1 -x 200 -y 340 -defaultsOSRD
+preplace inst s_avm_burstcount_logic -pg 1 -lvl 1 -x 200 -y 210 -defaultsOSRD
+preplace inst s_avm_readdata_logic -pg 1 -lvl 1 -x 200 -y 600 -defaultsOSRD
+preplace inst s_avm_readdatavalid_logic -pg 1 -lvl 1 -x 200 -y 730 -defaultsOSRD
+preplace inst s_avm_waitrequest_logic -pg 1 -lvl 1 -x 200 -y 860 -defaultsOSRD
+preplace netloc hr_dig_write_1 1 0 1 NJ 970
+preplace netloc hr_core_write_i_1 1 0 1 NJ 990
+preplace netloc hr_qnice_write_1 1 0 1 NJ 1010
+preplace netloc s_avm_write_logic_s_avm_write_i 1 1 1 NJ 990
+preplace netloc hr_dig_read_1 1 0 1 NJ 450
+preplace netloc hr_core_read_i_1 1 0 1 NJ 470
+preplace netloc hr_qnice_read_1 1 0 1 NJ 490
+preplace netloc s_avm_read_logic_s_avm_read_i 1 1 1 NJ 470
+preplace netloc hr_core_address_i_1 1 0 1 NJ 80
+preplace netloc hr_dig_address_1 1 0 1 NJ 60
+preplace netloc hr_qnice_address_1 1 0 1 NJ 100
+preplace netloc s_avm_address_logic_s_avm_address_i 1 1 1 NJ 80
+preplace netloc hr_dig_writedata_1 1 0 1 NJ 1100
+preplace netloc hr_core_writedata_i_1 1 0 1 NJ 1120
+preplace netloc hr_qnice_writedata_1 1 0 1 NJ 1140
+preplace netloc s_avm_writedata_logic_s_avm_writedata_i 1 1 1 NJ 1120
+preplace netloc hr_core_byteenable_i_1 1 0 1 NJ 340
+preplace netloc hr_dig_byteenable_1 1 0 1 NJ 320
+preplace netloc hr_qnice_byteenable_1 1 0 1 NJ 360
+preplace netloc s_avm_byteenable_logic_s_avm_byteenable_i 1 1 1 NJ 340
+preplace netloc hr_core_burstcount_i_1 1 0 1 NJ 210
+preplace netloc hr_dig_burstcount_1 1 0 1 NJ 190
+preplace netloc hr_qnice_burstcount_1 1 0 1 NJ 230
+preplace netloc s_avm_burstcount_logic_s_avm_burstcount_i 1 1 1 NJ 210
+preplace netloc s_avm_readdata_o_1 1 0 1 NJ 600
+preplace netloc s_avm_readdata_logic_hr_core_readdata_o 1 1 1 NJ 600
+preplace netloc s_avm_readdata_logic_hr_qnice_readdata 1 1 1 NJ 620
+preplace netloc s_avm_readdata_logic_hr_dig_readdata 1 1 1 NJ 580
+preplace netloc s_avm_readdatavalid_o_1 1 0 1 NJ 730
+preplace netloc s_avm_readdatavalid_logic_hr_dig_readdatavalid 1 1 1 NJ 710
+preplace netloc s_avm_readdatavalid_logic_hr_core_readdatavalid_o 1 1 1 NJ 730
+preplace netloc s_avm_readdatavalid_logic_hr_qnice_readdatavalid 1 1 1 NJ 750
+preplace netloc s_avm_waitrequest_o_1 1 0 1 NJ 860
+preplace netloc s_avm_waitrequest_logic_hr_dig_waitrequest 1 1 1 NJ 840
+preplace netloc s_avm_waitrequest_logic_hr_core_waitrequest_o 1 1 1 NJ 860
+preplace netloc s_avm_waitrequest_logic_hr_qnice_waitrequest 1 1 1 NJ 880
+preplace cgraphic comment_0 place left -684 -135 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 0 200 400
+pagesize -pg 1 -db -bbox -sgen -210 0 610 1190
+",
+   "linecolor_comment_0":"",
+   "textcolor_comment_0":""
+}
+
+{
+   "/comment_22":"comment_0"
+}

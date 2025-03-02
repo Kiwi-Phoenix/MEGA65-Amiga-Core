@@ -1,0 +1,90 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.965748",
+   "Default View_TopLeft":"-1429,2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_i_hs -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace port port-id_i_vs -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace port port-id_i_fl -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace port port-id_i_de -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port port-id_i_ce -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port port-id_i_clk -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_o_hs -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace port port-id_o_vs -pg 1 -lvl 1 -x 10 -y 100 -defaultsOSRD
+preplace port port-id_o_de -pg 1 -lvl 1 -x 10 -y 120 -defaultsOSRD
+preplace port port-id_o_vbl -pg 1 -lvl 1 -x 10 -y 140 -defaultsOSRD
+preplace port port-id_o_brd -pg 1 -lvl 1 -x 10 -y 160 -defaultsOSRD
+preplace port port-id_o_ce -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_o_clk -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace port port-id_o_fb_ena -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace port port-id_o_fb_hsize -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace port port-id_o_fb_vsize -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace port port-id_pal1_clk -pg 1 -lvl 0 -x -30 -y 380 -defaultsOSRD
+preplace port port-id_pal1_wr -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
+preplace port port-id_pal_n -pg 1 -lvl 0 -x -30 -y 460 -defaultsOSRD
+preplace port port-id_pal2_clk -pg 1 -lvl 0 -x -30 -y 480 -defaultsOSRD
+preplace port port-id_pal2_wr -pg 1 -lvl 0 -x -30 -y 540 -defaultsOSRD
+preplace port port-id_iauto -pg 1 -lvl 0 -x -30 -y 560 -defaultsOSRD
+preplace port port-id_himin -pg 1 -lvl 0 -x -30 -y 580 -defaultsOSRD
+preplace port port-id_himax -pg 1 -lvl 0 -x -30 -y 600 -defaultsOSRD
+preplace port port-id_vimin -pg 1 -lvl 0 -x -30 -y 620 -defaultsOSRD
+preplace port port-id_vimax -pg 1 -lvl 0 -x -30 -y 640 -defaultsOSRD
+preplace port port-id_i_hdmax -pg 1 -lvl 1 -x 10 -y 240 -defaultsOSRD
+preplace port port-id_i_vdmax -pg 1 -lvl 1 -x 10 -y 260 -defaultsOSRD
+preplace port port-id_run -pg 1 -lvl 0 -x -30 -y 660 -defaultsOSRD
+preplace port port-id_freeze -pg 1 -lvl 0 -x -30 -y 680 -defaultsOSRD
+preplace port port-id_htotal -pg 1 -lvl 0 -x -30 -y 720 -defaultsOSRD
+preplace port port-id_hsstart -pg 1 -lvl 0 -x -30 -y 740 -defaultsOSRD
+preplace port port-id_hsend -pg 1 -lvl 0 -x -30 -y 760 -defaultsOSRD
+preplace port port-id_hdisp -pg 1 -lvl 0 -x -30 -y 780 -defaultsOSRD
+preplace port port-id_hmin -pg 1 -lvl 0 -x -30 -y 800 -defaultsOSRD
+preplace port port-id_hmax -pg 1 -lvl 0 -x -30 -y 820 -defaultsOSRD
+preplace port port-id_vtotal -pg 1 -lvl 0 -x -30 -y 840 -defaultsOSRD
+preplace port port-id_vsstart -pg 1 -lvl 0 -x -30 -y 860 -defaultsOSRD
+preplace port port-id_vsend -pg 1 -lvl 0 -x -30 -y 880 -defaultsOSRD
+preplace port port-id_vdisp -pg 1 -lvl 0 -x -30 -y 900 -defaultsOSRD
+preplace port port-id_vmin -pg 1 -lvl 0 -x -30 -y 920 -defaultsOSRD
+preplace port port-id_vmax -pg 1 -lvl 0 -x -30 -y 940 -defaultsOSRD
+preplace port port-id_vrr -pg 1 -lvl 0 -x -30 -y 960 -defaultsOSRD
+preplace port port-id_vrrmax -pg 1 -lvl 0 -x -30 -y 980 -defaultsOSRD
+preplace port port-id_poly_clk -pg 1 -lvl 0 -x -30 -y 1020 -defaultsOSRD
+preplace port port-id_poly_wr -pg 1 -lvl 0 -x -30 -y 1080 -defaultsOSRD
+preplace port port-id_avl_clk -pg 1 -lvl 0 -x -30 -y 1100 -defaultsOSRD
+preplace port port-id_avl_waitrequest -pg 1 -lvl 0 -x -30 -y 1120 -defaultsOSRD
+preplace port port-id_avl_readdatavalid -pg 1 -lvl 0 -x -30 -y 1160 -defaultsOSRD
+preplace port port-id_avl_write -pg 1 -lvl 1 -x 10 -y 340 -defaultsOSRD
+preplace port port-id_avl_read -pg 1 -lvl 1 -x 10 -y 360 -defaultsOSRD
+preplace port port-id_reset_na -pg 1 -lvl 0 -x -30 -y 1180 -defaultsOSRD
+preplace portBus i_r -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace portBus i_g -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace portBus i_b -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace portBus o_r -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus o_g -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace portBus o_b -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus o_border -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace portBus o_fb_format -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace portBus o_fb_base -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
+preplace portBus o_fb_stride -pg 1 -lvl 0 -x -30 -y 360 -defaultsOSRD
+preplace portBus pal1_dw -pg 1 -lvl 0 -x -30 -y 400 -defaultsOSRD
+preplace portBus pal1_dr -pg 1 -lvl 1 -x 10 -y 180 -defaultsOSRD
+preplace portBus pal1_a -pg 1 -lvl 0 -x -30 -y 420 -defaultsOSRD
+preplace portBus pal2_dw -pg 1 -lvl 0 -x -30 -y 500 -defaultsOSRD
+preplace portBus pal2_dr -pg 1 -lvl 1 -x 10 -y 200 -defaultsOSRD
+preplace portBus pal2_a -pg 1 -lvl 0 -x -30 -y 520 -defaultsOSRD
+preplace portBus o_lltune -pg 1 -lvl 1 -x 10 -y 220 -defaultsOSRD
+preplace portBus mode -pg 1 -lvl 0 -x -30 -y 700 -defaultsOSRD
+preplace portBus format -pg 1 -lvl 0 -x -30 -y 1000 -defaultsOSRD
+preplace portBus poly_dw -pg 1 -lvl 0 -x -30 -y 1040 -defaultsOSRD
+preplace portBus poly_a -pg 1 -lvl 0 -x -30 -y 1060 -defaultsOSRD
+preplace portBus avl_readdata -pg 1 -lvl 0 -x -30 -y 1140 -defaultsOSRD
+preplace portBus avl_burstcount -pg 1 -lvl 1 -x 10 -y 280 -defaultsOSRD
+preplace portBus avl_writedata -pg 1 -lvl 1 -x 10 -y 300 -defaultsOSRD
+preplace portBus avl_address -pg 1 -lvl 1 -x 10 -y 320 -defaultsOSRD
+preplace portBus avl_byteenable -pg 1 -lvl 1 -x 10 -y 380 -defaultsOSRD
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -210 0 200 1260
+"
+}
+

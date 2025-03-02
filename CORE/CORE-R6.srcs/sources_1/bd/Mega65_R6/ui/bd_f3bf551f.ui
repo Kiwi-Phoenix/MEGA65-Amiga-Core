@@ -1,0 +1,26 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1685,-576",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"IDE is usually related to disk storage devices.
+Will likely need to connect these to the virtual drives, which will need input from the OSM.
+Logic and placeholder for now.",
+   "commentid":"comment_0|",
+   "font_comment_0":"13",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_ide_write -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace port port-id_ide_read -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace portBus ide_address -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus ide_writedata -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace cgraphic comment_0 place left -589 -104 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -200 0 180 100
+"
+}
+
+{
+   "/comment_34":"comment_0"
+}

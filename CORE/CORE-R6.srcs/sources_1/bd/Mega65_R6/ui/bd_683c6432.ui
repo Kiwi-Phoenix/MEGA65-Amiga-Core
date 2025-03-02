@@ -1,0 +1,203 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1177,-2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_ami_cpu_as -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
+preplace port port-id_ami_cpu_uds -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port port-id_ami_cpu_lds -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace port port-id_cpu_r_w -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace port port-id_ami_cpu_dtack -pg 1 -lvl 2 -x 390 -y 100 -defaultsOSRD
+preplace port port-id_ami_cpu_reset -pg 1 -lvl 2 -x 390 -y 120 -defaultsOSRD
+preplace port port-id_ami_cpu_reset_in -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port port-id_ovr -pg 1 -lvl 2 -x 390 -y 140 -defaultsOSRD
+preplace port port-id_ami_ram_bhe -pg 1 -lvl 2 -x 390 -y 200 -defaultsOSRD
+preplace port port-id_ami_ram_ble -pg 1 -lvl 2 -x 390 -y 220 -defaultsOSRD
+preplace port port-id_ami_ram_we -pg 1 -lvl 2 -x 390 -y 240 -defaultsOSRD
+preplace port port-id_ami_ram_oe -pg 1 -lvl 2 -x 390 -y 260 -defaultsOSRD
+preplace port port-id_rst_ext -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port port-id_rst_out -pg 1 -lvl 2 -x 390 -y 280 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
+preplace port port-id_clk7_en -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port port-id_clk7n_en -pg 1 -lvl 0 -x -10 -y 380 -defaultsOSRD
+preplace port port-id_c1 -pg 1 -lvl 0 -x -10 -y 400 -defaultsOSRD
+preplace port port-id_c3 -pg 1 -lvl 0 -x -10 -y 420 -defaultsOSRD
+preplace port port-id_cck -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
+preplace port port-id_rxd -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
+preplace port port-id_txd -pg 1 -lvl 2 -x 390 -y 300 -defaultsOSRD
+preplace port port-id_cts -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
+preplace port port-id_rts -pg 1 -lvl 2 -x 390 -y 320 -defaultsOSRD
+preplace port port-id_dtr -pg 1 -lvl 2 -x 390 -y 340 -defaultsOSRD
+preplace port port-id_dsr -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
+preplace port port-id_cd -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace port port-id_ri -pg 1 -lvl 0 -x -10 -y 560 -defaultsOSRD
+preplace port port-id_kms_level -pg 1 -lvl 0 -x -10 -y 720 -defaultsOSRD
+preplace port port-id_pwr_led -pg 1 -lvl 2 -x 390 -y 360 -defaultsOSRD
+preplace port port-id_fdd_led -pg 1 -lvl 2 -x 390 -y 380 -defaultsOSRD
+preplace port port-id_hdd_led -pg 1 -lvl 2 -x 390 -y 400 -defaultsOSRD
+preplace port port-id_IO_UIO -pg 1 -lvl 0 -x -10 -y 800 -defaultsOSRD
+preplace port port-id_IO_FPGA -pg 1 -lvl 0 -x -10 -y 820 -defaultsOSRD
+preplace port port-id_IO_STROBE -pg 1 -lvl 0 -x -10 -y 840 -defaultsOSRD
+preplace port port-id_IO_WAIT -pg 1 -lvl 2 -x 390 -y 420 -defaultsOSRD
+preplace port port-id_ami_hsync -pg 1 -lvl 2 -x 390 -y 460 -defaultsOSRD
+preplace port port-id_ami_vsync -pg 1 -lvl 2 -x 390 -y 480 -defaultsOSRD
+preplace port port-id_ami_csync -pg 1 -lvl 2 -x 390 -y 500 -defaultsOSRD
+preplace port port-id_field1 -pg 1 -lvl 2 -x 390 -y 520 -defaultsOSRD
+preplace port port-id_lace -pg 1 -lvl 2 -x 390 -y 540 -defaultsOSRD
+preplace port port-id_hblank -pg 1 -lvl 2 -x 390 -y 560 -defaultsOSRD
+preplace port port-id_vblank -pg 1 -lvl 2 -x 390 -y 580 -defaultsOSRD
+preplace port port-id_ce_pix -pg 1 -lvl 2 -x 390 -y 700 -defaultsOSRD
+preplace port port-id_ntsc -pg 1 -lvl 2 -x 390 -y 740 -defaultsOSRD
+preplace port port-id_toccata_ena -pg 1 -lvl 0 -x -10 -y 880 -defaultsOSRD
+preplace port port-id_bootrom -pg 1 -lvl 2 -x 390 -y 960 -defaultsOSRD
+preplace port port-id_ide_ena -pg 1 -lvl 2 -x 390 -y 980 -defaultsOSRD
+preplace port port-id_ide_fast -pg 1 -lvl 2 -x 390 -y 1000 -defaultsOSRD
+preplace port port-id_ide_ext_irq -pg 1 -lvl 0 -x -10 -y 920 -defaultsOSRD
+preplace port port-id_ide_write -pg 1 -lvl 0 -x -10 -y 960 -defaultsOSRD
+preplace port port-id_ide_read -pg 1 -lvl 0 -x -10 -y 1000 -defaultsOSRD
+preplace portBus cpu_address -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace portBus cpu_data -pg 1 -lvl 2 -x 390 -y 60 -defaultsOSRD
+preplace portBus cpudata_in -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace portBus ami_cpu_ipl -pg 1 -lvl 2 -x 390 -y 80 -defaultsOSRD
+preplace portBus nmi_addr -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace portBus ram_data -pg 1 -lvl 2 -x 390 -y 160 -defaultsOSRD
+preplace portBus ramdata_in -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace portBus ram_address -pg 1 -lvl 2 -x 390 -y 180 -defaultsOSRD
+preplace portBus chip48 -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace portBus eclk -pg 1 -lvl 0 -x -10 -y 460 -defaultsOSRD
+preplace portBus ami_joy1 -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
+preplace portBus ami_joy2 -pg 1 -lvl 0 -x -10 -y 600 -defaultsOSRD
+preplace portBus ami_joy3 -pg 1 -lvl 0 -x -10 -y 620 -defaultsOSRD
+preplace portBus ami_joy4 -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace portBus joya1 -pg 1 -lvl 0 -x -10 -y 660 -defaultsOSRD
+preplace portBus joya2 -pg 1 -lvl 0 -x -10 -y 680 -defaultsOSRD
+preplace portBus mouse_btn -pg 1 -lvl 0 -x -10 -y 700 -defaultsOSRD
+preplace portBus kbd_mouse_type -pg 1 -lvl 0 -x -10 -y 740 -defaultsOSRD
+preplace portBus kbd_mouse_data -pg 1 -lvl 0 -x -10 -y 760 -defaultsOSRD
+preplace portBus rtc -pg 1 -lvl 0 -x -10 -y 780 -defaultsOSRD
+preplace portBus IO_DIN -pg 1 -lvl 0 -x -10 -y 860 -defaultsOSRD
+preplace portBus IO_DOUT -pg 1 -lvl 2 -x 390 -y 440 -defaultsOSRD
+preplace portBus red -pg 1 -lvl 2 -x 390 -y 600 -defaultsOSRD
+preplace portBus green -pg 1 -lvl 2 -x 390 -y 620 -defaultsOSRD
+preplace portBus blue -pg 1 -lvl 2 -x 390 -y 640 -defaultsOSRD
+preplace portBus ar -pg 1 -lvl 2 -x 390 -y 660 -defaultsOSRD
+preplace portBus scanline -pg 1 -lvl 2 -x 390 -y 680 -defaultsOSRD
+preplace portBus res -pg 1 -lvl 2 -x 390 -y 720 -defaultsOSRD
+preplace portBus ldata -pg 1 -lvl 2 -x 390 -y 760 -defaultsOSRD
+preplace portBus rdata -pg 1 -lvl 2 -x 390 -y 780 -defaultsOSRD
+preplace portBus ldata_okk -pg 1 -lvl 2 -x 390 -y 800 -defaultsOSRD
+preplace portBus rdata_okk -pg 1 -lvl 2 -x 390 -y 820 -defaultsOSRD
+preplace portBus aud_mix -pg 1 -lvl 2 -x 390 -y 840 -defaultsOSRD
+preplace portBus toccata_base -pg 1 -lvl 0 -x -10 -y 900 -defaultsOSRD
+preplace portBus toccata_aud_left -pg 1 -lvl 2 -x 390 -y 860 -defaultsOSRD
+preplace portBus toccata_aud_right -pg 1 -lvl 2 -x 390 -y 880 -defaultsOSRD
+preplace portBus cpucfg -pg 1 -lvl 2 -x 390 -y 900 -defaultsOSRD
+preplace portBus cachecfg -pg 1 -lvl 2 -x 390 -y 920 -defaultsOSRD
+preplace portBus memcfg -pg 1 -lvl 2 -x 390 -y 940 -defaultsOSRD
+preplace portBus ide_req -pg 1 -lvl 2 -x 390 -y 1020 -defaultsOSRD
+preplace portBus ide_address -pg 1 -lvl 0 -x -10 -y 940 -defaultsOSRD
+preplace portBus ide_writedata -pg 1 -lvl 0 -x -10 -y 980 -defaultsOSRD
+preplace portBus ide_readdata -pg 1 -lvl 2 -x 390 -y 1040 -defaultsOSRD
+preplace inst CORE_Main_Minimig -pg 1 -lvl 1 -x 190 -y 560 -defaultsOSRD
+preplace netloc CORE_Main_Minimig_IO_DOUT 1 1 1 NJ 440
+preplace netloc CORE_Main_Minimig_IO_WAIT 1 1 1 NJ 420
+preplace netloc CORE_Main_Minimig_ar 1 1 1 NJ 660
+preplace netloc CORE_Main_Minimig_aud_mix 1 1 1 NJ 840
+preplace netloc CORE_Main_Minimig_blue 1 1 1 NJ 640
+preplace netloc CORE_Main_Minimig_bootrom 1 1 1 NJ 960
+preplace netloc CORE_Main_Minimig_cachecfg 1 1 1 NJ 920
+preplace netloc CORE_Main_Minimig_ce_pix 1 1 1 NJ 700
+preplace netloc CORE_Main_Minimig_cpu_data 1 1 1 NJ 60
+preplace netloc CORE_Main_Minimig_cpucfg 1 1 1 NJ 900
+preplace netloc CORE_Main_Minimig_dtr 1 1 1 NJ 340
+preplace netloc CORE_Main_Minimig_fdd_led 1 1 1 NJ 380
+preplace netloc CORE_Main_Minimig_field1 1 1 1 NJ 520
+preplace netloc CORE_Main_Minimig_green 1 1 1 NJ 620
+preplace netloc CORE_Main_Minimig_hblank 1 1 1 NJ 560
+preplace netloc CORE_Main_Minimig_hdd_led 1 1 1 NJ 400
+preplace netloc CORE_Main_Minimig_ide_ena 1 1 1 NJ 980
+preplace netloc CORE_Main_Minimig_ide_fast 1 1 1 NJ 1000
+preplace netloc CORE_Main_Minimig_ide_readdata 1 1 1 NJ 1040
+preplace netloc CORE_Main_Minimig_ide_req 1 1 1 NJ 1020
+preplace netloc CORE_Main_Minimig_lace 1 1 1 NJ 540
+preplace netloc CORE_Main_Minimig_ldata 1 1 1 NJ 760
+preplace netloc CORE_Main_Minimig_ldata_okk 1 1 1 NJ 800
+preplace netloc CORE_Main_Minimig_memcfg 1 1 1 NJ 940
+preplace netloc CORE_Main_Minimig_ntsc 1 1 1 NJ 740
+preplace netloc CORE_Main_Minimig_ovr 1 1 1 NJ 140
+preplace netloc CORE_Main_Minimig_pwr_led 1 1 1 NJ 360
+preplace netloc CORE_Main_Minimig_ram_address 1 1 1 NJ 180
+preplace netloc CORE_Main_Minimig_ram_data 1 1 1 NJ 160
+preplace netloc CORE_Main_Minimig_rdata 1 1 1 NJ 780
+preplace netloc CORE_Main_Minimig_rdata_okk 1 1 1 NJ 820
+preplace netloc CORE_Main_Minimig_red 1 1 1 NJ 600
+preplace netloc CORE_Main_Minimig_res 1 1 1 NJ 720
+preplace netloc CORE_Main_Minimig_rst_out 1 1 1 NJ 280
+preplace netloc CORE_Main_Minimig_rts 1 1 1 NJ 320
+preplace netloc CORE_Main_Minimig_scanline 1 1 1 NJ 680
+preplace netloc CORE_Main_Minimig_toccata_aud_left 1 1 1 NJ 860
+preplace netloc CORE_Main_Minimig_toccata_aud_right 1 1 1 NJ 880
+preplace netloc CORE_Main_Minimig_txd 1 1 1 NJ 300
+preplace netloc CORE_Main_Minimig_vblank 1 1 1 NJ 580
+preplace netloc CORE_Main_Minimig_x_cpu_dtack 1 1 1 NJ 100
+preplace netloc CORE_Main_Minimig_x_cpu_ipl 1 1 1 NJ 80
+preplace netloc CORE_Main_Minimig_x_cpu_reset 1 1 1 NJ 120
+preplace netloc CORE_Main_Minimig_x_csync 1 1 1 NJ 500
+preplace netloc CORE_Main_Minimig_x_hsync 1 1 1 NJ 460
+preplace netloc CORE_Main_Minimig_x_ram_bhe 1 1 1 NJ 200
+preplace netloc CORE_Main_Minimig_x_ram_ble 1 1 1 NJ 220
+preplace netloc CORE_Main_Minimig_x_ram_oe 1 1 1 NJ 260
+preplace netloc CORE_Main_Minimig_x_ram_we 1 1 1 NJ 240
+preplace netloc CORE_Main_Minimig_x_vsync 1 1 1 NJ 480
+preplace netloc IO_DIN_1 1 0 1 NJ 860
+preplace netloc IO_FPGA_1 1 0 1 NJ 820
+preplace netloc IO_STROBE_1 1 0 1 NJ 840
+preplace netloc IO_UIO_1 1 0 1 NJ 800
+preplace netloc ami_cpu_as_1 1 0 1 NJ 160
+preplace netloc ami_cpu_lds_1 1 0 1 NJ 200
+preplace netloc ami_cpu_reset_in_1 1 0 1 NJ 240
+preplace netloc ami_cpu_uds_1 1 0 1 NJ 180
+preplace netloc ami_joy1_1 1 0 1 NJ 580
+preplace netloc ami_joy2_1 1 0 1 NJ 600
+preplace netloc ami_joy3_1 1 0 1 NJ 620
+preplace netloc ami_joy4_1 1 0 1 NJ 640
+preplace netloc c1_1 1 0 1 NJ 400
+preplace netloc c3_1 1 0 1 NJ 420
+preplace netloc cck_1 1 0 1 NJ 440
+preplace netloc cd_1 1 0 1 NJ 540
+preplace netloc chip48_1 1 0 1 NJ 300
+preplace netloc clk7_en_1 1 0 1 NJ 360
+preplace netloc clk7n_en_1 1 0 1 NJ 380
+preplace netloc clk_1 1 0 1 NJ 340
+preplace netloc cpu_address_1 1 0 1 NJ 120
+preplace netloc cpu_r_w_1 1 0 1 NJ 220
+preplace netloc cpudata_in_1 1 0 1 NJ 140
+preplace netloc cts_1 1 0 1 NJ 500
+preplace netloc dsr_1 1 0 1 NJ 520
+preplace netloc eclk_1 1 0 1 NJ 460
+preplace netloc ide_address_1 1 0 1 NJ 940
+preplace netloc ide_ext_irq_1 1 0 1 NJ 920
+preplace netloc ide_read_1 1 0 1 NJ 1000
+preplace netloc ide_write_1 1 0 1 NJ 960
+preplace netloc ide_writedata_1 1 0 1 NJ 980
+preplace netloc joya1_1 1 0 1 NJ 660
+preplace netloc joya2_1 1 0 1 NJ 680
+preplace netloc kbd_mouse_data_1 1 0 1 NJ 760
+preplace netloc kbd_mouse_type_1 1 0 1 NJ 740
+preplace netloc kms_level_1 1 0 1 NJ 720
+preplace netloc mouse_btn_1 1 0 1 NJ 700
+preplace netloc nmi_addr_1 1 0 1 NJ 260
+preplace netloc ramdata_in_1 1 0 1 NJ 280
+preplace netloc ri_1 1 0 1 NJ 560
+preplace netloc rst_ext_1 1 0 1 NJ 320
+preplace netloc rtc_1 1 0 1 NJ 780
+preplace netloc rxd_1 1 0 1 NJ 480
+preplace netloc toccata_base_1 1 0 1 NJ 900
+preplace netloc toccata_ena_1 1 0 1 NJ 880
+levelinfo -pg 1 -10 190 390
+pagesize -pg 1 -db -bbox -sgen -200 0 610 1110
+"
+}
+0

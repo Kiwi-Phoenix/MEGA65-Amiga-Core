@@ -3,7 +3,33 @@
 --
 -- Clock Generator using the Xilinx specific MMCME2_ADV:
 --
---   @TODO YOURCORE expects 54 MHz
+--
+--  DJR - Update clocks for Amiga Core
+--  MiSTer's Amiga expects:
+--  Input  clk_28   - 28 MHz output clock (28.375160MHz)
+--  Output clk7_en  - 7  MHz output clock enable (on 28MHz clock domain)
+--  Output clk7n_en - 7  MHz negedge output clock enable (on 28MHz clock domain)
+--  Output c1       - clk28m clock domain signal synchronous with clk signal
+--  Output c3       - clk28m clock domain signal synchronous with clk signal delayed by 90 degrees
+--  Output cck      - colour clock output (3.54 MHz)   clk_29 / 8
+--  Output eclk     - 0.709379 MHz enable output (clk domain pulse)
+--
+--
+--  Amiga Clock Freq
+--  PAL  -  28.37516 MHzm CPU clock - 7.09 MHz
+--  NTSC -  28.63636 MHz, CPU clock - 7.16 MHz
+--
+--  Two clocks are used:
+--  PAL:     clk_114 = 113.50064 MHz
+--           clk_sys =  28.37516 MHz
+-- 
+--  NTSC:    clk_114 = 114.54544 MHz
+--           clk_sys =  28.63636 MHz
+--    
+--  There appears to be a Port on Agnus for NTSC.
+--  Need to work out how to adjust the clock when switching to NTSC. 
+-- 
+--
 --
 -- MiSTer2MEGA65 done by sy2002 and MJoergen in 2022 and licensed under GPL v3
 -------------------------------------------------------------------------------------------------------------
@@ -20,9 +46,10 @@ use xpm.vcomponents.all;
 entity clk is
    port (
       sys_clk_i       : in  std_logic;   -- expects 100 MHz
-
-      main_clk_o      : out std_logic;   -- main's @TODO 54 MHz main clock
+      main_clk_114_o  : out std_logic;   -- Amiga 114 clock
+      main_clk_o      : out std_logic;   -- main's 28.37516  MHz main clock   expected by the MiSTer Core
       main_rst_o      : out std_logic    -- main's reset, synchronized
+      
    );
 end entity clk;
 
@@ -35,36 +62,46 @@ signal clkfb2_mmcm        : std_logic;
 signal clkfb3             : std_logic;
 signal clkfb3_mmcm        : std_logic;
 signal main_clk_mmcm      : std_logic;
+signal main_clk114_mmcm   : std_logic;     
 
 signal main_locked        : std_logic;
 
 begin
 
    -------------------------------------------------------------------------------------
-   -- Generate QNICE and HyperRAM clock
+   -- Generate Amiga clock
    -------------------------------------------------------------------------------------
 
    i_clk_main : MMCME2_ADV
       generic map (
          BANDWIDTH            => "OPTIMIZED",
-         CLKOUT4_CASCADE      => FALSE,
-         COMPENSATION         => "ZHOLD",
-         STARTUP_WAIT         => FALSE,
-         CLKIN1_PERIOD        => 10.0,       -- INPUT @ 100 MHz
-         REF_JITTER1          => 0.010,
-         DIVCLK_DIVIDE        => 1,
-         CLKFBOUT_MULT_F      => 6.750,      -- 675 MHz
+         CLKFBOUT_MULT_F      => 49.375000,
          CLKFBOUT_PHASE       => 0.000,
          CLKFBOUT_USE_FINE_PS => FALSE,
-         CLKOUT0_DIVIDE_F     => 12.500,     -- 54 MHz
-         CLKOUT0_PHASE        => 0.000,
+         CLKIN1_PERIOD        => 10.0,
+         CLKIN2_PERIOD        => 0.000000,
+         CLKOUT0_DIVIDE_F     => 7.250000,
          CLKOUT0_DUTY_CYCLE   => 0.500,
-         CLKOUT0_USE_FINE_PS  => FALSE
+         CLKOUT0_PHASE        => 0.000,
+         CLKOUT0_USE_FINE_PS  => FALSE,
+         CLKOUT1_DIVIDE       => 29,
+         CLKOUT1_DUTY_CYCLE   => 0.500000,
+         CLKOUT1_PHASE        => 0.000000,
+         CLKOUT1_USE_FINE_PS  => false,
+         COMPENSATION         => "ZHOLD",
+         DIVCLK_DIVIDE        => 6,
+         REF_JITTER1          => 0.010,
+         REF_JITTER2          => 0.010,
+         SS_EN                => "FALSE",
+         SS_MODE              => "CENTER_HIGH",
+         SS_MOD_PERIOD        => 10000,                                
+         STARTUP_WAIT         => false                                                                                            
       )
       port map (
          -- Output clocks
          CLKFBOUT            => clkfb3_mmcm,
-         CLKOUT0             => main_clk_mmcm,
+         CLKOUT0             => main_clk114_mmcm,
+         CLKOUT1             => main_clk_mmcm,
          -- Input clock control
          CLKFBIN             => clkfb3,
          CLKIN1              => sys_clk_i,
@@ -101,6 +138,12 @@ begin
          I => clkfb3_mmcm,
          O => clkfb3
       );
+      
+   main_clk114_bufg : BUFG
+    port map (
+        I => main_clk114_mmcm,
+        O => main_clk_114_o
+    );
 
    main_clk_bufg : BUFG
       port map (

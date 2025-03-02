@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="43">
+  <CompositeFile CompositeFileTopName="Minimig_core_orig" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1740798613"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1740798571"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1740798613"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1740798571"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
+  </CompositeFile>
+</Root>

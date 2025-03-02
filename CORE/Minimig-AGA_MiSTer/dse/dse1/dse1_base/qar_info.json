@@ -1,0 +1,7 @@
+{
+	"common_dir" : "D:/Retro/Mega65/FPGA_Projects/MEGA65-Amiga-Core-Test/CORE/Minimig-AGA_MiSTer/",
+	"acds_version" : "Version 23.1std.1",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "Minimig.qpf"
+}

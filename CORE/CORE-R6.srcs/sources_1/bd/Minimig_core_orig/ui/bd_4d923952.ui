@@ -1,0 +1,106 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1441,-544",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk_sys -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace port port-id_ps2_kbd_clk_out -pg 1 -lvl 1 -x 10 -y 860 -defaultsOSRD
+preplace port port-id_ps2_kbd_data_out -pg 1 -lvl 1 -x 10 -y 880 -defaultsOSRD
+preplace port port-id_ps2_kbd_clk_in -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace port port-id_ps2_kbd_data_in -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
+preplace port port-id_ps2_mouse_clk_out -pg 1 -lvl 1 -x 10 -y 900 -defaultsOSRD
+preplace port port-id_ps2_mouse_data_out -pg 1 -lvl 1 -x 10 -y 920 -defaultsOSRD
+preplace port port-id_ps2_mouse_clk_in -pg 1 -lvl 0 -x -30 -y 360 -defaultsOSRD
+preplace port port-id_ps2_mouse_data_in -pg 1 -lvl 0 -x -30 -y 380 -defaultsOSRD
+preplace port port-id_forced_scandoubler -pg 1 -lvl 1 -x 10 -y 740 -defaultsOSRD
+preplace port port-id_direct_video -pg 1 -lvl 1 -x 10 -y 720 -defaultsOSRD
+preplace port port-id_video_rotated -pg 1 -lvl 0 -x -30 -y 420 -defaultsOSRD
+preplace port port-id_new_vmode -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace port port-id_status_set -pg 1 -lvl 0 -x -30 -y 400 -defaultsOSRD
+preplace port port-id_info_req -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace port port-id_img_readonly -pg 1 -lvl 1 -x 10 -y 760 -defaultsOSRD
+preplace port port-id_sd_buff_wr -pg 1 -lvl 1 -x 10 -y 940 -defaultsOSRD
+preplace port port-id_ioctl_download -pg 1 -lvl 1 -x 10 -y 780 -defaultsOSRD
+preplace port port-id_ioctl_wr -pg 1 -lvl 1 -x 10 -y 840 -defaultsOSRD
+preplace port port-id_ioctl_upload -pg 1 -lvl 1 -x 10 -y 820 -defaultsOSRD
+preplace port port-id_ioctl_upload_req -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace port port-id_ioctl_rd -pg 1 -lvl 1 -x 10 -y 800 -defaultsOSRD
+preplace port port-id_ioctl_wait -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace portBus HPS_BUS -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace portBus joystick_0 -pg 1 -lvl 1 -x 10 -y 480 -defaultsOSRD
+preplace portBus joystick_1 -pg 1 -lvl 1 -x 10 -y 500 -defaultsOSRD
+preplace portBus joystick_2 -pg 1 -lvl 1 -x 10 -y 520 -defaultsOSRD
+preplace portBus joystick_3 -pg 1 -lvl 1 -x 10 -y 540 -defaultsOSRD
+preplace portBus joystick_4 -pg 1 -lvl 1 -x 10 -y 560 -defaultsOSRD
+preplace portBus joystick_5 -pg 1 -lvl 1 -x 10 -y 580 -defaultsOSRD
+preplace portBus joystick_l_analog_0 -pg 1 -lvl 1 -x 10 -y 240 -defaultsOSRD
+preplace portBus joystick_l_analog_1 -pg 1 -lvl 1 -x 10 -y 260 -defaultsOSRD
+preplace portBus joystick_l_analog_2 -pg 1 -lvl 1 -x 10 -y 280 -defaultsOSRD
+preplace portBus joystick_l_analog_3 -pg 1 -lvl 1 -x 10 -y 300 -defaultsOSRD
+preplace portBus joystick_l_analog_4 -pg 1 -lvl 1 -x 10 -y 320 -defaultsOSRD
+preplace portBus joystick_l_analog_5 -pg 1 -lvl 1 -x 10 -y 340 -defaultsOSRD
+preplace portBus joystick_r_analog_0 -pg 1 -lvl 1 -x 10 -y 360 -defaultsOSRD
+preplace portBus joystick_r_analog_1 -pg 1 -lvl 1 -x 10 -y 380 -defaultsOSRD
+preplace portBus joystick_r_analog_2 -pg 1 -lvl 1 -x 10 -y 400 -defaultsOSRD
+preplace portBus joystick_r_analog_3 -pg 1 -lvl 1 -x 10 -y 420 -defaultsOSRD
+preplace portBus joystick_r_analog_4 -pg 1 -lvl 1 -x 10 -y 440 -defaultsOSRD
+preplace portBus joystick_r_analog_5 -pg 1 -lvl 1 -x 10 -y 460 -defaultsOSRD
+preplace portBus joystick_0_rumble -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace portBus joystick_1_rumble -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace portBus joystick_2_rumble -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace portBus joystick_3_rumble -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace portBus joystick_4_rumble -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace portBus joystick_5_rumble -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace portBus paddle_0 -pg 1 -lvl 1 -x 10 -y 600 -defaultsOSRD
+preplace portBus paddle_1 -pg 1 -lvl 1 -x 10 -y 620 -defaultsOSRD
+preplace portBus paddle_2 -pg 1 -lvl 1 -x 10 -y 640 -defaultsOSRD
+preplace portBus paddle_3 -pg 1 -lvl 1 -x 10 -y 660 -defaultsOSRD
+preplace portBus paddle_4 -pg 1 -lvl 1 -x 10 -y 680 -defaultsOSRD
+preplace portBus paddle_5 -pg 1 -lvl 1 -x 10 -y 700 -defaultsOSRD
+preplace portBus spinner_0 -pg 1 -lvl 1 -x 10 -y 1100 -defaultsOSRD
+preplace portBus spinner_1 -pg 1 -lvl 1 -x 10 -y 1120 -defaultsOSRD
+preplace portBus spinner_2 -pg 1 -lvl 1 -x 10 -y 1140 -defaultsOSRD
+preplace portBus spinner_3 -pg 1 -lvl 1 -x 10 -y 1160 -defaultsOSRD
+preplace portBus spinner_4 -pg 1 -lvl 1 -x 10 -y 1180 -defaultsOSRD
+preplace portBus spinner_5 -pg 1 -lvl 1 -x 10 -y 1200 -defaultsOSRD
+preplace portBus ps2_kbd_led_status -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
+preplace portBus ps2_kbd_led_use -pg 1 -lvl 0 -x -30 -y 460 -defaultsOSRD
+preplace portBus ps2_key -pg 1 -lvl 1 -x 10 -y 960 -defaultsOSRD
+preplace portBus ps2_mouse -pg 1 -lvl 1 -x 10 -y 980 -defaultsOSRD
+preplace portBus ps2_mouse_ext -pg 1 -lvl 1 -x 10 -y 1000 -defaultsOSRD
+preplace portBus gamma_bus -pg 1 -lvl 1 -x 10 -y 100 -defaultsOSRD
+preplace portBus status -pg 1 -lvl 1 -x 10 -y 1220 -defaultsOSRD
+preplace portBus status_in -pg 1 -lvl 0 -x -30 -y 580 -defaultsOSRD
+preplace portBus status_menumask -pg 1 -lvl 0 -x -30 -y 600 -defaultsOSRD
+preplace portBus info -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace portBus img_mounted -pg 1 -lvl 1 -x 10 -y 120 -defaultsOSRD
+preplace portBus img_size -pg 1 -lvl 1 -x 10 -y 140 -defaultsOSRD
+preplace portBus sd_lba -pg 1 -lvl 0 -x -30 -y 520 -defaultsOSRD
+preplace portBus sd_blk_cnt -pg 1 -lvl 0 -x -30 -y 480 -defaultsOSRD
+preplace portBus sd_rd -pg 1 -lvl 0 -x -30 -y 540 -defaultsOSRD
+preplace portBus sd_wr -pg 1 -lvl 0 -x -30 -y 560 -defaultsOSRD
+preplace portBus sd_ack -pg 1 -lvl 1 -x 10 -y 1020 -defaultsOSRD
+preplace portBus sd_buff_addr -pg 1 -lvl 1 -x 10 -y 1040 -defaultsOSRD
+preplace portBus sd_buff_dout -pg 1 -lvl 1 -x 10 -y 1060 -defaultsOSRD
+preplace portBus sd_buff_din -pg 1 -lvl 0 -x -30 -y 500 -defaultsOSRD
+preplace portBus ioctl_index -pg 1 -lvl 1 -x 10 -y 220 -defaultsOSRD
+preplace portBus ioctl_addr -pg 1 -lvl 1 -x 10 -y 160 -defaultsOSRD
+preplace portBus ioctl_dout -pg 1 -lvl 1 -x 10 -y 180 -defaultsOSRD
+preplace portBus ioctl_upload_index -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace portBus ioctl_din -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace portBus ioctl_file_ext -pg 1 -lvl 1 -x 10 -y 200 -defaultsOSRD
+preplace portBus sdram_sz -pg 1 -lvl 1 -x 10 -y 1080 -defaultsOSRD
+preplace portBus RTC -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus TIMESTAMP -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace portBus uart_mode -pg 1 -lvl 1 -x 10 -y 1240 -defaultsOSRD
+preplace portBus uart_speed -pg 1 -lvl 1 -x 10 -y 1260 -defaultsOSRD
+preplace portBus EXT_BUS -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus HPS_BUS_io_i -pg 1 -lvl 0 -x -30 -y 620 -defaultsOSRD
+preplace portBus buttons -pg 1 -lvl 1 -x 10 -y 1280 -defaultsOSRD
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -250 0 240 1300
+"
+}
+0

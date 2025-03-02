@@ -1,0 +1,57 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1388,-384",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"Logic to map the joysticks for input to minimig.
+Need to map the Mega65 Inputs to the array.
+MiSTer CORE appears to allow for 4 joysticks, while MEGA65 only has 2.
+The mouse buttons come from the Joystick ports.  The Amiga mouse is connected to Joy 1.
+MiSTer has a user Port for the mouse, for MEGA65 framework need to be mapped from the
+Joystick port.  Also the X,Y positions.  Like from Analogue pins on the same port.  Just got to map the correct ones.
+
+TBC: kbd_mouse_level => kms_level.  What is this for and is it necessary?  If so, where to get the input from.
+Same for kbd_mouse_type and kbd_mouse_data.  The data pin sounds important!!  The type likely could be "hardcoded" as
+there is only one type for the Mega65.",
+   "commentid":"comment_0|",
+   "fillcolor_comment_0":"",
+   "font_comment_0":"13",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_joy_1_fire_n_i -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace port port-id_joy_1_down_n_i -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace port port-id_joy_1_up_n_i -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace port port-id_joy_1_left_n_i -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace port port-id_joy_1_right_n_i -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace port port-id_joy_2_fire_n_i -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace port port-id_joy_2_down_n_i -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace port port-id_joy_2_up_n_i -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_joy_2_left_n_i -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port port-id_joy_2_right_n_i -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_kms_level -pg 1 -lvl 1 -x 10 -y 120 -defaultsOSRD
+preplace port port-id_kbd_mouse_level -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace portBus ami_joy1 -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus ami_joy2 -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace portBus joya1 -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus joya2 -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace portBus pot1_x_i -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace portBus pot1_y_i -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace portBus pot2_x_i -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace portBus pot2_y_i -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace portBus mouse_btn -pg 1 -lvl 1 -x 10 -y 100 -defaultsOSRD
+preplace portBus kbd_mouse_type -pg 1 -lvl 1 -x 10 -y 140 -defaultsOSRD
+preplace portBus kbd_mouse_data -pg 1 -lvl 1 -x 10 -y 160 -defaultsOSRD
+preplace portBus kbd_mouse_type_i -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace portBus kbd_mouse_data_i -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
+preplace cgraphic comment_0 place left -1019 -478 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -230 0 200 360
+",
+   "linecolor_comment_0":"",
+   "textcolor_comment_0":""
+}
+
+{
+   "/comment_33":"comment_0"
+}

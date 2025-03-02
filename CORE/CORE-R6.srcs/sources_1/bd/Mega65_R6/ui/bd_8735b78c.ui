@@ -1,0 +1,33 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1395,-398",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace port port-id_cache_inhibit -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace port port-id_cpu_cs -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
+preplace port port-id_cpu_we -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
+preplace port port-id_cpu_ir -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_cpu_dr -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_cpu_ack -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace port port-id_wb_en -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace port port-id_sdr_read_req -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace port port-id_sdr_read_ack -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
+preplace port port-id_snoop_act -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace portBus cpu_cache_ctrl -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace portBus cpu_adr -pg 1 -lvl 0 -x -30 -y 120 -defaultsOSRD
+preplace portBus cpu_bs -pg 1 -lvl 0 -x -30 -y 140 -defaultsOSRD
+preplace portBus cpu_dat_w -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
+preplace portBus cpu_dat_r -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace portBus sdr_dat_r -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace portBus snoop_adr -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace portBus snoop_dat_w -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace portBus snoop_bs -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -210 0 160 360
+"
+}
+

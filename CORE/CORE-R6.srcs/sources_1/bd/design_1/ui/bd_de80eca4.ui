@@ -1,0 +1,24 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-189,-207",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst paula_hier -pg 1 -lvl 7 -x 2050 -y 650 -defaultsOSRD
+preplace inst denise_hier -pg 1 -lvl 7 -x 2050 -y 260 -defaultsOSRD
+preplace inst agnus_hier -pg 1 -lvl 7 -x 2050 -y 50 -defaultsOSRD
+preplace inst ciaa1_hier -pg 1 -lvl 7 -x 2050 -y 120 -defaultsOSRD
+preplace inst ciab_hier -pg 1 -lvl 7 -x 2050 -y 190 -defaultsOSRD
+preplace inst userio_0 -pg 1 -lvl 6 -x 1800 -y 290 -defaultsOSRD
+preplace inst minimig_m68k_bridge_0 -pg 1 -lvl 5 -x 1450 -y 290 -defaultsOSRD
+preplace inst minimig_bankmapper_0 -pg 1 -lvl 4 -x 1140 -y 430 -defaultsOSRD
+preplace inst minimig_sram_bridge_0 -pg 1 -lvl 3 -x 850 -y 300 -defaultsOSRD
+preplace inst cart_0 -pg 1 -lvl 2 -x 520 -y 280 -defaultsOSRD
+preplace inst gary_0 -pg 1 -lvl 1 -x 150 -y 80 -defaultsOSRD
+preplace inst minimig_syscontrol_0 -pg 1 -lvl 1 -x 150 -y 440 -defaultsOSRD
+levelinfo -pg 1 -40 150 520 850 1140 1450 1800 2050 2120
+pagesize -pg 1 -db -bbox -sgen -40 -410 2120 690
+"
+}
+

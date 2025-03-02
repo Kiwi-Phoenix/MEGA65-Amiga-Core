@@ -1,0 +1,72 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.329225",
+   "Default View_TopLeft":"-3940,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_clk50_i -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port port-id_reset_n_i -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_uart_rxd_i -pg 1 -lvl 0 -x 0 -y 1410 -defaultsOSRD
+preplace port port-id_uart_txd_o -pg 1 -lvl 2 -x 450 -y 1410 -defaultsOSRD
+preplace port port-id_sd_reset_o -pg 1 -lvl 2 -x 450 -y 1190 -defaultsOSRD
+preplace port port-id_sd_clk_o -pg 1 -lvl 2 -x 450 -y 1210 -defaultsOSRD
+preplace port port-id_sd_mosi_o -pg 1 -lvl 2 -x 450 -y 1230 -defaultsOSRD
+preplace port port-id_sd_miso_i -pg 1 -lvl 0 -x 0 -y 1210 -defaultsOSRD
+preplace port port-id_sd_cd_i -pg 1 -lvl 0 -x 0 -y 1190 -defaultsOSRD
+preplace port port-id_sd2_reset_o -pg 1 -lvl 2 -x 450 -y 1130 -defaultsOSRD
+preplace port port-id_sd2_clk_o -pg 1 -lvl 2 -x 450 -y 1150 -defaultsOSRD
+preplace port port-id_sd2_mosi_o -pg 1 -lvl 2 -x 450 -y 1170 -defaultsOSRD
+preplace port port-id_sd2_miso_i -pg 1 -lvl 0 -x 0 -y 1170 -defaultsOSRD
+preplace port port-id_sd2_cd_i -pg 1 -lvl 0 -x 0 -y 1150 -defaultsOSRD
+preplace port port-id_csr_reset_o -pg 1 -lvl 2 -x 450 -y 220 -defaultsOSRD
+preplace port port-id_csr_pause_o -pg 1 -lvl 2 -x 450 -y 200 -defaultsOSRD
+preplace port port-id_csr_osm_o -pg 1 -lvl 2 -x 450 -y 180 -defaultsOSRD
+preplace port port-id_csr_keyboard_o -pg 1 -lvl 2 -x 450 -y 160 -defaultsOSRD
+preplace port port-id_csr_joy1_o -pg 1 -lvl 2 -x 450 -y 120 -defaultsOSRD
+preplace port port-id_csr_joy2_o -pg 1 -lvl 2 -x 450 -y 140 -defaultsOSRD
+preplace port port-id_ramrom_ce_o -pg 1 -lvl 2 -x 450 -y 240 -defaultsOSRD
+preplace port port-id_ramrom_wait_i -pg 1 -lvl 0 -x 0 -y 920 -defaultsOSRD
+preplace port port-id_ramrom_we_o -pg 1 -lvl 2 -x 450 -y 260 -defaultsOSRD
+preplace portBus osm_xy_o -pg 1 -lvl 2 -x 450 -y 100 -defaultsOSRD
+preplace portBus osm_dxdy_o -pg 1 -lvl 2 -x 450 -y 80 -defaultsOSRD
+preplace portBus ascal_mode_i -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus ascal_mode_o -pg 1 -lvl 2 -x 450 -y 20 -defaultsOSRD
+preplace portBus keys_n_i -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace portBus control_d_o -pg 1 -lvl 2 -x 450 -y 40 -defaultsOSRD
+preplace portBus control_m_o -pg 1 -lvl 2 -x 450 -y 60 -defaultsOSRD
+preplace portBus special_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus general_i -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace portBus ramrom_dev_o -pg 1 -lvl 2 -x 450 -y 320 -defaultsOSRD
+preplace portBus ramrom_addr_o -pg 1 -lvl 2 -x 450 -y 280 -defaultsOSRD
+preplace portBus ramrom_data_o -pg 1 -lvl 2 -x 450 -y 300 -defaultsOSRD
+preplace portBus ramrom_data_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace inst BROM_0 -pg 1 -lvl 1 -x 270 -y 1800 -defaultsOSRD
+preplace inst BRAM_0 -pg 1 -lvl 1 -x 270 -y 1640 -defaultsOSRD
+preplace inst EAE_0 -pg 1 -lvl 1 -x 270 -y 1970 -defaultsOSRD
+preplace inst sdmux_0 -pg 1 -lvl 1 -x 270 -y 1170 -defaultsOSRD
+preplace inst cycle_counter_0 -pg 1 -lvl 1 -x 270 -y 2180 -defaultsOSRD
+preplace inst mmio_mux_0 -pg 1 -lvl 1 -x 270 -y 410 -defaultsOSRD
+preplace inst sdcard_0 -pg 1 -lvl 1 -x 270 -y 2400 -defaultsOSRD
+preplace inst M2M_QNICE_CPU -pg 1 -lvl 1 -x 270 -y 920 -defaultsOSRD
+preplace inst M2M_QNICE_SOC_BUS_UART -pg 1 -lvl 1 -x 270 -y 1440 -defaultsOSRD
+preplace netloc M2M_QNICE_SOC_BUS_UART_tx 1 1 1 NJ 1410
+preplace netloc clk50_i_1 1 0 1 110 320n
+preplace netloc ramrom_wait_i_1 1 0 1 NJ 920
+preplace netloc reset_n_i_1 1 0 1 NJ 300
+preplace netloc sd2_cd_i_1 1 0 1 NJ 1150
+preplace netloc sd2_miso_i_1 1 0 1 NJ 1170
+preplace netloc sd_cd_i_1 1 0 1 NJ 1190
+preplace netloc sd_miso_i_1 1 0 1 NJ 1210
+preplace netloc sdmux_0_sd_back_clk_o 1 1 1 NJ 1210
+preplace netloc sdmux_0_sd_back_mosi_o 1 1 1 NJ 1230
+preplace netloc sdmux_0_sd_back_reset_o 1 1 1 NJ 1190
+preplace netloc sdmux_0_sd_tray_clk_o 1 1 1 NJ 1150
+preplace netloc sdmux_0_sd_tray_mosi_o 1 1 1 NJ 1170
+preplace netloc sdmux_0_sd_tray_reset_o 1 1 1 NJ 1130
+preplace netloc uart_rxd_i_1 1 0 1 NJ 1410
+levelinfo -pg 1 0 270 450
+pagesize -pg 1 -db -bbox -sgen -190 0 840 2800
+"
+}
+0

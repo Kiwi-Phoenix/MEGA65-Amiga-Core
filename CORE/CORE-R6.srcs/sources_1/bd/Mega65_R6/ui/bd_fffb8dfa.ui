@@ -1,0 +1,57 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-496,-178",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "HierExpandStatus_comment_1":"false",
+   "HierExpandStatus_comment_2":"false",
+   "HierExpandStatus_comment_3":"false",
+   "HierExpandStatus_comment_4":"false",
+   "HierExpandStatus_comment_5":"false",
+   "comment_0":"scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io",
+   "comment_1":"scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io",
+   "comment_2":"scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io
+",
+   "comment_3":"scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io",
+   "comment_4":"scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io
+",
+   "comment_5":"      scl_in_i      => "11" & audio_scl_io & vga_scl_io & hdmi_scl_io & i2c_scl_io & grove_scl_io & fpga_scl_io,
+      sda_in_i      => "11" & audio_sda_io & vga_sda_io & hdmi_sda_io & i2c_sda_io & grove_sda_io & fpga_sda_io,",
+   "commentid":"comment_0|comment_1|comment_2|comment_3|comment_4|comment_5|",
+   "font_comment_0":"10",
+   "font_comment_1":"10",
+   "font_comment_2":"10",
+   "font_comment_3":"10",
+   "font_comment_4":"10",
+   "font_comment_5":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_audio_scl_io_i -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_scl_in_i -pg 1 -lvl 1 -x 40 -y 20 -defaultsOSRD
+preplace port port-id_vga_scl_io_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_hdmi_scl_io_i -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_i2c_scl_io_i -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_grove_scl_io_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_fpga_scl_io_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_audio_sda_io_i -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_vga_sda_io_i -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_hdmi_sda_io_i -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_i2c_sda_io_i -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_grove_sda_io_i -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_fpga_sda_io_i -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_sda_in_i -pg 1 -lvl 1 -x 40 -y 40 -defaultsOSRD
+preplace cgraphic comment_5 place bot -67 52 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 0 40
+pagesize -pg 1 -db -bbox -sgen -150 0 150 260
+"
+}
+
+{
+   "/comment_10":"comment_2",
+   "/comment_11":"comment_3",
+   "/comment_13":"comment_4",
+   "/comment_15":"comment_5",
+   "/comment_8":"comment_0",
+   "/comment_9":"comment_1"
+}

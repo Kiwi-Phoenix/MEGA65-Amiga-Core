@@ -1,0 +1,74 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1069,-153",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_cyc -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port port-id_clk_sys -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_sel -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port port-id_sel_ack -pg 1 -lvl 2 -x 610 -y 60 -defaultsOSRD
+preplace port port-id_ready -pg 1 -lvl 2 -x 610 -y 40 -defaultsOSRD
+preplace port port-id_lds -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_uds -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_rnw -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD
+preplace port port-id_longword -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port port-id_rtg_ena -pg 1 -lvl 2 -x 610 -y 620 -defaultsOSRD
+preplace port port-id_rtg_pal_clk -pg 1 -lvl 2 -x 610 -y 740 -defaultsOSRD
+preplace port port-id_rtg_pal_wr -pg 1 -lvl 2 -x 610 -y 800 -defaultsOSRD
+preplace port port-id_ide_ena -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_ide_irq -pg 1 -lvl 2 -x 610 -y 140 -defaultsOSRD
+preplace port port-id_ide_write -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port port-id_ide_read -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_ide_led -pg 1 -lvl 2 -x 610 -y 220 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus addr -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus din -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus dout -pg 1 -lvl 2 -x 610 -y 20 -defaultsOSRD
+preplace portBus rtg_hsize -pg 1 -lvl 2 -x 610 -y 640 -defaultsOSRD
+preplace portBus rtg_vsize -pg 1 -lvl 2 -x 610 -y 660 -defaultsOSRD
+preplace portBus rtg_format -pg 1 -lvl 2 -x 610 -y 680 -defaultsOSRD
+preplace portBus rtg_base -pg 1 -lvl 2 -x 610 -y 700 -defaultsOSRD
+preplace portBus rtg_stride -pg 1 -lvl 2 -x 610 -y 720 -defaultsOSRD
+preplace portBus rtg_pal_dw -pg 1 -lvl 2 -x 610 -y 760 -defaultsOSRD
+preplace portBus rtg_pal_dr -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace portBus rtg_pal_a -pg 1 -lvl 2 -x 610 -y 780 -defaultsOSRD
+preplace portBus ide_req -pg 1 -lvl 2 -x 610 -y 180 -defaultsOSRD
+preplace portBus ide_address -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace portBus ide_writedata -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace portBus ide_readdata -pg 1 -lvl 2 -x 610 -y 200 -defaultsOSRD
+preplace inst rtg_0 -pg 1 -lvl 1 -x 190 -y 690 -defaultsOSRD
+preplace inst CORE_Main_fastchip_gayle -pg 1 -lvl 1 -x 190 -y 170 -defaultsOSRD
+preplace inst akiko_1 -pg 1 -lvl 1 -x 190 -y 430 -defaultsOSRD
+preplace netloc CORE_Main_fastchip_gayle_ide_readdata 1 1 1 NJ 200
+preplace netloc CORE_Main_fastchip_gayle_ide_req 1 1 1 NJ 180
+preplace netloc CORE_Main_fastchip_gayle_irq 1 1 1 NJ 140
+preplace netloc CORE_Main_fastchip_gayle_led 1 1 1 NJ 220
+preplace netloc addr_1 1 0 1 NJ 90
+preplace netloc clk_sys_1 1 0 1 40 50n
+preplace netloc din_1 1 0 1 NJ 110
+preplace netloc ide_address_1 1 0 1 NJ 230
+preplace netloc ide_read_1 1 0 1 NJ 290
+preplace netloc ide_write_1 1 0 1 NJ 250
+preplace netloc ide_writedata_1 1 0 1 NJ 270
+preplace netloc longword_1 1 0 1 NJ 210
+preplace netloc reset_1 1 0 1 30 70n
+preplace netloc rnw_1 1 0 1 20 420n
+preplace netloc rtg_0_base 1 1 1 NJ 700
+preplace netloc rtg_0_ena 1 1 1 NJ 620
+preplace netloc rtg_0_format 1 1 1 NJ 680
+preplace netloc rtg_0_hsize 1 1 1 NJ 640
+preplace netloc rtg_0_pal_a 1 1 1 NJ 780
+preplace netloc rtg_0_pal_clk 1 1 1 NJ 740
+preplace netloc rtg_0_pal_dw 1 1 1 NJ 760
+preplace netloc rtg_0_pal_wr 1 1 1 NJ 800
+preplace netloc rtg_0_stride 1 1 1 NJ 720
+preplace netloc rtg_0_vsize 1 1 1 NJ 660
+preplace netloc rtg_pal_dr_1 1 0 1 NJ 760
+levelinfo -pg 1 0 190 610
+pagesize -pg 1 -db -bbox -sgen -190 -110 780 860
+"
+}
+

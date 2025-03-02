@@ -1,0 +1,62 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1629,-396",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "comment_0":"   -- Clock domain crossing: QNICE to CORE
+   i_qnice2main: xpm_cdc_array_single
+      generic map (
+         WIDTH => 615
+      )
+      port map (
+         src_clk                    => qnice_clk,
+         src_in(0)                  => qnice_csr_reset,
+         src_in(1)                  => qnice_csr_pause,
+         src_in(2)                  => qnice_csr_keyboard_on,
+         src_in(3)                  => qnice_csr_joy1_on,
+         src_in(4)                  => qnice_csr_joy2_on,
+         src_in(5)                  => qnice_flip_joyports_i,
+         src_in(261 downto 6)       => qnice_osm_control_m_o,
+         src_in(517 downto 262)     => qnice_gp_reg_o,
+         src_in(525 downto 518)     => std_logic_vector(qnice_pot1_x_n),
+         src_in(533 downto 526)     => std_logic_vector(qnice_pot1_y_n),
+         src_in(541 downto 534)     => std_logic_vector(qnice_pot2_x_n),
+         src_in(549 downto 542)     => std_logic_vector(qnice_pot2_y_n),
+         src_in(614 downto 550)     => qnice_rtc,
+         dest_clk                   => main_clk_i,
+         dest_out(0)                => main_qnice_reset_o,
+         dest_out(1)                => main_qnice_pause_o,
+         dest_out(2)                => main_csr_keyboard_on,
+         dest_out(3)                => main_csr_joy1_on,
+         dest_out(4)                => main_csr_joy2_on,
+         dest_out(5)                => main_flip_joyports,
+         dest_out(261 downto 6)     => main_osm_control_m_o,
+         dest_out(517 downto 262)   => main_qnice_gp_reg_o,
+         dest_out(525 downto 518)   => main_pot1_x_o,
+         dest_out(533 downto 526)   => main_pot1_y_o,
+         dest_out(541 downto 534)   => main_pot2_x_o,
+         dest_out(549 downto 542)   => main_pot2_y_o,
+         dest_out(614 downto 550)   => main_rtc_o
+      ); -- i_qnice2main",
+   "commentid":"comment_0|",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_main_flip_joyports -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace port port-id_main_csr_joy1_on -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace port port-id_main_csr_joy2_on -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus main_osm_control_m_o -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+preplace portBus main_pot1_y_o -pg 1 -lvl 1 -x 10 -y 120 -defaultsOSRD
+preplace portBus main_pot2_x_o -pg 1 -lvl 1 -x 10 -y 140 -defaultsOSRD
+preplace portBus main_pot2_y_o -pg 1 -lvl 1 -x 10 -y 160 -defaultsOSRD
+preplace portBus main_pot1_x_o -pg 1 -lvl 1 -x 10 -y 100 -defaultsOSRD
+preplace cgraphic comment_0 place left -617 -61 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -10 10
+pagesize -pg 1 -db -bbox -sgen -10 0 260 200
+"
+}
+
+{
+   "/comment_24":"comment_0"
+}

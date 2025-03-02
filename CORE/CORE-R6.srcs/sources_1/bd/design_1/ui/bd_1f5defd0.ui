@@ -1,0 +1,205 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.58987",
+   "Default View_TopLeft":"-1805,-1007",
+   "ExpandedHierarchyInLayout":"",
+   "HierExpandStatus_comment_0":"false",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port test -pg 1 -lvl 3 -x 1030 -y 2810 -defaultsOSRD
+preplace port port-id_clk_i -pg 1 -lvl 0 -x -60 -y 80 -defaultsOSRD
+preplace port port-id_reset_button_i -pg 1 -lvl 0 -x -60 -y 620 -defaultsOSRD
+preplace port port-id_uart_rxd_i -pg 1 -lvl 0 -x -60 -y 820 -defaultsOSRD
+preplace port port-id_uart_txd_o -pg 1 -lvl 3 -x 1030 -y 2410 -defaultsOSRD
+preplace port port-id_vga_red_o -pg 1 -lvl 3 -x 1030 -y 2570 -defaultsOSRD
+preplace port port-id_vga_green_o -pg 1 -lvl 3 -x 1030 -y 2530 -defaultsOSRD
+preplace port port-id_vga_blue_o -pg 1 -lvl 3 -x 1030 -y 2510 -defaultsOSRD
+preplace port port-id_vga_hs_o -pg 1 -lvl 3 -x 1030 -y 2550 -defaultsOSRD
+preplace port port-id_vga_vs_o -pg 1 -lvl 3 -x 1030 -y 2630 -defaultsOSRD
+preplace port port-id_vga_scl_io -pg 1 -lvl 3 -x 1030 -y 2590 -defaultsOSRD
+preplace port port-id_vga_sda_io -pg 1 -lvl 3 -x 1030 -y 2610 -defaultsOSRD
+preplace port port-id_vdac_clk_o -pg 1 -lvl 3 -x 1030 -y 2450 -defaultsOSRD
+preplace port port-id_vdac_sync_n_o -pg 1 -lvl 3 -x 1030 -y 2490 -defaultsOSRD
+preplace port port-id_vdac_blank_n_o -pg 1 -lvl 3 -x 1030 -y 2430 -defaultsOSRD
+preplace port port-id_vdac_psave_n_o -pg 1 -lvl 3 -x 1030 -y 2470 -defaultsOSRD
+preplace port port-id_tmds_data_p_o -pg 1 -lvl 3 -x 1030 -y 2390 -defaultsOSRD
+preplace port port-id_tmds_clk_p_o -pg 1 -lvl 3 -x 1030 -y 2370 -defaultsOSRD
+preplace port port-id_tmds_clk_n_o -pg 1 -lvl 3 -x 1030 -y 2350 -defaultsOSRD
+preplace port port-id_hdmi_hiz_en_o -pg 1 -lvl 3 -x 1030 -y 1430 -defaultsOSRD
+preplace port port-id_hdmi_ls_oe_n_o -pg 1 -lvl 3 -x 1030 -y 1450 -defaultsOSRD
+preplace port port-id_hdmi_hpd_i -pg 1 -lvl 0 -x -60 -y 440 -defaultsOSRD
+preplace port port-id_hdmi_scl_io -pg 1 -lvl 3 -x 1030 -y 1470 -defaultsOSRD
+preplace port port-id_hdmi_sda_io -pg 1 -lvl 3 -x 1030 -y 1490 -defaultsOSRD
+preplace port port-id_kb_io0_o -pg 1 -lvl 3 -x 1030 -y 1810 -defaultsOSRD
+preplace port port-id_kb_io1_o -pg 1 -lvl 3 -x 1030 -y 1830 -defaultsOSRD
+preplace port port-id_kb_io2_i -pg 1 -lvl 0 -x -60 -y 540 -defaultsOSRD
+preplace port port-id_kb_tck_o -pg 1 -lvl 3 -x 1030 -y 1870 -defaultsOSRD
+preplace port port-id_kb_tdo_i -pg 1 -lvl 0 -x -60 -y 560 -defaultsOSRD
+preplace port port-id_kb_tms_o -pg 1 -lvl 3 -x 1030 -y 1910 -defaultsOSRD
+preplace port port-id_kb_tdi_o -pg 1 -lvl 3 -x 1030 -y 1890 -defaultsOSRD
+preplace port port-id_kb_jtagen_o -pg 1 -lvl 3 -x 1030 -y 1850 -defaultsOSRD
+preplace port port-id_sd_reset_o -pg 1 -lvl 3 -x 1030 -y 2110 -defaultsOSRD
+preplace port port-id_sd_clk_o -pg 1 -lvl 3 -x 1030 -y 2070 -defaultsOSRD
+preplace port port-id_sd_mosi_o -pg 1 -lvl 3 -x 1030 -y 2090 -defaultsOSRD
+preplace port port-id_sd_miso_i -pg 1 -lvl 0 -x -60 -y 700 -defaultsOSRD
+preplace port port-id_sd_cd_i -pg 1 -lvl 0 -x -60 -y 640 -defaultsOSRD
+preplace port port-id_sd_d1_i -pg 1 -lvl 0 -x -60 -y 660 -defaultsOSRD
+preplace port port-id_sd_d2_i -pg 1 -lvl 0 -x -60 -y 680 -defaultsOSRD
+preplace port port-id_sd2_reset_o -pg 1 -lvl 3 -x 1030 -y 2330 -defaultsOSRD
+preplace port port-id_sd2_clk_o -pg 1 -lvl 3 -x 1030 -y 2290 -defaultsOSRD
+preplace port port-id_sd2_mosi_o -pg 1 -lvl 3 -x 1030 -y 2310 -defaultsOSRD
+preplace port port-id_sd2_miso_i -pg 1 -lvl 0 -x -60 -y 780 -defaultsOSRD
+preplace port port-id_sd2_cd_i -pg 1 -lvl 0 -x -60 -y 720 -defaultsOSRD
+preplace port port-id_sd2_wp_i -pg 1 -lvl 0 -x -60 -y 800 -defaultsOSRD
+preplace port port-id_sd2_d1_i -pg 1 -lvl 0 -x -60 -y 740 -defaultsOSRD
+preplace port port-id_sd2_d2_i -pg 1 -lvl 0 -x -60 -y 760 -defaultsOSRD
+preplace port port-id_audio_mclk_o -pg 1 -lvl 3 -x 1030 -y 170 -defaultsOSRD
+preplace port port-id_audio_bick_o -pg 1 -lvl 3 -x 1030 -y 190 -defaultsOSRD
+preplace port port-id_audio_sdti_o -pg 1 -lvl 3 -x 1030 -y 210 -defaultsOSRD
+preplace port port-id_audio_lrclk_o -pg 1 -lvl 3 -x 1030 -y 230 -defaultsOSRD
+preplace port port-id_audio_pdn_n_o -pg 1 -lvl 3 -x 1030 -y 250 -defaultsOSRD
+preplace port port-id_audio_i2cfil_o -pg 1 -lvl 3 -x 1030 -y 60 -defaultsOSRD
+preplace port port-id_audio_scl_io -pg 1 -lvl 3 -x 1030 -y 80 -defaultsOSRD
+preplace port port-id_audio_sda_io -pg 1 -lvl 3 -x 1030 -y 100 -defaultsOSRD
+preplace port port-id_fa_up_n_i -pg 1 -lvl 0 -x -60 -y 320 -defaultsOSRD
+preplace port port-id_fa_down_n_i -pg 1 -lvl 0 -x -60 -y 240 -defaultsOSRD
+preplace port port-id_fa_left_n_i -pg 1 -lvl 0 -x -60 -y 280 -defaultsOSRD
+preplace port port-id_fa_right_n_i -pg 1 -lvl 0 -x -60 -y 300 -defaultsOSRD
+preplace port port-id_fa_fire_n_i -pg 1 -lvl 0 -x -60 -y 260 -defaultsOSRD
+preplace port port-id_fa_fire_n_o -pg 1 -lvl 3 -x 1030 -y 1170 -defaultsOSRD
+preplace port port-id_fa_up_n_o -pg 1 -lvl 3 -x 1030 -y 1230 -defaultsOSRD
+preplace port port-id_fa_left_n_o -pg 1 -lvl 3 -x 1030 -y 1190 -defaultsOSRD
+preplace port port-id_fa_down_n_o -pg 1 -lvl 3 -x 1030 -y 1150 -defaultsOSRD
+preplace port port-id_fa_right_n_o -pg 1 -lvl 3 -x 1030 -y 1210 -defaultsOSRD
+preplace port port-id_fb_up_n_i -pg 1 -lvl 0 -x -60 -y 420 -defaultsOSRD
+preplace port port-id_fb_down_n_i -pg 1 -lvl 0 -x -60 -y 340 -defaultsOSRD
+preplace port port-id_fb_left_n_i -pg 1 -lvl 0 -x -60 -y 380 -defaultsOSRD
+preplace port port-id_fb_right_n_i -pg 1 -lvl 0 -x -60 -y 400 -defaultsOSRD
+preplace port port-id_fb_fire_n_i -pg 1 -lvl 0 -x -60 -y 360 -defaultsOSRD
+preplace port port-id_fb_up_n_o -pg 1 -lvl 3 -x 1030 -y 1330 -defaultsOSRD
+preplace port port-id_fb_down_n_o -pg 1 -lvl 3 -x 1030 -y 1250 -defaultsOSRD
+preplace port port-id_fb_fire_n_o -pg 1 -lvl 3 -x 1030 -y 1270 -defaultsOSRD
+preplace port port-id_fb_right_n_o -pg 1 -lvl 3 -x 1030 -y 1310 -defaultsOSRD
+preplace port port-id_fb_left_n_o -pg 1 -lvl 3 -x 1030 -y 1290 -defaultsOSRD
+preplace port port-id_joystick_5v_disable_o -pg 1 -lvl 3 -x 1030 -y 1790 -defaultsOSRD
+preplace port port-id_joystick_5v_powergood_i -pg 1 -lvl 0 -x -60 -y 520 -defaultsOSRD
+preplace port port-id_paddle_drain_o -pg 1 -lvl 3 -x 1030 -y 1990 -defaultsOSRD
+preplace port port-id_hr_rwds_io -pg 1 -lvl 3 -x 1030 -y 1570 -defaultsOSRD
+preplace port port-id_hr_reset_o -pg 1 -lvl 3 -x 1030 -y 1550 -defaultsOSRD
+preplace port port-id_hr_clk_p_o -pg 1 -lvl 3 -x 1030 -y 1510 -defaultsOSRD
+preplace port port-id_hr_cs0_o -pg 1 -lvl 3 -x 1030 -y 1530 -defaultsOSRD
+preplace port port-id_iec_reset_n_o -pg 1 -lvl 3 -x 1030 -y 1690 -defaultsOSRD
+preplace port port-id_iec_atn_n_o -pg 1 -lvl 3 -x 1030 -y 1590 -defaultsOSRD
+preplace port port-id_iec_clk_en_n_o -pg 1 -lvl 3 -x 1030 -y 1610 -defaultsOSRD
+preplace port port-id_iec_clk_n_i -pg 1 -lvl 0 -x -60 -y 460 -defaultsOSRD
+preplace port port-id_iec_clk_n_o -pg 1 -lvl 3 -x 1030 -y 1630 -defaultsOSRD
+preplace port port-id_iec_data_en_n_o -pg 1 -lvl 3 -x 1030 -y 1650 -defaultsOSRD
+preplace port port-id_iec_data_n_i -pg 1 -lvl 0 -x -60 -y 480 -defaultsOSRD
+preplace port port-id_iec_data_n_o -pg 1 -lvl 3 -x 1030 -y 1670 -defaultsOSRD
+preplace port port-id_iec_srq_en_n_o -pg 1 -lvl 3 -x 1030 -y 1710 -defaultsOSRD
+preplace port port-id_iec_srq_n_i -pg 1 -lvl 0 -x -60 -y 500 -defaultsOSRD
+preplace port port-id_iec_srq_n_o -pg 1 -lvl 3 -x 1030 -y 1730 -defaultsOSRD
+preplace port port-id_cart_phi2_o -pg 1 -lvl 3 -x 1030 -y 650 -defaultsOSRD
+preplace port port-id_cart_dotclock_o -pg 1 -lvl 3 -x 1030 -y 390 -defaultsOSRD
+preplace port port-id_cart_dma_i -pg 1 -lvl 0 -x -60 -y 60 -defaultsOSRD
+preplace port port-id_cart_reset_oe_n_o -pg 1 -lvl 3 -x 1030 -y 690 -defaultsOSRD
+preplace port port-id_cart_reset_io -pg 1 -lvl 3 -x 1030 -y 670 -defaultsOSRD
+preplace port port-id_cart_game_oe_n_o -pg 1 -lvl 3 -x 1030 -y 470 -defaultsOSRD
+preplace port port-id_cart_game_io -pg 1 -lvl 3 -x 1030 -y 450 -defaultsOSRD
+preplace port port-id_cart_exrom_oe_n_o -pg 1 -lvl 3 -x 1030 -y 430 -defaultsOSRD
+preplace port port-id_cart_exrom_io -pg 1 -lvl 3 -x 1030 -y 410 -defaultsOSRD
+preplace port port-id_cart_nmi_oe_n_o -pg 1 -lvl 3 -x 1030 -y 630 -defaultsOSRD
+preplace port port-id_cart_nmi_io -pg 1 -lvl 3 -x 1030 -y 610 -defaultsOSRD
+preplace port port-id_cart_irq_oe_n_o -pg 1 -lvl 3 -x 1030 -y 570 -defaultsOSRD
+preplace port port-id_cart_irq_io -pg 1 -lvl 3 -x 1030 -y 550 -defaultsOSRD
+preplace port port-id_cart_ctrl_en_o -pg 1 -lvl 3 -x 1030 -y 310 -defaultsOSRD
+preplace port port-id_cart_ctrl_dir_o -pg 1 -lvl 3 -x 1030 -y 290 -defaultsOSRD
+preplace port port-id_cart_ba_io -pg 1 -lvl 3 -x 1030 -y 270 -defaultsOSRD
+preplace port port-id_cart_rw_io -pg 1 -lvl 3 -x 1030 -y 790 -defaultsOSRD
+preplace port port-id_cart_io1_io -pg 1 -lvl 3 -x 1030 -y 510 -defaultsOSRD
+preplace port port-id_cart_io2_io -pg 1 -lvl 3 -x 1030 -y 530 -defaultsOSRD
+preplace port port-id_cart_romh_oe_n_o -pg 1 -lvl 3 -x 1030 -y 730 -defaultsOSRD
+preplace port port-id_cart_romh_io -pg 1 -lvl 3 -x 1030 -y 710 -defaultsOSRD
+preplace port port-id_cart_roml_oe_n_o -pg 1 -lvl 3 -x 1030 -y 770 -defaultsOSRD
+preplace port port-id_cart_roml_io -pg 1 -lvl 3 -x 1030 -y 750 -defaultsOSRD
+preplace port port-id_cart_addr_en_o -pg 1 -lvl 3 -x 1030 -y 140 -defaultsOSRD
+preplace port port-id_cart_haddr_dir_o -pg 1 -lvl 3 -x 1030 -y 490 -defaultsOSRD
+preplace port port-id_cart_laddr_dir_o -pg 1 -lvl 3 -x 1030 -y 590 -defaultsOSRD
+preplace port port-id_cart_a_io -pg 1 -lvl 3 -x 1030 -y 120 -defaultsOSRD
+preplace port port-id_cart_data_en_o -pg 1 -lvl 3 -x 1030 -y 370 -defaultsOSRD
+preplace port port-id_cart_data_dir_o -pg 1 -lvl 3 -x 1030 -y 350 -defaultsOSRD
+preplace port port-id_cart_d_io -pg 1 -lvl 3 -x 1030 -y 330 -defaultsOSRD
+preplace port port-id_eth_clock_o -pg 1 -lvl 3 -x 1030 -y 830 -defaultsOSRD
+preplace port port-id_eth_led2_o -pg 1 -lvl 3 -x 1030 -y 850 -defaultsOSRD
+preplace port port-id_eth_mdc_o -pg 1 -lvl 3 -x 1030 -y 870 -defaultsOSRD
+preplace port port-id_eth_mdio_io -pg 1 -lvl 3 -x 1030 -y 890 -defaultsOSRD
+preplace port port-id_eth_reset_o -pg 1 -lvl 3 -x 1030 -y 910 -defaultsOSRD
+preplace port port-id_eth_rxdv_i -pg 1 -lvl 0 -x -60 -y 100 -defaultsOSRD
+preplace port port-id_eth_rxer_i -pg 1 -lvl 0 -x -60 -y 120 -defaultsOSRD
+preplace port port-id_eth_txen_o -pg 1 -lvl 3 -x 1030 -y 930 -defaultsOSRD
+preplace port port-id_f_density_o -pg 1 -lvl 3 -x 1030 -y 950 -defaultsOSRD
+preplace port port-id_f_diskchanged_i -pg 1 -lvl 0 -x -60 -y 140 -defaultsOSRD
+preplace port port-id_f_index_i -pg 1 -lvl 0 -x -60 -y 160 -defaultsOSRD
+preplace port port-id_f_motora_o -pg 1 -lvl 3 -x 1030 -y 970 -defaultsOSRD
+preplace port port-id_f_motorb_o -pg 1 -lvl 3 -x 1030 -y 990 -defaultsOSRD
+preplace port port-id_f_rdata_i -pg 1 -lvl 0 -x -60 -y 180 -defaultsOSRD
+preplace port port-id_f_selecta_o -pg 1 -lvl 3 -x 1030 -y 1010 -defaultsOSRD
+preplace port port-id_f_selectb_o -pg 1 -lvl 3 -x 1030 -y 1030 -defaultsOSRD
+preplace port port-id_f_side1_o -pg 1 -lvl 3 -x 1030 -y 1050 -defaultsOSRD
+preplace port port-id_f_stepdir_o -pg 1 -lvl 3 -x 1030 -y 1090 -defaultsOSRD
+preplace port port-id_f_step_o -pg 1 -lvl 3 -x 1030 -y 1070 -defaultsOSRD
+preplace port port-id_f_track0_i -pg 1 -lvl 0 -x -60 -y 200 -defaultsOSRD
+preplace port port-id_f_wdata_o -pg 1 -lvl 3 -x 1030 -y 1110 -defaultsOSRD
+preplace port port-id_f_wgate_o -pg 1 -lvl 3 -x 1030 -y 1130 -defaultsOSRD
+preplace port port-id_f_writeprotect_i -pg 1 -lvl 0 -x -60 -y 220 -defaultsOSRD
+preplace port port-id_fpga_sda_io -pg 1 -lvl 3 -x 1030 -y 1370 -defaultsOSRD
+preplace port port-id_fpga_scl_io -pg 1 -lvl 3 -x 1030 -y 1350 -defaultsOSRD
+preplace port port-id_grove_sda_io -pg 1 -lvl 3 -x 1030 -y 1410 -defaultsOSRD
+preplace port port-id_grove_scl_io -pg 1 -lvl 3 -x 1030 -y 1390 -defaultsOSRD
+preplace port port-id_led_g_n_o -pg 1 -lvl 3 -x 1030 -y 1930 -defaultsOSRD
+preplace port port-id_led_r_n_o -pg 1 -lvl 3 -x 1030 -y 1970 -defaultsOSRD
+preplace port port-id_led_o -pg 1 -lvl 3 -x 1030 -y 1950 -defaultsOSRD
+preplace port port-id_pmod1_en_o -pg 1 -lvl 3 -x 1030 -y 2010 -defaultsOSRD
+preplace port port-id_pmod1_flag_i -pg 1 -lvl 0 -x -60 -y 580 -defaultsOSRD
+preplace port port-id_pmod2_en_o -pg 1 -lvl 3 -x 1030 -y 2030 -defaultsOSRD
+preplace port port-id_pmod2_flag_i -pg 1 -lvl 0 -x -60 -y 600 -defaultsOSRD
+preplace port port-id_qspicsn_o -pg 1 -lvl 3 -x 1030 -y 2050 -defaultsOSRD
+preplace port port-id_i2c_scl_io -pg 1 -lvl 3 -x 1030 -y 1750 -defaultsOSRD
+preplace port port-id_i2c_sda_io -pg 1 -lvl 3 -x 1030 -y 1770 -defaultsOSRD
+preplace port port-id_dbg_io_11 -pg 1 -lvl 3 -x 1030 -y 810 -defaultsOSRD
+preplace port port-id_sdram_clk_o -pg 1 -lvl 3 -x 1030 -y 2170 -defaultsOSRD
+preplace port port-id_sdram_cke_o -pg 1 -lvl 3 -x 1030 -y 2150 -defaultsOSRD
+preplace port port-id_sdram_ras_n_o -pg 1 -lvl 3 -x 1030 -y 2250 -defaultsOSRD
+preplace port port-id_sdram_cas_n_o -pg 1 -lvl 3 -x 1030 -y 2130 -defaultsOSRD
+preplace port port-id_sdram_we_n_o -pg 1 -lvl 3 -x 1030 -y 2270 -defaultsOSRD
+preplace port port-id_sdram_cs_n_o -pg 1 -lvl 3 -x 1030 -y 2190 -defaultsOSRD
+preplace port port-id_sdram_dqml_o -pg 1 -lvl 3 -x 1030 -y 2230 -defaultsOSRD
+preplace port port-id_sdram_dqmh_o -pg 1 -lvl 3 -x 1030 -y 2210 -defaultsOSRD
+preplace portBus paddle_i -pg 1 -lvl 0 -x -60 -y 40 -defaultsOSRD
+preplace portBus hr_d_io -pg 1 -lvl 3 -x 1030 -y 40 -defaultsOSRD
+preplace portBus eth_txd_o -pg 1 -lvl 3 -x 1030 -y 20 -defaultsOSRD
+preplace portBus eth_rxd_i -pg 1 -lvl 0 -x -60 -y 20 -defaultsOSRD
+preplace portBus p1lo_io -pg 1 -lvl 3 -x 1030 -y 2670 -defaultsOSRD
+preplace portBus p1hi_io -pg 1 -lvl 3 -x 1030 -y 2650 -defaultsOSRD
+preplace portBus p2lo_io -pg 1 -lvl 3 -x 1030 -y 2710 -defaultsOSRD
+preplace portBus p2hi_io -pg 1 -lvl 3 -x 1030 -y 2690 -defaultsOSRD
+preplace portBus qspidb_io -pg 1 -lvl 3 -x 1030 -y 2730 -defaultsOSRD
+preplace portBus sdram_ba_o -pg 1 -lvl 3 -x 1030 -y 2770 -defaultsOSRD
+preplace portBus sdram_a_o -pg 1 -lvl 3 -x 1030 -y 2750 -defaultsOSRD
+preplace portBus sdram_dq_io -pg 1 -lvl 3 -x 1030 -y 2790 -defaultsOSRD
+preplace inst Main_hier -pg 1 -lvl 2 -x 810 -y 70 -defaultsOSRD
+preplace inst audio_0 -pg 1 -lvl 2 -x 810 -y 866 -defaultsOSRD
+preplace inst Mega65_0 -pg 1 -lvl 1 -x 310 -y 710 -defaultsOSRD
+preplace netloc audio_0_audio_bick_o 1 2 1 980J 190n
+preplace netloc audio_0_audio_lrclk_o 1 2 1 1000J 230n
+preplace netloc audio_0_audio_mclk_o 1 2 1 970J 170n
+preplace netloc audio_0_audio_pdn_n_o 1 2 1 1010J 250n
+preplace netloc audio_0_audio_sdti_o 1 2 1 990J 210n
+levelinfo -pg 1 -60 310 810 1030
+pagesize -pg 1 -db -bbox -sgen -280 -1010 2110 2830
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

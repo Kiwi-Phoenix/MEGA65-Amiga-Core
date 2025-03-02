@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1384,-514",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_IPL0n -pg 1 -lvl 1 -x 10 -y 20 -defaultsOSRD
+preplace port port-id_IPL1n -pg 1 -lvl 1 -x 10 -y 40 -defaultsOSRD
+preplace port port-id_IPL2n -pg 1 -lvl 1 -x 10 -y 60 -defaultsOSRD
+preplace portBus chip_ipl -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace portBus IPL -pg 1 -lvl 1 -x 10 -y 80 -defaultsOSRD
+levelinfo -pg 1 -30 10
+pagesize -pg 1 -db -bbox -sgen -180 0 130 100
+"
+}
+

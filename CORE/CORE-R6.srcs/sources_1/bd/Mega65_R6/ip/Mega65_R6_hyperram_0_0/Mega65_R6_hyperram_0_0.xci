@@ -1,0 +1,70 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Mega65_R6_hyperram_0_0",
+    "cell_name": "M2M_Framework/hyperram_0",
+    "component_reference": "xilinx.com:module_ref:hyperram:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../CORE-R6.gen/sources_1/bd/Mega65_R6/ip/Mega65_R6_hyperram_0_0",
+    "parameters": {
+      "component_parameters": {
+        "G_ERRATA_ISSI_D_FIX": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "Component_Name": [ { "value": "Mega65_R6_hyperram_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "G_ERRATA_ISSI_D_FIX": [ { "value": "true", "resolve_type": "generated", "format": "bool", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a200t" } ],
+        "PACKAGE": [ { "value": "fbg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../CORE-R6.gen/sources_1/bd/Mega65_R6/ip/Mega65_R6_hyperram_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk_i": [ { "direction": "in" } ],
+        "clk_del_i": [ { "direction": "in" } ],
+        "delay_refclk_i": [ { "direction": "in" } ],
+        "rst_i": [ { "direction": "in" } ],
+        "avm_write_i": [ { "direction": "in" } ],
+        "avm_read_i": [ { "direction": "in" } ],
+        "avm_address_i": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "avm_writedata_i": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "avm_byteenable_i": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "avm_burstcount_i": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "avm_readdata_o": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "avm_readdatavalid_o": [ { "direction": "out" } ],
+        "avm_waitrequest_o": [ { "direction": "out" } ],
+        "count_long_o": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "count_short_o": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "hr_resetn_o": [ { "direction": "out" } ],
+        "hr_csn_o": [ { "direction": "out" } ],
+        "hr_ck_o": [ { "direction": "out" } ],
+        "hr_rwds_in_i": [ { "direction": "in" } ],
+        "hr_rwds_out_o": [ { "direction": "out" } ],
+        "hr_rwds_oe_n_o": [ { "direction": "out" } ],
+        "hr_dq_in_i": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "hr_dq_out_o": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "hr_dq_oe_n_o": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
+      }
+    }
+  }
+}
