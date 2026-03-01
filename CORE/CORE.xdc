@@ -11,6 +11,95 @@
 ## Important: Using them in subsequent statements, e.g. clock dividers requires that they
 ## have been named/defined here before
 ## otherwise Vivado does not find the pins)
-create_generated_clock -name main_clk      [get_pins CORE/clk_gen/i_clk_main/CLKOUT0]
+#create_generated_clock -name main_clk      [get_pins CORE/clk_gen/i_clk_main/CLKOUT0]
 # Add more clocks here, if needed
 
+# Setting up the Clock net
+# The primary CLK is defined in common.xdc and comes from the FPGA Pins
+# The use create_generated_clock to define the clocks that are derived from the primary CLK
+# Must do this for all clocks generated / comes out of BUZFG, BUFGCE, MMCM or PLL
+# Needs to reference a "master" source so timing can trace back to the pin
+
+set src_clk_114     [get_pins CORE/clk_gen/i_clk_main_114/CLKOUT0]
+set src_clk_sys     [get_pins CORE/clk_gen/i_clk_main_sys/CLKOUT0]
+set src_clk_audio   [get_pins CORE/clk_gen/i_clk_main_audio/CLKOUT0]
+#set src_clk_sd      [get_pins CORE/i_main/Amiga/bufg_inst/I]
+set src_c1_clk      [get_pins CORE/i_main/Amiga/bufg_c1_inst/I]
+set src_c3_clk      [get_pins CORE/i_main/Amiga/bufg_c3_inst/I]
+set src_cck_clk     [get_pins CORE/i_main/Amiga/bufg_cck_inst/I]
+
+create_generated_clock -name clk_114        $src_clk_114
+create_generated_clock -name clk_sys        $src_clk_sys
+create_generated_clock -name clk_audio      $src_clk_audio
+
+#create_generated_clock -add -name clk_sd  -source $src_clk_sd   -master [get_clocks clk_114] -divide_by 1 [get_pins CORE/i_main/Amiga/bufg_inst/O]
+create_generated_clock -add -name clk_c1  -source $src_c1_clk   -master [get_clocks clk_sys] -divide_by 1 [get_pins CORE/i_main/Amiga/bufg_c1_inst/O]
+create_generated_clock -add -name clk_c3  -source $src_c3_clk   -master [get_clocks clk_sys] -divide_by 1 [get_pins CORE/i_main/Amiga/bufg_c3_inst/O]
+create_generated_clock -add -name clk_cck -source $src_cck_clk  -master [get_clocks clk_sys] -divide_by 1 [get_pins CORE/i_main/Amiga/bufg_cck_inst/O]
+
+
+# Set up clocks for the debugger
+
+#set src_clk_debug   [get_pins debug_gen.debug_clk_inst/CLKOUT0]
+#create_generated_clock -name clk_debug $src_clk_debug  
+
+
+
+#set src_pin [get_pins debug_gen.clk_buf_inst/I]
+#set clk_net [get_pins debug_gen.clk_buf_inst/O]
+
+#create_generated_clock -add -name clk_debug     -source $src_pin     -master [get_clocks clk]     -divide_by 1 $clk_net
+
+
+#set_false_path -from [get_clocks clk_debug] -to [get_clocks clk_sys]
+set_false_path -from [get_clocks clk_cck]   -to [get_clocks clk_sys]
+
+#set_false_path -from [get_clocks clk_114]   -to [get_clocks clk_debug]
+#set_false_path -from [get_clocks clk_audio] -to [get_clocks clk_debug]
+#set_false_path -from [get_clocks clk_c1]    -to [get_clocks clk_debug]
+#set_false_path -from [get_clocks clk_c3]    -to [get_clocks clk_debug]
+#set_false_path -from [get_clocks clk_cck]   -to [get_clocks clk_debug]
+
+
+set_false_path -from [get_clocks clk_sys]
+
+set_false_path -from [get_clocks clk]       -to [get_clocks clk_sys]
+set_false_path -from [get_clocks clk_sys]   -to [get_clocks clk_114]
+set_false_path -from [get_clocks clk_sys]   -to [get_clocks clk_audio]
+set_false_path -from [get_clocks clk_audio] -to [get_clocks clk_114]
+set_false_path -from [get_clocks clk_114]   -to [get_clocks clk_sys]
+set_false_path -from [get_clocks clk_cck]   -to [get_clocks clk_114]
+
+set_false_path -from [get_clocks clk_sys]   -to [get_clocks clk_c1]
+set_false_path -from [get_clocks clk_sys]   -to [get_clocks clk_c3]
+set_false_path -from [get_clocks clk_sys]   -to [get_clocks clk_cck]
+
+
+
+# confirm if these are necessary or covering up a mistake!!! Still need to valid the paths of the clocks in core to make sure that these are correct.
+set_false_path -from [get_clocks clk_114]   -to [get_clocks hr_clk]
+set_false_path -from [get_clocks hr_clk]    -to [get_clocks hdmi_clk]
+set_false_path -from [get_clocks hr_clk]    -to [get_clocks hr_clk_del]
+set_false_path -from [get_clocks qnice_clk] -to [get_clocks clk_sys]
+
+
+# Constraints / Paths for the fx68k
+#set_multicycle_path -setup -from [get_pins CORE/i_main/Amiga/fx68k/Ir*/C] -to [get_pins CORE/i_main/Amiga/fx68k/nanoAddr_reg*/D] 2
+#set_multicycle_path -setup -from [get_pins CORE/i_main/Amiga/fx68k/Ir*/C] -to [get_pins CORE/i_main/Amiga/fx68k/microAddr_reg*/D] 2
+#set_multicycle_path -hold  -from [get_pins CORE/i_main/Amiga/fx68k/Ir*/C] -to [get_pins CORE/i_main/Amiga/fx68k/nanoAddr_reg*/D] 1
+#set_multicycle_path -hold  -from [get_pins CORE/i_main/Amiga/fx68k/Ir*/C] -to [get_pins CORE/i_main/Amiga/fx68k/microAddr_reg*/D] 1
+
+set_multicycle_path -setup -from [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/Ir*/C] -to [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/nanoAddr_reg*/D] 2
+set_multicycle_path -setup -from [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/Ir*/C] -to [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/microAddr_reg*/D] 2
+set_multicycle_path -hold  -from [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/Ir*/C] -to [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/nanoAddr_reg*/D] 1
+set_multicycle_path -hold  -from [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/Ir*/C] -to [get_pins CORE/i_main/Amiga/cpu_wrapper/cpu_inst_o/microAddr_reg*/D] 1
+
+# Blanket false-paths for all debug cores
+#set dbg_cells [get_cells -hierarchical -filter {NAME =~ "*dbg_hub*"}]
+#set_false_path -through $dbg_cells
+
+
+set_property KEEP_HIERARCHY TRUE [get_cells *]
+# Stop Synthesis from removing modules.  Makes it easier to see where things are not connecting.
+# Specify the module and it's full path to only apply DONT_TOUCH for that module.
+set_property DONT_TOUCH true [get_cells *]

@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/pkg/Amiga_Debug_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/dut/cpu_cache_stub.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cpu_cache_stub'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/pkg/ram_type_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/dut/ramctrl_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ramctrl_bram'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/dut/ram_ctrl_unified.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ram_ctrl_unified'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/dut/ram_frontend_unified.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ram_frontend_unified'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_RamUnified/Sim/tb/tb_ram_frontend_unified.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_ram_frontend_unified'

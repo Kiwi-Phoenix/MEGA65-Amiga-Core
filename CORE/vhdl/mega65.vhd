@@ -33,8 +33,6 @@ port (
 
    -- Video and audio mode control
    qnice_dvi_o             : out std_logic;              -- 0=HDMI (with sound), 1=DVI (no sound)
-   -- DJR Only std_logic and std_logic_vector are allowed for ports in current VHDL standards  
-   -- Need to find another way of gettig the outcomes required.   Causes problems when trying to build a Block diagram.
    qnice_video_mode_o      : out video_mode_type;        -- Defined in video_modes_pkg.vhd
    qnice_osm_cfg_scaling_o : out std_logic_vector(8 downto 0);
    qnice_scandoubler_o     : out std_logic;              -- 0 = no scandoubler, 1 = scandoubler
@@ -106,7 +104,8 @@ port (
    clk_i                   : in  std_logic;              -- 100 MHz clock
 
    -- Share clock and reset with the framework
-   main_clk_o              : out std_logic;              -- CORE's 54 MHz clock
+   main_clk_o              : out std_logic;              -- CORE's 113 MHz clock
+   main_clk_sys_o          : out std_logic;              -- CORE's 28.37 MHz clock
    main_rst_o              : out std_logic;              -- CORE's reset, synchronized
 
    -- M2M's reset manager provides 2 signals:
@@ -128,10 +127,7 @@ port (
    main_audio_right_o      : out signed(15 downto 0);
 
    -- M2M Keyboard interface (incl. power led and drive led)
-   -- DJR only std_logic and std_lofic_vector can be used for Ports, Integer is not support in current VHDL standards
-   -- Need to find another method to get the required outcomes.
    main_kb_key_num_i       : in  integer range 0 to 79;  -- cycles through all MEGA65 keys
-   
    main_kb_key_pressed_n_i : in  std_logic;              -- low active: debounced feedback: is kb_key_num_i pressed right now?
    main_power_led_o        : out std_logic;
    main_power_led_col_o    : out std_logic_vector(23 downto 0);
@@ -225,49 +221,44 @@ end entity MEGA65_Core;
 
 architecture synthesis of MEGA65_Core is
 
----------------------------------------------------------------------------------------------
--- Clocks and active high reset signals for each clock domain
----------------------------------------------------------------------------------------------
-
-signal main_clk               : std_logic;               -- Core main clock
-signal main_rst               : std_logic;
-signal main_clk114            : std_logic;
-
-signal fdd_led                : std_logic;
-signal hdd_led                : std_logic;
-
-signal main_rtc               : std_logic_vector(64 downto 0);
----------------------------------------------------------------------------------------------
--- main_clk (MiSTer core's clock)
----------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------
--- qnice_clk
----------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------
--- Democore & example stuff: Delete before starting to port your own core
----------------------------------------------------------------------------------------------
-
 -- Democore menu items
---constant C_MENU_HDMI_16_9_50   : natural := 12;
---constant C_MENU_HDMI_16_9_60   : natural := 13;
---constant C_MENU_HDMI_4_3_50    : natural := 14;
---constant C_MENU_HDMI_5_4_50    : natural := 15;
---constant C_MENU_HDMI_640_60    : natural := 16;
---constant C_MENU_HDMI_720_5994  : natural := 17;
---constant C_MENU_SVGA_800_60    : natural := 18;
---constant C_MENU_CRT_EMULATION  : natural := 30;
---constant C_MENU_HDMI_ZOOM      : natural := 31;
---constant C_MENU_IMPROVE_AUDIO  : natural := 32;
+constant C_MENU_HDMI_16_9_50   : natural := 12;
+constant C_MENU_HDMI_16_9_60   : natural := 13;
+constant C_MENU_HDMI_4_3_50    : natural := 14;
+constant C_MENU_HDMI_5_4_50    : natural := 15;
+constant C_MENU_HDMI_640_60    : natural := 16;
+constant C_MENU_HDMI_720_5994  : natural := 17;
+constant C_MENU_SVGA_800_60    : natural := 18;
+constant C_MENU_CRT_EMULATION  : natural := 30;
+constant C_MENU_HDMI_ZOOM      : natural := 31;
+constant C_MENU_IMPROVE_AUDIO  : natural := 32;
 
 -- QNICE clock domain
 signal qnice_demo_vd_data_o   : std_logic_vector(15 downto 0);
 signal qnice_demo_vd_ce       : std_logic;
 signal qnice_demo_vd_we       : std_logic;
 
+---------------------------------------------------------------------------------------------
+-- Clocks and active high reset signals for each clock domain
+---------------------------------------------------------------------------------------------
+
+signal main_clk               : std_logic;               -- Core main clock
+signal main_rst               : std_logic;
+
+type CLK_REC_TYPE is record
+    main_clk            : std_logic;
+    main_clk_audio      : std_logic;        
+    main_clk_114        : std_logic;
+    main_clk_sys        : std_logic;
+    main_clk_locked     : std_logic;
+    main_clk_video      : std_logic;
+end record;
+
+signal clocks   : CLK_REC_TYPE;
+
+
 begin
- 
+
    hr_core_write_o      <= '0';
    hr_core_read_o       <= '0';
    hr_core_address_o    <= (others => '0');
@@ -280,7 +271,9 @@ begin
    cart_ctrl_oe_o       <= '0';
    cart_addr_oe_o       <= '0';
    cart_data_oe_o       <= '0';
-   cart_en_o            <= '0'; -- Disable port
+
+   -- Due to a bug in the R5/R6 boards, the cartridge port needs to be enabled for joystick port 2 to work 
+   cart_en_o            <= '1';
 
    cart_reset_oe_o      <= '0';
    cart_game_oe_o       <= '0';
@@ -319,25 +312,23 @@ begin
    main_joy_2_fire_n_o  <= '1';
 
 
-   -- MMCME2_ADV clock generators:
-   --   Amiga Clocks
+   -- MMCME2_ADV clock generators:   
    clk_gen : entity work.clk
       port map (
-         sys_clk_i         => clk_i,           -- expects 100 MHz
-<<<<<<< HEAD
-         main_clk_114_o    => main_clk114,    
-=======
->>>>>>> a617983d162547832bda3efc9ff83d367a3d3f6c
-         main_clk_o        => main_clk,        -- CORE's 28.37516 MHz clock (expecct by the MiSTer Amiga Core (??)
-         main_rst_o        => main_rst         -- CORE's reset, synchronized
+          sys_clk         => clk_i                      -- expects 100 MHz
+         ,main_rst        => main_rst                   -- CORE's reset, synchronized
+         ,main_clk_audio  => clocks.main_clk_audio      -- Amiga Audio Clock - 24.576 MHz / 24.61538 Mhz
+         ,main_clk_114    => clocks.main_clk_114        -- Amiga main clock  - 113.5009 Mhz / 113.67673 Mhz
+         ,main_clk_sys    => clocks.main_clk_sys        -- Amiga sys clock   - 28.37523 MHz / 28.38137  Mhz
+         ,main_clk_locked => clocks.main_clk_locked
+      ); -- clk_gen
 
-     ); -- clk_gen
- 
-
-
-   main_clk_o  <= main_clk;
-   main_rst_o  <= main_rst;
-   video_clk_o <= main_clk;
+   main_clk_o       <= clocks.main_clk_114;
+   main_clk_sys_o   <= clocks.main_clk_sys;
+   main_rst_o       <= main_rst;
+   
+   --video_clk_o <= main_clk;
+   video_clk_o <= clocks.main_clk_114;
    video_rst_o <= main_rst;
 
    ---------------------------------------------------------------------------------------------
@@ -347,72 +338,70 @@ begin
    -- MEGA65's power led: By default, it is on and glows green when the MEGA65 is powered on.
    -- We switch it to blue when a long reset is detected and as long as the user keeps pressing the preset button
    main_power_led_o     <= '1';
-   -- DJR In current VDHL expecting a Boolean type for main_reset_m2m_i, however is required to be 
-   -- std_logic type for port map.  Simply need to test if it = '1'.
-   --main_power_led_col_o <= x"0000FF" when main_reset_m2m_i else x"00FF00";
    main_power_led_col_o <= x"0000FF" when main_reset_m2m_i = '1' else x"00FF00";
 
    -- main.vhd contains the actual MiSTer core
    i_main : entity work.main
-      generic map (         
-         G_BOARD              => G_BOARD,           -- Which platform are we running on. 
+      generic map (
          G_VDNUM              => C_VDNUM
       )
       port map (
-         clk_main_i           => main_clk,
-         main_clk114_i        => main_clk114,
-         reset_soft_i         => main_reset_core_i,
-         reset_hard_i         => main_reset_m2m_i,
-         clk_reset_i          => main_rst,
-         pause_i              => main_pause_core_i,
---         clk_main_speed_i     => CORE_CLK_SPEED,              -- This maybe a constant.  However, haven't connected this port to anything.  Likely not needed.
+          clk_main_i           => main_clk
+         ,reset_soft_i         => main_reset_core_i
+         ,reset_hard_i         => main_reset_m2m_i
+         ,pause_i              => main_pause_core_i
+
+         ,clk_main_speed_i     => CORE_CLK_SPEED
+         
+         ,main_clk_sys_i       => clocks.main_clk_sys
+         ,main_clk_video_i     => clocks.main_clk_video
+         ,main_clk_audio_i     => clocks.main_clk_audio  
+         ,main_clk_locked_i    => clocks.main_clk_locked
+         ,main_rst_i           => main_rst        
 
          -- Video output
          -- This is PAL 720x576 @ 50 Hz (pixel clock 27 MHz), but synchronized to main_clk (54 MHz).
-         video_ce_o           => video_ce_o,
-         video_ce_ovl_o       => video_ce_ovl_o,
-         video_red_o          => video_red_o,
-         video_green_o        => video_green_o,
-         video_blue_o         => video_blue_o,
-         video_vs_o           => video_vs_o,
-         video_hs_o           => video_hs_o,
-         video_hblank_o       => video_hblank_o,
-         video_vblank_o       => video_vblank_o,
+         ,video_ce_o           => video_ce_o
+         ,video_ce_ovl_o       => video_ce_ovl_o
+         ,video_red_o          => video_red_o
+         ,video_green_o        => video_green_o
+         ,video_blue_o         => video_blue_o
+         ,video_vs_o           => video_vs_o
+         ,video_hs_o           => video_hs_o
+         ,video_hblank_o       => video_hblank_o
+         ,video_vblank_o       => video_vblank_o
 
          -- audio output (pcm format, signed values)
-         audio_left_o         => main_audio_left_o,
-         audio_right_o        => main_audio_right_o,
+         ,audio_left_o         => main_audio_left_o
+         ,audio_right_o        => main_audio_right_o
 
          -- M2M Keyboard interface
-         kb_key_num_i         => main_kb_key_num_i,
-         kb_key_pressed_n_i   => main_kb_key_pressed_n_i,
-         
-         
-         -- LEDs
-         main_power_led_o       => main_power_led_o,
-         main_fdd_led_o         => fdd_led,                   -- Placeholder
-         main_hdd_led_o         => hdd_led,                   -- Placeholder
-         
+         ,kb_key_num_i         => main_kb_key_num_i
+         ,kb_key_pressed_n_i   => main_kb_key_pressed_n_i
 
          -- MEGA65 joysticks and paddles/mouse/potentiometers
-         joy_1_up_n_i         => main_joy_1_up_n_i ,
-         joy_1_down_n_i       => main_joy_1_down_n_i,
-         joy_1_left_n_i       => main_joy_1_left_n_i,
-         joy_1_right_n_i      => main_joy_1_right_n_i,
-         joy_1_fire_n_i       => main_joy_1_fire_n_i,
+         ,joy_1_up_n_i         => main_joy_1_up_n_i 
+         ,joy_1_down_n_i       => main_joy_1_down_n_i
+         ,joy_1_left_n_i       => main_joy_1_left_n_i
+         ,joy_1_right_n_i      => main_joy_1_right_n_i
+         ,joy_1_fire_n_i       => main_joy_1_fire_n_i
 
-         joy_2_up_n_i         => main_joy_2_up_n_i,
-         joy_2_down_n_i       => main_joy_2_down_n_i,
-         joy_2_left_n_i       => main_joy_2_left_n_i,
-         joy_2_right_n_i      => main_joy_2_right_n_i,
-         joy_2_fire_n_i       => main_joy_2_fire_n_i,
+         ,joy_2_up_n_i         => main_joy_2_up_n_i
+         ,joy_2_down_n_i       => main_joy_2_down_n_i
+         ,joy_2_left_n_i       => main_joy_2_left_n_i
+         ,joy_2_right_n_i      => main_joy_2_right_n_i
+         ,joy_2_fire_n_i       => main_joy_2_fire_n_i
 
-         pot1_x_i             => main_pot1_x_i,
-         pot1_y_i             => main_pot1_y_i,
-         pot2_x_i             => main_pot2_x_i,
-         pot2_y_i             => main_pot2_y_i,
+         ,pot1_x_i             => main_pot1_x_i
+         ,pot1_y_i             => main_pot1_y_i
+         ,pot2_x_i             => main_pot2_x_i
+         ,pot2_y_i             => main_pot2_y_i
          
-         main_rtc_i           => main_rtc
+         -- User Config
+         ,main_osm_control_i   => main_osm_control_i
+         
+         
+                  
       ); -- i_main
 
    ---------------------------------------------------------------------------------------------
@@ -487,7 +476,7 @@ begin
       case qnice_dev_id_i is
 
          -- Demo core specific stuff: delete before porting your own core
---         when C_DEV_DEMO_VD =>
+         when C_DEV_DEMO_VD => null;
 --            qnice_demo_vd_ce     <= qnice_dev_ce_i;
 --            qnice_demo_vd_we     <= qnice_dev_we_i;
 --            qnice_dev_data_o     <= qnice_demo_vd_data_o;
@@ -523,9 +512,6 @@ begin
    -- a) In case that this is handled in main.vhd, you need to add the appropriate ports to i_main
    -- b) You might want to change the drive led's color (just like the C64 core does) as long as
    --    the cache is dirty (i.e. as long as the write process is not finished, yet)
-   --
-   -- DJR Need to put the logic here to map the FDD and HDD LEDs plus change their colour.
-   -- Two drive LED signals mapping to the one drive led on the Mega65.
    main_drive_led_o     <= '0';
    main_drive_led_col_o <= x"00FF00";  -- 24-bit RGB value for the led
 

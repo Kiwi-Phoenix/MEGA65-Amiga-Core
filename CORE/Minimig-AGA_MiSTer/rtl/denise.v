@@ -234,15 +234,23 @@ always @(posedge clk) begin
   end
 end
 
-// BPLCON4 values are supposedly delayed for 1 lores pixel TODO check this!
+// BPLCON4 values are delayed for 1 lores pixel - TODO double-check this!
+// AMR - bplxor is active from first write to BPL1DAT until DIWSTOP. (Fixes Andromeda: Nexus 7, shade cluster part)
+always @ (posedge clk) begin
+  if (clk7_en) begin
+    if(reset || hpos[8:0]==hdiwstop[8:0])
+      bplxor   <= 8'd0;
+	else if (display_ena)
+      bplxor   <= bplcon4[15:8];
+  end
+end
+// AMR - FIXME - should be the sprite colour offsets be treated as per bplxor? Probably not since sprites can appear in the border.
 always @ (posedge clk) begin
   if (clk7_en) begin
     if (reset) begin
-      bplxor   <= 8'd0;
       esprm    <= 4'd1;
       osprm    <= 4'd1;
     end else begin
-      bplxor   <= bplcon4[15:8];
       esprm    <= bplcon4[7:4];
       osprm    <= bplcon4[3:0];
     end
@@ -322,14 +330,18 @@ denise_bitplanes bplm0
   .bpldata(bpldata_out)
 );
 
-assign bpldata[1] = l_bpu > 0 ? bpldata_out[1] : 1'b0;
-assign bpldata[2] = l_bpu > 1 ? bpldata_out[2] : 1'b0;
-assign bpldata[3] = l_bpu > 2 ? bpldata_out[3] : 1'b0;
-assign bpldata[4] = l_bpu > 3 ? bpldata_out[4] : 1'b0;
-assign bpldata[5] = l_bpu > 4 ? bpldata_out[5] : 1'b0;
-assign bpldata[6] = l_bpu > 5 ? bpldata_out[6] : 1'b0;
-assign bpldata[7] = l_bpu > 6 ? bpldata_out[7] : 1'b0;
-assign bpldata[8] = l_bpu > 7 ? bpldata_out[8] : 1'b0;
+// AMR - mask bpldata against window_ena, so that the HAM generator always receives
+// the background colour outside the display window, to prevent the HAM generator
+// reacting to pixels scrolled off the left hand side of the screen.
+// Fixes Desire: Hamazing's "Hambarger" scene.
+assign bpldata[1] = window_ena && (l_bpu > 0) ? bpldata_out[1] : 1'b0;
+assign bpldata[2] = window_ena && (l_bpu > 1) ? bpldata_out[2] : 1'b0;
+assign bpldata[3] = window_ena && (l_bpu > 2) ? bpldata_out[3] : 1'b0;
+assign bpldata[4] = window_ena && (l_bpu > 3) ? bpldata_out[4] : 1'b0;
+assign bpldata[5] = window_ena && (l_bpu > 4) ? bpldata_out[5] : 1'b0;
+assign bpldata[6] = window_ena && (l_bpu > 5) ? bpldata_out[6] : 1'b0;
+assign bpldata[7] = window_ena && (l_bpu > 6) ? bpldata_out[7] : 1'b0;
+assign bpldata[8] = window_ena && (l_bpu > 7) ? bpldata_out[8] : 1'b0;
 
 // instantiate playfield module
 denise_playfields plfm0
@@ -369,10 +381,11 @@ denise_sprites sprm0
 );
 
 // instantiate video priority logic module
+wire [2:1] nplayfield_masked = nplayfield & {window_ena,window_ena};
 denise_spritepriority spm0
 (
   .bplcon2(bplcon2[5:0]),
-  .nplayfield(nplayfield),
+  .nplayfield(nplayfield_masked),
   .nsprite(nsprite),
   .sprsel(sprsel)
 );

@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sim/pkg/Amiga_Debug_pkg.vhd" \
+"../../../../Sim/dut/cpu_cache_stub.vhd" \
+"../../../../Sim/pkg/ram_type_pkg.vhd" \
+"../../../../Sim/dut/ramctrl_bram.vhd" \
+"../../../../Sim/dut/ram_ctrl_unified.vhd" \
+"../../../../Sim/dut/ram_frontend_unified.vhd" \
+"../../../../Sim/tb/tb_ram_frontend_unified.vhd" \
+
+# Do not sort compile order
+nosort

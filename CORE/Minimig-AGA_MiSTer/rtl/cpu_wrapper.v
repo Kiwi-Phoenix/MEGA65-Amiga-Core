@@ -66,7 +66,7 @@ module cpu_wrapper
 	output            ramuds,
 	output            ramshared,
 
-	output reg        toccata_ena,
+	output            toccata_ena,
 	output reg  [7:0] toccata_base,
 
 	output reg  [1:0] cpustate,
@@ -286,116 +286,6 @@ always @(posedge clk) begin
 	end
 end
 
-wire cfg_z3 = fastramcfg[2] & cpucfg[1];
-reg       ac_toccata;
-
-reg [3:0] autocfg_data;
-always @(*) begin
-	autocfg_data = 4'b1111;
-
-	if (~ac_toccata) begin
-		case (chip_addr[6:1])
-			6'h0: autocfg_data = 4'b1100; // Zorro-II card, no link, no ROM
-			6'h1: autocfg_data = 4'b0001; // Next board not related, size 'h64k
-			// Inverted from here on
-			6'h3: autocfg_data = 4'b0011; // Lower byte product number
-			6'h5: autocfg_data = 4'b1101;   // logical size 64k
-			6'h8: autocfg_data = 4'b1011; // Manufacturer ID: 0x4754
-			6'h9: autocfg_data = 4'b1000;
-			6'ha: autocfg_data = 4'b1010;
-			6'hb: autocfg_data = 4'b1011;
-			default: ;
-		endcase
-	end 
-	else if (autocfg_card) begin
-		if (~cfg_z3) begin
-			// Zorro II RAM (Up to 8 meg at 0x200000)
-			case (chip_addr[6:1])
-				6'b000000: autocfg_data = 4'b1110;	// Zorro-II card, add mem, no ROM
-				6'b000001:
-					case (fastramcfg)
-							   1: autocfg_data = 4'b0110; // 2MB
-							   2: autocfg_data = 4'b0111; // 4MB
-						default: autocfg_data = 4'b0000; // 8MB
-					endcase
-				6'b001000: autocfg_data = 4'b1110;	// Manufacturer ID: 0x139c
-				6'b001001: autocfg_data = 4'b1100;
-				6'b001010: autocfg_data = 4'b0110;
-				6'b001011: autocfg_data = 4'b0011;
-				6'b010011: autocfg_data = 4'b1110; //serial=1
-				  default:;
-			endcase
-		end
-		else begin
-			// Zorro III RAM 128MB/256MB
-			case (chip_addr[6:1])
-				6'b000000: autocfg_data = 4'b1010;	// Zorro-III card, add mem, no ROM
-				6'b000001: autocfg_data = autocfg_card[1] ? 4'b0011 : 4'b0100;	// 128MB or 256MB, extended
-				6'b000010: autocfg_data = 4'b1110;	// ProductID=0x10 (only setting upper nibble)
-				6'b000100: autocfg_data = 4'b0000;	// Memory card, not silenceable, Extended size, reserved.
-				6'b000101: autocfg_data = 4'b1111;	// 0000 - logical size matches physical size TODO change this to 0001, so it is autosized by the OS, WHEN it will be 24MB.
-				6'b001000: autocfg_data = 4'b1110;	// Manufacturer ID: 0x139c
-				6'b001001: autocfg_data = 4'b1100;
-				6'b001010: autocfg_data = 4'b0110;
-				6'b001011: autocfg_data = 4'b0011;
-				6'b010011: autocfg_data = {2'b11, ~autocfg_card};	// serial=1/2
-				  default:;
-			endcase
-		end
-	end
-end
-
-wire sel_autoconfig = fastramcfg && chip_addr[23:16] == 8'b11101000 && autocfg_card; //$E80000 - $E8FFFF
-
-reg [1:0] autocfg_card;
-reg       z2ram_ena;
-reg [4:0] z3ram_base0;
-reg [3:0] z3ram_base1;
-reg       z3ram_ena0;
-reg       z3ram_ena1;
-always @(posedge clk) begin
-	reg old_uds;
-	old_uds <= chip_uds;
-
-	if (~reset | ~reset_out) begin
-		autocfg_card <= 1;		//autoconfig on
-		z2ram_ena <= 0;
-		z3ram_ena0 <= 0;
-		z3ram_ena1 <= 0;
-		z3ram_base0 <= 1;
-		z3ram_base1 <= 1;
-		ac_toccata<=1'b0;
-		toccata_ena<=1'b0;
-	end
-	else if (sel_autoconfig && ~chip_rw && ~chip_uds && old_uds) begin
-		if (~ac_toccata) begin
-			if (chip_addr[6:1] == 6'b100100) begin // Register 0x48 - config, Toccata card in ZII io space ($E90000)
-				toccata_ena <= 1;
-				toccata_base <= cpu_dout[7:0];
-				ac_toccata<=1'b1;
-			end		
-		end
-		else if (~cfg_z3) begin
-			if (chip_addr[6:1] == 6'b100100) begin // Register 0x48 - config, ZII RAM
-				z2ram_ena <= 1;
-				autocfg_card <= 0;
-			end
-		end
-		else if (chip_addr[6:1] == 6'b100010)	begin // Register 0x44, assign base address to ZIII RAM.
-			if (autocfg_card == 1) begin
-				z3ram_base1 <= cpu_dout[15:12];
-				z3ram_ena1 <= 1;
-				autocfg_card <= {fastramcfg[0], 1'b0};
-			end
-			else begin
-				z3ram_base0 <= cpu_dout[15:11];
-				z3ram_ena0 <= 1;
-				autocfg_card <= 0;
-			end
-		end
-	end
-end
-
 reg       chipreq;
 reg [2:0] cpu_ipl;
 always @(posedge clk) begin
@@ -461,5 +351,117 @@ always @(negedge clk, negedge reset) begin
 		end
 	end
 end
+
+///////////////////// AUTOCONFIG ////////////////////////////
+
+reg       ac_toccata;
+reg [2:0] ac_memcard;
+reg [3:0] autocfg_data;
+
+always @(*) begin
+	autocfg_data = 4'b1111;
+
+	// Zorro II RAM (Up to 8 meg at 0x200000). It has a fixed base, so it must be first in the chain.
+	if (~ac_memcard[2] && ac_memcard[1:0]) begin
+		case (chip_addr[6:1])
+			6'b000000: autocfg_data = 4'b1110;	// Zorro-II card, add mem, no ROM
+			6'b000001:
+				case (ac_memcard[1:0])
+							1: autocfg_data = 4'b0110; // 2MB
+							2: autocfg_data = 4'b0111; // 4MB
+					default: autocfg_data = 4'b0000; // 8MB
+				endcase
+			6'b001000: autocfg_data = 4'b1110;	// Manufacturer ID: 0x139c
+			6'b001001: autocfg_data = 4'b1100;
+			6'b001010: autocfg_data = 4'b0110;
+			6'b001011: autocfg_data = 4'b0011;
+			6'b010011: autocfg_data = 4'b1110; //serial=1
+			  default:;
+		endcase
+	end
+	// Zorro II other cards
+	else if(ac_toccata) begin
+		case (chip_addr[6:1])
+			6'h0: autocfg_data = 4'b1100; // Zorro-II card, no link, no ROM
+			6'h1: autocfg_data = 4'b0001; // Next board not related, size 'h64k
+			// Inverted from here on
+			6'h3: autocfg_data = 4'b0011; // Lower byte product number
+			//6'h5: autocfg_data = 4'b1101; // logical size 64k -- commented out -> logical size == physical size. Issue with KS1.3?
+			6'h8: autocfg_data = 4'b1011; // Manufacturer ID: 0x4754
+			6'h9: autocfg_data = 4'b1000;
+			6'ha: autocfg_data = 4'b1010;
+			6'hb: autocfg_data = 4'b1011;
+			default: ;
+		endcase
+	end 
+	// Zorro III RAM 128MB/256MB/384MB
+	else if(ac_memcard[2]) begin
+		case (chip_addr[6:1])
+			6'b000000: autocfg_data = 4'b1010;	// Zorro-III card, add mem, no ROM
+			6'b000001: autocfg_data = ac_memcard[1] ? 4'b0011 : 4'b0100; // 128MB or 256MB, extended
+			6'b000010: autocfg_data = 4'b1110;	// ProductID=0x10 (only setting upper nibble)
+			6'b000100: autocfg_data = 4'b0000;	// Memory card, not silenceable, Extended size, reserved.
+			6'b000101: autocfg_data = 4'b1111;	// 0000 - logical size matches physical size TODO change this to 0001, so it is autosized by the OS, WHEN it will be 24MB.
+			6'b001000: autocfg_data = 4'b1110;	// Manufacturer ID: 0x139c
+			6'b001001: autocfg_data = 4'b1100;
+			6'b001010: autocfg_data = 4'b0110;
+			6'b001011: autocfg_data = 4'b0011;
+			6'b010011: autocfg_data = {2'b11, ~ac_memcard[1], ac_memcard[1]};	// serial=1/2
+			  default:;
+		endcase
+	end
+end
+
+wire sel_autoconfig = (chip_addr[23:16] == 8'b11101000) && (ac_memcard || ac_toccata); //$E80000 - $E8FFFF
+
+reg       z2ram_ena;
+reg [4:0] z3ram_base0;
+reg [3:0] z3ram_base1;
+reg       z3ram_ena0;
+reg       z3ram_ena1;
+always @(posedge clk) begin
+	reg old_uds;
+	old_uds <= chip_uds;
+
+	if (~reset | ~reset_out) begin
+		ac_memcard  <= cpucfg[1] ? fastramcfg : fastramcfg[2] ? 3'd3 : {1'b0, fastramcfg[1:0]};
+		ac_toccata  <= 1;
+		z2ram_ena   <= 0;
+		z3ram_ena0  <= 0;
+		z3ram_ena1  <= 0;
+		z3ram_base0 <= 1;
+		z3ram_base1 <= 1;
+	end
+	else if (sel_autoconfig && ~chip_rw && ~chip_uds && old_uds) begin
+		if(~ac_memcard[2] && ac_memcard[1:0]) begin
+			if (chip_addr[6:1] == 6'b100100) begin // Register 0x48 - config, ZII RAM
+				z2ram_ena <= 1;
+				ac_memcard <= 0;
+			end
+		end
+		else if(ac_toccata) begin
+			if (chip_addr[6:1] == 6'b100100) begin // Register 0x48 - config, Toccata card in ZII io space ($E90000)
+				toccata_base <= cpu_dout[7:0];
+				ac_toccata<=0;
+			end		
+		end
+		else if(ac_memcard[2]) begin
+			if(chip_addr[6:1] == 6'b100010) begin // Register 0x44, assign base address to ZIII RAM.
+				if(~ac_memcard[1]) begin
+					z3ram_base1 <= cpu_dout[15:12]; //256MB chunk
+					z3ram_ena1 <= 1;
+					ac_memcard <= {ac_memcard[0], ac_memcard[0], 1'b0};
+				end
+				else begin
+					z3ram_base0 <= cpu_dout[15:11]; //128MB chunk
+					z3ram_ena0 <= 1;
+					ac_memcard <= 0;
+				end
+			end
+		end
+	end
+end
+
+assign toccata_ena = ~ac_toccata;
 
 endmodule

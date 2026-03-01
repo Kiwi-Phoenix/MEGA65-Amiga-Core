@@ -47,7 +47,6 @@ always @(posedge clk) begin
 	end
 end
 
-
 always begin
 	reg [4:0] i;
 
