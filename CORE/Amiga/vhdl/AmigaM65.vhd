@@ -264,17 +264,8 @@ attribute DONT_TOUCH of comb_audio      : label is c_dont_touch(DEBUG);
     signal nvs              : std_logic;
     signal nhde             : std_logic;
     signal nvde             : std_logic;
-    
-          
-  -- Amiga Clocks    
-  signal buf_c1               : std_logic;
-  signal buf_c3               : std_logic;
-  signal buf_cck              : std_logic;
-      
-  --signal clk_114          : std_logic;
---  signal clk_sys          : std_logic;
---  signal locked           : std_logic;
-    
+              
+  -- Reset signals    
   signal reset_i          : std_logic;
   signal reset_d          : std_logic;
   signal reset_n          : std_logic;
@@ -350,7 +341,8 @@ VGA_VS              <= op.VGA_VS;
 VIDEO_HBLANK        <= op.VIDEO_HBLANK;
 VIDEO_VBLANK        <= op.VIDEO_VBLANK;
 CE_PIXEL            <= op.CE_PIXEL;
-CLK_VIDEO           <= op.CLK_VIDEO;
+--CLK_VIDEO           <= op.CLK_VIDEO;
+CLK_VIDEO           <= ip.main_clk_sys;
 VGA_DE              <= op.VGA_DE;
 VGA_F1              <= op.VGA_F1;
 VGA_SL              <= op.VGA_SL;
@@ -588,30 +580,26 @@ reset_sig : entity work.reset_sig
        ,reset_d     => reset_d
     );
    
---DJR   
+--Note: The outpur signals are not clock signals as such, they are Strobe signals.
+--      Not to be used as clock signals.
 amiga_clk : entity work.amiga_clk
     port map (
         clk_28          => ip.main_clk_sys                  --// input clock c1 (28.687500MHz)
        ,clk7_en         => amiclk.clk7_en                   --// output clock 7 enable (on 28MHz clock domain)                      -- Out
        ,clk7n_en        => amiclk.clk7n_en                  --// 7 MHz negedge output clock enable (on 28MHz clock domain)          -- Out   
-       ,c1              => buf_c1                           --// clk28m clock domain signal synchronous with clk signal             -- Out
-       ,c3              => buf_c3                           --// clk28m clock domain signal synchronous with clk signal delayed by 90 degrees  -- Out
-       ,cck             => buf_cck                          --// colour clock output (3.54 MHz)                                     -- Out
-
+       ,c1              => amiclk.c1                        --// clk28m clock domain signal synchronous with clk signal             -- Out
+       ,c3              => amiclk.c3                        --// clk28m clock domain signal synchronous with clk signal delayed by 90 degrees  -- Out
+       ,cck             => amiclk.cck                       --// colour clock output (3.54 MHz)                                     -- Out
        ,eclk            => amiclk.eclk                      --// 0.709379 <Hz clock enable output (clk domain pulse)                -- Out    
        ,reset_n         => reset_n
     );    
     
--- Put the generated clocks through a buffer.
--- Also need to be defined in the contraints as clocks so that they are part of the clock net.
--- If not part of the clock net, then any IP that uses the clock will not recognise it as a clock therefore will not work.     
-bufg_c1_inst  : BUFG port map (I => buf_c1  ,O => amiclk.c1);     
-bufg_c3_inst  : BUFG port map (I => buf_c3  ,O => amiclk.c3);
-bufg_cck_inst : BUFG port map (I => buf_cck ,O => amiclk.cck);        
+       
        
 compute_ram_cs : entity work.compute_ram_cs
     port map (
-        clk_114     => ip.main_clk_114
+        --clk_114     => ip.main_clk_114
+        clk_114     => ip.main_clk_sys
        ,c1          => amiclk.c1
        ,cpu_rst     => miniout.cpu_rst
        ,ram_ready   => ram_ready
@@ -676,7 +664,8 @@ cpu_wrapper : entity work.cpu_wrapper
 RAM_CTRL : entity work.ram_frontend_unified 
     port map (
         -- System / cache
-        sysclk              => ip.main_clk_114
+        --sysclk              => ip.main_clk_114
+        sysclk              => ip.main_clk_sys
        ,reset_n             => reset_nd
        ,cache_rst           => miniout.cpu_rst
        ,cache_inhibit_ext   => cache_inhibit
@@ -715,7 +704,8 @@ RAM_CTRL : entity work.ram_frontend_unified
 
 FastChip : entity work.fastchip
     port map (
-        clk             => ip.main_clk_114
+        --clk             => ip.main_clk_114
+        clk             => ip.main_clk_sys
        ,cyc             => cyc
        ,clk_sys         => ip.main_clk_sys
        
@@ -765,8 +755,8 @@ Power_LED : entity work.power_led
         
 Pixel_clk : entity work.pixelclk 
     port map (
---        clk         => ip.main_clk_sys
-        clk         => ip.main_clk_114
+        clk         => ip.main_clk_sys
+--        clk         => ip.main_clk_114
        ,hblank      => miniout.hblank
        ,vblank      => vblank
        ,res         => miniout.res 
@@ -809,7 +799,8 @@ video_mixer : entity work.video_mixer
        ,VSync           => nvs
        ,HBlank          => nhde
        ,VBlank          => nvde
-       ,CLK_VIDEO       => ip.main_clk_114                  --// should be multiple by (ce_pix*4)         
+       --,CLK_VIDEO       => ip.main_clk_114                  --// should be multiple by (ce_pix*4)         
+       ,CLK_VIDEO       => ip.main_clk_sys                  --// should be multiple by (ce_pix*4)         
 --       ,CLK_VIDEO       => clk_vid
        
        ,scandoubler     => scandoubler       
@@ -826,8 +817,8 @@ video_mixer : entity work.video_mixer
 
 HS_VS_Timing : entity work.hsvstiming
     port map (
---        clk_sys         => ip.main_clk_sys
-        clk_sys         => ip.main_clk_114        
+        clk_sys         => ip.main_clk_sys
+--        clk_sys         => ip.main_clk_114        
        ,hs              => miniout.hs
        ,hblank          => miniout.hblank
        ,field1          => miniout.field1

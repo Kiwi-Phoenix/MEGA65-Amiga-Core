@@ -9,6 +9,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.build_ver.all;
 
 entity config is
 port (
@@ -76,8 +77,8 @@ type WHS_RECORD_ARRAY_TYPE is array (0 to WHS_RECORDS - 1) of WHS_RECORD_TYPE;
 
 constant SCR_WELCOME : string :=
 
-   "Name of the Demo Core Version 1.0\n" &
-   "MiSTer port done by Demo Author in 2022\n\n" &
+   "MEGA65 Amiga Core " & BUILD_VER & "\n" &
+   "MiSTer port by David Raynor (Kiwi) in 2026\n\n" &
 
    -- We are not insisting. But it would be nice if you gave us credit for MiSTer2MEGA65 by leaving these lines in
    "Powered by MiSTer2MEGA65 Version [WIP],\n" &
@@ -87,20 +88,20 @@ constant SCR_WELCOME : string :=
    "You can for example show the keyboard map.\n" &
    "Look at this example for the Demo core:\n\n\n" &
 
-   "    Key                Demo core\n" &
+   "    Key                Amiga Core\n" &
    "    " & CHR_LINE_10 & CHR_LINE_10 & CHR_LINE_10 & CHR_LINE_1 & CHR_LINE_1 & "\n" &
-   "    Left Cursor        Paddle left\n" &
-   "    Right Cursor       Paddle right\n" &
-   "    Space              Start game\n" &
-   "    Help               Options menu\n\n\n" &
+--   "    Left Cursor        Paddle left\n" &
+--   "    Right Cursor       Paddle right\n" &
+--   "    Space              Start game\n" &
+   "    Restore           Options menu\n\n\n" &
 
    "\n\n    Press Space to continue.\n\n\n";
 
 constant HELP_1 : string :=
 
-   "\n Demo Core for MEGA65 Version 1\n\n" &
+   "\n Amiga Core for MEGA65 " & BUILD_VER & "\n\n" &
 
-   " MiSTer port 2022 by YOU\n" &
+   " MiSTer port 2026 by Kiwi\n" &
    " Powered by MiSTer2MEGA65\n\n\n" &
 
    " Lorem ipsum dolor sit amet, consetetur\n" &
@@ -119,7 +120,7 @@ constant HELP_1 : string :=
 
 constant HELP_2 : string :=
 
-   "\n Demo Core for MEGA65 Version 1\n\n" &
+   "\n Amiga Core for MEGA65 " & BUILD_VER & "\n\n" &
 
    " XYZ ABCDEFGH:\n\n" &
 
@@ -268,7 +269,8 @@ constant SEL_CORENAME      : std_logic_vector(15 downto 0) := x"0200";
 
 -- Currently this is only used in the debug console. Use the welcome screen and the
 -- help system to display the name and version of your core to the end user
-constant CORENAME          : string := "M2M DEMO CORE V1.0";
+--constant CORENAME          : string := "M2M DEMO CORE V1.0";
+constant CORENAME          : string := "Amiga Core " & BUILD_VER;
 
 --------------------------------------------------------------------------------------------------------------------
 -- "Help" menu / Options menu  (Selectors 0x0300 .. 0x0312): DO NOT TOUCH

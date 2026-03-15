@@ -21,11 +21,11 @@ end package Amiga_Globals;
 
 package build_id is
 -- TODO: place in a separate auto-generated package / file.
-    constant BUILD_DATE : string := "2025-7-29";
+    constant BUILD_DATE : string := "2026-03-04";
 end package;
 
 package build_ver is
-    constant BUILD_VER : string := "BETA V0.04";
+    constant BUILD_VER : string := "BETA V0.05";
 end package;
 
 package DocPkg is

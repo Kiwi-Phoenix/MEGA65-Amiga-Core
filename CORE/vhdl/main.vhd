@@ -21,7 +21,7 @@ entity main is
       G_VDNUM                 : natural                     -- amount of virtual drives
    );
    port (
-      clk_main_i              : in  std_logic;
+      --clk_main_i              : in  std_logic;
       reset_soft_i            : in  std_logic;
       reset_hard_i            : in  std_logic;
       pause_i                 : in  std_logic;
@@ -29,6 +29,7 @@ entity main is
       -- MiSTer core main clock speed:
       -- Make sure you pass very exact numbers here, because they are used for avoiding clock drift at derived clocks
       clk_main_speed_i        : in  natural;
+      main_clk_114_i          : in std_logic;
       main_clk_sys_i          : in std_logic;
       main_clk_video_i        : in std_logic;
       main_clk_audio_i        : in std_logic;      
@@ -109,13 +110,14 @@ signal audio_s          : std_logic;
 begin
 
 -- IN Ports Mapping
-ip.clk_main             <= clk_main_i;
+--ip.clk_main             <= clk_main_i;
 ip.reset_soft           <= reset_soft_i;
 ip.reset_hard           <= reset_hard_i;
 ip.pause                <= pause_i;
 
 ip.clk_main_speed       <= clk_main_speed_i;
 ip.main_clk_sys         <= main_clk_sys_i;
+ip.main_clk_114         <= main_clk_114_i;
 ip.main_clk_video       <= main_clk_video_i;
 ip.main_clk_audio       <= main_clk_audio_i;
 ip.main_clk_locked      <= main_clk_locked_i;
@@ -194,7 +196,7 @@ Config_CORE : entity work.Config_Manager
 
    Amiga_keyboard : entity work.keyboard
       port map (
-         clk                  => ip.clk_main
+         clk                  => ip.main_clk_sys
 
          -- Interface to the MEGA65 keyboard
         ,key_num              => ip.kb_key_num
@@ -206,7 +208,7 @@ Config_CORE : entity work.Config_Manager
 Amiga : entity work.AmigaM65
     port map (
         -- Input Clocks
-        main_clk_114        => ip.clk_main
+        main_clk_114        => ip.main_clk_114
        ,main_clk_sys        => ip.main_clk_sys
        ,clk_audio           => ip.main_clk_audio
        ,main_clk_locked     => ip.main_clk_locked
@@ -236,8 +238,8 @@ Amiga : entity work.AmigaM65
        ,audio_s             => audio_s
        
        -- Keyboard Input
-       ,kbd_mouse_type      => kbd_mouse_type
-       ,kbd_mouse_data      => kbd_mouse_data 
+       ,kbd_mouse_type      => kbd.kbd_mouse_type
+       ,kbd_mouse_data      => kbd.kbd_mouse_data 
        
        -- User Config
        ,io_uio              => io.io_uio

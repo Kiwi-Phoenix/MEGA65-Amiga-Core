@@ -41,7 +41,10 @@ constant QNICE_FIRMWARE           : string  := QNICE_FIRMWARE_M2M;
 ----------------------------------------------------------------------------------------------------------
 
 -- @TODO: Your core's clock speed
-constant CORE_CLK_SPEED       : natural := 54_000_000;   -- @TODO YOURCORE expects 54 MHz
+--constant CORE_CLK_SPEED       : natural := 54_000_000;   -- @TODO YOURCORE expects 54 MHz
+--constant CORE_CLK_SPEED_PAL       : natural := 113_559_320;   -- TBC maybe 28???
+constant CORE_CLK_SPEED_PAL       : natural := 28_375_230;   -- TBC maybe 28???
+constant CORE_CLK_SPEED           : natural := CORE_CLK_SPEED_PAL;
 
 -- System clock speed (crystal that is driving the FPGA) and QNICE clock speed
 -- !!! Do not touch !!!
@@ -151,11 +154,26 @@ constant C_CRTROMS_MAN           : crtrom_buf_array := ( x"EEEE", x"EEEE",
 --               b) Don't forget to zero-terminate each of your substrings of C_CRTROMS_AUTO_NAMES by adding "& ENDSTR;"
 --               c) Don't forget to finish the C_CRTROMS_AUTO array with x"EEEE"
 
+
+constant AMIGA_ROM              : std_logic_vector(15 downto 0) := x"0100";
+
+-- Amiga Core specific ROMS
+constant AMIGA_KICKSTART_ROMKEY     : string := "/Amiga/rom.key"        & ENDSTR;
+constant AMIGA_KICKSTART_BOOTROM    : string := "/Amiga/BOOT.ROM"       & ENDSTR;
+constant AMIGA_KICKSTART_ROM        : string := "/Amiga/KICK130.ROM"    & ENDSTR;
+
+constant AMIGA_KICKSTART_STARTROM   : std_logic_vector(15 downto 0) := x"0000";
+
+
 -- M2M framework constants
-constant C_CRTROMS_AUTO_NUM      : natural := 0;                                       -- Amount of automatically loadable ROMs and carts, maximum is 16
-constant C_CRTROMS_AUTO_NAMES    : string  := "" & ENDSTR;
-constant C_CRTROMS_AUTO          : crtrom_buf_array := ( x"EEEE", x"EEEE", x"EEEE", x"EEEE",
-                                                         x"EEEE");                     -- Always finish the array using x"EEEE"
+constant C_CRTROMS_AUTO_NUM      : natural := 1;                                       -- Amount of automatically loadable ROMs and carts, maximum is 16
+constant C_CRTROMS_AUTO_NAMES    : string  := AMIGA_KICKSTART_ROM;
+constant C_CRTROMS_AUTO          : crtrom_buf_array := ( C_CRTROMTYPE_DEVICE, AMIGA_ROM, C_CRTROMTYPE_MANDATORY, AMIGA_KICKSTART_STARTROM,
+                                                         x"EEEE");  
+--constant C_CRTROMS_AUTO_NUM      : natural := 0;                                       -- Amount of automatically loadable ROMs and carts, maximum is 16
+--constant C_CRTROMS_AUTO_NAMES    : string  := "" & ENDSTR;
+--constant C_CRTROMS_AUTO          : crtrom_buf_array := ( x"EEEE", x"EEEE", x"EEEE", x"EEEE",
+--                                                         x"EEEE");                     -- Always finish the array using x"EEEE"
 
 ----------------------------------------------------------------------------------------------------------
 -- Audio filters
@@ -164,6 +182,7 @@ constant C_CRTROMS_AUTO          : crtrom_buf_array := ( x"EEEE", x"EEEE", x"EEE
 -- that you are porting: sys/sys_top.v
 ----------------------------------------------------------------------------------------------------------
 
+-- TODO: DJR Put the values in for the Amiga
 -- Sample values from the C64: @TODO: Adjust to your needs
 constant audio_flt_rate : std_logic_vector(31 downto 0) := std_logic_vector(to_signed(7056000, 32));
 constant audio_cx       : std_logic_vector(39 downto 0) := std_logic_vector(to_signed(4258969, 40));

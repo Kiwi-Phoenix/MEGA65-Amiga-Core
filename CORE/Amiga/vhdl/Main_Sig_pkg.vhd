@@ -16,6 +16,7 @@ package Main_Sig_pkg is
         
         clk_main_speed        : natural;
         main_clk_sys          : std_logic;
+        main_clk_114          : std_logic;
         main_clk_video        : std_logic;
         main_clk_audio        : std_logic;      
         main_clk_locked       : std_logic;

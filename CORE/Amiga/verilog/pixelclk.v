@@ -1,6 +1,10 @@
 // Pixel Clock.  Code sourced directly from the MiSTer Minimig / Amiga emu module
 //
 // June 2025    David Raynor (Kiwi)
+// 
+// Notes:
+// ce_out - clock enable signal.  This is not a clock signal and should not be treated as such.
+
 
 module pixelclk (
     input clk

@@ -104,7 +104,7 @@ port (
    clk_i                   : in  std_logic;              -- 100 MHz clock
 
    -- Share clock and reset with the framework
-   main_clk_o              : out std_logic;              -- CORE's 113 MHz clock
+   --main_clk_114_o          : out std_logic;              -- CORE's 113 MHz clock
    main_clk_sys_o          : out std_logic;              -- CORE's 28.37 MHz clock
    main_rst_o              : out std_logic;              -- CORE's reset, synchronized
 
@@ -323,12 +323,13 @@ begin
          ,main_clk_locked => clocks.main_clk_locked
       ); -- clk_gen
 
-   main_clk_o       <= clocks.main_clk_114;
+   --main_clk_114_o    <= clocks.main_clk_114;
    main_clk_sys_o   <= clocks.main_clk_sys;
    main_rst_o       <= main_rst;
    
    --video_clk_o <= main_clk;
-   video_clk_o <= clocks.main_clk_114;
+   --video_clk_o <= clocks.main_clk_114;
+   video_clk_o <= clocks.main_clk_sys;
    video_rst_o <= main_rst;
 
    ---------------------------------------------------------------------------------------------
@@ -346,13 +347,14 @@ begin
          G_VDNUM              => C_VDNUM
       )
       port map (
-          clk_main_i           => main_clk
-         ,reset_soft_i         => main_reset_core_i
+          --clk_main_i           => main_clk
+          reset_soft_i         => main_reset_core_i
          ,reset_hard_i         => main_reset_m2m_i
          ,pause_i              => main_pause_core_i
 
          ,clk_main_speed_i     => CORE_CLK_SPEED
          
+         ,main_clk_114_i       => clocks.main_clk_114
          ,main_clk_sys_i       => clocks.main_clk_sys
          ,main_clk_video_i     => clocks.main_clk_video
          ,main_clk_audio_i     => clocks.main_clk_audio  

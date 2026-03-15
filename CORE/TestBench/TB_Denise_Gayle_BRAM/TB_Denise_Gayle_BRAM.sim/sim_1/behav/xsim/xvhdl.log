@@ -1,0 +1,3 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/pkg/Amiga_Debug_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_copper'

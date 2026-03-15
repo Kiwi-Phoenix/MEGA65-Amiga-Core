@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sim/pkg/Amiga_Debug_pkg.vhd" \
+"../../../../Sim/tb/tb_copper.vhd" \
+
+# Do not sort compile order
+nosort

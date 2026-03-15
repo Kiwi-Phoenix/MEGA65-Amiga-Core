@@ -1,5 +1,9 @@
 /* amiga_clk.v */
 /* 2012, rok.krajnc@gmail.com */
+//
+// Notes:
+// These outputs are technically not Clocks and shouldn't be used as such.
+// They are essentially Strobes.
 
 module amiga_clk
 (

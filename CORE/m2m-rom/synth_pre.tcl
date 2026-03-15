@@ -3,6 +3,6 @@ set cur_dir [exec pwd]
 
 cd ../../../CORE/m2m-rom/
 #exec ./make_rom.sh <@stdin >@stdout 2>@stderr
-#exec bash ./make_rom.sh <@stdin >@stdout 2>@stderr
+exec bash ./make_rom.sh <@stdin >@stdout 2>@stderr
 cd $cur_dir
 
