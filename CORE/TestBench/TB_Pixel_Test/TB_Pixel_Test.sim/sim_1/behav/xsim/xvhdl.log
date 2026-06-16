@@ -1,0 +1,19 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/Amiga_Globals_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/Amiga_Debug_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/ram_type_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/ramctrl_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ramctrl_bram'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/cpu_cache_stub.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cpu_cache_stub'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/Pixel_Test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Pixel_Test'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_agnus_blitter'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/Pixel_Test_OCS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Pixel_Test_OCS'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/pixel_test_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pixel_test_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/TB_Denise.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_denise'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_copper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_agnus_copper'

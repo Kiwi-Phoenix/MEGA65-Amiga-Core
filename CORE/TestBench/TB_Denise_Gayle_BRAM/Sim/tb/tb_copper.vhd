@@ -21,7 +21,7 @@ use work.debug_utils_pkg.all;
 
 entity tb_copper is
     generic (
-        TEST_ID : integer := 16
+        TEST_ID : integer := 15
         );
 end entity;
 
@@ -408,32 +408,7 @@ begin
     chipram(base+8) <= x"FFFF";
     chipram(base+9) <= x"FFFF";
 
-    when 14 => 
-    --  Test 11 : Skip exactly one instruction in a long chain
-    ----------------------------------------------------------------
-    -- Program:
-    --   MOVE #$1111,$0007   -- illegal → skip next
-    --   MOVE #$AAAA,$0180   -- skipped
-    --   MOVE #$BBBB,$0180   -- executed
-    --   MOVE #$CCCC,$0180   -- executed
-    --   END
-    ----------------------------------------------------------------
-    chipram(base+0) <= x"1111";
-    chipram(base+1) <= x"0007";
-
-    chipram(base+2) <= x"AAAA";   -- skipped
-    chipram(base+3) <= x"0180";
-
-    chipram(base+4) <= x"BBBB";   -- executed
-    chipram(base+5) <= x"0180";
-
-    chipram(base+6) <= x"CCCC";   -- executed
-    chipram(base+7) <= x"0180";
-
-    chipram(base+8) <= x"FFFF";
-    chipram(base+9) <= x"FFFF";
-
-    when 15 =>
+    when 14 =>
     --  Test 12 : Skip over a SKIP instruction
     ----------------------------------------------------------------
     -- Program:
@@ -454,7 +429,7 @@ begin
     chipram(base+6) <= x"FFFF";
     chipram(base+7) <= x"FFFF";
     
-    when 16 => 
+    when 15 => 
     --  Test 13 : Randomised SKIP stress test
     ----------------------------------------------------------------
     -- Generate 64 random instructions

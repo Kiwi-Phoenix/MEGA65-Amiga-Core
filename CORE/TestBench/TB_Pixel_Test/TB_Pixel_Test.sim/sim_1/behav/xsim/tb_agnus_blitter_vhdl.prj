@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sim/pkg/Amiga_Globals_pkg.vhd" \
+"../../../../Sim/pkg/Amiga_Debug_pkg.vhd" \
+"../../../../Sim/pkg/ram_type_pkg.vhd" \
+"../../../../Sim/dut/ramctrl_bram.vhd" \
+"../../../../Sim/dut/cpu_cache_stub.vhd" \
+"../../../../Sim/dut/Pixel_Test.vhd" \
+"../../../../Sim/tb/tb_agnus_blitter.vhd" \
+"../../../../Sim/dut/Pixel_Test_OCS.vhd" \
+"../../../../Sim/tb/pixel_test_tb.vhd" \
+"../../../../Sim/tb/TB_Denise.vhd" \
+"../../../../Sim/tb/tb_agnus_copper.vhd" \
+
+# Do not sort compile order
+nosort

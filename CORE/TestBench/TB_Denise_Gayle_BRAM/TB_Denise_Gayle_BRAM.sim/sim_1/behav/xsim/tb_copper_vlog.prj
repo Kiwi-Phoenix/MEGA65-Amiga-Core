@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
-"../../../../Sim/dut/agnus_copper.v" \
+verilog xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2.1/Vivado/data/rsb/busdef" \
+"../../../../Sim/dut/agnus_copper_M65.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

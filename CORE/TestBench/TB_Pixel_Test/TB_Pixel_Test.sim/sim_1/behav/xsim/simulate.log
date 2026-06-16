@@ -1,0 +1,966 @@
+Time resolution is 1 ps
+BLT: CONSTS,BLTCON0=040,BLTCON0L=05a,BLTCON1=042,BLTAFWM=044,BLTALWM=046,BLTADAT=074,BLTBDAT=072,BLTCDAT=070,BLTDDAT=000,BLTSIZE=058,BLTSIZH=05e,BLTSIZV=05c
+BLT: CONSTS 8_1,BLTCON0=020,BLTCON0L=02d,BLTCON1=021,BLTAFWM=022,BLTALWM=023,BLTADAT=03a,BLTBDAT=039,BLTCDAT=038,BLTDDAT=000,BLTSIZE=02c,BLTSIZH=02f,BLTSIZV=02e
+BLT: FSM,BLT_IDLE=00,BLT_INIT=01,BLT_A=09,BLT_B=0b,BLT_C=0a,BLT_D=08,BLT_E=0c,BLT_L1=19,BLT_L2=1b,BLT_L3=1a,BLT_L4=18,CHA=10,CHB=01,CHC=00,CHD=11
+ANGUS: CONSTS,DMACON=096,DMACONR=002,DIWSTRT=08e,DIWSTOP=090,DIWHIGH=1e4
+ANGUS: CONSTS 8_1,DMACON=04b,DMACONR=001,DIWSTRT=047,DIWSTOP=048,DIWHIGH=0f2
+Note: [TB: INOUT][CYCLE 1],T=17 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 17500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=18000,ecs=0,clkena=1,enadma=x,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=x,busy=x,int3=x,reg_address_out=03a,address_out=xxxxx,data_out=0000
+BLT: STATES,t=18000,start=x,busy=x,done=x,zero=x,reqdma=0,dma_req=0,enable=x,enadma=x,dma_ack=0,clkena=1,pipeline_full=x,next_word=x,blt_state=xx,blt_next=00
+BLT: INTERNAL,t=18000,bltcon0=xxxx,usea=x,useb=x,usec=x,used=x,enad=x,ife=x,efe=x,minterm_out=xxxx,bltadat=xxxx,bltbdat=xxxx,bltcdat=xxxx,bltddat=xxxx,ackdma=0,chsel=10,bltdhold=xxxx,bltahold=xxxx,bltbhold=xxxx,store_result=x,fill_out=xxxx
+AGNUS: IN,t=18000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=18000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=x,_vsync=x,_csync=x,field1=x,lace=x,hblank=x,vblank=x,hde=x,sol=x,sof=x,vbl_int=x,strhor_denise=x,strhor_paula=x,htotal=xxx,harddis=x,varbeamen=x,int3=x
+AGNUS: DMACON, t=18000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=18000,cck=1,blten=x,dmacon[6]=x,dmacon[9]=x,dmacon=xxxxxxxxxxxxx,ena_blt=x,blit_busy=x,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=xxxxx
+AGNUS: DMA ARB, t=18000,ena_blt=x,any_dma_active=x,dma_ref=x,dma_dsk=0,dma_aud=0,dma_spr=x,dma_bpl=x,dma_cop=x,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=18000, address_out=00000,address_blt=xxxxx,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=xxxxx
+Note: [TB: INOUT][CYCLE 2],T=52 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 52500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=53000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=53000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=53000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=53000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=53000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=x,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=53000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=53000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=53000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=53000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 3],T=87 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 87500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=88000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=88000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=88000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=88000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=88000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=88000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=88000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=88000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=88000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 4],T=122 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 122500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=123000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=123000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=123000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=123000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=123000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=123000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=123000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=123000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=123000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 5],T=157 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 157500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=158000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=158000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=158000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=158000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=158000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=158000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=158000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=158000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=158000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 6],T=192 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 192500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=193000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=193000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=193000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=193000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=193000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=193000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=193000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=193000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=193000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 7],T=227 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 227500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=228000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=228000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=228000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=228000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=228000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=228000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=228000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=228000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=228000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 8],T=332 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 332500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=333000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=333000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=333000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=333000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=333000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=333000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=333000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=333000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=333000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: === BLIT TEST: FILL MODE ===
+Time: 400 ns  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: [TB: INOUT][CYCLE 9],T=472 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 472500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=473000,ecs=0,clkena=0,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=473000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=473000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=473000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=473000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=473000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=473000,cck=0,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=x,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=473000,ena_blt=x,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=x,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=473000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 10],T=612 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=4B,chipram(150) = 0000,data_in=8241,dma_data_in=0000,cpu_data_in=8241,reg_address_out=4B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 612500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=613000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=04b,data_in=8241,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=613000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=613000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=613000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=04b,data_in=8241,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=613000,reg_address_out=04b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=613000,reg_address[8:1]=04b,data_in=0241,data_in=1000001001000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=613000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=613000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=613000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 11],T=752 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 752500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=753000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=753000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=753000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=753000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=753000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=753000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=753000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=753000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=753000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 12],T=892 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=20,chipram(64) = 0000,data_in=0BF0,dma_data_in=0000,cpu_data_in=0BF0,reg_address_out=20,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 892500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=893000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=020,data_in=0bf0,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=893000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=893000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=893000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=020,data_in=0bf0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=893000,reg_address_out=020,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=893000,reg_address[8:1]=020,data_in=0bf0,data_in=0000101111110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=893000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=893000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=893000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 13],T=1032 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 1032500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1033000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1033000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1033000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1033000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1033000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1033000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1033000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1033000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=1033000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 14],T=1172 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=21,chipram(66) = 0000,data_in=0002,dma_data_in=0000,cpu_data_in=0002,reg_address_out=21,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 1172500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1173000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=021,data_in=0002,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1173000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1173000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1173000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=021,data_in=0002,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1173000,reg_address_out=021,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1173000,reg_address[8:1]=021,data_in=0002,data_in=0000000000000010,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1173000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1173000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=1173000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 15],T=1312 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 1312500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1313000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1313000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1313000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1313000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1313000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1313000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1313000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1313000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=1313000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 16],T=1452 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=29,chipram(82) = 0000,data_in=8000,dma_data_in=0000,cpu_data_in=8000,reg_address_out=29,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 1452500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1453000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=029,data_in=8000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1453000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1453000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1453000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=029,data_in=8000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1453000,reg_address_out=029,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1453000,reg_address[8:1]=029,data_in=0000,data_in=1000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1453000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1453000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=1453000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 17],T=1592 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 1592500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1593000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1593000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1593000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1593000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1593000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=1,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1593000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1593000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1593000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=1593000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 18],T=1732 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2B,chipram(86) = 0000,data_in=9000,dma_data_in=0000,cpu_data_in=9000,reg_address_out=2B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 1732500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1733000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=02b,data_in=9000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=1733000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1733000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1733000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02b,data_in=9000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1733000,reg_address_out=02b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1733000,reg_address[8:1]=02b,data_in=1000,data_in=1001000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1733000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=1733000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=1733000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 19],T=1872 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 1872500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=1873000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=1873000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=1873000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=1873000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=1873000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=1873000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=1873000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=1873000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=1873000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 20],T=2012 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2C,chipram(88) = 0000,data_in=0001,dma_data_in=0000,cpu_data_in=0001,reg_address_out=2C,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2012500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2013000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=02c,data_in=0001,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04000,data_out=0000
+BLT: STATES,t=2013000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=2013000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2013000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02c,data_in=0001,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2013000,reg_address_out=02c,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2013000,reg_address[8:1]=02c,data_in=0001,data_in=0000000000000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2013000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04000
+AGNUS: DMA ARB, t=2013000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2013000, address_out=00000,address_blt=04000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 21],T=2152 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 2152500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2153000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2153000,start=0,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=2153000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2153000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2153000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2153000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2153000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2153000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=2153000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 22],T=2292 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2292500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2293000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2293000,start=0,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=2293000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2293000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2293000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2293000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2293000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2293000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2293000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 23],T=2432 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2432500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2433000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2433000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=2433000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2433000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2433000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2433000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2433000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2433000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2433000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 24],T=2572 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2572500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2573000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2573000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=01
+BLT: INTERNAL,t=2573000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2573000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2573000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2573000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2573000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2573000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2573000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 25],T=2712 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 2712500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2713000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2713000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=2713000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2713000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2713000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2713000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2713000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2713000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=2713000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 26],T=2852 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2852500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2853000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2853000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=2853000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2853000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2853000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2853000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2853000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2853000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2853000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 27],T=2992 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 2992500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=2993000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=2993000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=2993000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=2993000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=2993000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=2993000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=2993000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=2993000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=2993000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 28],T=3132 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 3132500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3133000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=3133000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=01,blt_next=09
+BLT: INTERNAL,t=3133000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=3133000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3133000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3133000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3133000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=3133000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=3133000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 29],T=3272 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 3272500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3273000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=04800,data_out=0000
+BLT: STATES,t=3273000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=09,blt_next=09
+BLT: INTERNAL,t=3273000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=3273000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3273000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3273000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3273000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=3273000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=3273000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 30],T=3412 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=3A,address_out=04000,chipram(296) = F0F0,data_out=0000,dbr='1',dbwe='0',
+Time: 3412500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3413000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=03a,data_in=f0f0,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=04000,data_out=0000
+BLT: STATES,t=3413000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=0,blt_state=09,blt_next=0a
+BLT: INTERNAL,t=3413000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=3413000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3413000,reg_address_out=03a,address_out=4000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3413000,reg_address[8:1]=03a,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3413000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=04000,address_blt=04000
+AGNUS: DMA ARB, t=3413000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=3413000, address_out=04000,address_blt=04000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 31],T=3552 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 3552500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3553000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=3553000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=0a,blt_next=0a
+BLT: INTERNAL,t=3553000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=3553000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3553000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3553000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3553000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=3553000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=3553000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 32],T=3692 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=38,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 3692500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3693000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=038,data_in=0000,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=3693000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=0,blt_state=0a,blt_next=08
+BLT: INTERNAL,t=3693000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=3693000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3693000,reg_address_out=038,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3693000,reg_address[8:1]=038,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3693000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=3693000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=3693000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 33],T=3832 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 3832500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3833000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=000,address_out=04800,data_out=0000
+BLT: STATES,t=3833000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=1,blt_state=08,blt_next=08
+BLT: INTERNAL,t=3833000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=11,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=3833000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3833000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3833000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3833000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=3833000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=3833000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 34],T=3972 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=00,address_out=04800,chipram(317) = F0F0,data_out=F0F0,dbr='1',dbwe='1',
+Time: 3972500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=3973000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=000,data_in=f0f0,reqdma=1,we=1,zero=1,busy=1,int3=0,reg_address_out=000,address_out=04800,data_out=f0f0
+BLT: STATES,t=3973000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=1,blt_state=08,blt_next=09
+BLT: INTERNAL,t=3973000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=11,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=1,fill_out=f0f0
+AGNUS: IN,t=3973000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=3973000,reg_address_out=000,address_out=4800,data_out=f0f0,cpu_custom=0,dbr=1,dbwe=1,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=3973000,reg_address[8:1]=000,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=3973000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=04800,address_blt=04800
+AGNUS: DMA ARB, t=3973000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=1
+AGNUS: ADDR MUX:,t=3973000, address_out=04800,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Error: BLIT FAIL: fill mode wrong
+Time: 4012500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: BLIT PASS: fill mode
+Time: 4012500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: [TB: INOUT][CYCLE 35],T=4042 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=3A,address_out=03FFF,chipram(296) = F0F0,data_out=0000,dbr='1',dbwe='0',
+Time: 4042500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4043000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=03a,data_in=f0f0,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=03fff,data_out=0000
+BLT: STATES,t=4043000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=1,next_word=0,blt_state=09,blt_next=0a
+BLT: INTERNAL,t=4043000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=10,bltdhold=f0f0,bltahold=0000,bltbhold=0000,store_result=1,fill_out=f0f0
+AGNUS: IN,t=4043000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4043000,reg_address_out=03a,address_out=3fff,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4043000,reg_address[8:1]=03a,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4043000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=03fff,address_blt=03fff
+AGNUS: DMA ARB, t=4043000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=4043000, address_out=03fff,address_blt=03fff,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 36],T=4077 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4077500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4078000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=0,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=4078000,start=0,busy=0,done=0,zero=0,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4078000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4078000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4078000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4078000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4078000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4078000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4078000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 37],T=4112 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4112500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4113000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=4113000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4113000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4113000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4113000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4113000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4113000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4113000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4113000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 38],T=4147 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4147500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4148000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=4148000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4148000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4148000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4148000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4148000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4148000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4148000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4148000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 39],T=4182 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4182500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4183000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=4183000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4183000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4183000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4183000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4183000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4183000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4183000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4183000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 40],T=4217 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4217500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4218000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=4218000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4218000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4218000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4218000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4218000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4218000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4218000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4218000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 41],T=4322 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4322500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4323000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=4323000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4323000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4323000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4323000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4323000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4323000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4323000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4323000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: === BLIT TEST: FILL MODE ===
+Time: 4412500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: [TB: INOUT][CYCLE 42],T=4462 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4462500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4463000,ecs=0,clkena=0,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=4463000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4463000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4463000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4463000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4463000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4463000,cck=0,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4463000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4463000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 43],T=4602 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=4B,chipram(150) = 0000,data_in=8241,dma_data_in=0000,cpu_data_in=8241,reg_address_out=4B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4602500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4603000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=04b,data_in=8241,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=4603000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4603000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4603000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=04b,data_in=8241,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4603000,reg_address_out=04b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4603000,reg_address[8:1]=04b,data_in=0241,data_in=1000001001000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4603000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4603000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4603000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 44],T=4742 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4742500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4743000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=4743000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4743000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4743000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4743000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4743000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4743000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4743000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4743000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 45],T=4882 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=20,chipram(64) = 0000,data_in=0BF0,dma_data_in=0000,cpu_data_in=0BF0,reg_address_out=20,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 4882500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=4883000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=020,data_in=0bf0,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=4883000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=4883000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=4883000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=020,data_in=0bf0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=4883000,reg_address_out=020,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=4883000,reg_address[8:1]=020,data_in=0bf0,data_in=0000101111110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=4883000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=4883000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=4883000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 46],T=5022 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 5022500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5023000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5023000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5023000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5023000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5023000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5023000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5023000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5023000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=5023000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 47],T=5162 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=21,chipram(66) = 0000,data_in=0002,dma_data_in=0000,cpu_data_in=0002,reg_address_out=21,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 5162500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5163000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=021,data_in=0002,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5163000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5163000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5163000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=021,data_in=0002,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5163000,reg_address_out=021,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5163000,reg_address[8:1]=021,data_in=0002,data_in=0000000000000010,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5163000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5163000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=5163000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 48],T=5302 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 5302500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5303000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5303000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5303000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5303000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5303000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5303000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5303000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5303000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=5303000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 49],T=5442 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=29,chipram(82) = 0000,data_in=8000,dma_data_in=0000,cpu_data_in=8000,reg_address_out=29,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 5442500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5443000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=029,data_in=8000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5443000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5443000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5443000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=029,data_in=8000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5443000,reg_address_out=029,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5443000,reg_address[8:1]=029,data_in=0000,data_in=1000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5443000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5443000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=5443000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 50],T=5582 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 5582500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5583000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5583000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5583000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5583000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5583000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=1,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5583000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5583000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5583000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=5583000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 51],T=5722 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2B,chipram(86) = 0000,data_in=9000,dma_data_in=0000,cpu_data_in=9000,reg_address_out=2B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 5722500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5723000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=02b,data_in=9000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=5723000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5723000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5723000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02b,data_in=9000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5723000,reg_address_out=02b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5723000,reg_address[8:1]=02b,data_in=1000,data_in=1001000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5723000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=5723000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=5723000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 52],T=5862 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 5862500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=5863000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=5863000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=5863000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=5863000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=5863000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=5863000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=5863000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=5863000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=5863000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 53],T=6002 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2C,chipram(88) = 0000,data_in=0001,dma_data_in=0000,cpu_data_in=0001,reg_address_out=2C,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6002500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6003000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=02c,data_in=0001,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04000,data_out=0000
+BLT: STATES,t=6003000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=6003000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6003000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02c,data_in=0001,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6003000,reg_address_out=02c,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6003000,reg_address[8:1]=02c,data_in=0001,data_in=0000000000000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6003000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04000
+AGNUS: DMA ARB, t=6003000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6003000, address_out=00000,address_blt=04000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 54],T=6142 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 6142500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6143000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6143000,start=0,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=6143000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6143000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6143000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6143000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6143000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6143000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=6143000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 55],T=6282 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6282500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6283000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6283000,start=0,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=6283000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6283000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6283000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6283000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6283000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6283000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6283000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 56],T=6422 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6422500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6423000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6423000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=6423000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6423000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6423000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6423000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6423000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6423000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6423000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 57],T=6562 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6562500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6563000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6563000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=01
+BLT: INTERNAL,t=6563000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6563000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6563000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6563000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6563000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6563000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6563000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 58],T=6702 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 6702500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6703000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6703000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=6703000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6703000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6703000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6703000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6703000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6703000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=6703000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 59],T=6842 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6842500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6843000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6843000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=6843000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6843000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6843000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6843000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6843000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6843000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6843000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 60],T=6982 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 6982500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=6983000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=6983000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=01,blt_next=01
+BLT: INTERNAL,t=6983000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=6983000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=6983000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=6983000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=6983000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=6983000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=6983000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 61],T=7122 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 7122500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7123000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=7123000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=01,blt_next=09
+BLT: INTERNAL,t=7123000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=7123000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7123000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7123000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7123000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=7123000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=7123000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 62],T=7262 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 7262500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7263000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=04800,data_out=0000
+BLT: STATES,t=7263000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=09,blt_next=09
+BLT: INTERNAL,t=7263000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=7263000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7263000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7263000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7263000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=7263000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=7263000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 63],T=7402 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=3A,address_out=04000,chipram(296) = F0F0,data_out=0000,dbr='1',dbwe='0',
+Time: 7402500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7403000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=03a,data_in=f0f0,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=04000,data_out=0000
+BLT: STATES,t=7403000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=0,blt_state=09,blt_next=0a
+BLT: INTERNAL,t=7403000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=7403000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7403000,reg_address_out=03a,address_out=4000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7403000,reg_address[8:1]=03a,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7403000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=04000,address_blt=04000
+AGNUS: DMA ARB, t=7403000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=7403000, address_out=04000,address_blt=04000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 64],T=7542 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 7542500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7543000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=7543000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=0a,blt_next=0a
+BLT: INTERNAL,t=7543000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=7543000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7543000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7543000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7543000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=7543000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=7543000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 65],T=7682 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=38,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 7682500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7683000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=038,data_in=0000,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=7683000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=0,blt_state=0a,blt_next=08
+BLT: INTERNAL,t=7683000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=7683000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7683000,reg_address_out=038,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7683000,reg_address[8:1]=038,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7683000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=7683000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=7683000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 66],T=7822 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 7822500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7823000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=1,int3=0,reg_address_out=000,address_out=04800,data_out=0000
+BLT: STATES,t=7823000,start=1,busy=1,done=0,zero=1,reqdma=0,dma_req=1,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=1,blt_state=08,blt_next=08
+BLT: INTERNAL,t=7823000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=11,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=f0f0
+AGNUS: IN,t=7823000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7823000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7823000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7823000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=7823000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=7823000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 67],T=7962 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=00,address_out=04800,chipram(317) = F0F0,data_out=F0F0,dbr='1',dbwe='1',
+Time: 7962500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=7963000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=000,data_in=f0f0,reqdma=1,we=1,zero=1,busy=1,int3=0,reg_address_out=000,address_out=04800,data_out=f0f0
+BLT: STATES,t=7963000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=0,next_word=1,blt_state=08,blt_next=09
+BLT: INTERNAL,t=7963000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=11,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=1,fill_out=f0f0
+AGNUS: IN,t=7963000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=7963000,reg_address_out=000,address_out=4800,data_out=f0f0,cpu_custom=0,dbr=1,dbwe=1,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=7963000,reg_address[8:1]=000,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=7963000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=04800,address_blt=04800
+AGNUS: DMA ARB, t=7963000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=1
+AGNUS: ADDR MUX:,t=7963000, address_out=04800,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Error: BLIT FAIL: fill mode wrong
+Time: 8002500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: BLIT PASS: fill mode
+Time: 8002500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: [TB: INOUT][CYCLE 68],T=8032 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=F0F0,dma_data_in=F0F0,cpu_data_in=0000,reg_address_out=3A,address_out=03FFF,chipram(296) = F0F0,data_out=0000,dbr='1',dbwe='0',
+Time: 8032500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8033000,ecs=0,clkena=1,enadma=1,ackdma=1,reg_address_in=03a,data_in=f0f0,reqdma=1,we=0,zero=1,busy=1,int3=0,reg_address_out=03a,address_out=03fff,data_out=0000
+BLT: STATES,t=8033000,start=1,busy=1,done=0,zero=1,reqdma=1,dma_req=1,enable=1,enadma=1,dma_ack=1,clkena=1,pipeline_full=1,next_word=0,blt_state=09,blt_next=0a
+BLT: INTERNAL,t=8033000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=1,enad=1,ife=0,efe=0,minterm_out=f0f0,bltadat=f0f0,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=1,chsel=10,bltdhold=f0f0,bltahold=0000,bltbhold=0000,store_result=1,fill_out=f0f0
+AGNUS: IN,t=8033000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=f0f0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8033000,reg_address_out=03a,address_out=3fff,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=1,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8033000,reg_address[8:1]=03a,data_in=10f0,data_in=1111000011110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8033000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=1,req_blt=1,ack_blt=1,dbr=1,address_out=03fff,address_blt=03fff
+AGNUS: DMA ARB, t=8033000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=1,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=8033000, address_out=03fff,address_blt=03fff,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 69],T=8067 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8067500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8068000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=0,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=8068000,start=0,busy=0,done=0,zero=0,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8068000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8068000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8068000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8068000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8068000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8068000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8068000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 70],T=8102 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8102500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8103000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=8103000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8103000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8103000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8103000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8103000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8103000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8103000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8103000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 71],T=8137 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8137500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8138000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=8138000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8138000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8138000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8138000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8138000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8138000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8138000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8138000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 72],T=8172 ns,clk7_en='1',cck='1',reset='1',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8172500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8173000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=8173000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8173000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8173000,clk7_en=1,cck=1,reset=1,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8173000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8173000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8173000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8173000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8173000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 73],T=8207 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8207500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8208000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=8208000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8208000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8208000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8208000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8208000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8208000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8208000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8208000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 74],T=8312 ns,clk7_en='1',cck='1',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8312500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8313000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=03a,address_out=00000,data_out=0000
+BLT: STATES,t=8313000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8313000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=10,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8313000,clk7_en=1,cck=1,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8313000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8313000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8313000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8313000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8313000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: === BLIT TEST: FILL MODE ===
+Time: 8402500 ps  Iteration: 0  Process: /tb_agnus_blitter/stim_proc  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+Note: [TB: INOUT][CYCLE 75],T=8452 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8452500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8453000,ecs=0,clkena=0,enadma=0,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=8453000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8453000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8453000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8453000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8453000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8453000,cck=0,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8453000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8453000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 76],T=8592 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=4B,chipram(150) = 0000,data_in=8241,dma_data_in=0000,cpu_data_in=8241,reg_address_out=4B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8592500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8593000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=04b,data_in=8241,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=8593000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8593000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8593000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=04b,data_in=8241,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8593000,reg_address_out=04b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8593000,reg_address[8:1]=04b,data_in=0241,data_in=1000001001000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8593000,cck=1,blten=0,dmacon[6]=0,dmacon[9]=0,dmacon=0000000000000,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8593000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8593000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 77],T=8732 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8732500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8733000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=8733000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8733000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8733000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8733000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=1,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8733000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8733000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8733000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8733000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 78],T=8872 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=20,chipram(64) = 0000,data_in=0BF0,dma_data_in=0000,cpu_data_in=0BF0,reg_address_out=20,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 8872500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=8873000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=020,data_in=0bf0,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=8873000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=8873000,bltcon0=0000,usea=0,useb=0,usec=0,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=8873000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=020,data_in=0bf0,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=8873000,reg_address_out=020,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=8873000,reg_address[8:1]=020,data_in=0bf0,data_in=0000101111110000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=8873000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=8873000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=8873000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 79],T=9012 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 9012500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9013000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9013000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9013000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9013000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9013000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9013000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9013000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9013000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=9013000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 80],T=9152 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=21,chipram(66) = 0000,data_in=0002,dma_data_in=0000,cpu_data_in=0002,reg_address_out=21,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9152500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9153000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=021,data_in=0002,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9153000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9153000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9153000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=021,data_in=0002,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9153000,reg_address_out=021,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9153000,reg_address[8:1]=021,data_in=0002,data_in=0000000000000010,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9153000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9153000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9153000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 81],T=9292 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9292500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9293000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9293000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9293000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9293000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9293000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9293000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9293000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9293000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9293000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 82],T=9432 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=29,chipram(82) = 0000,data_in=8000,dma_data_in=0000,cpu_data_in=8000,reg_address_out=29,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9432500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9433000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=029,data_in=8000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9433000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9433000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9433000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=029,data_in=8000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9433000,reg_address_out=029,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9433000,reg_address[8:1]=029,data_in=0000,data_in=1000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9433000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9433000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9433000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 83],T=9572 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='1',dbwe='0',
+Time: 9572500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9573000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9573000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9573000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9573000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9573000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=0,dbr=1,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=1,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9573000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9573000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=1,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9573000,ena_blt=1,any_dma_active=0,dma_ref=1,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=1,dbwe=0
+AGNUS: ADDR MUX:,t=9573000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 84],T=9712 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2B,chipram(86) = 0000,data_in=9000,dma_data_in=0000,cpu_data_in=9000,reg_address_out=2B,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9712500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9713000,ecs=0,clkena=1,enadma=0,ackdma=0,reg_address_in=02b,data_in=9000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=00000,data_out=0000
+BLT: STATES,t=9713000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=0,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9713000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9713000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02b,data_in=9000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9713000,reg_address_out=02b,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9713000,reg_address[8:1]=02b,data_in=1000,data_in=1001000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9713000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=0,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=00000
+AGNUS: DMA ARB, t=9713000,ena_blt=0,any_dma_active=1,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9713000, address_out=00000,address_blt=00000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 85],T=9852 ns,clk7_en='1',cck='0',reset='0',aen='0',hwr='0',lwr='0',rd='0',address_in=00,chipram(0) = 0000,data_in=0000,dma_data_in=0000,cpu_data_in=0000,reg_address_out=FF,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9852500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9853000,ecs=0,clkena=0,enadma=1,ackdma=0,reg_address_in=0ff,data_in=0000,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04800,data_out=0000
+BLT: STATES,t=9853000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=0,enadma=1,dma_ack=0,clkena=0,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9853000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9853000,clk7_en=1,cck=0,reset=0,aen=0,hwr=0,lwr=0,address_in=000,data_in=0000,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9853000,reg_address_out=0ff,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9853000,reg_address[8:1]=0ff,data_in=0000,data_in=0000000000000000,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9853000,cck=0,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04800
+AGNUS: DMA ARB, t=9853000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9853000, address_out=00000,address_blt=04800,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000
+Note: [TB: INOUT][CYCLE 86],T=9992 ns,clk7_en='1',cck='1',reset='0',aen='1',hwr='1',lwr='1',rd='0',address_in=2C,chipram(88) = 0000,data_in=0001,dma_data_in=0000,cpu_data_in=0001,reg_address_out=2C,address_out=00000,chipram(0) = 0000,data_out=0000,dbr='0',dbwe='0',
+Time: 9992500 ps  Iteration: 1  Process: /tb_agnus_blitter/monitor  File: D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd
+BLT: INOUT,t=9993000,ecs=0,clkena=1,enadma=1,ackdma=0,reg_address_in=02c,data_in=0001,reqdma=0,we=0,zero=1,busy=0,int3=0,reg_address_out=038,address_out=04000,data_out=0000
+BLT: STATES,t=9993000,start=0,busy=0,done=0,zero=1,reqdma=0,dma_req=0,enable=1,enadma=1,dma_ack=0,clkena=1,pipeline_full=0,next_word=0,blt_state=00,blt_next=00
+BLT: INTERNAL,t=9993000,bltcon0=0bf0,usea=1,useb=0,usec=1,used=0,enad=0,ife=0,efe=0,minterm_out=0000,bltadat=0000,bltbdat=0000,bltcdat=0000,bltddat=0000,ackdma=0,chsel=00,bltdhold=0000,bltahold=0000,bltbhold=0000,store_result=0,fill_out=0000
+AGNUS: IN,t=9993000,clk7_en=1,cck=1,reset=0,aen=1,hwr=1,lwr=1,address_in=02c,data_in=0001,audio_dmal=0,audio_dmas=0,disk_dmal=0,disk_dmas=0,bls=0,ntsc=0,a1k=0,ecs=0,aga=0
+AGNUS: OUT,t=9993000,reg_address_out=02c,address_out=0000,data_out=0000,cpu_custom=1,dbr=0,dbwe=0,_hsync=1,_vsync=1,_csync=1,field1=0,lace=0,hblank=0,vblank=1,hde=0,sol=0,sof=0,vbl_int=0,strhor_denise=0,strhor_paula=0,htotal=1c4,harddis=0,varbeamen=0,int3=0
+AGNUS: DMACON, t=9993000,reg_address[8:1]=02c,data_in=0001,data_in=0000000000000001,DMACON=04b
+AGNUS: BLT_HANDSHAKE:, t=9993000,cck=1,blten=1,dmacon[6]=1,dmacon[9]=1,dmacon=0001001000001,ena_blt=1,blit_busy=0,req_blt=0,ack_blt=0,dbr=0,address_out=00000,address_blt=04000
+AGNUS: DMA ARB, t=9993000,ena_blt=1,any_dma_active=0,dma_ref=0,dma_dsk=0,dma_aud=0,dma_spr=0,dma_bpl=0,dma_cop=0,dma_blt=0,bls_cnt=0,BLS_CNT_MAX=3,dbr=0,dbwe=0
+AGNUS: ADDR MUX:,t=9993000, address_out=00000,address_blt=04000,address_dsk=xxxxx,address_aud=xxxxx,address_bpl=xxxxx,address_spr=xxxxx,address_cop=00000

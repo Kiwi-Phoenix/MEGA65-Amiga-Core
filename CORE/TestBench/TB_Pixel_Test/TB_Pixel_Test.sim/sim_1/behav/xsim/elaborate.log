@@ -1,0 +1,35 @@
+Vivado Simulator v2025.2.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2.1/Vivado/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_agnus_blitter_behav xil_defaultlib.tb_agnus_blitter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.debug_utils_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module xil_defaultlib.amiga_clk
+Compiling module xil_defaultlib.agnus_refresh
+Compiling module xil_defaultlib.agnus_diskdma_DJR
+Compiling module xil_defaultlib.agnus_audiodma_DJR
+Compiling module xil_defaultlib.agnus_bitplanedma_m65
+Compiling module xil_defaultlib.agnus_spritedma_DJR
+Compiling module xil_defaultlib.agnus_copper_M65_default
+Compiling module xil_defaultlib.agnus_blitter_barrelshifter
+Compiling module xil_defaultlib.agnus_blitter_minterm
+Compiling module xil_defaultlib.agnus_blitter_fill
+Compiling module xil_defaultlib.agnus_blitter_adrgen_DJR
+Compiling module xil_defaultlib.agnus_blitter_DJR
+Compiling module xil_defaultlib.agnus_beamcounter_m65
+Compiling module xil_defaultlib.agnus_DJR
+Compiling module xil_defaultlib.agnus_wrapper_DJR
+Compiling architecture sim of entity xil_defaultlib.tb_agnus_blitter
+Built simulation snapshot tb_agnus_blitter_behav

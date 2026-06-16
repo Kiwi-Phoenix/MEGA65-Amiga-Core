@@ -1,7 +1,7 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module agnus_copper
-WARNING: [VRFC 10-3380] identifier 'enable' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper.v:175]
-WARNING: [VRFC 10-3380] identifier 'copper_state' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper.v:176]
-WARNING: [VRFC 10-3380] identifier 'dma_req' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper.v:177]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_copper_M65
+WARNING: [VRFC 10-3380] identifier 'enable' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper_M65.v:175]
+WARNING: [VRFC 10-3380] identifier 'copper_state' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper_M65.v:176]
+WARNING: [VRFC 10-3380] identifier 'dma_req' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper_M65.v:177]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/TB_Denise_Gayle_BRAM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

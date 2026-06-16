@@ -1,0 +1,172 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_wrapper_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_wrapper_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_wrapper_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_wrapper_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/Denise_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/TB_Pixel_Test.srcs/sim_1/new/denise_bitplane_shifter_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_bitplane_shifter_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_bitplanes_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_bitplanes_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_collision_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_collision_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_colortable_AGA_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_colortable_AGA_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_colortable_ram_mf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_colortable_ram_mf
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_hamgenerator_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_hamgenerator_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_playfields_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_playfields_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_spritepriority_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_spritepriority_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_sprites_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_sprites_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/denise_sprites_shifter_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denise_sprites_shifter_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_m65
+WARNING: [VRFC 10-2938] 'blit_busy' is already implicitly declared on line 641 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:661]
+WARNING: [VRFC 10-2938] 'hpos' is already implicitly declared on line 523 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:723]
+WARNING: [VRFC 10-2938] 'vpos' is already implicitly declared on line 588 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:724]
+WARNING: [VRFC 10-2938] 'vbl' is already implicitly declared on line 616 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:725]
+WARNING: [VRFC 10-2938] 'vblend' is already implicitly declared on line 617 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:726]
+WARNING: [VRFC 10-2096] empty statement in sequential block [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:838]
+WARNING: [VRFC 10-8956] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:839]
+WARNING: [VRFC 10-3380] identifier 'hpos' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:120]
+WARNING: [VRFC 10-3380] identifier 'vpos' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:121]
+WARNING: [VRFC 10-3380] identifier 'copen' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:122]
+WARNING: [VRFC 10-3380] identifier 'req_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:123]
+WARNING: [VRFC 10-3380] identifier 'dmacon' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:124]
+WARNING: [VRFC 10-3380] identifier 'cpu_write_pending' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:125]
+WARNING: [VRFC 10-3380] identifier 'reg_address_sync' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:126]
+WARNING: [VRFC 10-3380] identifier 'data_in_sync' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:127]
+WARNING: [VRFC 10-3380] identifier 'blitter_wr_valid' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:128]
+WARNING: [VRFC 10-3380] identifier 'blitter_wr_addr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:129]
+WARNING: [VRFC 10-3380] identifier 'blitter_wr_data' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:130]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:161]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:178]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:179]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:180]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:181]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:182]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:183]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:184]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:190]
+WARNING: [VRFC 10-3380] identifier 'data_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:191]
+WARNING: [VRFC 10-3380] identifier 'data_bmc' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:192]
+WARNING: [VRFC 10-3380] identifier 'req_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:246]
+WARNING: [VRFC 10-3380] identifier 'req_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:247]
+WARNING: [VRFC 10-3380] identifier 'req_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:248]
+WARNING: [VRFC 10-3380] identifier 'blit_busy' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:323]
+WARNING: [VRFC 10-3380] identifier 'address_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:438]
+WARNING: [VRFC 10-3380] identifier 'reg_address_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:439]
+WARNING: [VRFC 10-3380] identifier 'wr_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:440]
+WARNING: [VRFC 10-3380] identifier 'address_aud' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:460]
+WARNING: [VRFC 10-3380] identifier 'reg_address_aud' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:461]
+WARNING: [VRFC 10-3380] identifier 'address_bpl' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:471]
+WARNING: [VRFC 10-3380] identifier 'reg_address_bpl' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:472]
+WARNING: [VRFC 10-3380] identifier 'address_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:482]
+WARNING: [VRFC 10-3380] identifier 'reg_address_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:483]
+WARNING: [VRFC 10-3380] identifier 'address_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:493]
+WARNING: [VRFC 10-3380] identifier 'reg_address_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:494]
+WARNING: [VRFC 10-3380] identifier 'address_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:504]
+WARNING: [VRFC 10-3380] identifier 'reg_address_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:505]
+WARNING: [VRFC 10-3380] identifier 'we_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_M65.v:506]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_M65
+WARNING: [VRFC 10-3380] identifier 'blt_state' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_M65.v:107]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_bitplanedma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_bitplanedma
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_diskdma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_diskdma
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_audiodma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_audiodma
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_spritedma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_spritedma
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_adrgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_adrgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_DJR
+WARNING: [VRFC 10-2938] 'blit_busy' is already implicitly declared on line 456 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:493]
+WARNING: [VRFC 10-2938] 'hpos' is already implicitly declared on line 338 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:525]
+WARNING: [VRFC 10-2938] 'vpos' is already implicitly declared on line 403 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:526]
+WARNING: [VRFC 10-2938] 'vbl' is already implicitly declared on line 431 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:527]
+WARNING: [VRFC 10-2938] 'vblend' is already implicitly declared on line 432 [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:528]
+WARNING: [VRFC 10-3380] identifier 'hpos' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:107]
+WARNING: [VRFC 10-3380] identifier 'vpos' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:108]
+WARNING: [VRFC 10-3380] identifier 'reg_address' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:123]
+WARNING: [VRFC 10-3380] identifier 'data_bmc' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:126]
+WARNING: [VRFC 10-3380] identifier 'req_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:141]
+WARNING: [VRFC 10-3380] identifier 'req_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:142]
+WARNING: [VRFC 10-3380] identifier 'req_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:143]
+WARNING: [VRFC 10-3380] identifier 'blit_busy' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:178]
+WARNING: [VRFC 10-3380] identifier 'address_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:248]
+WARNING: [VRFC 10-3380] identifier 'reg_address_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:249]
+WARNING: [VRFC 10-3380] identifier 'wr_dsk' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:250]
+WARNING: [VRFC 10-3380] identifier 'address_aud' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:270]
+WARNING: [VRFC 10-3380] identifier 'reg_address_aud' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:271]
+WARNING: [VRFC 10-3380] identifier 'address_bpl' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:281]
+WARNING: [VRFC 10-3380] identifier 'reg_address_bpl' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:282]
+WARNING: [VRFC 10-3380] identifier 'address_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:292]
+WARNING: [VRFC 10-3380] identifier 'reg_address_spr' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:293]
+WARNING: [VRFC 10-3380] identifier 'address_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:303]
+WARNING: [VRFC 10-3380] identifier 'reg_address_cop' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:304]
+WARNING: [VRFC 10-3380] identifier 'address_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:314]
+WARNING: [VRFC 10-3380] identifier 'reg_address_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:315]
+WARNING: [VRFC 10-3380] identifier 'we_blt' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_DJR.v:316]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_audiodma_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_audiodma_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_beamcounter_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_beamcounter_m65
+WARNING: [VRFC 10-3380] identifier 'long_frame' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_beamcounter_m65.v:118]
+WARNING: [VRFC 10-3380] identifier 'last_line' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_beamcounter_m65.v:371]
+WARNING: [VRFC 10-3380] identifier 'end_of_frame' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_beamcounter_m65.v:390]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_bitplanedma_m65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_bitplanedma_m65
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_adrgen_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_adrgen_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_barrelshifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_barrelshifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_fill.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_fill
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_blitter_minterm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_blitter_minterm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_copper_M65.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_copper_M65
+WARNING: [VRFC 10-3380] identifier 'enable' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_copper_M65.v:175]
+WARNING: [VRFC 10-3380] identifier 'copper_state' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_copper_M65.v:176]
+WARNING: [VRFC 10-3380] identifier 'dma_req' is used before its declaration [D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_copper_M65.v:177]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_diskdma_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_diskdma_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_refresh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_refresh
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/agnus_spritedma_DJR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module agnus_spritedma_DJR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/amiga_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module amiga_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/TB_Pixel_Test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/Amiga_Globals_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/Amiga_Debug_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/pkg/ram_type_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/ramctrl_bram.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ramctrl_bram'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/cpu_cache_stub.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cpu_cache_stub'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/Pixel_Test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Pixel_Test'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_blitter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_agnus_blitter'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/dut/Pixel_Test_OCS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Pixel_Test_OCS'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/pixel_test_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pixel_test_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/TB_Denise.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_denise'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Pixel_Test/Sim/tb/tb_agnus_copper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_agnus_copper'

@@ -1,8 +1,8 @@
 0.7
 2020.2
-Nov 14 2025
-19:37:27
-D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper.v,1773540249,verilog,D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd,,,agnus_copper,,,C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+Mar 19 2026
+19:50:51
+D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/dut/agnus_copper_M65.v,1773543573,verilog,D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd,,,\agnus_copper_M65\,,,../../../../../../../../../../../AMDDesignTools/2025.2.1/Vivado/data/rsb/busdef,,,,,
 D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/pkg/Amiga_Debug_pkg.vhd,1772349403,vhdl,D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd,,,amiga_debug_pkg;amiga_debug_sig_pkg;clk_attr_pkg;debug_utils_pkg,,,,,,,,
-D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd,1773543475,vhdl,,,,tb_copper,,,,,,,,
-D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/TB_Denise_Gayle_BRAM.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/Sim/tb/tb_copper.vhd,1774735966,vhdl,,,,tb_copper,,,,,,,,
+D:/Retro/Mega65/FPGA_Projects/M65-Amiga-Core/CORE/TestBench/TB_Denise_Gayle_BRAM/TB_Denise_Gayle_BRAM.sim/sim_1/behav/xsim/glbl.v,1762536278,verilog,,,,glbl,,,,,,,,
